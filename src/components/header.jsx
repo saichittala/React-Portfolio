@@ -6,7 +6,7 @@ function header() {
     <div>
       <nav className="nav-bar">
         <div className="nav-main">
-          <a href="/"><img src="../img/logo.svg" alt="logo" /></a>
+          <a href="/"><img src="./img/logo.svg" alt="logo" /></a>
           <img className="menu-icon" src="../img/menu.svg" alt="menu-icon" id="menu-icon" />
           <div className="menu-container" id="menu-container">
             <div className="mob-nav-btns">
