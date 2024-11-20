@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './home.js';
 import Ricoz from './ricoz.js'
-import MyDeziner from './mydeziner.js'
 
 function App() {
   return(
@@ -10,7 +9,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/ricoz" element={<Ricoz/>} />
-        <Route path="/mydeziner" element={<MyDeziner/>} />
       </Routes>
     </Router>
   );
