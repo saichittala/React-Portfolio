@@ -1,8 +1,8 @@
 import React, { useEffect} from 'react';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import useFadeIn from '../components/useFadeIn';
-import useScrollEffect from '../components/useScrollEffect';
+import Header from './components/header';
+import Footer from './components/footer';
+import useFadeIn from './components/useFadeIn';
+import useScrollEffect from './components/useScrollEffect';
 
 
 
