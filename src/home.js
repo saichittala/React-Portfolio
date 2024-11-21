@@ -34,7 +34,7 @@ const Home = () => {
                     <p className="intro-white-text fade-in translate-text-down">
                       Sai Chittala <br />
                       <span className="intro-white-text">Product Designer at </span>
-                      <a className="company-text" href="./mydeziner" target="_blank" rel="noopener noreferrer">
+                      <a className="company-text" href="https://www.customfurnish.com/home" target="_blank" rel="noopener noreferrer">
                         CustomFurnish
                       </a>
                       <br />

@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './home';
-import Ricoz from './ricoz';
-import MyDeziner from './mydeziner';
+import Home from './home.js';
+import Ricoz from './ricoz.js';
+import MyDeziner from './mydeziner.jsx';
 
 const repoName = process.env.REACT_APP_REPO_NAME || '/default-repo';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ricoz" element={<Ricoz />} />
@@ -20,6 +20,3 @@ function App() {
 }
 
 export default App;
-
-
-    // <Router basename="{process.env.PUBLIC_URL}">
