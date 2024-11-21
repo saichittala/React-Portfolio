@@ -4,9 +4,11 @@ import Home from './home.js';
 import Ricoz from './ricoz.js';
 import Mydeziner from './mydeziner.js';
 
+const repoName = process.env.REACT_APP_REPO_NAME || '/default-repo';
+
 function App() {
   return (
-    <Router basename='React-Portfolio'>
+    <Router basename='%PUBLIC_URL%'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ricoz" element={<Ricoz />} />

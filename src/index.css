@@ -102,9 +102,6 @@ body {
     z-index: 10;
     border-bottom: 1px solid transparent;
     transition: 0.3s cubic-bezier(0.91, -0.21, 0, 1.39);
-    /* transform: translateY(6px); */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
 }
 
 .nav-bar.scrolled {

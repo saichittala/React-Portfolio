@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect} from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
@@ -7,9 +7,9 @@ import useScrollEffect from './components/useScrollEffect';
 
 
 const Mydeziner = () => {
-  useFadeIn()
-  useScrollEffect()
-  const fadeInRefs = useRef([]); // Ref array to store all fade-in elements
+  useFadeIn();
+  useScrollEffect();
+
   useEffect(() => {
     const loader = document.getElementById("loader");
     const circleLoader = document.getElementById("circleloading");
@@ -44,30 +44,12 @@ const Mydeziner = () => {
       }, 2500);
     }, 500);
 
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('fade-in'); // Replace 'old-class' with the class you want to remove
-          entry.target.classList.add('fade-in-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-
-    // Observe each fade-in element
-    fadeInRefs.current.forEach(fadeIn => observer.observe(fadeIn));
-
-    // Clean up observer on component unmount
+    // Clean up effect when component is unmounted
     return () => {
-      fadeInRefs.current.forEach(fadeIn => observer.unobserve(fadeIn));
+      // No observer to clean up anymore
     };
   }, []);
+
 
   return (
     <div>
@@ -206,7 +188,7 @@ const Mydeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch>Design Flexibility</ch>
-                          <p fade-in>One of the key challenges in developing MyDeziner was creating a
+                          <p className='fade-in'>One of the key challenges in developing MyDeziner was creating a
                             platform that could effortlessly accommodate every design style. From
                             minimalist to vintage, interior designers needed a tool that balanced
                             flexibility with simplicity. The goal was to provide customizable
@@ -224,7 +206,7 @@ const Mydeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch>Creative Freedom</ch>
-                          <p fade-in>MyDeziner unlocks endless possibilities, allowing designers to
+                          <p className='fade-in'>MyDeziner unlocks endless possibilities, allowing designers to
                             effortlessly switch between modern minimalism and timeless classics.
                             Every
                             feature is designed to enhance creativity without overwhelming users,
@@ -243,7 +225,7 @@ const Mydeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch>Seamless Innovation</ch>
-                          <p fade-in>MyDeziner redefines how interior designers interact with their
+                          <p className='fade-in'>MyDeziner redefines how interior designers interact with their
                             projects, offering a perfect blend of flexibility and user-friendliness.
                             With customizable textures, drag-and-drop elements, and real-time
                             adjustments, it’s an experience built for modern creativity. Design
@@ -329,7 +311,7 @@ const Mydeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch>Heading</ch>
-                          <p fade-in> This project involved collaborating with a health and
+                          <p className='fade-in'> This project involved collaborating with a health and
                             wellness company
                             to revamp their
                             brand image and appeal to a younger, more modern audience. The focus was
@@ -401,7 +383,7 @@ const Mydeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch>Heading</ch>
-                          <p fade-in> This project involved collaborating with a health and
+                          <p className='fade-in'> This project involved collaborating with a health and
                             wellness company
                             to revamp their
                             brand image and appeal to a younger, more modern audience. The focus was
@@ -422,7 +404,7 @@ const Mydeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch>Heading</ch>
-                          <p fade-in> This project involved collaborating with a health and
+                          <p className='fade-in'> This project involved collaborating with a health and
                             wellness company
                             to revamp their
                             brand image and appeal to a younger, more modern audience. The focus was
@@ -484,7 +466,7 @@ const Mydeziner = () => {
                     </div>
                     <div className="pd-content">
                       <img src="img/projects/customfurnish.webp" alt="" className="fade-in" loading="lazy"/>
-                        <p fade-in> This project involved collaborating with a health and
+                        <p className='fade-in'> This project involved collaborating with a health and
                           wellness company
                           to revamp their
                           brand image and appeal to a younger, more modern audience. The focus was on
