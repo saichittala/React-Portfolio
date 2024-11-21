@@ -3,7 +3,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 
 
-const Ricoz = () => {
+const Mydeziner = () => {
     const fadeInRefs = useRef([]); // Ref array to store all fade-in elements
   useEffect(() => {
     const loader = document.getElementById("loader");
@@ -146,4 +146,4 @@ const Ricoz = () => {
   );
 }
 
-export default Ricoz;
+export default Mydeziner;
