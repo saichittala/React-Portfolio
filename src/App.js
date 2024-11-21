@@ -8,7 +8,7 @@ const repoName = process.env.REACT_APP_REPO_NAME || '/default-repo';
 
 function App() {
   return (
-    <Router basename='%PUBLIC_URL%'>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ricoz" element={<Ricoz />} />
