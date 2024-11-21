@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './home.js';
-import Ricoz from './ricoz.js';
-import MyDeziner from './mydeziner.js';
+import Home from './home';
+import Ricoz from './ricoz';
+import MyDeziner from './mydeziner';
 
 const repoName = process.env.REACT_APP_REPO_NAME || '/default-repo';
 
