@@ -3,11 +3,13 @@ import Card from './card';
 import Header from './components/header';
 import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
+import useScrollEffect from './components/useScrollEffect';
 
 const Home = () => {
   useFadeIn(); 
+  useScrollEffect(); 
   const cardsData = [
-    { title: "MyDeziner", type: "Product Design 🔒", image: "img/projects/mydeziner.webp", link: '/mydeziner', openInNewTab: true, locked: false },
+    { title: "MyDeziner", type: "Product Design 🔒", image: "img/projects/mydeziner.webp", link: 'React-Portfolio/mydeziner', openInNewTab: true, locked: false },
     { title: "CustomFurnish", type: "UX Design", image: "img/projects/customfurnish.webp", link: "https://customfurnish.com", openInNewTab: true, locked: false },
     { title: "HomeGymr", type: "UX Design", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Petzy", type: "Case Study", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true },
@@ -17,22 +19,7 @@ const Home = () => {
     { title: "Muzicon", type: "UX Design", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const navBar = document.querySelector('.nav-bar');
-      if (window.scrollY > 0) {
-        navBar.classList.add('scrolled');
-      } else {
-        navBar.classList.remove('scrolled');
-      }
-    };
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <div className="content" id="content">
