@@ -6,7 +6,7 @@ import Mydeziner from './mydeziner.js';
 
 function App() {
   return (
-    <Router>
+    <Router basename='React-Portfolio'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ricoz" element={<Ricoz />} />

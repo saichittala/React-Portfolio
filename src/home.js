@@ -5,12 +5,11 @@ import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
 
 const Home = () => {
-  useFadeIn(); // Trigger fade-in effect using the custom hook
-
+  useFadeIn(); 
   const cardsData = [
-    { title: "MyDeziner", type: "Product Design 🔒", image: "img//projects/mydeziner.webp", link: "./React-Portfolio/mydeziner", openInNewTab: true, locked: false },
-    { title: "CustomFurnish", type: "UX Design", image: "img//projects/customfurnish.webp", link: "https://customfurnish.com", openInNewTab: true, locked: false },
-    { title: "HomeGymr", type: "UX Design", image: "img//projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
+    { title: "MyDeziner", type: "Product Design 🔒", image: "img/projects/mydeziner.webp", link: '/mydeziner', openInNewTab: true, locked: false },
+    { title: "CustomFurnish", type: "UX Design", image: "img/projects/customfurnish.webp", link: "https://customfurnish.com", openInNewTab: true, locked: false },
+    { title: "HomeGymr", type: "UX Design", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Petzy", type: "Case Study", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true },
     { title: "Yalla Gai", type: "UX Design 🔒", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: false },
     { title: "Temple Address", type: "UX Design", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: false },

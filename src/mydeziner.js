@@ -1,11 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
+import useFadeIn from './components/useFadeIn';
+import useScrollEffect from './components/useScrollEffect';
+
 
 
 const Mydeziner = () => {
+    useFadeIn()
+    useScrollEffect()
     const fadeInRefs = useRef([]); // Ref array to store all fade-in elements
-  useEffect(() => {
+    useEffect(() => {
     const loader = document.getElementById("loader");
     const circleLoader = document.getElementById("circleloading");
     const loadingText = document.getElementById("loading-text");
@@ -84,7 +89,7 @@ const Mydeziner = () => {
               <div className="project-details-main">
                 <div className="project-details">
                   <div className="fade-in p-img-1" ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
-                    <img  src="/img/sample.jpg" alt="project sample" />
+                    <img  src="img/sample.jpg" alt="project sample" />
                   </div>
                   <div className="pd-main">
                     <div className="fade-in pd-heading-div"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
@@ -113,18 +118,18 @@ const Mydeziner = () => {
                 <div className="bg-full">
                   <div className="p-main-imgs">
                     <div className="fade-in p-img-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
-                      <img  src="/img/sample.jpg" alt="img-content" />
+                      <img  src="img/sample.jpg" alt="img-content" />
                     </div>
                     <div className="p-2imgs-2">
                       <div className="fade-in p-img-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
-                        <img  src="/img/sample.jpg" alt="img-content" />
+                        <img  src="img/sample.jpg" alt="img-content" />
                       </div>
                       <div className="fade-in p-img-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
-                        <img  src="/img/sample.jpg" alt="img-content" />
+                        <img  src="img/sample.jpg" alt="img-content" />
                       </div>
                     </div>
                     <div className="fade-in p-img-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
-                      <img  src="/img/sample.jpg" alt="img-content" />
+                      <img  src="img/sample.jpg" alt="img-content" />
                     </div>
                   </div>
                 </div>
