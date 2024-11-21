@@ -6,7 +6,7 @@ import useScrollEffect from './components/useScrollEffect';
 
 
 
-const Mydeziner = () => {
+const MyDeziner = () => {
   useFadeIn();
   useScrollEffect();
 
@@ -500,4 +500,4 @@ const Mydeziner = () => {
   );
 }
 
-export default Mydeziner;
+export default MyDeziner;

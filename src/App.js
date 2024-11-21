@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './home.js';
 import Ricoz from './ricoz.js';
-import Mydeziner from './mydeziner.js';
+import MyDeziner from './mydeziner.js';
 
 const repoName = process.env.REACT_APP_REPO_NAME || '/default-repo';
 
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ricoz" element={<Ricoz />} />
-        <Route path="/mydeziner" element={<Mydeziner />} />
+        <Route path="/mydeziner" element={<MyDeziner />} />
       </Routes>
     </Router>
 
