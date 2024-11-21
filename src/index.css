@@ -466,14 +466,12 @@ body {
     gap: 10px;
     align-self: stretch;
     background: var(--secondary-color);
-    transition: transform 0.05s ease-in-out;
+    transition: transform .1s ease-in-out;
     background-position: center;
     background-size: cover;
     cursor: pointer;
     border: 1px solid var(--black-2-color);
     overflow: hidden;
-    /* Ensures no overflow from scaling */
-    transition: cursor .3s ease-in-out;
 }
 
 
@@ -547,7 +545,7 @@ body {
 }
 
 .main-card:active {
-    transform: scale(0.98) !important;
+    transform: scale(0.99) !important;
 }
 
 

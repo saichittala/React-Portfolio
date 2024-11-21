@@ -12,16 +12,16 @@ function Header() {
       <nav className="nav-bar">
         <div className="nav-main">
           {/* Logo */}
-          <a href="/">
-            <img src="./img/logo.svg" alt="logo" />
+          <a href=".">
+            <img src="img/logo.svg" alt="logo" />
           </a>
 
           {/* Menu Icon */}
-          <img 
-            className={`menu-icon ${menuActive ? 'clicked' : ''}`} 
-            src={menuActive ? '../img/close.svg' : '../img/menu.svg'} 
-            alt="menu-icon" 
-            onClick={toggleMenu} 
+          <img
+            className={`menu-icon ${menuActive ? 'clicked' : ''}`}
+            src={menuActive ? 'img/close.svg' : 'img/menu.svg'}
+            alt="menu-icon"
+            onClick={toggleMenu}
           />
 
           {/* Mobile Menu Container */}
@@ -35,7 +35,7 @@ function Header() {
           {/* Desktop Navigation */}
           <div className="nav-btns">
             <a href="/about-section" className="about-button header-text">About</a>
-            <a href="../Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text">Resume</a>
+            <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text">Resume</a>
           </div>
         </div>
       </nav>
