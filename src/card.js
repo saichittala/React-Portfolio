@@ -44,19 +44,18 @@ const Card = ({ title, type, image, link, openInNewTab = true, locked, password 
 
   return (
     <div>
-      <a href={link} target={openInNewTab ? "_blank" : "_self"} rel="noopener noreferrer">
-        <div
-          className="main-card fade-in"
-          style={{ backgroundImage: `url(${image})` }}
-        >
-          <div className="sub-card">
-            <div className="card-content">
-              <div className="main-heading">{title}</div>
-              <div className="heading-type">{type}</div>
-            </div>
+      <div
+        className="main-card fade-in"
+        style={{ backgroundImage: `url(${image})` }}
+        onClick={handleCardClick}
+      >
+        <div className="sub-card">
+          <div className="card-content">
+            <div className="main-heading">{title}</div>
+            <div className="heading-type">{type}</div>
           </div>
         </div>
-      </a>
+      </div>
 
       {isPopupVisible && (
         <div id="passwordPopup" className="popup" style={{ display: 'flex', zIndex: 1001 }}>

@@ -1,10 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect} from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
+import useFadeIn from './components/useFadeIn';
+import useScrollEffect from './components/useScrollEffect';
+
 
 
 const Ricoz = () => {
-    const fadeInRefs = useRef([]); // Ref array to store all fade-in elements
+  useFadeIn();
+  useScrollEffect();
   useEffect(() => {
     const loader = document.getElementById("loader");
     const circleLoader = document.getElementById("circleloading");
@@ -39,29 +43,10 @@ const Ricoz = () => {
       }, 2500);
     }, 500);
 
-    const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1,
-      };
-  
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('fade-in'); // Replace 'old-class' with the class you want to remove
-            entry.target.classList.add('fade-in-visible');          
-            observer.unobserve(entry.target);
-          }
-        });
-      }, options);
-  
-      // Observe each fade-in element
-      fadeInRefs.current.forEach(fadeIn => observer.observe(fadeIn));
-  
-      // Clean up observer on component unmount
-      return () => {
-        fadeInRefs.current.forEach(fadeIn => observer.unobserve(fadeIn));
-      };
+    // Clean up effect when component is unmounted
+    return () => {
+      // No observer to clean up anymore
+    };
   }, []);
 
   return (
@@ -78,17 +63,17 @@ const Ricoz = () => {
       <Header />
 
       <main>
-        <section className="fade-in"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
+        <section className="fade-in"  >
           <div className="full-bg">
             <div className="bg-main width-unset">
               <div className="project-details-main">
                 <div className="project-details">
-                  <div className="fade-in p-img-1" ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
+                  <div className="fade-in p-img-1" >
                     <img  src="/img/sample.jpg" alt="project sample" />
                   </div>
                   <div className="pd-main">
-                    <div className="fade-in pd-heading-div"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
-                      <a className="fade-in pd-main-heading translate-text-up"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>Ricoz</a>
+                    <div className="fade-in pd-heading-div"  >
+                      <a className="fade-in pd-main-heading translate-text-up"  >Ricoz</a>
                       <a className="fade-in pd-sub-heading translate-text-down">Website Design</a>
                     </div>
                     <p className="pd-content">This project involved collaborating with a health and wellness company to revamp their brand image and appeal to a younger, more modern audience. The focus was on creating a clean, minimalist visual aesthetic that conveyed the company's commitment to natural, healthy living.</p>
@@ -96,34 +81,34 @@ const Ricoz = () => {
                   <div className="pd-main">
                     <div className="pd-heading-main-div">
                       <div className="pd-heading-sub-div">
-                        <a className="fade-in pd-main-heading-2 translate-text-up"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>Project Details</a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>- Website Design</a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>- Branding</a>
+                        <a className="fade-in pd-main-heading-2 translate-text-up"  >Project Details</a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"  >- Website Design</a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"  >- Branding</a>
                       </div>
                       <div className="pd-heading-div">
-                        <a className="fade-in pd-main-heading-2 translate-text-up"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>Timeline</a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>2022-2023</a>
+                        <a className="fade-in pd-main-heading-2 translate-text-up"  >Timeline</a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"  >2022-2023</a>
                       </div>
                     </div>
-                    <div className="fade-in pd-content"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
+                    <div className="fade-in pd-content"  >
                       <p>This project involved collaborating with a health and wellness company to revamp their brand image and appeal to a younger, more modern audience. The focus was on creating a clean, minimalist visual aesthetic that conveyed the company's commitment to natural, healthy living.</p>
                     </div>
                   </div>
                 </div>
                 <div className="bg-full">
                   <div className="p-main-imgs">
-                    <div className="fade-in p-img-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
+                    <div className="fade-in p-img-2"  >
                       <img  src="/img/sample.jpg" alt="img-content" />
                     </div>
                     <div className="p-2imgs-2">
-                      <div className="fade-in p-img-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
+                      <div className="fade-in p-img-2"  >
                         <img  src="/img/sample.jpg" alt="img-content" />
                       </div>
-                      <div className="fade-in p-img-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
+                      <div className="fade-in p-img-2"  >
                         <img  src="/img/sample.jpg" alt="img-content" />
                       </div>
                     </div>
-                    <div className="fade-in p-img-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>
+                    <div className="fade-in p-img-2"  >
                       <img  src="/img/sample.jpg" alt="img-content" />
                     </div>
                   </div>
@@ -131,9 +116,9 @@ const Ricoz = () => {
                 <div className="project-details">
                   <div className="pd-main">
                     <div className="pd-heading-div">
-                      <a className="fade-in pd-main-heading-2"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>Conclusion</a>
+                      <a className="fade-in pd-main-heading-2"  >Conclusion</a>
                     </div>
-                    <p className="fade-in pd-content"  ref={(el) => { if (el) fadeInRefs.current.push(el); }}>This project involved collaborating with a health and wellness company to revamp their brand image and appeal to a younger, more modern audience. The focus was on creating a clean, minimalist visual aesthetic that conveyed the company's commitment to natural, healthy living.</p>
+                    <p className="fade-in pd-content"  >This project involved collaborating with a health and wellness company to revamp their brand image and appeal to a younger, more modern audience. The focus was on creating a clean, minimalist visual aesthetic that conveyed the company's commitment to natural, healthy living.</p>
                   </div>
                 </div>
               </div>
