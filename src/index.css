@@ -761,14 +761,14 @@ body {
 
 .fade-in {
     opacity: 0;
-    transform: scale(0.98) translateY(20px); /* Start with scale 0.9 and slide down */
-    transition: opacity .8s cubic-bezier(0.22, 0.61, 0.36, 1), transform .8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform: scale(0.98) translateY(10px); /* Start with scale 0.9 and slide down */
+    transition: opacity .8s cubic-bezier(0.455,0.030,0.515,0.955), transform .8s cubic-bezier(0.455,0.030,0.515,0.955);
 }
 
 .fade-in.visible {
     opacity: 1;
     transform: scale(1) translateY(0); /* Scale to 1 and move to original position */
-    transition: opacity .8s cubic-bezier(0.22, 0.61, 0.36, 1), transform .8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: opacity .8s cubic-bezier(0.455,0.030,0.515,0.955), transform .8s cubic-bezier(0.455,0.030,0.515,0.955);
 }
 
 

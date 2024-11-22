@@ -4,12 +4,13 @@ import Header from './components/header';
 import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
 import useScrollEffect from './components/useScrollEffect';
+import MyDeziner from './pages/mydeziner';
 
 const Home = () => {
   useFadeIn(); 
   useScrollEffect(); 
   const cardsData = [
-    { title: "MyDeziner", type: "Product Design 🔒", image: "img/projects/mydeziner.webp", link: "./mydeziner", openInNewTab: true, locked: false },
+    { title: "MyDeziner", type: "Product Design 🔒", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
     { title: "CustomFurnish", type: "UX Design", image: "img/projects/customfurnish.webp", link: "https://customfurnish.com", openInNewTab: true, locked: false },
     { title: "HomeGymr", type: "UX Design", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Petzy", type: "Case Study", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true },
@@ -34,7 +35,7 @@ const Home = () => {
                     <p className="intro-white-text fade-in translate-text-down">
                       Sai Chittala <br />
                       <span className="intro-white-text">Product Designer at </span>
-                      <a className="company-text" href="./ricoz" target="_blank" rel="noopener noreferrer">
+                      <a className="company-text" href={<MyDeziner />} target="_blank" rel="noopener noreferrer">
                         CustomFurnish
                       </a>
                       <br />
