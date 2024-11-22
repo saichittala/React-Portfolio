@@ -111,7 +111,7 @@ body {
 }
 
 .nav-bar {
-    background-color: var(--black-opacity);
+    background-color: var(--black-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -125,6 +125,7 @@ body {
 
 
 .nav-bar.scrolled {
+    background-color: var(--black-opacity);
     border-bottom: 1px solid var(--border-color);
     transform: translateY(0px);
 }
@@ -304,7 +305,7 @@ body {
 }
 
 .intro-link {
-    margin-right: 10px;
+    margin-right: 16px;
     cursor: pointer;
 }
 
@@ -1232,7 +1233,8 @@ p {
 
 
 
-.pd-content ch {
+.pd-content 
+    ch {
     font-size: 18px;
     font-weight: 400;
     color: var(--white-color);
