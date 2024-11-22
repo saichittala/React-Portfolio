@@ -1,18 +1,16 @@
 import React from 'react';
 import Home from './home.js';
-import Ricoz from './pages/ricoz.jsx';
-import MyDeziner from './pages/mydeziner.jsx';
-import {HashRouter, Routes, Route} from 'react-router-dom'
+import MyDeziner from './pages/mydeziner.js';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <HashRouter >
+    <BrowserRouter >
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ricoz" element={<Ricoz />} />
         <Route path="/mydeziner" element={<MyDeziner />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
 
   );
 }
