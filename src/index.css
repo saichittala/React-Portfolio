@@ -617,6 +617,7 @@ body {
     /* Apply scale animation */
     position: relative;
     border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-1);
 }
 
 
@@ -639,7 +640,7 @@ body {
 }
 
 .popup-content img {
-    border-radius: 0px !important;
+    border-radius: var(--border-radius-1) !important;
 }
 
 /* Optional fade-in effect for the background */
@@ -680,6 +681,7 @@ body {
     border-width: 1px;
     border-color: #ffffff40;
     color: #fff;
+    border-radius: var(--border-radius-1);
     font-weight: 400;
 
 }
@@ -700,6 +702,7 @@ body {
     color: var(--black-color);
     transition: all .3s ease-in-out;
     border: 1px solid transparent;
+    border-radius: var(--border-radius-1);
 }
 
 .unlock-projects a {
