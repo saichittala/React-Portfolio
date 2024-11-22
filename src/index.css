@@ -195,7 +195,7 @@ body {
 }
 
 .btn-1:active {
-    transform: scale(0.98);
+    transform: scale3d(0.98,0.98,0.98)';
 }
 
 .btn-2 {
@@ -213,7 +213,7 @@ body {
 }
 
 .btn-2:active {
-    transform: scale(0.98);
+    transform: scale3d(0.98,0.98,0.98)';
 }
 
 .btn-3 {
@@ -232,7 +232,7 @@ body {
 }
 
 .btn-3:active {
-    transform: scale(0.98);
+    transform: scale3d(0.98,0.98,0.98)';
 }
 
 
@@ -376,7 +376,7 @@ body {
 }
 
 .scroll-btn:active {
-    transform: scale(0.98);
+    transform: scale3d(0.98,0.98,0.98)';
 }
 
 
@@ -549,6 +549,7 @@ body {
         /* Make visible on hover */
         visibility: visible;
         /* Ensure element is visible */
+        
         transition: backdrop-filter 0.3s cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s cubic-bezier(0, -.6, 0, 1.07), background-color 0.3s cubic-bezier(0, -.6, 0, 1.07);
     }
 
@@ -561,18 +562,21 @@ body {
     .heading-type {
         color: var(--text-color);
     }
-
-    transition: backdrop-filter 0.05s ease-in-out;
+    transition-duration: 0.3s !important;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    box-shadow: 2px 4px 16px #ffffff29;
+    transform: scale3d(1.01,1.01,1.01) !important;
 }
 
 .main-card:active {
-    transform: scale(0.99) !important;
+    transform: scale3d(0.98,0.98,0.98);
 }
 
 
 @keyframes scaleIn {
     from {
-        transform: scale(0.5);
+        transform: scale3d(0.5,0.5,0.5);
         opacity: 0;
     }
 
@@ -606,7 +610,7 @@ body {
     box-shadow: 0px 0px 140px 0px rgba(255, 255, 255, 0.25);
     padding: 56px;
     text-align: center;
-    transform: scale(0.5);
+    transform: scale3d(0.5,0.5,0.5);
     /* Initial scale */
     animation: scaleIn 0.1s ease-in-out forwards;
     /* Apply scale animation */
@@ -663,7 +667,7 @@ body {
 }
 
 .close-button:active {
-    transform: scale(0.98);
+    transform: scale3d(0.98,0.98,0.98);
 }
 
 .popup-content input {
@@ -717,7 +721,7 @@ body {
 }
 
 .unlock-projects:active {
-    transform: scale(0.98);
+    transform: scale3d(0.98,0.98,0.98);
 }
 
 
@@ -782,14 +786,14 @@ body {
 
 .fade-in {
     opacity: 0;
-    transform: scale(0.98) translateY(10px);
+    transform: scale3d(0.98,0.98,0.98) translateY(10px);
     /* Start with scale 0.9 and slide down */
     transition: opacity .8s cubic-bezier(0.455, 0.030, 0.515, 0.955), transform .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: scale3d(1,1,1) translateY(0);
     /* Scale to 1 and move to original position */
     transition: opacity .8s cubic-bezier(0.455, 0.030, 0.515, 0.955), transform .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
@@ -1002,11 +1006,11 @@ a {
     .btn-1:active,
     .btn-2:active,
     .btn-3:active {
-        transform: scale(0.9) !important;
+        transform: scale3d(0.98,0.98,0.98) !important;
     }
 
     .main-card:active {
-        transform: scale(0.9) !important;
+        transform: scale3d(0.98,0.98,0.98) !important;
     }
 
 
@@ -1043,7 +1047,7 @@ a {
 
 
     .menu-icon.clicked {
-        transform: scale(0.98);
+        transform: scale3d(0.98,0.98,0.98);
         /* Scale effect on click */
     }
 
