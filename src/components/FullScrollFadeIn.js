@@ -13,7 +13,7 @@ const FullScrollFadeIn = () => {
                 const visibleFromBottom = windowHeight - rect.top;
 
                 // Customize when fade starts (e.g., starts 50px into the viewport)
-                const fadeStart = 56; // Start fade-in when element is 50px into the viewport
+                const fadeStart = 64; // Start fade-in when element is 50px into the viewport
                 const fadeEnd = rect.height * 0.6; // End fade-in when 50% of the element's height is visible
 
                 // Calculate fade ratio

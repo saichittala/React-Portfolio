@@ -317,7 +317,7 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="  pd-main-heading-2"> 02-02 </a>
+                          <a className="pd-main-heading-2"> 02-02 </a>
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Heading</ch>
@@ -460,9 +460,9 @@ const MyDeziner = () => {
 
                 <div className="project-details padding-top-unset">
                   <div className="project-breif-section">
-                    <div className="project-breif-heading">
-                      <span className="fade-in">04</span>
-                      <span className="fade-in">Result</span>
+                    <div className="project-breif-heading fade-in">
+                      <span >04</span>
+                      <span >Result</span>
                     </div>
                     <img src="img/sample3.jpg" alt="" className="fade-in" loading="lazy" />
                   </div>
@@ -470,9 +470,9 @@ const MyDeziner = () => {
 
                 <div className="project-details padding-top-unset">
                   <div className="project-final-section">
-                    <div className="project-breif-heading">
-                      <span className="fade-in">05</span>
-                      <span className="fade-in">Conclusion</span>
+                    <div className="project-breif-heading fade-in">
+                      <span>05</span>
+                      <span>Conclusion</span>
                     </div>
                     <div className="pd-content">
                       <img src="img/projects/customfurnish.webp" alt="" className="fade-in" loading="lazy" />
