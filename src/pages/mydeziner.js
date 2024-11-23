@@ -78,17 +78,17 @@ const MyDeziner = () => {
         <section>
           <div className="full-bg">
             <div className=" p-img-1 main-image">
-              <img src="img/projects/mydeziner.webp" alt="mydeziner" loading="lazy" className='fade-in'/>
+              <img src="img/projects/mydeziner.webp" alt="mydeziner" loading="lazy" className='fade-in' />
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
                 <div className="project-details padding-top-unset">
 
                   <div className="pd-main">
-                    <div className="pd-heading-div">
+                    <div className="pd-heading-div p-head-arrow">
                       <a className=" pd-main-heading">MyDeziner</a>
+                      <img src="img/arrow-down.svg" alt="arrow-down" />
                     </div>
-                    <p className="pd-content"> </p>
                   </div>
 
                   <div className="project-breif-section">
@@ -166,8 +166,7 @@ const MyDeziner = () => {
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">02</span>
-                            <span className="challenge-content">Integration of Real-Time Collaboration
-                              Features</span>
+                            <span className="challenge-content">Innovating Through MyDeziner's Development Challenges</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">03</span>
@@ -199,15 +198,12 @@ const MyDeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Design Flexibility</ch>
-                          <p className='fade-in'>One of the key challenges in developing MyDeziner was creating a
-                            platform that could effortlessly accommodate every design style. From
-                            minimalist to vintage, interior designers needed a tool that balanced
-                            flexibility with simplicity. The goal was to provide customizable
-                            features—like drag-and-drop elements and adaptive layouts—without
-                            overwhelming users. With continuous iteration and user feedback,
-                            MyDeziner
-                            became a versatile yet intuitive solution, empowering designers to bring
-                            their creative visions to life with ease and precision.</p>
+                          <p className='fade-in'>MyDeziner transforms creativity into reality,
+                            offering effortless adaptability across every design
+                            style—from minimalist to vintage. With intuitive features
+                            and user-driven innovation, it empowers designers to craft
+                            their visions with unparalleled precision and ease.
+                          </p>
                           <img src="img/projects/mydeziner/02/02-01.png" alt="" className="fade-in" />
                         </div>
                       </div>
@@ -217,14 +213,9 @@ const MyDeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Creative Freedom</ch>
-                          <p className='fade-in'>MyDeziner unlocks endless possibilities, allowing designers to
-                            effortlessly switch between modern minimalism and timeless classics.
-                            Every
-                            feature is designed to enhance creativity without overwhelming users,
-                            providing a seamless experience. With intuitive tools and adaptive
-                            layouts,
-                            MyDeziner empowers designers to transform their vision into reality, one
-                            click at a time.
+                          <p className='fade-in'>MyDeziner empowers designers to effortlessly blend modern 
+                            minimalism with timeless elegance through intuitive tools and adaptive layouts, 
+                            transforming creative visions into reality with ease.
                           </p>
                           <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
                             loading="lazy" />
@@ -236,12 +227,9 @@ const MyDeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Seamless Innovation</ch>
-                          <p className='fade-in'>MyDeziner redefines how interior designers interact with their
-                            projects, offering a perfect blend of flexibility and user-friendliness.
-                            With customizable textures, drag-and-drop elements, and real-time
-                            adjustments, it’s an experience built for modern creativity. Design
-                            effortlessly and make every space come to life with innovation at your
-                            fingertips.
+                          <p className='fade-in'>MyDeziner revolutionizes interior design with flexible, 
+                            user-friendly features like customizable textures, drag-and-drop elements, 
+                            and real-time adjustments, empowering designers to effortlessly bring spaces to life.
                           </p>
                           <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
                             loading="lazy" />
@@ -268,8 +256,7 @@ const MyDeziner = () => {
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading">02</span>
-                            <span className="challenge-content">Integration of Real-Time Collaboration
-                              Features</span>
+                            <span className="challenge-content">Innovating Through MyDeziner's Development Challenges</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">03</span>
@@ -286,7 +273,7 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="challenges-content-heading fade-in">
-                        A seamless collaboration tool built for real-time Creativity and Teamwork.
+                      A Seamless Design Platform Empowering Creativity and Effortless Customization
                       </div>
                     </div>
                   </div>
@@ -297,22 +284,12 @@ const MyDeziner = () => {
                     <div className="pd-challenges-main ">
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className=" fade-in pd-main-heading-2"> 02-01 </a>
+                          <a className=" fade-in pd-main-heading-2"> 02-04 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up"> Heading</ch>
-                          <p className='fade-in'> This project involved collaborating with a health and
-                            wellness company
-                            to revamp their
-                            brand image and appeal to a younger, more modern audience. The focus was
-                            on
-                            creating
-                            a
-                            clean, minimalist visual aesthetic that conveyed the company's
-                            commitment to
-                            natural,
-                            healthy living.</p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          <ch className="fade-in translate-text-up">Custom Material Uploading:</ch>
+                          <p className='fade-in'>Upload your own materials in various formats like GLTF to make each design uniquely yours.</p>
+                          <img src="img/projects/mydeziner/02/02-04.png" alt="" className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -359,8 +336,7 @@ const MyDeziner = () => {
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">02</span>
-                            <span className="challenge-content">Integration of Real-Time Collaboration
-                              Features</span>
+                            <span className="challenge-content">Innovating Through MyDeziner's Development Challenges</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading">03</span>
@@ -445,7 +421,7 @@ const MyDeziner = () => {
                         <span>Brand Design</span>
                       </div>
                       <div className='zoom-image df'>
-                      <img src="img/projects/customfurnish.webp" alt="" className="zoom-in" loading="lazy" />
+                        <img src="img/projects/mydeziner/03/brand.png" alt="" className="zoom-in" loading="lazy" />
                       </div>
                     </div>
                   </div>

@@ -14,7 +14,7 @@ const ZoomOnScroll = () => {
 
                 // Set the point when the zoom effect starts and ends
                 const zoomStart = 50;  // Start zoom when element is 50px into the viewport
-                const zoomEnd = rect.height * 0.5;  // End zoom when 50% of the element's height is visible
+                const zoomEnd = rect.height * 0.9;  // End zoom when 50% of the element's height is visible
 
                 // Calculate zoom ratio (scroll ratio) - clamped between 0 and 1
                 const zoomRatio = Math.min(Math.max((visibleFromTop - zoomStart) / zoomEnd, 0), 1);

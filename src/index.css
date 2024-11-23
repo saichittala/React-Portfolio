@@ -1,6 +1,48 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+/* @font-face {
+    font-family: 'Neue Regrade';
+    src: url('/public/fonts/NR-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Regrade';
+    src: url('/public/fonts/NR-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Regrade';
+    src: url('/public/fonts/NR-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Regrade';
+    src: url('/public/fonts/NR-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Regrade';
+    src: url('/public/fonts/NR-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+} */
+
+
+
+
+
+
 :root {
 
     /* Colors */
@@ -254,9 +296,11 @@ body {
     width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
     margin: auto;
     padding: 0 0 100px 0;
+
     .zoom-image {
         width: unset;
     }
+
     .project-breif-heading {
         width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
         margin: auto;
@@ -280,7 +324,10 @@ body {
 
 .df {
     display: flex;
+    flex-direction: column;
+    gap: 56px;
 }
+
 .intro-section-main {
     width: 100%;
     display: flex;
@@ -817,14 +864,16 @@ body {
 
 
 .zoom-in {
-    --start-width: 100%;   /* Example start width, can be % or any unit like vw, vh, px */
+    --start-width: 100%;
+    /* Example start width, can be % or any unit like vw, vh, px */
     --end-width: 1080px;
     border-radius: var(--border-radius-1);
 
 }
 
 .zoom-in.zoomed {
-    width: var(--end-width); /* Apply the end width defined in the CSS variable */
+    width: var(--end-width);
+    /* Apply the end width defined in the CSS variable */
     border-radius: var(--border-radius-1);
 }
 
@@ -840,16 +889,17 @@ body {
         --end-width: 100%;
         transition: all .3s ease-in-out;
     }
+
     .zoom-in.zoomed {
         padding: 0 24px;
         border-radius: 18px;
     }
-    
+
 }
 
 
-.zoom-image img{
-    width: 100% ;
+.zoom-image img {
+    width: 100%;
     height: AUTO;
     object-fit: cover;
     margin: auto;
@@ -982,7 +1032,8 @@ a {
 
     .nav-main,
     .bg-about,
-    .bg-main, .project-breif-heading {
+    .bg-main,
+    .project-breif-heading {
         width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
     }
 
@@ -1014,6 +1065,10 @@ a {
 
     .bg-main {
         padding: 80px 0;
+        gap: 40px;
+    }
+
+    .df {
         gap: 40px;
     }
 
@@ -1192,6 +1247,7 @@ a {
     width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
     margin: auto;
     padding: 100px 0;
+
     .zoom-image {
         width: unset;
         border-radius: var(--border-radius-1);
@@ -1233,6 +1289,13 @@ a {
     flex-direction: column;
     gap: 24px;
     width: 40%;
+}
+
+.p-head-arrow {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    width: 100% !important;
 }
 
 .pd-main-heading {
@@ -1300,7 +1363,6 @@ p {
     line-height: 34px;
     margin: 0;
     color: var(--grey-bg-b-color);
-    word-break: break-all;
 }
 
 
@@ -1498,6 +1560,9 @@ p {
 .challenges-content-flow {
     display: flex;
     gap: 40px;
+    img {
+        border-radius: 4px !important;
+    }
 }
 
 
@@ -1595,12 +1660,13 @@ p {
 
 .zoom-image {
     .fade-in {
-        transform: scale3d(1.2,1.2,1.2) !important;
+        transform: scale3d(1.2, 1.2, 1.2) !important;
         overflow: overlay !important;
     }
+
     .fade-in.visible {
         overflow: unset !important;
-        transform: scale3d(1,1,1) !important;
+        transform: scale3d(1, 1, 1) !important;
     }
 }
 
