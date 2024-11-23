@@ -78,23 +78,23 @@ const MyDeziner = () => {
         <section>
           <div className="full-bg">
             <div className=" p-img-1 main-image">
-              <img src="img/projects/mydeziner.webp" alt="mydeziner" loading="lazy" />
+              <img src="img/projects/mydeziner.webp" alt="mydeziner" loading="lazy" className='fade-in'/>
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
                 <div className="project-details padding-top-unset">
 
                   <div className="pd-main">
-                    <div className="fade-in pd-heading-div">
-                      <a className="fade-in pd-main-heading translate-text-up">MyDeziner</a>
+                    <div className="pd-heading-div">
+                      <a className=" pd-main-heading">MyDeziner</a>
                     </div>
                     <p className="pd-content"> </p>
                   </div>
 
                   <div className="project-breif-section">
-                    <div className="project-breif-heading">
-                      <span className="fade-in">01</span>
-                      <span className="fade-in">Project Overview</span>
+                    <div className="project-breif-heading fade-in">
+                      <span>01</span>
+                      <span>Project Overview</span>
                     </div>
                     <div className="project-breif-main fade-in">
                       <div className="pd-heading-sub-div">
