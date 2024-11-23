@@ -3,46 +3,47 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
+import ZoomOnScroll from '../components/ZoomOnScroll';
 
 
 
 const MyDeziner = () => {
   FullScrollFadeIn();
   useScrollEffect();
-
+  ZoomOnScroll();
   useEffect(() => {
-    const loader = document.getElementById("loader");
-    const circleLoader = document.getElementById("circleloading");
-    const loadingText = document.getElementById("loading-text");
+    // const loader = document.getElementById("loader");
+    // const circleLoader = document.getElementById("circleloading");
+    // const loadingText = document.getElementById("loading-text");
 
-    // Set initial opacity of the loader (circle and text)
-    circleLoader.style.opacity = 0;
-    loadingText.style.opacity = 0;
-    loader.style.opacity = 1;
+    // // Set initial opacity of the loader (circle and text)
+    // circleLoader.style.opacity = 0;
+    // loadingText.style.opacity = 0;
+    // loader.style.opacity = 1;
 
-    // Set a static loading text
-    loadingText.textContent = "Just a minute";
+    // // Set a static loading text
+    // loadingText.textContent = "Just a minute";
 
-    // Fade in the loader (circles and text)
-    setTimeout(() => {
-      circleLoader.style.transition = 'opacity 1s';
-      loadingText.style.transition = 'opacity 1s';
-      circleLoader.style.opacity = 1;
-      loadingText.style.opacity = 1;
+    // // Fade in the loader (circles and text)
+    // setTimeout(() => {
+    //   circleLoader.style.transition = 'opacity 1s';
+    //   loadingText.style.transition = 'opacity 1s';
+    //   circleLoader.style.opacity = 1;
+    //   loadingText.style.opacity = 1;
 
-      // Fade out loader (text and circles) after content is fully loaded
-      setTimeout(() => {
-        loadingText.style.opacity = 0;
-        circleLoader.style.opacity = 0;
+    //   // Fade out loader (text and circles) after content is fully loaded
+    //   setTimeout(() => {
+    //     loadingText.style.opacity = 0;
+    //     circleLoader.style.opacity = 0;
 
-        setTimeout(() => {
-          loader.style.opacity = '0';
-          setTimeout(() => {
-            loader.style.display = 'none';
-          }, 500);
-        }, 500);
-      }, 2500);
-    }, 500);
+    //     setTimeout(() => {
+    //       loader.style.opacity = '0';
+    //       setTimeout(() => {
+    //         loader.style.display = 'none';
+    //       }, 500);
+    //     }, 500);
+    //   }, 2500);
+    // }, 500);
 
     // Video Autoplay
     const video = document.getElementById('myVideo');
@@ -62,14 +63,14 @@ const MyDeziner = () => {
 
   return (
     <div>
-      <div className="loader-styling" id="loader">
+      {/* <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
           <div className="circle-input"></div>
           <div className="circle-input"></div>
         </div>
         <div id="loading-text">Just a minute</div>
-      </div>
+      </div> */}
 
       <Header />
 
@@ -159,18 +160,18 @@ const MyDeziner = () => {
                       <div className="challenges-main">
                         <div className="challenges-sub">
                           <div className="challenge-active-card fade-in">
-                            <span className="challenge-heading fade-in">01</span>
-                            <span className="challenge-content fade-in">User Experience Optimization for Diverse
+                            <span className="challenge-heading">01</span>
+                            <span className="challenge-content">User Experience Optimization for Diverse
                               Design Styles</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading fade-in">02</span>
-                            <span className="challenge-content fade-in">Integration of Real-Time Collaboration
+                            <span className="challenge-heading">02</span>
+                            <span className="challenge-content">Integration of Real-Time Collaboration
                               Features</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading fade-in">03</span>
-                            <span className="challenge-content fade-in">Scalability and Performance in Complex
+                            <span className="challenge-heading">03</span>
+                            <span className="challenge-content">Scalability and Performance in Complex
                               Designs</span>
                           </div>
                         </div>
@@ -261,18 +262,18 @@ const MyDeziner = () => {
                       <div className="challenges-main">
                         <div className="challenges-sub">
                           <div className="challenge-inactive-card fade-in">
-                            <span className="challenge-heading fade-in">01</span>
-                            <span className="challenge-content fade-in">User Experience Optimization for Diverse
+                            <span className="challenge-heading">01</span>
+                            <span className="challenge-content">User Experience Optimization for Diverse
                               Design Styles</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
-                            <span className="challenge-heading fade-in">02</span>
-                            <span className="challenge-content fade-in">Integration of Real-Time Collaboration
+                            <span className="challenge-heading">02</span>
+                            <span className="challenge-content">Integration of Real-Time Collaboration
                               Features</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading fade-in">03</span>
-                            <span className="challenge-content fade-in">Scalability and Performance in Complex
+                            <span className="challenge-heading">03</span>
+                            <span className="challenge-content">Scalability and Performance in Complex
                               Designs</span>
                           </div>
                         </div>
@@ -352,18 +353,18 @@ const MyDeziner = () => {
                       <div className="challenges-main">
                         <div className="challenges-sub">
                           <div className="challenge-inactive-card fade-in">
-                            <span className="challenge-heading fade-in">01</span>
-                            <span className="challenge-content fade-in">User Experience Optimization for Diverse
+                            <span className="challenge-heading">01</span>
+                            <span className="challenge-content">User Experience Optimization for Diverse
                               Design Styles</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading fade-in">02</span>
-                            <span className="challenge-content fade-in">Integration of Real-Time Collaboration
+                            <span className="challenge-heading">02</span>
+                            <span className="challenge-content">Integration of Real-Time Collaboration
                               Features</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading">03</span>
-                            <span className="challenge-content fade-in">Scalability and Performance in Complex
+                            <span className="challenge-content">Scalability and Performance in Complex
                               Designs</span>
                           </div>
                         </div>
@@ -410,7 +411,7 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="  pd-main-heading-2"> 02-02 </a>
+                          <a className="pd-main-heading-2"> 02-02 </a>
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Heading</ch>
@@ -437,13 +438,15 @@ const MyDeziner = () => {
 
 
                 <div className="bg-full bg-white">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details">
+                  <div className="bg-main  padding-unset width-unset">
+                    <div className="project-details width-unset">
                       <div className="project-breif-heading fade-in">
                         <span>03</span>
                         <span>Brand Design</span>
                       </div>
-                      <img src="img/projects/customfurnish.webp" alt="" className="fade-in" loading="lazy" />
+                      <div className='zoom-image df'>
+                      <img src="img/projects/customfurnish.webp" alt="" className="zoom-in" loading="lazy" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -454,7 +457,9 @@ const MyDeziner = () => {
                       <img src="img/projects/petzy.webp" alt="" className="fade-in" loading="lazy" />
                       <img src="img/projects/shruh.webp" alt="" className="fade-in" loading="lazy" />
                     </div>
-                    <img src="img/sample4.jpg" alt="" className="fade-in" loading="lazy" />
+                    <div >
+                      <img src="img/sample4.jpg" alt="" className="fade-in" loading="lazy" />
+                    </div>
                   </div>
                 </div>
 

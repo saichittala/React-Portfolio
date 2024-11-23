@@ -196,7 +196,7 @@ body {
 }
 
 .btn-1:active {
-    transform: scale3d(0.98,0.98,0.98);
+    transform: scale3d(0.98, 0.98, 0.98);
 }
 
 .btn-2 {
@@ -214,7 +214,7 @@ body {
 }
 
 .btn-2:active {
-    transform: scale3d(0.98,0.98,0.98);
+    transform: scale3d(0.98, 0.98, 0.98);
 }
 
 .btn-3 {
@@ -233,7 +233,7 @@ body {
 }
 
 .btn-3:active {
-    transform: scale3d(0.98,0.98,0.98);
+    transform: scale3d(0.98, 0.98, 0.98);
 }
 
 
@@ -254,6 +254,14 @@ body {
     width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
     margin: auto;
     padding: 0 0 100px 0;
+    .zoom-image {
+        width: unset;
+    }
+    .project-breif-heading {
+        width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
+        margin: auto;
+
+    }
 }
 
 .bg-main-project {
@@ -270,7 +278,9 @@ body {
     width: unset !important;
 }
 
-
+.df {
+    display: flex;
+}
 .intro-section-main {
     width: 100%;
     display: flex;
@@ -377,7 +387,7 @@ body {
 }
 
 .scroll-btn:active {
-    transform: scale3d(0.98,0.98,0.98);
+    transform: scale3d(0.98, 0.98, 0.98);
 }
 
 
@@ -550,7 +560,7 @@ body {
         /* Make visible on hover */
         visibility: visible;
         /* Ensure element is visible */
-        
+
         transition: backdrop-filter 0.3s cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s cubic-bezier(0, -.6, 0, 1.07), background-color 0.3s cubic-bezier(0, -.6, 0, 1.07);
     }
 
@@ -563,21 +573,22 @@ body {
     .heading-type {
         color: var(--text-color);
     }
+
     transition-duration: 0.3s !important;
     transition-property: all;
     transition-timing-function: ease-in-out;
     box-shadow: 2px 4px 16px #ffffff29;
-    transform: scale3d(1.01,1.01,1.01) !important;
+    transform: scale3d(1.01, 1.01, 1.01) !important;
 }
 
 .main-card:active {
-    transform: scale3d(0.98,0.98,0.98);
+    transform: scale3d(0.98, 0.98, 0.98);
 }
 
 
 @keyframes scaleIn {
     from {
-        transform: scale3d(0.5,0.5,0.5);
+        transform: scale3d(0.5, 0.5, 0.5);
         opacity: 0;
     }
 
@@ -611,7 +622,7 @@ body {
     box-shadow: 0px 0px 140px 0px rgba(255, 255, 255, 0.25);
     padding: 56px;
     text-align: center;
-    transform: scale3d(0.5,0.5,0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
     /* Initial scale */
     animation: scaleIn 0.1s ease-in-out forwards;
     /* Apply scale animation */
@@ -669,7 +680,7 @@ body {
 }
 
 .close-button:active {
-    transform: scale3d(0.98,0.98,0.98);
+    transform: scale3d(0.98, 0.98, 0.98);
 }
 
 .popup-content input {
@@ -725,7 +736,7 @@ body {
 }
 
 .unlock-projects:active {
-    transform: scale3d(0.98,0.98,0.98);
+    transform: scale3d(0.98, 0.98, 0.98);
 }
 
 
@@ -790,17 +801,60 @@ body {
 
 .fade-in {
     opacity: 0;
-    transform: scale3d(0.98,0.98,0.98) translateY(10px);
+    transform: scale(var(--scale-start, 0.98));
     /* Start with scale 0.9 and slide down */
     transition: opacity .8s cubic-bezier(0.455, 0.030, 0.515, 0.955), transform .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: scale3d(1,1,1) translateY(0);
+    transform: scale(var(--scale-start, 1));
+    transform: scale3d(1, 1, 1) translateY(0);
     /* Scale to 1 and move to original position */
     transition: opacity .8s cubic-bezier(0.455, 0.030, 0.515, 0.955), transform .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
+
+
+
+.zoom-in {
+    --start-width: 100%;   /* Example start width, can be % or any unit like vw, vh, px */
+    --end-width: 1080px;
+    border-radius: var(--border-radius-1);
+
+}
+
+.zoom-in.zoomed {
+    width: var(--end-width); /* Apply the end width defined in the CSS variable */
+    border-radius: var(--border-radius-1);
+}
+
+
+@media (max-width:1440px) {
+    .zoom-in {
+        --end-width: 75%;
+    }
+}
+
+@media (max-width:674px) {
+    .zoom-in {
+        --end-width: 100%;
+        transition: all .3s ease-in-out;
+    }
+    .zoom-in.zoomed {
+        padding: 0 24px;
+        border-radius: 18px;
+    }
+    
+}
+
+
+.zoom-image img{
+    width: 100% ;
+    height: AUTO;
+    object-fit: cover;
+    margin: auto;
+}
+
 
 
 .translate-text-b {
@@ -928,8 +982,14 @@ a {
 
     .nav-main,
     .bg-about,
-    .bg-main {
+    .bg-main, .project-breif-heading {
         width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
+    }
+
+    .bg-main {
+        .project-breif-heading {
+            width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
+        }
     }
 
     .bg-footer {
@@ -970,10 +1030,11 @@ a {
         background: var(--black-color);
         border-bottom: 1px solid var(--border-color);
         box-sizing: border-box;
-        z-index: 10;  /* Ensure the menu is on top of other content */
+        z-index: 10;
+        /* Ensure the menu is on top of other content */
     }
-    
-    
+
+
     .mob-nav-btns {
         display: flex;
         gap: 40px;
@@ -1011,11 +1072,11 @@ a {
     .btn-1:active,
     .btn-2:active,
     .btn-3:active {
-        transform: scale3d(0.98,0.98,0.98) !important;
+        transform: scale3d(0.98, 0.98, 0.98) !important;
     }
 
     .main-card:active {
-        transform: scale3d(0.98,0.98,0.98) !important;
+        transform: scale3d(0.98, 0.98, 0.98) !important;
     }
 
 
@@ -1053,7 +1114,7 @@ a {
 
 
     .menu-icon.clicked {
-        transform: scale3d(0.98,0.98,0.98);
+        transform: scale3d(0.98, 0.98, 0.98);
         /* Scale effect on click */
     }
 
@@ -1131,10 +1192,14 @@ a {
     width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
     margin: auto;
     padding: 100px 0;
+    .zoom-image {
+        width: unset;
+        border-radius: var(--border-radius-1);
+    }
 }
 
-.project-details img{
-    border-radius: var(--border-radius-1);
+.project-details img {
+    border-radius: var(--border-radius-1) !important;
 }
 
 .project-details-main {
@@ -1192,6 +1257,7 @@ a {
     justify-content: space-between;
     width: 100%;
     gap: 40px;
+
     int {
         font-size: 18px;
         font-weight: 300 !important;
@@ -1210,6 +1276,7 @@ a {
 .pd-heading-div-main {
     display: flex;
     flex-direction: column;
+
     .pd-main-heading-2 {
         position: unset !important;
         top: 0;
@@ -1219,11 +1286,12 @@ a {
 .pd-heading-sub-div {
     display: flex;
     flex-direction: column;
+
     .pd-main-heading-2 {
         position: unset !important;
         top: 0;
     }
-    
+
 }
 
 p {
@@ -1238,8 +1306,7 @@ p {
 
 
 
-.pd-content 
-    ch {
+.pd-content ch {
     font-size: 18px;
     font-weight: 400;
     color: var(--white-color);
@@ -1327,6 +1394,7 @@ p {
         border-radius: var(--border-radius-1);
         border: 1px solid var(--border-color);
     }
+
     video {
         border-radius: var(--border-radius-1);
         border: 1px solid var(--border-color);
@@ -1523,6 +1591,17 @@ p {
     object-fit: cover;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-1);
+}
+
+.zoom-image {
+    .fade-in {
+        transform: scale3d(1.2,1.2,1.2) !important;
+        overflow: overlay !important;
+    }
+    .fade-in.visible {
+        overflow: unset !important;
+        transform: scale3d(1,1,1) !important;
+    }
 }
 
 .project-final-section {
