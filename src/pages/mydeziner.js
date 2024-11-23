@@ -12,38 +12,38 @@ const MyDeziner = () => {
   useScrollEffect();
   ZoomOnScroll();
   useEffect(() => {
-    // const loader = document.getElementById("loader");
-    // const circleLoader = document.getElementById("circleloading");
-    // const loadingText = document.getElementById("loading-text");
+    const loader = document.getElementById("loader");
+    const circleLoader = document.getElementById("circleloading");
+    const loadingText = document.getElementById("loading-text");
 
-    // // Set initial opacity of the loader (circle and text)
-    // circleLoader.style.opacity = 0;
-    // loadingText.style.opacity = 0;
-    // loader.style.opacity = 1;
+    // Set initial opacity of the loader (circle and text)
+    circleLoader.style.opacity = 0;
+    loadingText.style.opacity = 0;
+    loader.style.opacity = 1;
 
-    // // Set a static loading text
-    // loadingText.textContent = "Just a minute";
+    // Set a static loading text
+    loadingText.textContent = "Just a minute";
 
-    // // Fade in the loader (circles and text)
-    // setTimeout(() => {
-    //   circleLoader.style.transition = 'opacity 1s';
-    //   loadingText.style.transition = 'opacity 1s';
-    //   circleLoader.style.opacity = 1;
-    //   loadingText.style.opacity = 1;
+    // Fade in the loader (circles and text)
+    setTimeout(() => {
+      circleLoader.style.transition = 'opacity 1s';
+      loadingText.style.transition = 'opacity 1s';
+      circleLoader.style.opacity = 1;
+      loadingText.style.opacity = 1;
 
-    //   // Fade out loader (text and circles) after content is fully loaded
-    //   setTimeout(() => {
-    //     loadingText.style.opacity = 0;
-    //     circleLoader.style.opacity = 0;
+      // Fade out loader (text and circles) after content is fully loaded
+      setTimeout(() => {
+        loadingText.style.opacity = 0;
+        circleLoader.style.opacity = 0;
 
-    //     setTimeout(() => {
-    //       loader.style.opacity = '0';
-    //       setTimeout(() => {
-    //         loader.style.display = 'none';
-    //       }, 500);
-    //     }, 500);
-    //   }, 2500);
-    // }, 500);
+        setTimeout(() => {
+          loader.style.opacity = '0';
+          setTimeout(() => {
+            loader.style.display = 'none';
+          }, 500);
+        }, 500);
+      }, 2500);
+    }, 500);
 
     // Video Autoplay
     const video = document.getElementById('myVideo');
@@ -63,14 +63,14 @@ const MyDeziner = () => {
 
   return (
     <div>
-      {/* <div className="loader-styling" id="loader">
+      <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
           <div className="circle-input"></div>
           <div className="circle-input"></div>
         </div>
         <div id="loading-text">Just a minute</div>
-      </div> */}
+      </div>
 
       <Header />
 
