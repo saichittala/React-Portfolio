@@ -1691,6 +1691,12 @@ p {
         padding: 80px 0;
     }
 
+    .p-head-arrow {
+        img {
+            display: none;
+        }
+    }
+
     .pd-main {
         flex-direction: column;
     }
