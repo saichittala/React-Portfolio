@@ -27,14 +27,14 @@ function Header() {
           {/* Mobile Menu Container */}
           <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
             <div className="mob-nav-btns">
-              <a href="/ricoz" className="about-button btn-1 mob-btn-1">About</a>
+              <a href="/#about" className="about-button btn-1 mob-btn-1">About</a>
               <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-1 mob-btn-1">Resume</a>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="nav-btns">
-            <a href="/ricoz" className="about-button header-text">About</a>
+            <a href="/#about" className="about-button header-text">About</a>
             <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text">Resume</a>
           </div>
         </div>

@@ -9,89 +9,47 @@ const ZoomOnScroll = () => {
                 const rect = el.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
 
-                // Calculate how far the element has entered the viewport from the top
+                // Calculate visibility from top
                 const visibleFromTop = windowHeight - rect.top;
 
-                // Set the point when the zoom effect starts and ends
-                const zoomStart = 50;  // Start zoom when element is 50px into the viewport
-                const zoomEnd = rect.height * 0.9;  // End zoom when 50% of the element's height is visible
+                // Adjust thresholds for mobile screens
+                const zoomStart = window.innerWidth <= 768 ? 30 : 50; // Start earlier on mobile
+                const zoomEnd = rect.height * 0.5; // Adjust for smaller viewport heights
 
-                // Calculate zoom ratio (scroll ratio) - clamped between 0 and 1
+                // Calculate the zoom ratio
                 const zoomRatio = Math.min(Math.max((visibleFromTop - zoomStart) / zoomEnd, 0), 1);
 
-                // Get the start and end width from the CSS variables
+                // Get CSS variable values for start and end widths
                 const startWidth = getComputedStyle(el).getPropertyValue('--start-width').trim();
                 const endWidth = getComputedStyle(el).getPropertyValue('--end-width').trim();
 
-                // Function to parse dimensions (px, %, vw, vh, calc(), min(), max())
                 const parseDimension = (value) => {
-                    if (value.includes('calc(')) {
-                        return calculateCSSExpression(value);
-                    } else if (value.includes('min(') || value.includes('max(')) {
-                        return calculateMinMaxExpression(value);
-                    }
-
-                    const unit = value.replace(/[0-9.-]/g, ''); // Extract the unit
+                    if (!value) return 0;
+                    const unit = value.replace(/[0-9.-]/g, '').trim();
                     const numberValue = parseFloat(value);
 
                     switch (unit) {
-                        case '%':
-                            return (numberValue / 100) * window.innerWidth;
-                        case 'px':
-                            return numberValue;
-                        case 'vw':
-                            return (numberValue / 100) * window.innerWidth;
-                        case 'vh':
-                            return (numberValue / 100) * window.innerHeight;
-                        default:
-                            return numberValue;
+                        case 'px': return numberValue;
+                        case '%': return (numberValue / 100) * window.innerWidth;
+                        case 'vw': return (numberValue / 100) * window.innerWidth;
+                        case 'vh': return (numberValue / 100) * window.innerHeight;
+                        default: return numberValue;
                     }
                 };
 
-                // A safer function to evaluate calc() expressions
-                const calculateCSSExpression = (expression) => {
-                    try {
-                        const calcExpression = expression.replace(/calc\(([^)]+)\)/, (_, match) => {
-                            return match; // Extract the expression inside calc()
-                        });
-                        return eval(calcExpression); // Safely evaluate the expression
-                    } catch (e) {
-                        console.error("Invalid expression:", expression);
-                        return 0;
-                    }
-                };
-
-                // A function to handle min() and max() expressions
-                const calculateMinMaxExpression = (expression) => {
-                    try {
-                        const match = expression.match(/(min|max)\(([^)]+)\)/);
-                        if (match) {
-                            const values = match[2].split(',').map(v => parseDimension(v.trim()));
-                            return match[1] === 'min' ? Math.min(...values) : Math.max(...values);
-                        }
-                    } catch (e) {
-                        console.error("Invalid min/max expression:", expression);
-                        return 0;
-                    }
-                };
-
-                // Parse start and end widths
+                // Parse the dimensions
                 const startWidthValue = parseDimension(startWidth);
                 const endWidthValue = parseDimension(endWidth);
 
-                // Add a minimum width to prevent the element from disappearing
-                const minWidth = 50;  // Minimum width in pixels (you can adjust this)
-
-                // Calculate the new width based on the scroll position (zoomRatio)
+                // Ensure a minimum width
+                const minWidth = 50;
                 const newWidth = startWidthValue - (startWidthValue - endWidthValue) * zoomRatio;
-
-                // Ensure the new width doesn't go below the minWidth
                 const finalWidth = Math.max(newWidth, minWidth);
 
-                // Apply the new width by updating the element's style
+                // Apply the new width to the element
                 el.style.width = `${finalWidth}px`;
 
-                // Add "zoomed" class when the element has fully zoomed (when zoomRatio is 1)
+                // Toggle "zoomed" class based on zoomRatio
                 if (zoomRatio === 1) {
                     el.classList.add('zoomed');
                 } else {
@@ -100,19 +58,22 @@ const ZoomOnScroll = () => {
             });
         };
 
-        // Attach scroll event listener
+        const handleResize = () => {
+            handleScroll(); // Re-trigger scroll calculations on resize
+        };
+
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
 
-        // Perform initial calculation when the page loads
-        handleScroll();
+        handleScroll(); // Initial calculation
 
-        // Cleanup event listener on component unmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
         };
-    }, []); // Empty dependency array ensures this runs only once after initial render
+    }, []);
 
-    return null; // No need to render anything in this component
+    return null;
 };
 
 export default ZoomOnScroll;

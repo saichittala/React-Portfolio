@@ -3,44 +3,6 @@
 
 
 
-/* @font-face {
-    font-family: 'Neue Regrade';
-    src: url('/public/fonts/NR-Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Neue Regrade';
-    src: url('/public/fonts/NR-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Neue Regrade';
-    src: url('/public/fonts/NR-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Neue Regrade';
-    src: url('/public/fonts/NR-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Neue Regrade';
-    src: url('/public/fonts/NR-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-} */
-
-
-
-
 
 
 :root {
@@ -79,6 +41,10 @@
 
 .cursor {
     cursor: url('../public/img/cursors/cursor.svg'), auto;
+}
+
+.overflow-x-h {
+    overflow-x: unset;
 }
 
 .content {
@@ -160,16 +126,21 @@ body {
     width: 100%;
     z-index: 10;
     border-bottom: 1px solid transparent;
-    transition: 0.3s cubic-bezier(0.91, -0.21, 0, 1.39);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
+    .nav-main {
+        transform: translate3d(0px, 2px, 2px);
+        transition: 0.6s  transform ease-in-out;
+    }
 }
 
 
 .nav-bar.scrolled {
     background-color: var(--black-opacity);
     border-bottom: 1px solid var(--border-color);
-    transform: translateY(0px);
+    .nav-main {
+        transform: translate3d(0px, 0px, 0px);
+    }
 }
 
 .nav-main {
@@ -476,10 +447,24 @@ body {
 
 .about-main {
     display: flex;
-    height: 100%;
-    gap: 40px;
+    gap: 56px;
+    flex-direction: row;
+    padding-top: 30vh;
 }
 
+
+.about-main p {
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 300 ;
+    width: 50%;
+}
+
+.about-main img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+}
 
 
 .about-div-heading {
@@ -864,7 +849,7 @@ body {
 
 
 .zoom-in {
-    --start-width: 100%;
+    --start-width: 99%;
     /* Example start width, can be % or any unit like vw, vh, px */
     --end-width: 1080px;
     border-radius: var(--border-radius-1);
@@ -1227,6 +1212,9 @@ a {
 
 /* Project Details  */
 
+
+
+
 .padding-unset {
     padding: 0 !important;
 }
@@ -1376,6 +1364,7 @@ p {
 
 .pd-content img {
     border-radius: var(--border-radius-1);
+    border-radius: 1px solid var(--border-color);
 }
 
 .bg-grey {

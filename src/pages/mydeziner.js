@@ -62,7 +62,7 @@ const MyDeziner = () => {
 
 
   return (
-    <div>
+    <div className='cursor overflow-x-h'>
       <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
@@ -213,8 +213,8 @@ const MyDeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Creative Freedom</ch>
-                          <p className='fade-in'>MyDeziner empowers designers to effortlessly blend modern 
-                            minimalism with timeless elegance through intuitive tools and adaptive layouts, 
+                          <p className='fade-in'>MyDeziner empowers designers to effortlessly blend modern
+                            minimalism with timeless elegance through intuitive tools and adaptive layouts,
                             transforming creative visions into reality with ease.
                           </p>
                           <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
@@ -227,8 +227,8 @@ const MyDeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Seamless Innovation</ch>
-                          <p className='fade-in'>MyDeziner revolutionizes interior design with flexible, 
-                            user-friendly features like customizable textures, drag-and-drop elements, 
+                          <p className='fade-in'>MyDeziner revolutionizes interior design with flexible,
+                            user-friendly features like customizable textures, drag-and-drop elements,
                             and real-time adjustments, empowering designers to effortlessly bring spaces to life.
                           </p>
                           <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
@@ -273,7 +273,7 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="challenges-content-heading fade-in">
-                      A Seamless Design Platform Empowering Creativity and Effortless Customization
+                        A Seamless Design Platform Empowering Creativity and Effortless Customization
                       </div>
                     </div>
                   </div>
@@ -478,6 +478,11 @@ const MyDeziner = () => {
                           href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
                           target="_blank">Have a look</a>
                       </div>
+                      {/* <div className="thankyou-content-heading fade-in">
+                        Thank you for viewing. <a
+                          href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
+                          target="_blank">Have a look</a>
+                      </div> */}
                     </div>
                   </div>
                 </div>

@@ -4,7 +4,6 @@ import Header from './components/header';
 import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
 import useScrollEffect from './components/useScrollEffect';
-import MyDeziner from './pages/mydeziner';
 
 const Home = () => {
   useFadeIn(); 
@@ -23,7 +22,7 @@ const Home = () => {
 
 
   return (
-    <div className="content" id="content">
+    <div className="content cursor" id="content">
       <Header />
       <main>
         <section className="fade-in">
