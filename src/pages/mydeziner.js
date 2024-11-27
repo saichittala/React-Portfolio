@@ -4,17 +4,21 @@ import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomOnScroll';
-
+import ReactBeforeSliderComponent from 'react-before-after-slider-component';
+import 'react-before-after-slider-component/dist/build.css';
 
 
 const MyDeziner = () => {
+
   FullScrollFadeIn();
   useScrollEffect();
   ZoomOnScroll();
   useEffect(() => {
+
     const loader = document.getElementById("loader");
     const circleLoader = document.getElementById("circleloading");
     const loadingText = document.getElementById("loading-text");
+
 
     // Set initial opacity of the loader (circle and text)
     circleLoader.style.opacity = 0;
@@ -231,7 +235,7 @@ const MyDeziner = () => {
                             user-friendly features like customizable textures, drag-and-drop elements,
                             and real-time adjustments, empowering designers to effortlessly bring spaces to life.
                           </p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-03.png" alt="" className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -381,8 +385,12 @@ const MyDeziner = () => {
                             commitment to
                             natural,
                             healthy living.</p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
-                            loading="lazy" />
+                            {/* <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                            loading="lazy" /> */}
+                          <ReactBeforeSliderComponent
+                            firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png'}}  // Passing the first image
+                            secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png'}}  // Passing the first image
+                          />
                         </div>
                       </div>
                       <div className="challenges-content-flow">
