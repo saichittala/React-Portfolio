@@ -385,11 +385,11 @@ const MyDeziner = () => {
                             commitment to
                             natural,
                             healthy living.</p>
-                            {/* <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          {/* <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
                             loading="lazy" /> */}
                           <ReactBeforeSliderComponent
-                            firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png'}}  // Passing the first image
-                            secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png'}}  // Passing the first image
+                            firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
+                            secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
                           />
                         </div>
                       </div>
@@ -453,7 +453,11 @@ const MyDeziner = () => {
                       <span >04</span>
                       <span >Result</span>
                     </div>
-                    <img src="img/sample3.jpg" alt="" className="fade-in" loading="lazy" />
+                    {/* <img src="img/sample3.jpg" alt="" className="fade-in" loading="lazy" /> */}
+                    <ReactBeforeSliderComponent
+                      firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
+                      secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
+                    />
                   </div>
                 </div>
 
