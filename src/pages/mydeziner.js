@@ -76,6 +76,20 @@ const MyDeziner = () => {
         <div id="loading-text">Just a minute</div>
       </div>
 
+      <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="Sai's Portfolio"
+      content="/"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo.svg" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Sai Chittala Portfolio</title>
+  </head>
+
       <Header />
 
       <main>
