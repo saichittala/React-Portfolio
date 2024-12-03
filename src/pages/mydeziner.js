@@ -227,7 +227,7 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="  pd-main-heading-2"> 02-02 </a>
+                          <a className="fade-in pd-main-heading-2"> 02-02 </a>
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Creative Freedom</ch>
@@ -241,7 +241,7 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="  pd-main-heading-2"> 02-03 </a>
+                          <a className="fade-in pd-main-heading-2"> 02-03 </a>
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Seamless Innovation</ch>
@@ -313,7 +313,7 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="pd-main-heading-2"> 02-02 </a>
+                          <a className="fade-in pd-main-heading-2"> 02-02 </a>
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Heading</ch>
@@ -409,7 +409,7 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="pd-main-heading-2"> 02-02 </a>
+                          <a className="fade-in pd-main-heading-2"> 02-02 </a>
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up"> Heading</ch>
