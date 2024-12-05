@@ -239,20 +239,6 @@ const MyDeziner = () => {
                             loading="lazy" />
                         </div>
                       </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2"> 02-03 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up"> Seamless Innovation</ch>
-                          <p className='fade-in'>MyDeziner revolutionizes interior design with flexible,
-                            user-friendly features like customizable textures, drag-and-drop elements,
-                            and real-time adjustments, empowering designers to effortlessly bring spaces to life.
-                          </p>
-                          <img src="img/projects/mydeziner/02/02-03.png" alt="" className="fade-in"
-                            loading="lazy" />
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -302,32 +288,68 @@ const MyDeziner = () => {
                     <div className="pd-challenges-main ">
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className=" fade-in pd-main-heading-2"> 02-04 </a>
+                          <a className=" fade-in pd-main-heading-2"> 02-03 </a>
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Custom Material Uploading:</ch>
-                          <p className='fade-in'>Upload your own materials in various formats like GLTF to make each design uniquely yours.</p>
+                          <p className='fade-in'>Upload your own materials in various formats to make each design uniquely yours.</p>
                           <img src="img/projects/mydeziner/02/02-04.png" alt="" className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2"> 02-02 </a>
+                          <a className="fade-in pd-main-heading-2"> 02-04 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up"> Heading</ch>
-                          <p className='fade-in'> This project involved collaborating with a health and
-                            wellness company
-                            to revamp their
-                            brand image and appeal to a younger, more modern audience. The focus was
-                            on
-                            creating
-                            a
-                            clean, minimalist visual aesthetic that conveyed the company's
-                            commitment to
-                            natural,
-                            healthy living.</p>
+                          <ch className="fade-in translate-text-up">Effortless Material Swapping</ch>
+                          <p className='fade-in'>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
+                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                            loading="lazy" />
+                        </div>
+                      </div>
+                      <div className="challenges-content-flow">
+                        <div className="pd-heading-div">
+                          <a className="fade-in pd-main-heading-2"> 02-05 </a>
+                        </div>
+                        <div className="pd-content">
+                          <ch className="fade-in translate-text-up">Enhanced Lighting Control</ch>
+                          <p className='fade-in'>A curated IES lighting library enables users to adjust temperature and intensity, delivering unparalleled realism and ambiance to designs.</p>
+                          <ReactBeforeSliderComponent
+                            firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
+                            secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
+                          />
+                        </div>
+                      </div>
+                      <div className="challenges-content-flow">
+                        <div className="pd-heading-div">
+                          <a className="fade-in pd-main-heading-2"> 02-06 </a>
+                        </div>
+                        <div className="pd-content">
+                          <ch className="fade-in translate-text-up">Material Copying Made Simple</ch>
+                          <p className='fade-in'>Streamline design workflows by copying and pasting materials across multiple objects, ensuring consistency and efficiency in projects.</p>
+                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                            loading="lazy" />
+                        </div>
+                      </div>
+                      <div className="challenges-content-flow">
+                        <div className="pd-heading-div">
+                          <a className="fade-in pd-main-heading-2"> 02-07 </a>
+                        </div>
+                        <div className="pd-content">
+                          <ch className="fade-in translate-text-up">Material Favorites for Quick Access</ch>
+                          <p className='fade-in'>Save and organize favorite materials for instant retrieval, keeping creativity flowing without interruption.</p>
+                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                            loading="lazy" />
+                        </div>
+                      </div>
+                      <div className="challenges-content-flow">
+                        <div className="pd-heading-div">
+                          <a className="fade-in pd-main-heading-2"> 02-08 </a>
+                        </div>
+                        <div className="pd-content">
+                          <ch className="fade-in translate-text-up">Property and Room Management</ch>
+                          <p className='fade-in'>Revolutionize project customization with intuitive property manipulation and room switching, enabling tailored adjustments across spaces.</p>
                           <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
                             loading="lazy" />
                         </div>

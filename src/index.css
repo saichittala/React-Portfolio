@@ -21,6 +21,20 @@
     --grey-bg-b-color: #808080;
     --black-opacity: rgba(22, 22, 23, 0.8);
 
+    .light-theme {
+        --black-color: #ffffff;
+        --black-2-color: #eaeaea;
+        --white-color: #000000;
+        --primary-color: #ffffff;
+        --secondary-color: #f0f0f0;
+        --teritiary-color: #c0c0c0;
+        --text-color: #404040;
+        --border-color: #cccccc;
+        --grey-bg-w-color: #d6d6d6;
+        --grey-bg-b-color: #f0f0f0;
+        --black-opacity: rgba(255, 255, 255, 0.8);
+    }
+
 
     /* Responsive */
 
