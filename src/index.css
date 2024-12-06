@@ -24,15 +24,15 @@
 
     .light-theme {
         --black-color: #ffffff;
-        --black-2-color: #eaeaea;
+        --black-2-color: #f7f8f9;
         --white-color: #000000;
         --primary-color: #ffffff;
-        --secondary-color: #f0f0f0;
+        --secondary-color: #f7f8f9;
         --teritiary-color: #c0c0c0;
         --text-color: #404040;
         --border-color: #cccccc;
-        --grey-bg-w-color: #606060;
-        --grey-bg-b-color: #808080;
+        --grey-bg-w-color: #808080;
+        --grey-bg-b-color: #606060;
         --black-opacity: rgba(255, 255, 255, 0.8);
     }
 
@@ -1383,22 +1383,22 @@ p {
     width: fit-content;
     padding: 14px 56px;
     background: var(--secondary-color);
-    color: var(--text-color);
+    color: var(--grey-bg-b-color);
     border: none;
     border-radius: 99px;
     font-size: 18px;
     transform: scale3d(1,1,1);
-    transition: all 0.2 ease-in;
+    transition: all 0.3s ease-in;
     cursor: pointer;
 }
 
 .project-link-btn:hover {
-    background: var(--white-color);
-    color: var(--black-color);
+    color: var(--white-color);
 }
 
 
 .project-link-btn:active {
+    background: var(--teritiary-color);
     transform: scale3d(0.98, 0.98, 0.98);
 }
 

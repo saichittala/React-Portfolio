@@ -52,7 +52,7 @@ const CustomFurnish = () => {
 
 
   return (
-    <div className='cursor overflow-x-h'>
+    <div className='cursor overflow-x-h light-theme'>
       <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
@@ -63,26 +63,26 @@ const CustomFurnish = () => {
       </div>
 
       <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/img/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="Sai's Portfolio"
-      content="/"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo.svg" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Sai Chittala Portfolio</title>
-  </head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/img/logo.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="Sai's Portfolio"
+          content="/"
+        />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo.svg" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <title>Sai Chittala Portfolio</title>
+      </head>
 
       <Header />
 
-      <main className='light-theme'>
+      <main>
         <section>
           <div className="full-bg">
             <div className=" p-img-1 main-image object-fit">
-              <img src="img/projects/customfurnish/main.jpg" alt="mydeziner" loading="lazy" className='fade-in' />
+              <img src="img/projects/customfurnish/showcase.jpg" alt="mydeziner" loading="lazy" className='fade-in' />
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
@@ -103,7 +103,7 @@ const CustomFurnish = () => {
                       <div className="pd-heading-sub-div">
                         <a className="fade-in pd-main-heading-2 translate-text-up"> Project Type
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Product
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"> UX
                           Design</a>
                       </div>
                       <div className="pd-heading-div-main">
@@ -115,7 +115,7 @@ const CustomFurnish = () => {
                         <a className="fade-in pd-main-heading-2 translate-text-up">Contributors</a>
                         <a className="fade-in pd-sub-heading-2 translate-text-down"> Sai Chittala
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Tulasiram Kadiyala </a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Boyapati Ravi Kumar </a>
                       </div>
                       <div className="pd-heading-div-main">
                         <a className="fade-in pd-main-heading-2 translate-text-up">My Contribution</a>
@@ -125,25 +125,13 @@ const CustomFurnish = () => {
                         </a>
                         <a className="fade-in pd-sub-heading-2 translate-text-down"> Interface Design
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Interaction Design </a>
                       </div>
                     </div>
                     <div className="pd-main">
                       <div className="   pd-content-main">
-                        <int className="fade-in">MyDeziner is a comprehensive interior design software
-                          tailored for design
-                          professionals and businesses. It offers a centralized dashboard with
-                          tools
-                          to manage projects, inventory, material uploads/downloads, and pricing.
-                          Users can create custom material combinations, set preferences, and
-                          control
-                          margins for products. The platform supports seamless staff management
-                          and
-                          efficient organization of loose goods and services. Designed for
-                          flexibility, it empowers users to streamline workflows and elevate
-                          interior
-                          design projects.</int>
-                          <button className='project-link-btn'>Open Live Website</button>
+                        <img src="img/projects/customfurnish/main.jpg" alt="interior-image-with-luxury-environment" />
+                        <int className="fade-in">CustomFurnish is a user-friendly platform offering personalized interior design and furnishing solutions with a focus on style and functionality. Its seamless interface and clear navigation make it an ideal choice for homeowners and professionals alike.</int>
+                        <a href='https://www.customfurnish.com' target='blank' className='project-link-btn'>Open Live Website</a>
                       </div>
                     </div>
                   </div>
