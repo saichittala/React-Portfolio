@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './home.js';
 import MyDeziner from './pages/mydeziner.js';
+import CustomFurnish from './pages/customfurnish.js';
 import About from './pages/about.js';
 import {HashRouter, Routes, Route} from 'react-router-dom'
 
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mydeziner" element={<MyDeziner />} />
+        <Route path="/customfurnish" element={<CustomFurnish />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </HashRouter>

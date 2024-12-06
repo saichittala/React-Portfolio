@@ -293,7 +293,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Custom Material Uploading:</ch>
                           <p className='fade-in'>Upload your own materials in various formats to make each design uniquely yours.</p>
-                          <img src="img/projects/mydeziner/02/02-04.png" alt="" className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-03.png" alt="" className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -304,7 +304,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Effortless Material Swapping</ch>
                           <p className='fade-in'>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-04.gif" alt="" className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
