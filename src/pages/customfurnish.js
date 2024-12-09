@@ -82,7 +82,7 @@ const CustomFurnish = () => {
         <section>
           <div className="full-bg">
             <div className=" p-img-1 main-image object-fit">
-              <img src="img/projects/customfurnish/showcase.jpg" alt="mydeziner" loading="lazy" className='fade-in' />
+              <img src="img/projects/customfurnish/showcase.jpg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-in' />
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
@@ -91,7 +91,7 @@ const CustomFurnish = () => {
                   <div className="pd-main">
                     <div className="pd-heading-div p-head-arrow">
                       <a className=" pd-main-heading">CustomFurnish</a>
-                      <img src="img/arrow-down.svg" alt="arrow-down" />
+                      <img src="img/arrow-down.svg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer arrow-down" />
                     </div>
                   </div>
 
@@ -129,7 +129,7 @@ const CustomFurnish = () => {
                     </div>
                     <div className="pd-main">
                       <div className="   pd-content-main">
-                        <img src="img/projects/customfurnish/main.jpg" alt="interior-image-with-luxury-environment" />
+                        <img src="img/projects/customfurnish/main.jpg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer interior-image-with-luxury-environment" />
                         <int className="fade-in">CustomFurnish is a user-friendly platform offering personalized interior design and furnishing solutions with a focus on style and functionality. Its seamless interface and clear navigation make it an ideal choice for homeowners and professionals alike.</int>
                         <a href='https://www.customfurnish.com' target='blank' className='project-link-btn'>Open Live Website</a>
                       </div>

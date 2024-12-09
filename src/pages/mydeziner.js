@@ -96,7 +96,7 @@ const MyDeziner = () => {
         <section>
           <div className="full-bg">
             <div className=" p-img-1 main-image">
-              <img src="img/projects/mydeziner.webp" alt="mydeziner" loading="lazy" className='fade-in' />
+              <img src="img/projects/mydeziner.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-in' />
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
@@ -105,7 +105,7 @@ const MyDeziner = () => {
                   <div className="pd-main">
                     <div className="pd-heading-div p-head-arrow">
                       <a className=" pd-main-heading">MyDeziner</a>
-                      <img src="img/arrow-down.svg" alt="arrow-down" />
+                      <img src="img/arrow-down.svg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer arrow-down" />
                     </div>
                   </div>
 
@@ -222,7 +222,7 @@ const MyDeziner = () => {
                             and user-driven innovation, it empowers designers to craft
                             their visions with unparalleled precision and ease.
                           </p>
-                          <img src="img/projects/mydeziner/02/02-01.png" alt="" className="fade-in" />
+                          <img src="img/projects/mydeziner/02/02-01.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" />
                         </div>
                       </div>
                       <div className="challenges-content-flow">
@@ -235,7 +235,7 @@ const MyDeziner = () => {
                             minimalism with timeless elegance through intuitive tools and adaptive layouts,
                             transforming creative visions into reality with ease.
                           </p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -293,7 +293,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Custom Material Uploading:</ch>
                           <p className='fade-in'>Upload your own materials in various formats to make each design uniquely yours.</p>
-                          <img src="img/projects/mydeziner/02/02-03.png" alt="" className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-03.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -304,7 +304,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Effortless Material Swapping</ch>
                           <p className='fade-in'>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
-                          <img src="img/projects/mydeziner/02/02-04.gif" alt="" className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-04.gif" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -328,7 +328,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Copying Made Simple</ch>
                           <p className='fade-in'>Streamline design workflows by copying and pasting materials across multiple objects, ensuring consistency and efficiency in projects.</p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -339,7 +339,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Favorites for Quick Access</ch>
                           <p className='fade-in'>Save and organize favorite materials for instant retrieval, keeping creativity flowing without interruption.</p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -350,7 +350,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Property and Room Management</ch>
                           <p className='fade-in'>Revolutionize project customization with intuitive property manipulation and room switching, enabling tailored adjustments across spaces.</p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -421,7 +421,7 @@ const MyDeziner = () => {
                             commitment to
                             natural,
                             healthy living.</p>
-                          {/* <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" /> */}
                           <ReactBeforeSliderComponent
                             firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
@@ -446,7 +446,7 @@ const MyDeziner = () => {
                             commitment to
                             natural,
                             healthy living.</p>
-                          <img src="img/projects/customfurnish.webp" alt="" className="fade-in"
+                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -465,7 +465,7 @@ const MyDeziner = () => {
                         <span>Brand Design</span>
                       </div>
                       <div className='zoom-image df'>
-                        <img src="img/projects/mydeziner/03/brand.png" alt="" className="zoom-in" loading="lazy" />
+                        <img src="img/projects/mydeziner/03/brand.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="zoom-in" loading="lazy" />
                       </div>
                     </div>
                   </div>
@@ -474,11 +474,11 @@ const MyDeziner = () => {
                 <div className="project-details">
                   <div className="p-main-imgs">
                     <div className="p-2imgs-2">
-                      <img src="img/projects/petzy.webp" alt="" className="fade-in" loading="lazy" />
-                      <img src="img/projects/shruh.webp" alt="" className="fade-in" loading="lazy" />
+                      <img src="img/projects/petzy.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                      <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                     </div>
                     <div >
-                      <img src="img/sample4.jpg" alt="" className="fade-in" loading="lazy" />
+                      <img src="img/sample4.jpg" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -489,7 +489,7 @@ const MyDeziner = () => {
                       <span >04</span>
                       <span >Result</span>
                     </div>
-                    {/* <img src="img/sample3.jpg" alt="" className="fade-in" loading="lazy" /> */}
+                    {/* <img src="img/sample3.jpg" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" /> */}
                     <ReactBeforeSliderComponent
                       firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
                       secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
@@ -504,7 +504,7 @@ const MyDeziner = () => {
                       <span>Conclusion</span>
                     </div>
                     <div className="pd-content">
-                      <img src="img/projects/customfurnish.webp" alt="" className="fade-in" loading="lazy" />
+                      <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                       <p className='fade-in'> This project involved collaborating with a health and
                         wellness company
                         to revamp their

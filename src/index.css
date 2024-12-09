@@ -50,7 +50,7 @@
 
     /* Fonts */
     --primary-font: "Hanken Grotesk", sans-serif;
-    --secondary-font:"Hanken Grotesk", sans-serif;
+    --secondary-font: "Hanken Grotesk", sans-serif;
 
 }
 
@@ -1550,11 +1550,11 @@ p {
 
 
     .challenge-heading {
-        font-weight: 400;
+        font-weight: 300;
     }
 
     .challenge-content {
-        font-weight: 400;
+        font-weight: 300;
     }
 }
 
