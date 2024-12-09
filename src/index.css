@@ -1610,7 +1610,6 @@ p {
 
 .challenges-content-flow {
     display: flex;
-    gap: 40px;
     img {
         border-radius: 4px !important;
     }
@@ -1852,6 +1851,7 @@ p {
 
     .challenges-content-flow {
         flex-direction: column;
+        gap: 40px;
     }
 
     .pd-main-heading-2 {
