@@ -34,6 +34,9 @@
         --grey-bg-w-color: #808080;
         --grey-bg-b-color: #606060;
         --black-opacity: rgba(255, 255, 255, 0.8);
+
+        .menu-icon {
+            filter: brightness(0) saturate(100%) invert(0%) sepia(90%) saturate(7460%) hue-rotate(152deg) brightness(108%) contrast(109%);        }
     }
 
 

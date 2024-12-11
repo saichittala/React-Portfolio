@@ -77,18 +77,18 @@ const MyDeziner = () => {
       </div>
 
       <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/img/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="Sai's Portfolio"
-      content="/"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo.svg" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Sai Chittala Portfolio</title>
-  </head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/img/logo.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="Sai's Portfolio"
+          content="/"
+        />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo.svg" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <title>Sai Chittala Portfolio</title>
+      </head>
 
       <Header />
 
@@ -150,19 +150,7 @@ const MyDeziner = () => {
                           Your browser does not support the video tag.
                         </video>
 
-                        <int className="fade-in">MyDeziner is a comprehensive interior design software
-                          tailored for design
-                          professionals and businesses. It offers a centralized dashboard with
-                          tools
-                          to manage projects, inventory, material uploads/downloads, and pricing.
-                          Users can create custom material combinations, set preferences, and
-                          control
-                          margins for products. The platform supports seamless staff management
-                          and
-                          efficient organization of loose goods and services. Designed for
-                          flexibility, it empowers users to streamline workflows and elevate
-                          interior
-                          design projects.</int>
+                        <int className="fade-in">MyDeziner is a game-changing tool for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between creativity and functionality.</int>
                       </div>
                     </div>
                   </div>
@@ -179,17 +167,15 @@ const MyDeziner = () => {
                         <div className="challenges-sub">
                           <div className="challenge-active-card fade-in">
                             <span className="challenge-heading">01</span>
-                            <span className="challenge-content">User Experience Optimization for Diverse
-                              Design Styles</span>
+                            <span className="challenge-content">Designing MyDeziner From the Ground Up</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">02</span>
-                            <span className="challenge-content">Innovating Through MyDeziner's Development Challenges</span>
+                            <span className="challenge-content">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">03</span>
-                            <span className="challenge-content">Scalability and Performance in Complex
-                              Designs</span>
+                            <span className="challenge-content">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -201,9 +187,7 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="challenges-content-heading fade-in">
-                        Imagine a design tool that adapts to every style, blending creativity and
-                        functionality seamlessly.
-                      </div>
+                        Imagine a design tool empowering everyone, balancing simplicity and functionality.                      </div>
                     </div>
                   </div>
                 </div>
@@ -215,12 +199,8 @@ const MyDeziner = () => {
                           <a className="fade-in pd-main-heading-2"> 02-01 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up"> Design Flexibility</ch>
-                          <p className='fade-in'>MyDeziner transforms creativity into reality,
-                            offering effortless adaptability across every design
-                            style—from minimalist to vintage. With intuitive features
-                            and user-driven innovation, it empowers designers to craft
-                            their visions with unparalleled precision and ease.
+                          <ch className="fade-in translate-text-up"> User-Driven Design</ch>
+                          <p className='fade-in'>Every interface was created based on input from professional designers to ensure usability and precision.
                           </p>
                           <img src="img/projects/mydeziner/02/02-01.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" />
                         </div>
@@ -230,10 +210,8 @@ const MyDeziner = () => {
                           <a className="fade-in pd-main-heading-2"> 02-02 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up"> Creative Freedom</ch>
-                          <p className='fade-in'>MyDeziner empowers designers to effortlessly blend modern
-                            minimalism with timeless elegance through intuitive tools and adaptive layouts,
-                            transforming creative visions into reality with ease.
+                          <ch className="fade-in translate-text-up">Effortless Navigation</ch>
+                          <p className='fade-in'>A perfect blend of simplicity and power ensures users can create, modify, and render projects with ease.
                           </p>
                           <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
@@ -255,17 +233,15 @@ const MyDeziner = () => {
                         <div className="challenges-sub">
                           <div className="challenge-inactive-card fade-in">
                             <span className="challenge-heading">01</span>
-                            <span className="challenge-content">User Experience Optimization for Diverse
-                              Design Styles</span>
+                            <span className="challenge-content">Designing MyDeziner From the Ground Up</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading">02</span>
-                            <span className="challenge-content">Innovating Through MyDeziner's Development Challenges</span>
+                            <span className="challenge-content">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">03</span>
-                            <span className="challenge-content">Scalability and Performance in Complex
-                              Designs</span>
+                            <span className="challenge-content">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -277,7 +253,7 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="challenges-content-heading fade-in">
-                        A Seamless Design Platform Empowering Creativity and Effortless Customization
+                        What if complex design features felt intuitive and effortless to use?
                       </div>
                     </div>
                   </div>
@@ -313,8 +289,8 @@ const MyDeziner = () => {
                           <a className="fade-in pd-main-heading-2"> 02-05 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up">Enhanced Lighting Control</ch>
-                          <p className='fade-in'>A curated IES lighting library enables users to adjust temperature and intensity, delivering unparalleled realism and ambiance to designs.</p>
+                          <ch className="fade-in translate-text-up">IES Lighting Integration:</ch>
+                          <p className='fade-in'>Improved render quality with customizable lighting for more realistic outputs.</p>
                           <ReactBeforeSliderComponent
                             firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
                             secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
@@ -338,7 +314,7 @@ const MyDeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Favorites for Quick Access</ch>
-                          <p className='fade-in'>Save and organize favorite materials for instant retrieval, keeping creativity flowing without interruption.</p>
+                          <p className='fade-in'>Allows users to modify room settings and apply changes globally in seconds.</p>
                           <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
@@ -354,11 +330,20 @@ const MyDeziner = () => {
                             loading="lazy" />
                         </div>
                       </div>
+                      <div className="challenges-content-flow">
+                        <div className="pd-heading-div">
+                          <a className="fade-in pd-main-heading-2"> 02-09 </a>
+                        </div>
+                        <div className="pd-content">
+                          <ch className="fade-in translate-text-up">Custom Model Uploading</ch>
+                          <p className='fade-in'>Seamlessly integrates user-created 3D models for full creative control.</p>
+                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
+                            loading="lazy" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-
-
 
                 <div className="bg-full bg-grey">
                   <div className="bg-main  padding-unset">
@@ -371,17 +356,15 @@ const MyDeziner = () => {
                         <div className="challenges-sub">
                           <div className="challenge-inactive-card fade-in">
                             <span className="challenge-heading">01</span>
-                            <span className="challenge-content">User Experience Optimization for Diverse
-                              Design Styles</span>
+                            <span className="challenge-content">Designing MyDeziner From the Ground Up</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">02</span>
-                            <span className="challenge-content">Innovating Through MyDeziner's Development Challenges</span>
+                            <span className="challenge-content">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading">03</span>
-                            <span className="challenge-content">Scalability and Performance in Complex
-                              Designs</span>
+                            <span className="challenge-content">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -393,9 +376,7 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="challenges-content-heading fade-in">
-                        Imagine having your concentrated,
-                        limitless workspace with you
-                        wherever you go.
+                        How do you create a tool that performs flawlessly, no matter the device?
                       </div>
                     </div>
                   </div>
@@ -406,46 +387,11 @@ const MyDeziner = () => {
                     <div className="pd-challenges-main ">
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className=" fade-in pd-main-heading-2"> 02-01 </a>
+                          <a className=" fade-in pd-main-heading-2"> 02-10 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up"> Heading</ch>
-                          <p className='fade-in'> This project involved collaborating with a health and
-                            wellness company
-                            to revamp their
-                            brand image and appeal to a younger, more modern audience. The focus was
-                            on
-                            creating
-                            a
-                            clean, minimalist visual aesthetic that conveyed the company's
-                            commitment to
-                            natural,
-                            healthy living.</p>
-                          {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" /> */}
-                          <ReactBeforeSliderComponent
-                            firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
-                            secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
-                          />
-                        </div>
-                      </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2"> 02-02 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up"> Heading</ch>
-                          <p className='fade-in'> This project involved collaborating with a health and
-                            wellness company
-                            to revamp their
-                            brand image and appeal to a younger, more modern audience. The focus was
-                            on
-                            creating
-                            a
-                            clean, minimalist visual aesthetic that conveyed the company's
-                            commitment to
-                            natural,
-                            healthy living.</p>
+                          <ch className="fade-in translate-text-up">Cross-Device Compatibility</ch>
+                          <p className='fade-in'>Provides a seamless experience whether on mobile, tablet, or desktop.</p>
                           <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
@@ -453,8 +399,6 @@ const MyDeziner = () => {
                     </div>
                   </div>
                 </div>
-
-
 
 
                 <div className="bg-full bg-white">
@@ -505,15 +449,18 @@ const MyDeziner = () => {
                     </div>
                     <div className="pd-content">
                       <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                      <p className='fade-in'> This project involved collaborating with a health and
-                        wellness company
-                        to revamp their
-                        brand image and appeal to a younger, more modern audience. The focus was on
-                        creating
-                        a
-                        clean, minimalist visual aesthetic that conveyed the company's commitment to
-                        natural,
-                        healthy living.</p>
+                      <p className='fade-in'>MyDeziner redefines what interior design tools can do, empowering users to turn their creative visions into reality.</p>
+                      <p className='fade-in'>This project demonstrates my ability to:</p>
+                      <p className='fade-in'>	•	Build user-centered tools from scratch that address real-world needs.
+                      </p>
+                      <p className='fade-in'>	•	Simplify complex features without sacrificing depth or precision.
+                      </p>
+                      <p className='fade-in'>	•	Ensure high-performance scalability across all platforms.
+                      </p>
+                      <p className='fade-in'>	•	Craft a cohesive brand identity that resonates with users.
+                      </p>
+                      <p className='fade-in'>With MyDeziner, I’ve proven my expertise in product design and innovation, making this case study a testament to my ability to deliver solutions worthy of global leaders like Google, Apple, and Microsoft.
+                      </p>
                     </div>
                   </div>
                 </div>
