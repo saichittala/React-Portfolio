@@ -315,7 +315,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Favorites for Quick Access</ch>
                           <p className='fade-in'>Allows users to modify room settings and apply changes globally in seconds.</p>
-                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-04.gif" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -384,7 +384,7 @@ const MyDeziner = () => {
 
                 <div className="bg-full bg-darkgrey">
                   <div className="project-details">
-                    <div className="pd-challenges-main ">
+                    <div className="pd-challenges-main">
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
                           <a className=" fade-in pd-main-heading-2"> 02-10 </a>
@@ -392,7 +392,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Cross-Device Compatibility</ch>
                           <p className='fade-in'>Provides a seamless experience whether on mobile, tablet, or desktop.</p>
-                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-10.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -408,14 +408,20 @@ const MyDeziner = () => {
                         <span>03</span>
                         <span>Brand Design</span>
                       </div>
-                      <div className='zoom-image df'>
-                        <img src="img/projects/mydeziner/03/brand.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="zoom-in" loading="lazy" />
+                      <div className='pd-challenges-main'>
+                        <div className='zoom-image df'>
+                          <img src="img/projects/mydeziner/03/brand.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="zoom-in" loading="lazy" />
+                        </div>
+                        <div className="p-2imgs-2 padding-unset bg-main light-theme">
+                          <img src="img/projects/mydeziner/03/typeface.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                          <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="project-details">
+                {/* <div className="project-details">
                   <div className="p-main-imgs">
                     <div className="p-2imgs-2">
                       <img src="img/projects/petzy.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
@@ -425,9 +431,9 @@ const MyDeziner = () => {
                       <img src="img/sample4.jpg" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                     </div>
                   </div>
-                </div>
+                </div> */}
 
-                <div className="project-details padding-top-unset">
+                <div className="project-details">
                   <div className="project-breif-section">
                     <div className="project-breif-heading fade-in">
                       <span >04</span>
