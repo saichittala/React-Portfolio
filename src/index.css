@@ -1023,7 +1023,7 @@ a {
     }
 
     .intro-section-main {
-        margin-top: unset;
+        padding-top: unset;
         margin-bottom: unset;
     }
 
