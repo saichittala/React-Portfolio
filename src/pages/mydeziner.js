@@ -409,12 +409,21 @@ const MyDeziner = () => {
                         <span>Brand Design</span>
                       </div>
                       <div className='pd-challenges-main'>
+                      <div className="pd-content width-100">
+                      <ch className="fade-in translate-text-up light-theme bg-main padding-unset">Colors used</ch>
                         <div className='zoom-image df'>
                           <img src="img/projects/mydeziner/03/brand.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="zoom-in" loading="lazy" />
                         </div>
+                        </div>
                         <div className="p-2imgs-2 padding-unset bg-main light-theme">
+                        <div className="pd-content width-100">
+                        <ch className="fade-in translate-text-up light-theme">Typography</ch>
                           <img src="img/projects/mydeziner/03/typeface.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                          <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                        </div>
+                        <div className="pd-content width-100">
+                        <ch className="fade-in translate-text-up light-theme">Typography</ch>
+                        <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                        </div>
                         </div>
                       </div>
                     </div>

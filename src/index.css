@@ -48,7 +48,7 @@
 
     /* Border Radius */
     --border-radius-1: 18px;
-    --border-radius-2: 14px;
+    --border-radius-2: 14pxx;
 
 
     /* Fonts */
@@ -310,6 +310,15 @@ body {
     width: unset !important;
 }
 
+.width-100 {
+    width: 100% !important;
+}
+
+.bottom-0 {
+    position: absolute;
+    bottom: 0;
+}
+
 .df {
     display: flex;
     flex-direction: column;
@@ -320,7 +329,7 @@ body {
     width: 100%;
     display: flex;
     place-items: center;
-    margin-top: 32vh;
+    padding-top: 32vh;
 }
 
 .intro-section {
@@ -466,21 +475,24 @@ body {
     display: flex;
     gap: 56px;
     flex-direction: row;
-    padding-top: 30vh;
+    padding-top: 20vh;
 }
 
 
 .about-main p {
     color: var(--white-color);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300 ;
     width: 50%;
+    line-height: 1.8;
 }
 
 .about-main img {
     width: 50%;
-    height: 100%;
-    object-fit: contain;
+    height: 50vh;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-1);
 }
 
 
@@ -1030,6 +1042,11 @@ a {
     .about-main,
     .footer-main {
         flex-direction: column;
+    }
+
+    .about-main p, .about-main img {
+        width: 100%;
+        height: 100%;
     }
 
     .nav-main,
