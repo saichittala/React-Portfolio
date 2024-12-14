@@ -1004,11 +1004,11 @@ a {
     .nav-main,
     .bg-about,
     .bg-main {
-        width: calc(min(1440px, 100vw) - var(--ps-gutter) / 8);
+        width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
     }
 
     .bg-footer {
-        width: calc(min(1440px, 100vw) - var(--ps-gutter) / 8);
+        width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
         flex-direction: column;
         gap: 48px;
         align-items: flex-start;

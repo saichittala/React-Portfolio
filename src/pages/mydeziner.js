@@ -159,7 +159,8 @@ const MyDeziner = () => {
                           Your browser does not support the video tag.
                         </video>
 
-                        <int className="fade-in">MyDeziner is a game-changing tool for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between creativity and functionality.</int>
+                        <int className="fade-in">
+                          <p><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
                       </div>
                     </div>
                   </div>
@@ -176,7 +177,7 @@ const MyDeziner = () => {
                         <div className="challenges-sub">
                           <div className="challenge-active-card fade-in">
                             <span className="challenge-heading">01</span>
-                            <span className="challenge-content">Designing MyDeziner From the Ground Up</span>
+                            <span className="challenge-content">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">02</span>
@@ -242,7 +243,7 @@ const MyDeziner = () => {
                         <div className="challenges-sub">
                           <div className="challenge-inactive-card fade-in">
                             <span className="challenge-heading">01</span>
-                            <span className="challenge-content">Designing MyDeziner From the Ground Up</span>
+                            <span className="challenge-content">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading">02</span>
@@ -409,7 +410,7 @@ const MyDeziner = () => {
                         <div className="challenges-sub">
                           <div className="challenge-inactive-card fade-in">
                             <span className="challenge-heading">01</span>
-                            <span className="challenge-content">Designing MyDeziner From the Ground Up</span>
+                            <span className="challenge-content">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading">02</span>
