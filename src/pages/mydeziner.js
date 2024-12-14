@@ -222,8 +222,8 @@ const MyDeziner = () => {
                           <ch className="fade-in translate-text-up">Effortless Navigation</ch>
                           <p className='fade-in'>A perfect blend of simplicity and power ensures users can create, modify, and render projects with ease.
                           </p>
-                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" />
+                          {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
+                            loading="lazy" /> */}
                         </div>
                       </div>
                     </div>
@@ -289,8 +289,19 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Effortless Material Swapping</ch>
                           <p className='fade-in'>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
-                          <img src="img/projects/mydeziner/02/02-04-crop.gif" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" />
+                          <video 
+                          className="fade-in"
+                          loading="lazy"
+                          preload="metadata"
+                          disablePictureInPicture
+                          id="myVideo"
+                          loop
+                          muted
+                          autoPlay
+                          playsInline>
+                            <source src="img/projects/mydeziner/02/02-04.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
                       </div>
                       <div className="challenges-content-flow">
@@ -335,8 +346,19 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Favorites for Quick Access</ch>
                           <p className='fade-in'>Allows users to modify room settings and apply changes globally in seconds.</p>
-                          <img src="img/projects/mydeziner/02/02-04-crop.gif" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" />
+                          <video 
+                          className="fade-in"
+                          loading="lazy"
+                          preload="metadata"
+                          disablePictureInPicture
+                          id="myVideo"
+                          loop
+                          muted
+                          autoPlay
+                          playsInline>
+                            <source src="img/projects/mydeziner/02/02-07.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
                       </div>
                       <div className="challenges-content-flow">
@@ -346,8 +368,19 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Property and Room Management</ch>
                           <p className='fade-in'>Revolutionize project customization with intuitive property manipulation and room switching, enabling tailored adjustments across spaces.</p>
-                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" />
+                            <video 
+                          className="fade-in"
+                          loading="lazy"
+                          preload="metadata"
+                          disablePictureInPicture
+                          id="myVideo"
+                          loop
+                          muted
+                          autoPlay
+                          playsInline>
+                            <source src="img/projects/mydeziner/02/02-08.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
                       </div>
                       <div className="challenges-content-flow">
@@ -357,8 +390,8 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Custom Model Uploading</ch>
                           <p className='fade-in'>Seamlessly integrates user-created 3D models for full creative control.</p>
-                          <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" />
+                          {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
+                            loading="lazy" /> */}
                         </div>
                       </div>
                     </div>
@@ -441,8 +474,8 @@ const MyDeziner = () => {
                             <img src="img/projects/mydeziner/03/typeface.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                           </div>
                           <div className="pd-content width-100">
-                            <ch className="fade-in translate-text-up light-theme">Typography</ch>
-                            <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                            <ch className="fade-in translate-text-up light-theme">Logo</ch>
+                            <img src="img/projects/mydeziner/03/logo.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                           </div>
                         </div>
                       </div>
