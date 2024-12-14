@@ -1635,6 +1635,9 @@ p {
     img {
         border-radius: 4px !important;
     }
+    video {
+        border-radius: 4px !important;
+    }
 }
 
 
