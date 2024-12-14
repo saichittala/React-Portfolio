@@ -145,7 +145,7 @@ const MyDeziner = () => {
                     </div>
                     <div className="pd-main">
                       <div className="   pd-content-main">
-                        <video className="fade-in" loading="lazy" preload="metadata" controls  id="myVideo" loop muted autoplay="autoplay">
+                        <video className="fade-in" loading="lazy" preload="metadata" controls  id="myVideo" loop muted autoplay="autoplay" playsInline>
                           <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
@@ -304,7 +304,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Copying Made Simple</ch>
                           <p className='fade-in'>Streamline design workflows by copying and pasting materials across multiple objects, ensuring consistency and efficiency in projects.</p>
-                          <video className="fade-in" loading="lazy" preload="metadata"   id="myVideo" loop muted autoplay="autoplay">
+                          <video className="fade-in" loading="lazy" preload="metadata"   id="myVideo" loop muted autoplay="autoplay" playsInline>
                           <source src="img/projects/mydeziner/02/02-06.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                           </video>
