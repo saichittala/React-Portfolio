@@ -145,7 +145,8 @@ const MyDeziner = () => {
                     </div>
                     <div className="pd-main">
                       <div className="   pd-content-main">
-                        <video className="fade-in" loading="lazy" preload="metadata" controls  id="myVideo" loop muted autoplay="autoplay" playsInline>
+                        <video className="fade-in" loading="lazy" preload="metadata" controls id="myVideo" loop muted autoplay="autoplay" playsInline
+                          playsinline>
                           <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
@@ -304,9 +305,9 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Copying Made Simple</ch>
                           <p className='fade-in'>Streamline design workflows by copying and pasting materials across multiple objects, ensuring consistency and efficiency in projects.</p>
-                          <video className="fade-in" loading="lazy" preload="metadata"   id="myVideo" loop muted autoplay="autoplay" playsInline>
-                          <source src="img/projects/mydeziner/02/02-06.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
+                          <video className="fade-in" loading="lazy" preload="metadata" id="myVideo" loop muted autoplay="autoplay" playsInline>
+                            <source src="img/projects/mydeziner/02/02-06.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
                           </video>
                         </div>
                       </div>
@@ -411,21 +412,21 @@ const MyDeziner = () => {
                         <span>Brand Design</span>
                       </div>
                       <div className='pd-challenges-main'>
-                      <div className="pd-content width-100">
-                      <ch className="fade-in translate-text-up light-theme bg-main padding-unset">Colors used</ch>
-                        <div className='zoom-image df'>
-                          <img src="img/projects/mydeziner/03/brand.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="zoom-in" loading="lazy" />
-                        </div>
+                        <div className="pd-content width-100">
+                          <ch className="fade-in translate-text-up light-theme bg-main padding-unset">Colors used</ch>
+                          <div className='zoom-image df'>
+                            <img src="img/projects/mydeziner/03/brand.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="zoom-in" loading="lazy" />
+                          </div>
                         </div>
                         <div className="p-2imgs-2 padding-unset bg-main light-theme">
-                        <div className="pd-content width-100">
-                        <ch className="fade-in translate-text-up light-theme">Typography</ch>
-                          <img src="img/projects/mydeziner/03/typeface.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                        </div>
-                        <div className="pd-content width-100">
-                        <ch className="fade-in translate-text-up light-theme">Typography</ch>
-                        <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                        </div>
+                          <div className="pd-content width-100">
+                            <ch className="fade-in translate-text-up light-theme">Typography</ch>
+                            <img src="img/projects/mydeziner/03/typeface.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                          </div>
+                          <div className="pd-content width-100">
+                            <ch className="fade-in translate-text-up light-theme">Typography</ch>
+                            <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                          </div>
                         </div>
                       </div>
                     </div>
