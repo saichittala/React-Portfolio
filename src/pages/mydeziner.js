@@ -495,7 +495,7 @@ const MyDeziner = () => {
                   </div>
                 </div> */}
 
-                <div className="project-details">
+                <div className="project-details ">
                   <div className="project-breif-section">
                     <div className="project-breif-heading fade-in">
                       <span >04</span>
@@ -504,13 +504,15 @@ const MyDeziner = () => {
                     <div className="pd-content width-100">
                       <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                       <ch className='fade-in'>This project demonstrates my ability to:</ch>
-                      <p className='fade-in'>Build user-centered tools from scratch that address real-world needs.
+                      <p className='fade-in'><ch>Design user-centered solutions</ch> that address real-world needs with intuitive ease.
                       </p>
-                      <p className='fade-in'>Simplify complex features without sacrificing depth or precision.
+                      <p className='fade-in'>Simplify complex features without <ch>sacrificing depth or precision.</ch>
                       </p>
-                      <p className='fade-in'>Ensure high-performance scalability across all platforms.
+                      <p className='fade-in'>Ensure <ch>high-performance scalability</ch> across all platforms.
                       </p>
-                      <p className='fade-in'>Craft a cohesive brand identity that resonates with users.
+                      <p className='fade-in'><ch>Build cohesive brand identities</ch> that resonate and leave lasting impressions.
+                      </p>
+                      <p className='fade-in'>It’s a testament to my commitment to impactful, high-performance design and innovation.
                       </p>
                     </div>
                   </div>
