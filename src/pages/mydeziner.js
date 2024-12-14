@@ -501,15 +501,22 @@ const MyDeziner = () => {
                       <span >04</span>
                       <span >Result</span>
                     </div>
-                    {/* <img src="img/sample3.jpg" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" /> */}
-                    <ReactBeforeSliderComponent className='fade-in'
-                      firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
-                      secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
-                    />
+                    <div className="pd-content width-100">
+                      <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                      <ch className='fade-in'>This project demonstrates my ability to:</ch>
+                      <p className='fade-in'>Build user-centered tools from scratch that address real-world needs.
+                      </p>
+                      <p className='fade-in'>Simplify complex features without sacrificing depth or precision.
+                      </p>
+                      <p className='fade-in'>Ensure high-performance scalability across all platforms.
+                      </p>
+                      <p className='fade-in'>Craft a cohesive brand identity that resonates with users.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="project-details padding-top-unset">
+                {/* <div className="project-details padding-top-unset">
                   <div className="project-final-section">
                     <div className="project-breif-heading fade-in">
                       <span>05</span>
@@ -531,7 +538,7 @@ const MyDeziner = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="bg-full bg-white margin-unset">
                   <div className="bg-main  padding-unset">
