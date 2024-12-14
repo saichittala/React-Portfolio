@@ -280,7 +280,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Effortless Material Swapping</ch>
                           <p className='fade-in'>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
-                          <img src="img/projects/mydeziner/02/02-04.gif" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-04-crop.gif" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -289,9 +289,9 @@ const MyDeziner = () => {
                           <a className="fade-in pd-main-heading-2"> 02-05 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up">IES Lighting Integration:</ch>
+                          <ch className="fade-in translate-text-up">IES Lighting Integration</ch>
                           <p className='fade-in'>Improved render quality with customizable lighting for more realistic outputs.</p>
-                          <ReactBeforeSliderComponent
+                          <ReactBeforeSliderComponent className='fade-in'
                             firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
                             secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
                           />
@@ -315,7 +315,7 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Favorites for Quick Access</ch>
                           <p className='fade-in'>Allows users to modify room settings and apply changes globally in seconds.</p>
-                          <img src="img/projects/mydeziner/02/02-04.gif" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
+                          <img src="img/projects/mydeziner/02/02-04-crop.gif" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
@@ -449,7 +449,7 @@ const MyDeziner = () => {
                       <span >Result</span>
                     </div>
                     {/* <img src="img/sample3.jpg" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" /> */}
-                    <ReactBeforeSliderComponent
+                    <ReactBeforeSliderComponent className='fade-in'
                       firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
                       secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
                     />

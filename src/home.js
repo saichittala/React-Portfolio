@@ -6,8 +6,8 @@ import useFadeIn from './components/useFadeIn';
 import useScrollEffect from './components/useScrollEffect';
 
 const Home = () => {
-  useFadeIn(); 
-  useScrollEffect(); 
+  useFadeIn();
+  useScrollEffect();
   const cardsData = [
     { title: "MyDeziner", type: "Product Design 🔒", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
     { title: "CustomFurnish", type: "UX Design", image: "img/projects/customfurnish.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
