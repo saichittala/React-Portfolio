@@ -158,7 +158,6 @@ const MyDeziner = () => {
                           <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
-
                         <int className="fade-in">
                           <p><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
                       </div>
@@ -346,7 +345,7 @@ const MyDeziner = () => {
                         </div>
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up">Material Favorites for Quick Access</ch>
-                          <p className='fade-in'>Allows users to modify room settings and apply changes globally in seconds.</p>
+                          <p className='fade-in'>Users can save their go-to materials and access them instantly for smoother workflows.</p>
                           <video 
                           className="fade-in"
                           loading="lazy"
@@ -504,16 +503,11 @@ const MyDeziner = () => {
                     </div>
                     <div className="pd-content width-100">
                       <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                      <ch className='fade-in'>This project demonstrates my ability to:</ch>
-                      <p className='fade-in'><ch>Design user-centered solutions</ch> that address real-world needs with intuitive ease.
+                      <p className='fade-in'><ch>50% Faster Workflows</ch> streamlined tools accelerate project completion.
                       </p>
-                      <p className='fade-in'>Simplify complex features without <ch>sacrificing depth or precision.</ch>
+                      <p className='fade-in'>Users praise the tool for its balance of simplicity and power rated <ch>9.4/10 User Satisfaction</ch>
                       </p>
-                      <p className='fade-in'>Ensure <ch>high-performance scalability</ch> across all platforms.
-                      </p>
-                      <p className='fade-in'><ch>Build cohesive brand identities</ch> that resonate and leave lasting impressions.
-                      </p>
-                      <p className='fade-in'>It’s a testament to my commitment to impactful, high-performance design and innovation.
+                      <p className='fade-in'><ch>Flawless Multi-Device Experience</ch> Optimized performance on mobile, tablet, and desktop ensures every user can work efficiently.
                       </p>
                     </div>
                   </div>

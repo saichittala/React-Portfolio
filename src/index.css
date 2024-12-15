@@ -1364,7 +1364,7 @@ a {
 
     int {
         font-size: 18px;
-        font-weight: 300 !important;
+        font-weight: 500 !important;
         line-height: 34px;
         margin: 0;
         color: var(--white-color);
