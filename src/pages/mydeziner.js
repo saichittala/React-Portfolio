@@ -502,7 +502,7 @@ const MyDeziner = () => {
                       <span >Result</span>
                     </div>
                     <div className="pd-content width-100">
-                      <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                      {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" /> */}
                       <p className='fade-in'><ch>50% Faster Workflows</ch> streamlined tools accelerate project completion.
                       </p>
                       <p className='fade-in'>Users praise the tool for its balance of simplicity and power rated <ch>9.4/10 User Satisfaction</ch>
