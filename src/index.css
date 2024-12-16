@@ -1337,7 +1337,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 40%;
+    width: 35%;
 }
 
 .p-head-arrow {
@@ -1443,7 +1443,7 @@ p {
 
 
 .pd-content ch {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--white-color);
 }
@@ -1685,7 +1685,7 @@ p {
 
 
 .pd-content {
-    width: 60%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -1731,7 +1731,7 @@ p {
 }
 
 .pd-main-heading-2 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 20px;
     color: var(--white-color);
