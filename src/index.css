@@ -483,13 +483,22 @@ body {
     gap: 56px;
     flex-direction: row;
     padding-top: 20vh;
+    a {
+        font-weight: 400;
+        line-height: inherit;
+        color: var(--white-color);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 
 .about-main p {
-    color: var(--white-color);
+    color: var(--grey-bg-b-color);
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 300 !important ;
     width: 50%;
     line-height: 1.8;
 }
@@ -1647,7 +1656,7 @@ p {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 56px;
+    gap: 72px;
 }
 
 .challenges-content-flow {
@@ -1679,7 +1688,7 @@ p {
     width: 60%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
 }
 
 .pd-content-main {

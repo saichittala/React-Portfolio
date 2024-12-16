@@ -276,7 +276,7 @@ const MyDeziner = () => {
                           <a className=" fade-in pd-main-heading-2"> 02-03 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up">Custom Material Uploading:</ch>
+                          <ch className="fade-in translate-text-up">Custom Material Uploading</ch>
                           <p className='fade-in'>Upload your own materials in various formats to make each design uniquely yours.</p>
                           <img src="img/projects/mydeziner/02/02-03.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
