@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import CustomCursor from '../components/customcursor';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
@@ -67,6 +68,7 @@ const MyDeziner = () => {
 
   return (
     <div className='cursor overflow-x-h'>
+            <CustomCursor />
       <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>

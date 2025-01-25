@@ -30,7 +30,7 @@
         --secondary-color: #f7f8f9;
         --teritiary-color: #c0c0c0;
         --text-color: #404040;
-        --border-color: #cccccc;
+        --border-color: #DDDDDD;
         --grey-bg-w-color: #808080;
         --grey-bg-b-color: #606060;
         --black-opacity: rgba(255, 255, 255, 0.8);
@@ -61,8 +61,12 @@
 }
 
 .cursor {
-    cursor: url('../public/img/cursors/cursor.svg'), auto;
+    cursor: none;
 }
+
+
+
+
 
 .overflow-x-h {
     overflow-x: unset;
@@ -104,6 +108,25 @@ body {
     background-color: var(--grey-bg-b-color);
     border-radius: 100%;
     animation: translateCircle 1.2s ease-in-out infinite;
+}
+
+
+.custom-cursor {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    background: #ffffff30;
+    border-radius: 100%;
+    backdrop-filter: blur(2px);
+    background-size: contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    border: 1px solid #00000020;
+}
+
+@media (max-width: 1200px) {
+    
 }
 
 @keyframes translateCircle {
@@ -149,6 +172,7 @@ body {
     border-bottom: 1px solid transparent;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
+
 
     .nav-main {
         transform: translate3d(0px, 2px, 2px);
@@ -221,7 +245,8 @@ body {
     gap: 10px;
     background: var(--black-2-color);
     transition: 0.2s ease-in-out;
-    cursor: pointer;
+    cursor: none;
+
     text-decoration: none;
     color: var(--white-color);
     border-radius: 99px;
@@ -481,6 +506,7 @@ body {
     gap: 56px;
     flex-direction: row;
     padding-top: 20vh;
+
     a {
         font-weight: 400;
         line-height: inherit;
@@ -496,7 +522,7 @@ body {
 .about-main p {
     color: var(--grey-bg-b-color);
     font-size: 20px;
-    font-weight: 300 !important ;
+    font-weight: 300 !important;
     width: 50%;
     line-height: 1.8;
 }
@@ -575,11 +601,12 @@ body {
     transition: transform .1s ease-in-out;
     background-position: center;
     background-size: cover;
-    cursor: pointer;
+    cursor: none;
     border: 1px solid var(--black-2-color);
     overflow: hidden;
     border-radius: var(--border-radius-1);
 }
+
 
 
 .sub-card {
@@ -654,6 +681,8 @@ body {
     transition-timing-function: ease-in-out;
     box-shadow: 2px 4px 16px #ffffff29;
     transform: scale3d(1.01, 1.01, 1.01) !important;
+
+
 }
 
 .main-card:active {

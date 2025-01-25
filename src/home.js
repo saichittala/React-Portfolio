@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './card';
 import Header from './components/header';
+import CustomCursor from './components/customcursor';
 import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
 import useScrollEffect from './components/useScrollEffect';
@@ -22,7 +23,10 @@ const Home = () => {
 
 
   return (
+
     <div className="content cursor" id="content">
+      <CustomCursor />
+
       <Header />
       <main>
         <section className="fade-in">
