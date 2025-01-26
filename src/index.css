@@ -6,6 +6,7 @@
 
 
 
+
 :root {
 
     /* Colors */
@@ -120,13 +121,34 @@ body {
     backdrop-filter: blur(2px);
     background-size: contain;
     pointer-events: none;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     z-index: 10000;
     border: 1px solid #00000020;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+.custom-cursor.pointer {
+    width: 56px;
+    height: 56px;
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-cursor.text {
+    width: 2px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 1);
 }
 
 @media (max-width: 1200px) {
-    
+    .custom-cursor {
+        display: none;
+    }
+}
+@media (max-width: 674px) {
+    .custom-cursor {
+        display: none;
+    }
 }
 
 @keyframes translateCircle {
@@ -601,7 +623,7 @@ body {
     transition: transform .1s ease-in-out;
     background-position: center;
     background-size: cover;
-    cursor: none;
+    cursor: pointer;
     border: 1px solid var(--black-2-color);
     overflow: hidden;
     border-radius: var(--border-radius-1);
@@ -665,7 +687,7 @@ body {
 
         transition: backdrop-filter 0.3s cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s cubic-bezier(0, -.6, 0, 1.07), background-color 0.3s cubic-bezier(0, -.6, 0, 1.07);
     }
-
+    
     img {
         height: 120%;
         width: 120%;
