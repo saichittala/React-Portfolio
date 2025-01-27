@@ -68,7 +68,7 @@ const MyDeziner = () => {
 
   return (
     <div className='cursor overflow-x-h'>
-            <CustomCursor />
+      <CustomCursor />
       <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
@@ -147,10 +147,10 @@ const MyDeziner = () => {
                     </div>
                     <div className="pd-main">
                       <div className="   pd-content-main">
-                      <ReactBeforeSliderComponent className='fade-in'
-                            firstImage={{ "imageUrl": 'img/projects/mydeziner/mydeziner-new.png' }}  // Passing the first image
-                            secondImage={{ "imageUrl": 'img/projects/mydeziner/mydeziner-old.png' }}  // Passing the first image
-                          />
+                        <ReactBeforeSliderComponent className='fade-in'
+                          firstImage={{ "imageUrl": 'img/projects/mydeziner/mydeziner-new.png' }}  // Passing the first image
+                          secondImage={{ "imageUrl": 'img/projects/mydeziner/mydeziner-old.png' }}  // Passing the first image
+                        />
                         {/* <video 
                           className="fade-in"
                           loading="lazy"
@@ -165,7 +165,7 @@ const MyDeziner = () => {
                           Your browser does not support the video tag.
                         </video> */}
                         <int className="fade-in">
-                          <p  className='cursor-textt'><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
+                          <p className='cursor-textt'><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
                       </div>
                     </div>
                   </div>
@@ -175,8 +175,8 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="project-breif-heading fade-in">
-                        <span  className='cursor-textt'>02</span>
-                        <span  className='cursor-textt'>Challenges</span>
+                        <span className='cursor-textt'>02</span>
+                        <span className='cursor-textt'>Challenges</span>
                       </div>
                       <div className="challenges-main">
                         <div className="challenges-sub">
@@ -228,8 +228,19 @@ const MyDeziner = () => {
                           <ch className="fade-in translate-text-up cursor-textt">Effortless Navigation</ch>
                           <p className='fade-in cursor-textt'>A perfect blend of simplicity and power ensures users can create, modify, and render projects with ease.
                           </p>
-                          {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" /> */}
+                          <video 
+                          className="fade-in"
+                          loading="lazy"
+                          preload="metadata"
+                          id="myVideo"
+                          loop
+                          muted
+                          autoPlay
+                          playsInline
+                          disablePictureInPicture>
+                          <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
                         </div>
                       </div>
                     </div>
@@ -295,16 +306,16 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up cursor-textt">Effortless Material Swapping</ch>
                           <p className='fade-in cursor-textt'>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
-                          <video 
-                          className="fade-in"
-                          loading="lazy"
-                          preload="metadata"
-                          disablePictureInPicture
-                          id="myVideo"
-                          loop
-                          muted
-                          autoPlay
-                          playsInline>
+                          <video
+                            className="fade-in"
+                            loading="lazy"
+                            preload="metadata"
+                            disablePictureInPicture
+                            id="myVideo"
+                            loop
+                            muted
+                            autoPlay
+                            playsInline>
                             <source src="img/projects/mydeziner/02/02-04.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
@@ -330,16 +341,16 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up cursor-textt">Material Copying Made Simple</ch>
                           <p className='fade-in cursor-textt'>Streamline design workflows by copying and pasting materials across multiple objects, ensuring consistency and efficiency in projects.</p>
-                          <video 
-                          className="fade-in"
-                          loading="lazy"
-                          preload="metadata"
-                          disablePictureInPicture
-                          id="myVideo"
-                          loop
-                          muted
-                          autoPlay
-                          playsInline>
+                          <video
+                            className="fade-in"
+                            loading="lazy"
+                            preload="metadata"
+                            disablePictureInPicture
+                            id="myVideo"
+                            loop
+                            muted
+                            autoPlay
+                            playsInline>
                             <source src="img/projects/mydeziner/02/02-06.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
@@ -352,16 +363,16 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up cursor-textt">Material Favorites for Quick Access</ch>
                           <p className='fade-in cursor-textt'>Users can save their go-to materials and access them instantly for smoother workflows.</p>
-                          <video 
-                          className="fade-in"
-                          loading="lazy"
-                          preload="metadata"
-                          disablePictureInPicture
-                          id="myVideo"
-                          loop
-                          muted
-                          autoPlay
-                          playsInline>
+                          <video
+                            className="fade-in"
+                            loading="lazy"
+                            preload="metadata"
+                            disablePictureInPicture
+                            id="myVideo"
+                            loop
+                            muted
+                            autoPlay
+                            playsInline>
                             <source src="img/projects/mydeziner/02/02-07.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
@@ -374,16 +385,16 @@ const MyDeziner = () => {
                         <div className="pd-content">
                           <ch className="fade-in translate-text-up cursor-textt">Property and Room Management</ch>
                           <p className='fade-in cursor-textt'>Revolutionize project customization with intuitive property manipulation and room switching, enabling tailored adjustments across spaces.</p>
-                            <video 
-                          className="fade-in"
-                          loading="lazy"
-                          preload="metadata"
-                          disablePictureInPicture
-                          id="myVideo"
-                          loop
-                          muted
-                          autoPlay
-                          playsInline>
+                          <video
+                            className="fade-in"
+                            loading="lazy"
+                            preload="metadata"
+                            disablePictureInPicture
+                            id="myVideo"
+                            loop
+                            muted
+                            autoPlay
+                            playsInline>
                             <source src="img/projects/mydeziner/02/02-08.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
@@ -453,6 +464,28 @@ const MyDeziner = () => {
                           <p className='fade-in cursor-textt'>Provides a seamless experience whether on mobile, tablet, or desktop.</p>
                           <img src="img/projects/mydeziner/02/02-10.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
+                        </div>
+                      </div>
+                      <div className="challenges-content-flow video-content-vr">
+                        <div className="pd-heading-div">
+                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-11 </a>
+                        </div>
+                        <div className="pd-content">
+                          <ch className="fade-in translate-text-up cursor-textt">VR Experience</ch>
+                          <p className='fade-in cursor-textt'>Users can experience real-time VR and immerse themselves in the world of interior design, exploring and choosing beautiful interiors that bring their vision to life in a single platform.</p>
+                          <video
+                            className="fade-in"
+                            loading="lazy"
+                            preload="metadata"
+                            disablePictureInPicture
+                            id="myVideo"
+                            loop
+                            muted
+                            autoPlay
+                            playsInline>
+                            <source src="img/projects/mydeziner/mydeziner-vr.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
                       </div>
                     </div>

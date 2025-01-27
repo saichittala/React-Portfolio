@@ -127,32 +127,35 @@ body {
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-.cursor-text:hover ~ .round-cursor {
-    background-color: #0172EA; /* Bright orange for example */
-  }
+.cursor-text:hover~.round-cursor {
+    background-color: #0172EA;
+    /* Bright orange for example */
+}
 
 .cursor-link,
 .cursor-text {
-  cursor: none;
+    cursor: none;
 }
 
 @media (max-width: 1200px) {
     .round-cursor {
         display: none;
     }
+
     .cursor-link,
     .cursor-text {
-  cursor: none;
-}
+        cursor: none;
+    }
 }
 
 @media (max-width: 674px) {
     .round-cursor {
         display: none;
     }
+
     .cursor-link,
     .cursor-text {
-      cursor: none;
+        cursor: none;
     }
 }
 
@@ -722,6 +725,7 @@ body {
 .main-card:active {
     transform: scale3d(0.98, 0.98, 0.98);
 }
+
 
 
 @keyframes scaleIn {
@@ -1371,6 +1375,15 @@ a {
         width: unset;
         border-radius: var(--border-radius-1);
     }
+
+    .video-content-vr {
+        width: unset !important;
+    }
+}
+
+.video-content-vr {
+    width: 100%;
+    background-size: cover;
 }
 
 .project-details img {
@@ -1603,6 +1616,23 @@ p {
     display: flex;
     justify-content: space-between;
 }
+
+.before-after-slider__delimiter-icon {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 56px !important;
+    width: 56px !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56' fill='none'%3E%3Crect width='56' height='56' rx='28' fill='white'/%3E%3Cpath d='M22.8008 34L16.8008 28L22.8008 22L24.2008 23.4L19.6008 28L24.2008 32.6L22.8008 34Z' fill='black'/%3E%3Cpath d='M33.2012 22L39.2012 28L33.2012 34L31.8012 32.6L36.4012 28L31.8012 23.4L33.2012 22Z' fill='black'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: none !important;
+    .round-cursor {
+        width: 56px;
+        height: 56px;
+    }
+}
+
 
 
 .project-breif-section {
@@ -1891,6 +1921,13 @@ p {
     .pd-main {
         flex-direction: column;
     }
+
+
+    .before-after-slider__delimiter-icon {
+        height: 40px !important;
+        width: 40px !important;
+    }
+
 
     .pd-heading-div {
         width: 100%;
