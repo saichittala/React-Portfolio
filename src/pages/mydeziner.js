@@ -147,7 +147,11 @@ const MyDeziner = () => {
                     </div>
                     <div className="pd-main">
                       <div className="   pd-content-main">
-                        <video 
+                      <ReactBeforeSliderComponent className='fade-in'
+                            firstImage={{ "imageUrl": 'img/projects/mydeziner/mydeziner-new.png' }}  // Passing the first image
+                            secondImage={{ "imageUrl": 'img/projects/mydeziner/mydeziner-old.png' }}  // Passing the first image
+                          />
+                        {/* <video 
                           className="fade-in"
                           loading="lazy"
                           preload="metadata"
@@ -159,7 +163,7 @@ const MyDeziner = () => {
                           disablePictureInPicture>
                           <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
-                        </video>
+                        </video> */}
                         <int className="fade-in">
                           <p  className='cursor-textt'><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
                       </div>
