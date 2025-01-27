@@ -244,15 +244,15 @@ const MyDeziner = () => {
                         <div className="challenges-sub">
                           <div className="challenge-inactive-card fade-in">
                             <span className="challenge-heading cursor-textt">01</span>
-                            <span className="challenge-heading cursor-textt">Designing MyDeziner Where Innovation Meets Imagination</span>
+                            <span className="challenge-content cursor-textt">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading cursor-textt">02</span>
-                            <span className="challenge-heading cursor-textt">Simplifying Advanced Features Without Losing Depth</span>
+                            <span className="challenge-content cursor-textt">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading cursor-textt">03</span>
-                            <span className="challenge-heading cursor-textt">Scaling for Seamless Performance Across Devices</span>
+                            <span className="challenge-content cursor-textt">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -411,15 +411,15 @@ const MyDeziner = () => {
                         <div className="challenges-sub">
                           <div className="challenge-inactive-card fade-in">
                             <span className="challenge-heading cursor-textt">01</span>
-                            <span className="challenge-heading cursor-textt">Designing MyDeziner Where Innovation Meets Imagination</span>
+                            <span className="challenge-content cursor-textt">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
                             <span className="challenge-heading cursor-textt">02</span>
-                            <span className="challenge-heading cursor-textt">Simplifying Advanced Features Without Losing Depth</span>
+                            <span className="challenge-content cursor-textt">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading cursor-textt">03</span>
-                            <span className="challenge-heading cursor-textt">Scaling for Seamless Performance Across Devices</span>
+                            <span className="challenge-content cursor-textt">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
