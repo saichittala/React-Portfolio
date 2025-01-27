@@ -112,42 +112,47 @@ body {
 }
 
 
-.custom-cursor {
+.round-cursor {
     position: fixed;
     width: 36px;
     height: 36px;
     background: #ffffff30;
     border-radius: 100%;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     background-size: contain;
     pointer-events: none;
     transform: translate(-50%, -50%) scale(1);
     z-index: 10000;
     border: 1px solid #00000020;
-    transition: width 0.3s ease, height 0.3s ease;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
+.cursor-text:hover ~ .round-cursor {
+    background-color: #0172EA; /* Bright orange for example */
+  }
 
-.custom-cursor.pointer {
-    width: 56px;
-    height: 56px;
-    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
-}
-
-.custom-cursor.text {
-    width: 2px;
-    height: 24px;
-    background-color: rgba(0, 0, 0, 1);
+.cursor-link,
+.cursor-text {
+  cursor: none;
 }
 
 @media (max-width: 1200px) {
-    .custom-cursor {
+    .round-cursor {
         display: none;
     }
+    .cursor-link,
+.cursor-text {
+  display: none;
 }
+}
+
 @media (max-width: 674px) {
-    .custom-cursor {
+    .round-cursor {
         display: none;
+    }
+    .cursor-link,
+    .cursor-text {
+      display: none;
     }
 }
 
@@ -288,7 +293,8 @@ body {
     align-items: flex-start;
     gap: 10px;
     transition: 0.2s ease-in-out;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
     color: var(--grey-bg-b-color);
 }
 
@@ -306,7 +312,8 @@ body {
     align-items: flex-start;
     gap: 10px;
     transition: 0.2s ease-in-out;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
     background: var(--teritiary-color);
     width: fit-content;
 }
@@ -412,7 +419,8 @@ body {
 
 .intro-link {
     margin-right: 16px;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
 }
 
 .intro-link:hover {
@@ -432,7 +440,8 @@ body {
 
 .company-text {
     color: var(--white-color);
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
     background-image: linear-gradient(138deg, #0895FF, #C952DD 34%, #FF2E55 68%, #FF9014);
     background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
@@ -460,7 +469,8 @@ body {
     color: var(--grey-bg-b-color);
     transition: transform 0.2s ease-in-out;
     border-radius: 99px;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
 }
 
 .scroll-btn a {
@@ -623,10 +633,11 @@ body {
     transition: transform .1s ease-in-out;
     background-position: center;
     background-size: cover;
-    cursor: pointer;
+    cursor: none;
     border: 1px solid var(--black-2-color);
     overflow: hidden;
     border-radius: var(--border-radius-1);
+
 }
 
 
@@ -687,7 +698,7 @@ body {
 
         transition: backdrop-filter 0.3s cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s cubic-bezier(0, -.6, 0, 1.07), background-color 0.3s cubic-bezier(0, -.6, 0, 1.07);
     }
-    
+
     img {
         height: 120%;
         width: 120%;
@@ -706,6 +717,8 @@ body {
 
 
 }
+
+
 
 .main-card:active {
     transform: scale3d(0.98, 0.98, 0.98);
@@ -795,7 +808,8 @@ body {
     position: absolute;
     top: 28px;
     right: 28px;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
     width: fit-content;
     height: fit-content;
     transition: transform .2s ease-in-out;
@@ -828,7 +842,8 @@ body {
 }
 
 .unlock-projects {
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
     background: var(--white-color);
     display: flex;
     padding: 14px;
@@ -921,7 +936,8 @@ body {
 .toggle {
     display: none;
     font-size: 24px;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
 }
 
 
@@ -1379,7 +1395,8 @@ a {
 
 .b-inactive:hover {
     color: var(--black-2-color);
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
 }
 
 .pd-heading-main-div {
@@ -1475,7 +1492,8 @@ p {
     font-size: 18px;
     transform: scale3d(1, 1, 1);
     transition: all 0.3s ease-in;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: none;
 }
 
 .project-link-btn:hover {

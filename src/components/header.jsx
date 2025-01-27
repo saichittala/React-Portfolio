@@ -12,7 +12,7 @@ function Header() {
       <nav className="nav-bar">
         <div className="nav-main">
           {/* Logo */}
-          <a href="." className='logo'>
+          <a href="." className='logo  cursor-link'>
             <img src="img/logo.svg" alt="logo" />
           </a>
 
@@ -28,16 +28,16 @@ function Header() {
           <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
             <div className="mob-nav-btns">
               <a href="." className="about-button btn-1 mob-btn-1">Work</a>
-              <a href="/#about" className="about-button btn-1 mob-btn-1">Info</a>
+              <a href="/#about" className="about-button btn-1 mob-btn-1 ">Info</a>
               <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-1 mob-btn-1">Resume</a>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="nav-btns">
-            <a href="." className="about-button header-text">Work</a>
-            <a href="/#about" className="about-button header-text">Info</a>
-            <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text">Resume</a>
+            <a href="." className="about-button header-text cursor-link">Work</a>
+            <a href="/#about" className="about-button header-text cursor-link">Info</a>
+            <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text cursor-link">Resume</a>
           </div>
         </div>
       </nav>

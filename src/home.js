@@ -26,7 +26,6 @@ const Home = () => {
 
     <div className="content cursor" id="content">
       <CustomCursor />
-
       <Header />
       <main>
         <section className="fade-in">
@@ -35,20 +34,20 @@ const Home = () => {
               <div className="intro-section-main">
                 <div className="intro-section">
                   <div className="intro-content">
-                    <p className="intro-white-text fade-in translate-text-down">
-                      Sai Chittala <br />
-                      <span className="intro-white-text">Product Designer at </span>
-                      <a className="company-text" href="https://www.customfurnish.com/home" target="_blank" rel="noopener noreferrer">
+                    <p className="intro-white-text fade-in translate-text-down ">
+                      <a className='cursor-text'>Sai Chittala</a> <br />
+                      <span className="intro-white-text cursor-text">Product Designer at </span>
+                      <a className="company-text cursor-link" href="https://www.customfurnish.com/home" target="_blank" rel="noopener noreferrer">
                         CustomFurnish
                       </a>
                       <br />
-                      <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link" rel="noopener noreferrer">
+                      <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link cursor-link" rel="noopener noreferrer">
                         Email
                       </a>
-                      <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link cursor-link" rel="noopener noreferrer">
                         LinkedIn
                       </a>
-                      <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link" rel="noopener noreferrer">
+                      <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link cursor-link" rel="noopener noreferrer">
                         Upwork
                       </a>
                     </p>

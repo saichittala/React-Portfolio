@@ -9,15 +9,15 @@ function footer() {
                         <div className="footer-main">
                             {/* Personal Details */}
                             <div className="footer-content">
-                                <a className="footer-white">Sai Chittala</a>
-                                <a className="footer-grey">Product Designer</a>
+                                <a className="footer-white cursor-text">Sai Chittala</a>
+                                <a className="footer-grey cursor-text">Product Designer</a>
                             </div>
 
                             {/* Social Links */}
                             <div className="footer-content">
                                 <a
                                     href="https://www.linkedin.com/in/saichittala/"
-                                    className="footer-white"
+                                    className="footer-white cursor-link"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -25,7 +25,7 @@ function footer() {
                                 </a>
                                 <a
                                     href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf/"
-                                    className="footer-white"
+                                    className="footer-white cursor-link"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -35,8 +35,8 @@ function footer() {
 
                             {/* Additional Links */}
                             <div className="footer-content">
-                                <a href='/#about' className="footer-white">About</a>
-                                <a href="Resume.pdf" className="footer-white">Resume</a>
+                                <a href='/#about' className="footer-white cursor-link">About</a>
+                                <a href="Resume.pdf" className="footer-white cursor-link">Resume</a>
                             </div>
                         </div>
                     </div>

@@ -45,10 +45,10 @@ const Card = ({ title, type, image, link, openInNewTab = true, locked, password 
   return (
     <div>
       <div
-        className="main-card fade-in"
+        className="main-card fade-in cursor-link"
         style={{ backgroundImage: `url(${image})` }}
         onClick={handleCardClick}
-      >
+>
         <div className="sub-card">
           <div className="card-content">
             <div className="main-heading">{title}</div>
