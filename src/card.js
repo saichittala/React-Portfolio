@@ -1,46 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import useFadeIn from './components/useFadeIn';
 
-const Card = ({ title, type, image, link, openInNewTab = true, locked, password }) => {
+const Card = ({ title, type, image, link, openInNewTab = true, locked, onRequestLockPopup, password }) => {
   useFadeIn();
-
-  const [isPopupVisible, setPopupVisible] = useState(false);
-  const passwordInputRef = useRef(null);
 
   const handleCardClick = () => {
     if (locked) {
-      setPopupVisible(true);
+      onRequestLockPopup(link, password); // Pass password to the popup request
     } else {
       window.open(link, openInNewTab ? "_blank" : "_self");
     }
   };
-
-  const handlePasswordSubmit = () => {
-    const enteredPassword = passwordInputRef.current.value;
-    if (enteredPassword === password) {
-      window.open(link, openInNewTab ? "_blank" : "_self");
-      setPopupVisible(false);
-    } else {
-      alert('Incorrect password. Please try again.');
-    }
-  };
-
-  const closePasswordPopup = () => {
-    setPopupVisible(false);
-    passwordInputRef.current.value = '';
-  };
-
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      handlePasswordSubmit();
-    }
-  };
-
-  useEffect(() => {
-    if (isPopupVisible && passwordInputRef.current) {
-      passwordInputRef.current.focus();
-    }
-  }, [isPopupVisible]);
 
   return (
     <div>
@@ -48,7 +18,7 @@ const Card = ({ title, type, image, link, openInNewTab = true, locked, password 
         className="main-card fade-in cursor-link"
         style={{ backgroundImage: `url(${image})` }}
         onClick={handleCardClick}
->
+      >
         <div className="sub-card">
           <div className="card-content">
             <div className="main-heading">{title}</div>
@@ -56,37 +26,6 @@ const Card = ({ title, type, image, link, openInNewTab = true, locked, password 
           </div>
         </div>
       </div>
-
-      {isPopupVisible && (
-        <div id="passwordPopup" className="popup" style={{ display: 'flex', zIndex: 1001 }}>
-          <div className="popup-content">
-            <div className="popup-main">
-              <div className="popup-header">
-                <img src="img/lock.svg" alt="lock" />
-                <img
-                  className="close-button"
-                  src="img/close-popup.svg"
-                  alt="close-popup"
-                  onClick={closePasswordPopup}
-                />
-              </div>
-            </div>
-            <div>
-              <p>Enter password to continue</p>
-              <input
-                ref={passwordInputRef}
-                type="password"
-                placeholder="Enter password"
-                onKeyDown={handleKeyPress}
-              />
-            </div>
-            <div className="unlock-projects" onClick={handlePasswordSubmit}>
-              <img src="img/unlock.svg" alt="unlock" />
-              <a>Unlock</a>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

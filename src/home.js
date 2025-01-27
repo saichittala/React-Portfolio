@@ -1,29 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './card';
 import Header from './components/header';
 import CustomCursor from './components/customcursor';
 import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
 import useScrollEffect from './components/useScrollEffect';
+import LockPopup from './components/lockpopup'; // Import LockPopup component
 
 const Home = () => {
   useFadeIn();
   useScrollEffect();
+
+  // Manage popup state
+  const [isPopupVisible, setPopupVisible] = useState(false);
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [currentLink, setCurrentLink] = useState('');
+  const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
+
   const cardsData = [
     { title: "MyDeziner", type: "Product Design", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
     { title: "CustomFurnish", type: "UX Design", image: "img/projects/customfurnish.webp", link: "#/customfurnish", openInNewTab: true, locked: true, password: "surya@123" },
     { title: "HomeGymr", type: "UX Design", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Petzy", type: "Case Study", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: true, password: "surya@123" },
     { title: "Yalla Gai", type: "UX Design", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: true, password: "surya@123" },
-    { title: "Temple Address", type: "UX Design", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "surya@123" },
+    { title: "Temple Address", type: "UX Design", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "1" },
     { title: "Shruh", type: "UX Design", image: "img/projects/shruh.webp", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
     { title: "Muzicon", type: "UX Design", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
   ];
 
+  // Handle the locked popup request
+  const handleRequestLockPopup = (link, password) => {
+    setPopupVisible(true);
+    setCurrentPassword(password); // Store the password here
+    setCurrentLink(link); // Store the link here
+    setIsPasswordIncorrect(false); // Reset incorrect password flag
+  };
 
+  // Handle unlock logic
+  const handleUnlock = (enteredPassword) => {
+    if (enteredPassword === currentPassword) {
+      window.open(currentLink, "_blank");
+      setPopupVisible(false); // Close popup on success
+    } else {
+      setIsPasswordIncorrect(true); // Set incorrect flag if password is wrong
+    }
+  };
+
+  // Close the popup
+  const closePopup = () => {
+    setPopupVisible(false);
+    setCurrentPassword('');
+    setCurrentLink('');
+    setIsPasswordIncorrect(false); // Reset password check state
+  };
 
   return (
-
     <div className="content cursor" id="content">
       <CustomCursor />
       <Header />
@@ -54,7 +85,12 @@ const Home = () => {
 
                     <div className="cards-container" id="cards-container">
                       {cardsData.map((card, index) => (
-                        <Card key={index} {...card} />
+                        <Card
+                          key={index}
+                          {...card}
+                          onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
+                          password={card.password} // Pass password prop for locked cards
+                        />
                       ))}
                     </div>
                   </div>
@@ -64,7 +100,17 @@ const Home = () => {
           </div>
         </section>
       </main>
+
       <Footer />
+
+      {/* LockPopup */}
+      <LockPopup
+        isVisible={isPopupVisible}
+        onClose={closePopup}
+        onUnlock={handleUnlock}
+        password={currentPassword} // Pass password to LockPopup
+        isPasswordIncorrect={isPasswordIncorrect} // Pass incorrect password flag
+      />
     </div>
   );
 };

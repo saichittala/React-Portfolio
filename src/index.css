@@ -719,7 +719,6 @@ body {
 }
 
 
-
 .main-card:active {
     transform: scale3d(0.98, 0.98, 0.98);
 }
@@ -750,7 +749,8 @@ body {
     z-index: 100000;
     overflow-y: hidden !important;
     animation: fadeIn 0.1s ease-in-out;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
+    overflow: hidden;
 }
 
 .popup-content {
@@ -768,6 +768,7 @@ body {
     position: relative;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-1);
+    overflow-y: hidden !important;
 }
 
 
@@ -791,6 +792,10 @@ body {
 
 .popup-content img {
     border-radius: var(--border-radius-1) !important;
+}
+
+.popup-lock-img {
+    border: 1px solid var(--border-color);
 }
 
 /* Optional fade-in effect for the background */
