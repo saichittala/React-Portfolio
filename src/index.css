@@ -141,8 +141,8 @@ body {
         display: none;
     }
     .cursor-link,
-.cursor-text {
-  display: none;
+    .cursor-text {
+  cursor: none;
 }
 }
 
@@ -152,7 +152,7 @@ body {
     }
     .cursor-link,
     .cursor-text {
-      display: none;
+      cursor: none;
     }
 }
 
