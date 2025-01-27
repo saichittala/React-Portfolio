@@ -1269,7 +1269,7 @@ a {
         transform: translateY(0);
         /* Slide down to the original position */
         visibility: visible;
-        height: 40vh;
+        height: auto;
     }
 
 
