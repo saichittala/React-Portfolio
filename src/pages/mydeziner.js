@@ -493,11 +493,57 @@ const MyDeziner = () => {
                 </div>
 
 
-                <div className="bg-full bg-white">
+                <div className="bg-full bg-grey">
                   <div className="bg-main  padding-unset width-unset">
                     <div className="project-details width-unset">
                       <div className="project-breif-heading fade-in">
                         <span className='cursor-textt'>03</span>
+                        <span className='cursor-textt'>Process</span>
+                      </div>
+                      <div className='pd-challenges-main'>
+                        <div className="pd-content width-100">
+                          <div className='process-card-main'>
+                            <a className='process-card-heading'>01. Discovery</a>
+                            <div className='process-card-sub'>
+                              <div className='process-card-info'>User Interviews</div>
+                              <div className='process-card-info'>Problem Identification</div>
+                              <div className='process-card-info'>Competitor Analysis</div>
+                            </div>
+                          </div>
+                          <div className='process-card-main'>
+                            <a className='process-card-heading'>02 . Ideation</a>
+                            <div className='process-card-sub'>
+                              <div className='process-card-info'>Low Fedility Wireframes</div>
+                              <div className='process-card-info'>User Feedback Loop</div>
+                            </div>
+                          </div>
+                          <div className='process-card-main'>
+                            <a className='process-card-heading'>03. Design</a>
+                            <div className='process-card-sub'>
+                              <div className='process-card-info'>Moodboards</div>
+                              <div className='process-card-info'>High-Fidelity Wireframes</div>
+                              <div className='process-card-info'>Interactive Prototypes</div>
+                              
+                            </div>
+                          </div>
+                          <div className='process-card-main'>
+                            <a className='process-card-heading'>04. Development Collaboration</a>
+                            <div className='process-card-sub'>
+                              <div className='process-card-info'>Design System</div>
+                              <div className='process-card-info'>Handoff to Developers</div>
+                              <div className='process-card-info'>QA & Iterations</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-full bg-white">
+                  <div className="bg-main  padding-unset width-unset">
+                    <div className="project-details width-unset">
+                      <div className="project-breif-heading fade-in">
+                        <span className='cursor-textt'>04</span>
                         <span className='cursor-textt'>Brand Design</span>
                       </div>
                       <div className='pd-challenges-main'>
@@ -537,7 +583,7 @@ const MyDeziner = () => {
                 <div className="project-details ">
                   <div className="project-breif-section">
                     <div className="project-breif-heading fade-in">
-                      <span className='cursor-textt'>04</span>
+                      <span className='cursor-textt'>05</span>
                       <span className='cursor-textt'>Result</span>
                     </div>
                     <div className="pd-content width-100">
