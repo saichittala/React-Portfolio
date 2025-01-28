@@ -22,6 +22,7 @@
     --grey-bg-w-color: #606060;
     --grey-bg-b-color: #808080;
     --black-opacity: rgba(22, 22, 23, 0.8);
+    --cursor-color: #ffffff30;
 
     .light-theme {
         --black-color: #ffffff;
@@ -35,6 +36,8 @@
         --grey-bg-w-color: #808080;
         --grey-bg-b-color: #606060;
         --black-opacity: rgba(255, 255, 255, 0.8);
+        --cursor-color: #00000030;
+
 
         .menu-icon {
             filter: brightness(0) saturate(100%) invert(0%) sepia(90%) saturate(7460%) hue-rotate(152deg) brightness(108%) contrast(109%);
@@ -116,16 +119,18 @@ body {
     position: fixed;
     width: 36px;
     height: 36px;
-    background: #ffffff30;
+    background: var(--cursor-color);
     border-radius: 100%;
-    backdrop-filter: blur(1px);
     background-size: contain;
+    backdrop-filter: blur(1px);
     pointer-events: none;
     transform: translate(-50%, -50%) scale(1);
     z-index: 10000;
     border: 1px solid #00000020;
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    /* mix-blend-mode: difference; */
 }
+
 
 .cursor-text:hover~.round-cursor {
     background-color: #0172EA;
@@ -426,9 +431,26 @@ body {
     cursor: none;
 }
 
+
 .intro-link:hover {
     text-decoration: underline;
 }
+
+
+.say-hi-btn {
+    padding: 12px 24px;
+    font-size: 16px !important;
+    gap: 10px;
+    background: none;
+    display: flex;
+    border: 1px solid var(--border-color) !important;
+    width: fit-content;
+    margin-top: 36px;
+    border-radius: var(--border-radius-1);
+}
+
+
+
 
 
 .intro-content p {
@@ -1627,6 +1649,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     cursor: none !important;
+
     .round-cursor {
         width: 56px;
         height: 56px;

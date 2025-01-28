@@ -81,6 +81,9 @@ const Home = () => {
                       <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link cursor-link" rel="noopener noreferrer">
                         Upwork
                       </a>
+                      {/* <div className='say-hi-btn cursor-playful'>
+                      <img src="img/right-arrow.svg" alt="logo" />
+                      <a>Say Hi</a></div> */}
                     </p>
 
                     <div className="cards-container" id="cards-container">

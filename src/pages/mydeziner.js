@@ -383,7 +383,7 @@ const MyDeziner = () => {
                           <a className="fade-in pd-main-heading-2 cursor-textt"> 02-08 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">Property and Room Management</ch>
+                          <ch className="fade-in translate-text-up cursor-textt">Multi-Level Property Control</ch>
                           <p className='fade-in cursor-textt'>Revolutionize project customization with intuitive property manipulation and room switching, enabling tailored adjustments across spaces.</p>
                           <video
                             className="fade-in"
@@ -523,13 +523,13 @@ const MyDeziner = () => {
                 </div>
 
                 {/* <div className="project-details">
-                  <div className="p-main-imgs">
+                  <div className="p-main-imgs padding-bottom-unset">
                     <div className="p-2imgs-2">
                       <img src="img/projects/petzy.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                       <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                     </div>
                     <div >
-                      <img src="img/sample4.jpg" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                      <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                     </div>
                   </div>
                 </div> */}
@@ -579,8 +579,8 @@ const MyDeziner = () => {
                 <div className="bg-full bg-white margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
-                      <div className="thankyou-content-heading fade-in">
-                        Thank you for viewing. <a
+                      <div className="thankyou-content-heading fade-in cursor-text">
+                        Thank you for viewing. <a className='cursor-link'
                           href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
                           target="_blank">Have a look</a>
                       </div>
