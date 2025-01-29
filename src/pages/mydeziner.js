@@ -502,36 +502,36 @@ const MyDeziner = () => {
                       </div>
                       <div className='pd-challenges-main'>
                         <div className="pd-content width-100">
-                          <div className='process-card-main'>
-                            <a className='process-card-heading'>01. Discovery</a>
+                          <div className='process-card-main fade-in'>
+                            <a className='process-card-heading fade-in'>01. Discovery</a>
                             <div className='process-card-sub'>
-                              <div className='process-card-info'>User Interviews</div>
-                              <div className='process-card-info'>Problem Identification</div>
-                              <div className='process-card-info'>Competitor Analysis</div>
+                              <div className='process-card-info fade-in'>User Interviews</div>
+                              <div className='process-card-info fade-in'>Problem Identification</div>
+                              <div className='process-card-info fade-in'>Competitor Analysis</div>
                             </div>
                           </div>
-                          <div className='process-card-main'>
-                            <a className='process-card-heading'>02 . Ideation</a>
+                          <div className='process-card-main fade-in'>
+                            <a className='process-card-heading fade-in'>02 . Ideation</a>
                             <div className='process-card-sub'>
-                              <div className='process-card-info'>Low Fedility Wireframes</div>
-                              <div className='process-card-info'>User Feedback Loop</div>
+                              <div className='process-card-info fade-in'>Low Fedility Wireframes</div>
+                              <div className='process-card-info fade-in'>User Feedback Loop</div>
                             </div>
                           </div>
-                          <div className='process-card-main'>
+                          <div className='process-card-main fade-in'>
                             <a className='process-card-heading'>03. Design</a>
-                            <div className='process-card-sub'>
-                              <div className='process-card-info'>Moodboards</div>
-                              <div className='process-card-info'>High-Fidelity Wireframes</div>
-                              <div className='process-card-info'>Interactive Prototypes</div>
+                            <div className='process-card-sub fade-in'>
+                              <div className='process-card-info fade-in'>Moodboards</div>
+                              <div className='process-card-info fade-in'>High-Fidelity Wireframes</div>
+                              <div className='process-card-info fade-in'>Interactive Prototypes</div>
                               
                             </div>
                           </div>
-                          <div className='process-card-main'>
-                            <a className='process-card-heading'>04. Development Collaboration</a>
+                          <div className='process-card-main fade-in'>
+                            <a className='process-card-heading fade-in'>04. Development Collaboration</a>
                             <div className='process-card-sub'>
-                              <div className='process-card-info'>Design System</div>
-                              <div className='process-card-info'>Handoff to Developers</div>
-                              <div className='process-card-info'>QA & Iterations</div>
+                              <div className='process-card-info fade-in'>Design System</div>
+                              <div className='process-card-info fade-in'>Handoff to Developers</div>
+                              <div className='process-card-info fade-in'>QA & Iterations</div>
                             </div>
                           </div>
                         </div>
