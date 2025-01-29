@@ -503,35 +503,35 @@ const MyDeziner = () => {
                       <div className='pd-challenges-main'>
                         <div className="pd-content width-100">
                           <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'>01 Discovery</a>
+                            <a className='process-card-heading fade-in'><pcard className='cursor-text'>01 Discovery</pcard></a>
                             <div className='process-card-sub'>
-                              <div className='process-card-info fade-in'>User Interviews</div>
-                              <div className='process-card-info fade-in'>Problem Identification</div>
-                              <div className='process-card-info fade-in'>Competitor Analysis</div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>User Interviews</pcard></div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Problem Identification</pcard></div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Competitor Analysis</pcard></div>
                             </div>
                           </div>
                           <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'>02 Ideation</a>
+                            <a className='process-card-heading fade-in'><pcard className='cursor-text'>02 Ideation</pcard></a>
                             <div className='process-card-sub'>
-                              <div className='process-card-info fade-in'>Low Fedility Wireframes</div>
-                              <div className='process-card-info fade-in'>User Feedback Loop</div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Low Fedility Wireframes</pcard></div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>User Feedback Loop</pcard></div>
                             </div>
                           </div>
                           <div className='process-card-main fade-in'>
-                            <a className='process-card-heading'>03 Design</a>
+                            <a className='process-card-heading'><pcard className='cursor-text'>03 Design</pcard></a>
                             <div className='process-card-sub fade-in'>
-                              <div className='process-card-info fade-in'>Moodboards</div>
-                              <div className='process-card-info fade-in'>High-Fidelity Wireframes</div>
-                              <div className='process-card-info fade-in'>Interactive Prototypes</div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Moodboards</pcard></div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>High-Fidelity Wireframes</pcard></div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Interactive Prototypes</pcard></div>
                               
                             </div>
                           </div>
                           <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'>04 Development Collaboration</a>
+                            <a className='process-card-heading fade-in'><pcard className='cursor-text'>04 Development Collaboration</pcard></a>
                             <div className='process-card-sub'>
-                              <div className='process-card-info fade-in'>Design System</div>
-                              <div className='process-card-info fade-in'>Handoff to Developers</div>
-                              <div className='process-card-info fade-in'>QA & Iterations</div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Design System</pcard></div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Handoff to Developers</pcard></div>
+                              <div className='process-card-info fade-in'><pcard className='cursor-text'>QA & Iterations</pcard></div>
                             </div>
                           </div>
                         </div>
