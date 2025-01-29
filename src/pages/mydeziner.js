@@ -178,19 +178,19 @@ const MyDeziner = () => {
                         <span className='cursor-textt'>02</span>
                         <span className='cursor-textt'>Challenges</span>
                       </div>
-                      <div className="challenges-main">
-                        <div className="challenges-sub">
+                      <div className="challenges-main fade-in">
+                        <div className="challenges-sub fade-in">
                           <div className="challenge-active-card fade-in">
-                            <span className="challenge-heading cursor-textt">01</span>
-                            <span className="challenge-content cursor-textt">Designing MyDeziner Where Innovation Meets Imagination</span>
+                            <span className="challenge-heading cursor-textt fade-in">01</span>
+                            <span className="challenge-content cursor-textt fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading cursor-textt">02</span>
-                            <span className="challenge-content cursor-textt">Simplifying Advanced Features Without Losing Depth</span>
+                            <span className="challenge-heading cursor-textt fade-in">02</span>
+                            <span className="challenge-content cursor-textt fade-in">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading cursor-textt">03</span>
-                            <span className="challenge-content cursor-textt">Scaling for Seamless Performance Across Devices</span>
+                            <span className="challenge-heading cursor-textt fade-in">03</span>
+                            <span className="challenge-content cursor-textt fade-in">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -252,22 +252,22 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="project-breif-heading fade-in">
-                        <span className='cursor-textt'>02</span>
-                        <span className='cursor-textt'>Challenges</span>
+                        <span className='cursor-textt fade-in'>02</span>
+                        <span className='cursor-textt fade-in'>Challenges</span>
                       </div>
-                      <div className="challenges-main">
-                        <div className="challenges-sub">
+                      <div className="challenges-main fade-in">
+                        <div className="challenges-sub fade-in">
                           <div className="challenge-inactive-card fade-in">
-                            <span className="challenge-heading cursor-textt">01</span>
-                            <span className="challenge-content cursor-textt">Designing MyDeziner Where Innovation Meets Imagination</span>
+                            <span className="challenge-heading cursor-textt fade-in">01</span>
+                            <span className="challenge-content cursor-textt fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
-                            <span className="challenge-heading cursor-textt">02</span>
-                            <span className="challenge-content cursor-textt">Simplifying Advanced Features Without Losing Depth</span>
+                            <span className="challenge-heading cursor-textt fade-in">02</span>
+                            <span className="challenge-content cursor-textt fade-in">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading cursor-textt">03</span>
-                            <span className="challenge-content cursor-textt">Scaling for Seamless Performance Across Devices</span>
+                            <span className="challenge-heading cursor-textt fade-in">03</span>
+                            <span className="challenge-content cursor-textt fade-in">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -422,15 +422,15 @@ const MyDeziner = () => {
                         <span className='cursor-textt'>02</span>
                         <span className='cursor-textt'>Challenges</span>
                       </div>
-                      <div className="challenges-main">
-                        <div className="challenges-sub">
+                      <div className="challenges-main fade-in">
+                        <div className="challenges-sub fade-in">
                           <div className="challenge-inactive-card fade-in">
-                            <span className="challenge-heading cursor-textt">01</span>
-                            <span className="challenge-content cursor-textt">Designing MyDeziner Where Innovation Meets Imagination</span>
+                            <span className="challenge-heading cursor-textt fade-in">01</span>
+                            <span className="challenge-content cursor-textt fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading cursor-textt">02</span>
-                            <span className="challenge-content cursor-textt">Simplifying Advanced Features Without Losing Depth</span>
+                            <span className="challenge-heading cursor-textt fade-in">02</span>
+                            <span className="challenge-content cursor-textt fade-in">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
                             <span className="challenge-heading cursor-textt">03</span>
@@ -503,7 +503,7 @@ const MyDeziner = () => {
                       <div className='pd-challenges-main'>
                         <div className="pd-content width-100">
                           <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'>01. Discovery</a>
+                            <a className='process-card-heading fade-in'>01 Discovery</a>
                             <div className='process-card-sub'>
                               <div className='process-card-info fade-in'>User Interviews</div>
                               <div className='process-card-info fade-in'>Problem Identification</div>
@@ -511,14 +511,14 @@ const MyDeziner = () => {
                             </div>
                           </div>
                           <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'>02 . Ideation</a>
+                            <a className='process-card-heading fade-in'>02 Ideation</a>
                             <div className='process-card-sub'>
                               <div className='process-card-info fade-in'>Low Fedility Wireframes</div>
                               <div className='process-card-info fade-in'>User Feedback Loop</div>
                             </div>
                           </div>
                           <div className='process-card-main fade-in'>
-                            <a className='process-card-heading'>03. Design</a>
+                            <a className='process-card-heading'>03 Design</a>
                             <div className='process-card-sub fade-in'>
                               <div className='process-card-info fade-in'>Moodboards</div>
                               <div className='process-card-info fade-in'>High-Fidelity Wireframes</div>
@@ -527,7 +527,7 @@ const MyDeziner = () => {
                             </div>
                           </div>
                           <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'>04. Development Collaboration</a>
+                            <a className='process-card-heading fade-in'>04 Development Collaboration</a>
                             <div className='process-card-sub'>
                               <div className='process-card-info fade-in'>Design System</div>
                               <div className='process-card-info fade-in'>Handoff to Developers</div>
