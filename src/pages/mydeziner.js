@@ -588,7 +588,9 @@ const MyDeziner = () => {
                     </div>
                     <div className="pd-content width-100">
                       {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" /> */}
-                      <p className='fade-in cursor-textt'><ch c>50% Faster Workflows</ch> streamlined tools accelerate project completion.
+                      <p className='fade-in cursor-textt'><ch >Good Website Structure</ch> and <ch >clear navigation.</ch>
+                      </p>
+                      <p className='fade-in cursor-textt'><ch >50% Faster Workflows</ch> streamlined tools accelerate project completion.
                       </p>
                       <p className='fade-in cursor-textt'>Users praise the tool for its balance of simplicity and power rated <ch>9.4/10 User Satisfaction</ch>
                       </p>

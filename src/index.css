@@ -1391,7 +1391,7 @@ a {
     gap: 80px;
     width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
     margin: auto;
-    padding: 100px 0;
+    padding: 150px 0;
 
     .zoom-image {
         width: unset;
@@ -1882,8 +1882,6 @@ p {
     flex-direction: column;
     border-radius: var(--border-radius-1);
     background-color: var(--white-color);
-
-
 }
 
 .process-card-heading {
@@ -1896,7 +1894,8 @@ p {
 .process-card-sub {
     display: flex;
     gap: 18px;
-    flex-wrap: wrap; /* This ensures items will wrap to the next line */
+    flex-wrap: wrap;
+    /* This ensures items will wrap to the next line */
 }
 
 .process-card-info {
