@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/img/logo.svg" />
@@ -20,7 +23,6 @@
     content="Sai Chittala's portfolio highlights UX, Product, Visual, and Interaction Design expertise with detailed case studies and digital solutions." />
   <meta name="twitter:image" content="url-to-feature-image.jpg">
   <meta name="Sai's Portfolio" content="/" />
-
   <!-- JSON-LD Schema Markup -->
   <script type="application/ld+json">
       {
@@ -36,20 +38,24 @@
         ],
         "description": "Sai Chittala's portfolio showcases expertise as a UX Designer, Product Designer, Visual Designer, and Interaction Designer, offering user-centered solutions and impactful designs."
       }
-  </script>
+      </script>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HSV3LEN82"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!-- Google Analytics Script -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5HSV3LEN82"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-5HSV3LEN82');
-  </script>
-
+  gtag('config', 'G-5HSV3LEN82');
+</script>
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo.svg" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>Sai Chittala | Product Designer Portfolio</title>
 </head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+</html>
