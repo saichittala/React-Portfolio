@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
 import useScrollEffect from './components/useScrollEffect';
 import LockPopup from './components/lockpopup'; // Import LockPopup component
+import GoogleAnalytics from './components/googleanalytics';
 
 const Home = () => {
   useFadeIn();
@@ -58,6 +59,7 @@ const Home = () => {
     <div className="content cursor" id="content">
       <CustomCursor />
       <Header />
+      <GoogleAnalytics />
       <main>
         <section className="fade-in">
           <div className="full-bg">
