@@ -7,7 +7,6 @@ import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomOnScroll';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
-import GoogleAnalytics from '../components/googleanalytics';
 
 
 const MyDeziner = () => {
@@ -94,7 +93,6 @@ const MyDeziner = () => {
       </head>
 
       <Header />
-      <GoogleAnalytics />
 
       <main>
         <section>
