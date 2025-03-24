@@ -5,7 +5,7 @@ import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
 import useScrollEffect from './components/useScrollEffect';
 import LockPopup from './components/lockpopup'; // Import LockPopup component
-import DesignText from './components/designtext';
+// import DesignText from './components/designtext';
 import { useRef } from "react";
 import SmoothScroll from './components/smoothscroll';
 
@@ -109,7 +109,7 @@ const Home = () => {
                           />
                         ))}
                       </div>
-                      <DesignText />
+                      {/* <DesignText /> */}
                     </div>
                   </div>
                 </div>
