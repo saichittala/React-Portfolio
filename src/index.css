@@ -64,13 +64,40 @@
 
 }
 
-.cursor {
-    cursor: none;
+.border-none-img {
+    img {
+        border: none !important;
+    }
 }
 
+* {
+    box-sizing: border-box;
+}
+.cursor {
+    overflow: hidden; /* Hide the overflow */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.scale-on-scroll {
+    --start-scale: 1.0;
+    --end-scale: 3.0;
+    transform-origin: top center;
+    transition: transform 0.3s ease-out;
+    height: 200vh;
+    overflow: hidden;
+}
 
-
-
+.imagediv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 
 .overflow-x-h {
     overflow-x: unset;
@@ -139,7 +166,7 @@ body {
 
 .cursor-link,
 .cursor-text {
-    cursor: none;
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -149,7 +176,7 @@ body {
 
     .cursor-link,
     .cursor-text {
-        cursor: none;
+        cursor: pointer;
     }
 }
 
@@ -160,7 +187,7 @@ body {
 
     .cursor-link,
     .cursor-text {
-        cursor: none;
+        cursor: pointer;
     }
 }
 
@@ -280,7 +307,7 @@ body {
     gap: 10px;
     background: var(--black-2-color);
     transition: 0.2s ease-in-out;
-    cursor: none;
+    cursor: pointer;
 
     text-decoration: none;
     color: var(--white-color);
@@ -302,7 +329,7 @@ body {
     gap: 10px;
     transition: 0.2s ease-in-out;
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
     color: var(--grey-bg-b-color);
 }
 
@@ -321,7 +348,7 @@ body {
     gap: 10px;
     transition: 0.2s ease-in-out;
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
     background: var(--teritiary-color);
     width: fit-content;
 }
@@ -428,7 +455,7 @@ body {
 .intro-link {
     margin-right: 16px;
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
 }
 
 
@@ -466,7 +493,7 @@ body {
 .company-text {
     color: var(--white-color);
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
     background-image: linear-gradient(138deg, #0895FF, #C952DD 34%, #FF2E55 68%, #FF9014);
     background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
@@ -495,7 +522,7 @@ body {
     transition: transform 0.2s ease-in-out;
     border-radius: 99px;
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
 }
 
 .scroll-btn a {
@@ -658,7 +685,7 @@ body {
     transition: transform .1s ease-in-out;
     background-position: center;
     background-size: cover;
-    cursor: none;
+    cursor: pointer;
     border: 1px solid var(--black-2-color);
     overflow: hidden;
     border-radius: var(--border-radius-1);
@@ -714,7 +741,7 @@ body {
 
 .main-card:hover {
     .sub-card {
-        background-color: rgba(0, 0, 0, 0.30);
+        background-color: rgba(0, 0, 0, 0.60);
         backdrop-filter: blur(60px);
         opacity: 1;
         /* Make visible on hover */
@@ -739,14 +766,15 @@ body {
     transition-timing-function: ease-in-out;
     box-shadow: 2px 4px 16px #ffffff29;
     transform: scale3d(1.01, 1.01, 1.01) !important;
-
-
 }
 
 
 .main-card:active {
     transform: scale3d(0.98, 0.98, 0.98);
 }
+
+
+
 
 
 
@@ -762,6 +790,28 @@ body {
     }
 }
 
+.design-text-div {
+    width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(32px, 2.5vw, 100px);
+    font-weight: 600;
+    text-align: center;
+}
+
+.word {
+    color: #fff; /* Initial color is white */
+    opacity: 0; /* Initially hidden */
+}
+
+@media (max-width: 674px) {
+    .design-text-div {
+        width: 100%;
+    }
+}
 .popup {
     position: fixed;
     top: 0;
@@ -840,7 +890,7 @@ body {
     top: 28px;
     right: 28px;
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
     width: fit-content;
     height: fit-content;
     transition: transform .2s ease-in-out;
@@ -874,7 +924,7 @@ body {
 
 .unlock-projects {
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
     background: var(--white-color);
     display: flex;
     padding: 14px;
@@ -934,6 +984,7 @@ body {
 .footer-main a {
     color: var(--white-color);
     font-weight: 300;
+    cursor: none ;
 }
 
 .footer-content {
@@ -958,7 +1009,11 @@ body {
 
 .footer-link {
     color: var(--white-color);
+    cursor: pointer !important;
 }
+
+
+
 
 .footer-link:hover {
     text-decoration: underline;
@@ -968,7 +1023,7 @@ body {
     display: none;
     font-size: 24px;
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
 }
 
 
@@ -1026,7 +1081,7 @@ body {
 
 .zoom-image img {
     width: 100%;
-    height: AUTO;
+    height: auto;
     object-fit: cover;
     margin: auto;
 }
@@ -1305,19 +1360,19 @@ a {
         /* Scale effect on click */
     }
 
-    .main-card {
-        padding: 8px;
-    }
 
     .sub-card {
-        padding: 14px;
+        padding: 20px;
         height: unset;
         background-color: rgba(0, 0, 0, 0.60);
         backdrop-filter: blur(20px);
-        border-radius: var(--border-radius-2);
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        border-radius: var(--border-radius-1);
         opacity: 1;
         visibility: visible;
         transition: backdrop-filter 0.3s cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s cubic-bezier(0, -.6, 0, 1.07), background-color 0.3s cubic-bezier(0, -.6, 0, 1.07);
+
     }
 
     .card-content {
@@ -1436,7 +1491,7 @@ a {
 .b-inactive:hover {
     color: var(--black-2-color);
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
 }
 
 .pd-heading-main-div {
@@ -1533,7 +1588,7 @@ p {
     transform: scale3d(1, 1, 1);
     transition: all 0.3s ease-in;
     /* cursor: pointer; */
-    cursor: none;
+    cursor: pointer;
 }
 
 .project-link-btn:hover {

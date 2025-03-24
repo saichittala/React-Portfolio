@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import CustomCursor from '../components/customcursor';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
@@ -68,7 +67,6 @@ const MyDeziner = () => {
 
   return (
     <div className='cursor overflow-x-h'>
-      <CustomCursor />
       <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
@@ -106,43 +104,43 @@ const MyDeziner = () => {
 
                   <div className="pd-main">
                     <div className="pd-heading-div p-head-arrow">
-                      <a className=" pd-main-heading cursor-textt">MyDeziner</a>
+                      <a className=" pd-main-heading ">MyDeziner</a>
                       <img src="img/arrow-down.svg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer arrow-down" />
                     </div>
                   </div>
 
                   <div className="project-breif-section">
                     <div className="project-breif-heading fade-in">
-                      <span className='cursor-textt'>01</span>
-                      <span className='cursor-textt'>Project Overview</span>
+                      <span className=''>01</span>
+                      <span className=''>Project Overview</span>
                     </div>
                     <div className="project-breif-main fade-in">
                       <div className="pd-heading-sub-div">
-                        <a className="fade-in pd-main-heading-2 translate-text-up cursor-textt"> Project Type
+                        <a className="fade-in pd-main-heading-2 translate-text-up "> Project Type
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down cursor-textt"> Product
+                        <a className="fade-in pd-sub-heading-2 translate-text-down "> Product
                           Design</a>
                       </div>
                       <div className="pd-heading-div-main">
-                        <a className="fade-in pd-main-heading-2 translate-text-up cursor-textt">Timeline</a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down cursor-textt"> 2023-2024
+                        <a className="fade-in pd-main-heading-2 translate-text-up ">Timeline</a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down "> 2023-2024
                         </a>
                       </div>
                       <div className="pd-heading-div-main">
-                        <a className="fade-in pd-main-heading-2 translate-text-up cursor-textt">Contributors</a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down cursor-textt"> Sai Chittala
+                        <a className="fade-in pd-main-heading-2 translate-text-up ">Contributors</a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down "> Sai Chittala
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down cursor-textt"> Tulasiram Kadiyala </a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down "> Tulasiram Kadiyala </a>
                       </div>
                       <div className="pd-heading-div-main">
-                        <a className="fade-in pd-main-heading-2 translate-text-up cursor-textt">My Contribution</a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down cursor-textt">Visual Design
+                        <a className="fade-in pd-main-heading-2 translate-text-up ">My Contribution</a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down ">Visual Design
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down cursor-textt">Service Design
+                        <a className="fade-in pd-sub-heading-2 translate-text-down ">Service Design
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down cursor-textt"> Interface Design
+                        <a className="fade-in pd-sub-heading-2 translate-text-down "> Interface Design
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down cursor-textt"> Interaction Design </a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down "> Interaction Design </a>
                       </div>
                     </div>
                     <div className="pd-main">
@@ -165,7 +163,7 @@ const MyDeziner = () => {
                           Your browser does not support the video tag.
                         </video> */}
                         <int className="fade-in">
-                          <p className='cursor-textt'><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
+                          <p className=''><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
                       </div>
                     </div>
                   </div>
@@ -175,22 +173,22 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="project-breif-heading fade-in">
-                        <span className='cursor-textt'>02</span>
-                        <span className='cursor-textt'>Challenges</span>
+                        <span className=''>02</span>
+                        <span className=''>Challenges</span>
                       </div>
                       <div className="challenges-main fade-in">
                         <div className="challenges-sub fade-in">
                           <div className="challenge-active-card fade-in">
-                            <span className="challenge-heading cursor-textt fade-in">01</span>
-                            <span className="challenge-content cursor-textt fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
+                            <span className="challenge-heading  fade-in">01</span>
+                            <span className="challenge-content  fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading cursor-textt fade-in">02</span>
-                            <span className="challenge-content cursor-textt fade-in">Simplifying Advanced Features Without Losing Depth</span>
+                            <span className="challenge-heading  fade-in">02</span>
+                            <span className="challenge-content  fade-in">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading cursor-textt fade-in">03</span>
-                            <span className="challenge-content cursor-textt fade-in">Scaling for Seamless Performance Across Devices</span>
+                            <span className="challenge-heading  fade-in">03</span>
+                            <span className="challenge-content  fade-in">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -201,7 +199,7 @@ const MyDeziner = () => {
                 <div className="bg-full bg-white margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
-                      <div className="challenges-content-heading fade-in cursor-textt">
+                      <div className="challenges-content-heading fade-in ">
                         Imagine a design tool empowering everyone, balancing simplicity and functionality.                      </div>
                     </div>
                   </div>
@@ -211,22 +209,22 @@ const MyDeziner = () => {
                     <div className="pd-challenges-main ">
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-01 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-01 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt"> User-Driven Design</ch>
-                          <p className='fade-in cursor-textt'>Every interface was created based on input from professional designers to ensure usability and precision.
+                          <ch className="fade-in translate-text-up "> User-Driven Design</ch>
+                          <p className='fade-in '>Every interface was created based on input from professional designers to ensure usability and precision.
                           </p>
                           <img src="img/projects/mydeziner/02/02-01.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" />
                         </div>
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-02 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-02 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">Effortless Navigation</ch>
-                          <p className='fade-in cursor-textt'>A perfect blend of simplicity and power ensures users can create, modify, and render projects with ease.
+                          <ch className="fade-in translate-text-up ">Effortless Navigation</ch>
+                          <p className='fade-in '>A perfect blend of simplicity and power ensures users can create, modify, and render projects with ease.
                           </p>
                           <video 
                           className="fade-in"
@@ -252,22 +250,22 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="project-breif-heading fade-in">
-                        <span className='cursor-textt fade-in'>02</span>
-                        <span className='cursor-textt fade-in'>Challenges</span>
+                        <span className=' fade-in'>02</span>
+                        <span className=' fade-in'>Challenges</span>
                       </div>
                       <div className="challenges-main fade-in">
                         <div className="challenges-sub fade-in">
                           <div className="challenge-inactive-card fade-in">
-                            <span className="challenge-heading cursor-textt fade-in">01</span>
-                            <span className="challenge-content cursor-textt fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
+                            <span className="challenge-heading  fade-in">01</span>
+                            <span className="challenge-content  fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
-                            <span className="challenge-heading cursor-textt fade-in">02</span>
-                            <span className="challenge-content cursor-textt fade-in">Simplifying Advanced Features Without Losing Depth</span>
+                            <span className="challenge-heading  fade-in">02</span>
+                            <span className="challenge-content  fade-in">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading cursor-textt fade-in">03</span>
-                            <span className="challenge-content cursor-textt fade-in">Scaling for Seamless Performance Across Devices</span>
+                            <span className="challenge-heading  fade-in">03</span>
+                            <span className="challenge-content  fade-in">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -278,7 +276,7 @@ const MyDeziner = () => {
                 <div className="bg-full bg-white margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
-                      <div className="challenges-content-heading cursor-textt fade-in">
+                      <div className="challenges-content-heading  fade-in">
                         What if complex design features felt intuitive and effortless to use?
                       </div>
                     </div>
@@ -290,22 +288,22 @@ const MyDeziner = () => {
                     <div className="pd-challenges-main ">
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className=" fade-in pd-main-heading-2 cursor-textt"> 02-03 </a>
+                          <a className=" fade-in pd-main-heading-2 "> 02-03 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">Custom Material Uploading</ch>
-                          <p className='fade-in cursor-textt'>Upload your own materials in various formats to make each design uniquely yours.</p>
+                          <ch className="fade-in translate-text-up ">Custom Material Uploading</ch>
+                          <p className='fade-in '>Upload your own materials in various formats to make each design uniquely yours.</p>
                           <img src="img/projects/mydeziner/02/02-03.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-04 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-04 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">Effortless Material Swapping</ch>
-                          <p className='fade-in cursor-textt'>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
+                          <ch className="fade-in translate-text-up ">Effortless Material Swapping</ch>
+                          <p className='fade-in '>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
                           <video
                             className="fade-in"
                             loading="lazy"
@@ -323,11 +321,11 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-05 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-05 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">IES Lighting Integration</ch>
-                          <p className='fade-in cursor-textt'>Improved render quality with customizable lighting for more realistic outputs.</p>
+                          <ch className="fade-in translate-text-up ">IES Lighting Integration</ch>
+                          <p className='fade-in '>Improved render quality with customizable lighting for more realistic outputs.</p>
                           <ReactBeforeSliderComponent className='fade-in'
                             firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
                             secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
@@ -336,11 +334,11 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-06 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-06 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">Material Copying Made Simple</ch>
-                          <p className='fade-in cursor-textt'>Streamline design workflows by copying and pasting materials across multiple objects, ensuring consistency and efficiency in projects.</p>
+                          <ch className="fade-in translate-text-up ">Material Copying Made Simple</ch>
+                          <p className='fade-in '>Streamline design workflows by copying and pasting materials across multiple objects, ensuring consistency and efficiency in projects.</p>
                           <video
                             className="fade-in"
                             loading="lazy"
@@ -358,11 +356,11 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-07 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-07 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">Material Favorites for Quick Access</ch>
-                          <p className='fade-in cursor-textt'>Users can save their go-to materials and access them instantly for smoother workflows.</p>
+                          <ch className="fade-in translate-text-up ">Material Favorites for Quick Access</ch>
+                          <p className='fade-in '>Users can save their go-to materials and access them instantly for smoother workflows.</p>
                           <video
                             className="fade-in"
                             loading="lazy"
@@ -380,11 +378,11 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-08 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-08 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">Multi-Level Property Control</ch>
-                          <p className='fade-in cursor-textt'>Revolutionize project customization with intuitive property manipulation and room switching, enabling tailored adjustments across spaces.</p>
+                          <ch className="fade-in translate-text-up ">Multi-Level Property Control</ch>
+                          <p className='fade-in '>Revolutionize project customization with intuitive property manipulation and room switching, enabling tailored adjustments across spaces.</p>
                           <video
                             className="fade-in"
                             loading="lazy"
@@ -402,10 +400,10 @@ const MyDeziner = () => {
                       </div>
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-09 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-09 </a>
                         </div>
-                        <div className="pd-content cursor-textt">
-                          <ch className="fade-in translate-text-up cursor-textt">Custom Model Uploading</ch>
+                        <div className="pd-content ">
+                          <ch className="fade-in translate-text-up ">Custom Model Uploading</ch>
                           <p className='fade-in'>Seamlessly integrates user-created 3D models for full creative control.</p>
                           {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" /> */}
@@ -419,22 +417,22 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="project-breif-heading fade-in">
-                        <span className='cursor-textt'>02</span>
-                        <span className='cursor-textt'>Challenges</span>
+                        <span className=''>02</span>
+                        <span className=''>Challenges</span>
                       </div>
                       <div className="challenges-main fade-in">
                         <div className="challenges-sub fade-in">
                           <div className="challenge-inactive-card fade-in">
-                            <span className="challenge-heading cursor-textt fade-in">01</span>
-                            <span className="challenge-content cursor-textt fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
+                            <span className="challenge-heading  fade-in">01</span>
+                            <span className="challenge-content  fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
                           </div>
                           <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading cursor-textt fade-in">02</span>
-                            <span className="challenge-content cursor-textt fade-in">Simplifying Advanced Features Without Losing Depth</span>
+                            <span className="challenge-heading  fade-in">02</span>
+                            <span className="challenge-content  fade-in">Simplifying Advanced Features Without Losing Depth</span>
                           </div>
                           <div className="challenge-active-card fade-in ">
-                            <span className="challenge-heading cursor-textt">03</span>
-                            <span className="challenge-content cursor-textt">Scaling for Seamless Performance Across Devices</span>
+                            <span className="challenge-heading ">03</span>
+                            <span className="challenge-content ">Scaling for Seamless Performance Across Devices</span>
                           </div>
                         </div>
                       </div>
@@ -445,7 +443,7 @@ const MyDeziner = () => {
                 <div className="bg-full bg-white margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
-                      <div className="challenges-content-heading cursor-textt fade-in">
+                      <div className="challenges-content-heading  fade-in">
                         How do you create a tool that performs flawlessly, no matter the device?
                       </div>
                     </div>
@@ -457,22 +455,22 @@ const MyDeziner = () => {
                     <div className="pd-challenges-main">
                       <div className="challenges-content-flow">
                         <div className="pd-heading-div">
-                          <a className=" fade-in pd-main-heading-2 cursor-textt"> 02-10 </a>
+                          <a className=" fade-in pd-main-heading-2 "> 02-10 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">Cross-Device Compatibility</ch>
-                          <p className='fade-in cursor-textt'>Provides a seamless experience whether on mobile, tablet, or desktop.</p>
+                          <ch className="fade-in translate-text-up ">Cross-Device Compatibility</ch>
+                          <p className='fade-in '>Provides a seamless experience whether on mobile, tablet, or desktop.</p>
                           <img src="img/projects/mydeziner/02/02-10.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
                             loading="lazy" />
                         </div>
                       </div>
                       <div className="challenges-content-flow video-content-vr">
                         <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 cursor-textt"> 02-11 </a>
+                          <a className="fade-in pd-main-heading-2 "> 02-11 </a>
                         </div>
                         <div className="pd-content">
-                          <ch className="fade-in translate-text-up cursor-textt">VR Experience</ch>
-                          <p className='fade-in cursor-textt'>Users can experience real-time VR and immerse themselves in the world of interior design, exploring and choosing beautiful interiors that bring their vision to life in a single platform.</p>
+                          <ch className="fade-in translate-text-up ">VR Experience</ch>
+                          <p className='fade-in '>Users can experience real-time VR and immerse themselves in the world of interior design, exploring and choosing beautiful interiors that bring their vision to life in a single platform.</p>
                           <video
                             className="fade-in"
                             loading="lazy"
@@ -497,8 +495,8 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset width-unset">
                     <div className="project-details width-unset">
                       <div className="project-breif-heading fade-in">
-                        <span className='cursor-textt'>03</span>
-                        <span className='cursor-textt'>Process</span>
+                        <span className=''>03</span>
+                        <span className=''>Process</span>
                       </div>
                       <div className='pd-challenges-main'>
                         <div className="pd-content width-100">
@@ -543,23 +541,23 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset width-unset">
                     <div className="project-details width-unset">
                       <div className="project-breif-heading fade-in">
-                        <span className='cursor-textt'>04</span>
-                        <span className='cursor-textt'>Brand Design</span>
+                        <span className=''>04</span>
+                        <span className=''>Brand Design</span>
                       </div>
                       <div className='pd-challenges-main'>
                         <div className="pd-content width-100">
-                          <ch className="fade-in translate-text-up light-theme bg-main padding-unset cursor-textt">Colors used</ch>
+                          <ch className="fade-in translate-text-up light-theme bg-main padding-unset ">Colors used</ch>
                           <div className='zoom-image df'>
                             <img src="img/projects/mydeziner/03/brand.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="zoom-in" loading="lazy" />
                           </div>
                         </div>
                         <div className="p-2imgs-2 padding-unset bg-main light-theme">
                           <div className="pd-content width-100">
-                            <ch className="fade-in translate-text-up light-theme cursor-textt">Typography</ch>
+                            <ch className="fade-in translate-text-up light-theme ">Typography</ch>
                             <img src="img/projects/mydeziner/03/typeface.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                           </div>
                           <div className="pd-content width-100">
-                            <ch className="fade-in translate-text-up light-theme cursor-textt">Logo</ch>
+                            <ch className="fade-in translate-text-up light-theme ">Logo</ch>
                             <img src="img/projects/mydeziner/03/logo.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                           </div>
                         </div>
@@ -583,18 +581,18 @@ const MyDeziner = () => {
                 <div className="project-details ">
                   <div className="project-breif-section">
                     <div className="project-breif-heading fade-in">
-                      <span className='cursor-textt'>05</span>
-                      <span className='cursor-textt'>Result</span>
+                      <span className=''>05</span>
+                      <span className=''>Result</span>
                     </div>
                     <div className="pd-content width-100">
                       {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" /> */}
-                      <p className='fade-in cursor-textt'><ch >Good Website Structure</ch> and <ch >clear navigation.</ch>
+                      <p className='fade-in '><ch >Good Website Structure</ch> and <ch >clear navigation.</ch>
                       </p>
-                      <p className='fade-in cursor-textt'><ch >50% Faster Workflows</ch> streamlined tools accelerate project completion.
+                      <p className='fade-in '><ch >50% Faster Workflows</ch> streamlined tools accelerate project completion.
                       </p>
-                      <p className='fade-in cursor-textt'>Users praise the tool for its balance of simplicity and power rated <ch>9.4/10 User Satisfaction</ch>
+                      <p className='fade-in '>Users praise the tool for its balance of simplicity and power rated <ch>9.4/10 User Satisfaction</ch>
                       </p>
-                      <p className='fade-in cursor-textt'><ch>Flawless Multi-Device Experience</ch> Optimized performance on mobile, tablet, and desktop ensures every user can work efficiently.
+                      <p className='fade-in '><ch>Flawless Multi-Device Experience</ch> Optimized performance on mobile, tablet, and desktop ensures every user can work efficiently.
                       </p>
                     </div>
                   </div>
@@ -628,7 +626,7 @@ const MyDeziner = () => {
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                       <div className="thankyou-content-heading fade-in cursor-text">
-                        Thank you for viewing. <a className='cursor-link'
+                        Thank you for viewing. <a className=''
                           href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
                           target="_blank">Have a look</a>
                       </div>
@@ -644,6 +642,7 @@ const MyDeziner = () => {
             </div>
           </div>
         </section>
+        <div className='grain' ></div>
       </main>
       <Footer />
     </div>

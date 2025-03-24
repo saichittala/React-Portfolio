@@ -14,7 +14,7 @@ const ZoomOnScroll = () => {
 
                 // Adjust thresholds for mobile screens
                 const zoomStart = window.innerWidth <= 768 ? 30 : 50; // Start earlier on mobile
-                const zoomEnd = rect.height * 0.5; // Adjust for smaller viewport heights
+                const zoomEnd = rect.height * 0.9; // Adjust for smaller viewport heights
 
                 // Calculate the zoom ratio
                 const zoomRatio = Math.min(Math.max((visibleFromTop - zoomStart) / zoomEnd, 0), 1);

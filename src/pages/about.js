@@ -1,5 +1,4 @@
 import React from 'react'
-import CustomCursor from '../components/customcursor';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import useFadeIn from '../components/useFadeIn';
@@ -8,7 +7,6 @@ function About() {
     useFadeIn();
     return (
         <div className="content cursor light-theme" id="content">
-            <CustomCursor />
             <Header />
             <main>
                 <section className="fade-in">

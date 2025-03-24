@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import CustomCursor from '../components/customcursor';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
-import ZoomOnScroll from '../components/ZoomOnScroll';
+import ZoomOnScroll from '../components/ZoomonScrollscale';
 import 'react-before-after-slider-component/dist/build.css';
 
 
@@ -53,8 +52,7 @@ const CustomFurnish = () => {
 
 
   return (
-    <div className='cursor overflow-x-h light-theme'>
-      <CustomCursor />
+    <div className='cursor overflow-x-h'>
       <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
@@ -84,7 +82,7 @@ const CustomFurnish = () => {
         <section>
           <div className="full-bg">
             <div className=" p-img-1 main-image object-fit">
-              <img src="img/projects/customfurnish/showcase.jpg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-in' />
+              <img src="img/projects/customfurnish/showcase.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-in' />
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
@@ -130,8 +128,10 @@ const CustomFurnish = () => {
                       </div>
                     </div>
                     <div className="pd-main">
-                      <div className="   pd-content-main">
-                        <img src="img/projects/customfurnish/main.jpg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer interior-image-with-luxury-environment" />
+                      <div className="pd-content-main border-none-img">
+                        <div className='imagediv'>
+                          <img src="img/projects/customfurnish/macbook-air.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer interior-image-with-luxury-environment" />
+                        </div>
                         <int className="fade-in">CustomFurnish is a user-friendly platform offering personalized interior design and furnishing solutions with a focus on style and functionality. Its seamless interface and clear navigation make it an ideal choice for homeowners and professionals alike.</int>
                         <a href='https://www.customfurnish.com' target='blank' className='project-link-btn'>Open Live Website</a>
                       </div>
