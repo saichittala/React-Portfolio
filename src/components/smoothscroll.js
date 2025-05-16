@@ -1,126 +1,121 @@
 import React, { useEffect, useRef } from 'react';
-import Scrollbar from 'smooth-scrollbar';
 import { gsap } from 'gsap';
 
-const SmoothScroll = ({
-    adminBarSelector = '#wpadminbar',
-    absoluteElementsSelector = '[data-arts-scroll-absolute]',
-    fixedElementsSelector = '[data-arts-scroll-fixed]',
-    damping = 0.05, // 🔥 Adjust smoothness here (lower = smoother)
-    thumbMinSize = 20, // 🔥 Adjust scrollbar thumb size
-    continuousScrolling = true, // 🔥 Enable continuous scrolling
-    children
-}) => {
-    const containerRef = useRef(null);
+const LuxurySmoothScroll = ({ children, scrollSpeed = 1 }) => {
+  const scrollContainer = useRef(null);
+  const frameId = useRef(null);
+  const previousY = useRef(0); // Store previous Y to improve scroll interpolation
 
-    useEffect(() => {
-        if (
-            typeof Scrollbar === 'undefined' ||
-            !window.theme?.smoothScroll?.enabled ||
-            !containerRef.current ||
-            typeof window.elementor !== 'undefined' ||
-            (window.Modernizr?.touchevents &&
-                !containerRef.current.classList.contains('js-smooth-scroll_enable-mobile')) ||
-            window.Modernizr?.touchevents
-        ) {
-            return;
+  useEffect(() => {
+    const container = scrollContainer.current;
+    if (!container || typeof window === 'undefined') return;
+
+    let currentY = window.scrollY;
+    let targetY = window.scrollY;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const lerpAmount = isMobile ? 0.05 * scrollSpeed : 0.1 * scrollSpeed;
+
+    const setBodyHeight = () => {
+      const height = container.getBoundingClientRect().height;
+      document.body.style.height = `${height}px`;
+    };
+
+    const updateScroll = () => {
+      targetY = window.scrollY;
+      currentY = gsap.utils.interpolate(currentY, targetY, lerpAmount);
+      previousY.current = currentY;
+
+      gsap.set(container, {
+        y: -currentY,
+      });
+
+      frameId.current = requestAnimationFrame(updateScroll);
+    };
+
+    const onResize = () => {
+      setBodyHeight();
+    };
+
+    setBodyHeight();
+    updateScroll();
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      cancelAnimationFrame(frameId.current);
+      window.removeEventListener('resize', onResize);
+      document.body.style.height = 'auto';
+    };
+  }, [scrollSpeed]);
+
+  const ScrollIndicator = () => (
+    <div className="luxury-scroll-indicator">
+      <div className="scroll-line"></div>
+      <div className="scroll-dot"></div>
+    </div>
+  );
+
+  return (
+    <div className="luxury-smooth-scroll">
+      <div className="scroll-container" ref={scrollContainer}>
+        {children}
+      </div>
+      <ScrollIndicator />
+      <style jsx global>{`
+        .luxury-smooth-scroll {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
         }
 
-        // Destroy existing scrollbar
-        if (window.SB) {
-            window.SB.destroy();
+        .scroll-container {
+          position: absolute;
+          width: 100%;
+          will-change: transform;
         }
 
-        containerRef.current.classList.add('smooth-scroll');
-
-        // Initialize smooth-scrollbar with custom smoothness settings
-        window.SB = Scrollbar.init(containerRef.current, {
-            damping, // 🔥 Smoothness control
-            thumbMinSize, // 🔥 Scrollbar thumb size
-            continuousScrolling, // 🔥 Continuous scrolling
-            alwaysShowTracks: false
-        });
-
-        // Emit native scroll events
-        const scrollEvt = new CustomEvent('scroll');
-        window.SB.addListener((e) => {
-            window.pageYOffset = e.offset.y;
-            window.pageXOffset = e.offset.x;
-            window.dispatchEvent(scrollEvt);
-        });
-
-        // Handle WP Admin Bar
-        const adminBar = document.querySelector(adminBarSelector);
-        if (adminBar) {
-            document.documentElement.style.overflow = 'hidden';
+        .luxury-scroll-indicator {
+          position: fixed;
+          right: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1000;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          pointer-events: none;
         }
 
-        // Absolute Elements Handling
-        const absoluteElements = document.querySelectorAll(absoluteElementsSelector);
-        if (absoluteElements.length) {
-            gsap.to(absoluteElements, { y: 0, duration: 0.3 });
-            absoluteElements.forEach((el) => {
-                window.SB.addListener((scrollbar) => {
-                    gsap.set(el, { y: -scrollbar.offset.y + (adminBar ? adminBar.offsetHeight : 0) });
-                });
-            });
+        .scroll-line {
+                display: none;
+
+          width: 1px;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.2);
+          position: relative;
         }
 
-        // Fixed Elements Handling
-        const fixedElements = document.querySelectorAll(fixedElementsSelector);
-        if (fixedElements.length) {
-            gsap.to(fixedElements, { y: 0, duration: 0.3 });
-            fixedElements.forEach((el) => {
-                window.SB.addListener((scrollbar) => {
-                    gsap.set(el, { y: scrollbar.offset.y + (adminBar ? adminBar.offsetHeight : 0) });
-                });
-            });
+        .scroll-dot {
+        display: none;
+          position: absolute;
+          right: -3px;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: white;
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+          animation: float 3s ease-in-out infinite;
         }
 
-        // Anchor Scrolling Handler
-        const handleAnchorsScrolling = () => {
-            const anchorSelectors = [
-                '.page-wrapper__content a[href*="#"]:not([href="#"])',
-                '#page-footer a[href*="#"]:not([href="#"])'
-            ];
-            const anchors = containerRef.current.querySelectorAll(anchorSelectors.join(', '));
-
-            anchors.forEach((anchor) => {
-                const url = anchor.getAttribute('href');
-                const hashIndex = url.indexOf('#');
-                const filteredUrl = url.substring(hashIndex);
-
-                if (filteredUrl.length) {
-                    const targetEl = document.querySelector(filteredUrl);
-                    if (targetEl) {
-                        anchor.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            if (window.SB && typeof window.SB.scrollTo === 'function') {
-                                window.SB.scrollTo(0, targetEl.offsetTop, 800);
-                            } else {
-                                window.scrollTo({ top: targetEl.offsetTop, behavior: 'smooth' });
-                            }
-                        });
-                    }
-                }
-            });
-        };
-
-        try {
-            handleAnchorsScrolling();
-        } catch (error) {
-            console.error(error);
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
         }
-
-        // Cleanup
-        return () => {
-            if (window.SB) {
-                window.SB.destroy();
-            }
-        };
-    }, [adminBarSelector, absoluteElementsSelector, fixedElementsSelector, damping, thumbMinSize, continuousScrolling]);
-
-    return <div className="js-smooth-scroll" ref={containerRef}>{children}</div>;
+      `}</style>
+    </div>
+  );
 };
 
-export default SmoothScroll;
+export default LuxurySmoothScroll;

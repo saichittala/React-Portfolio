@@ -7,7 +7,7 @@ import useScrollEffect from './components/useScrollEffect';
 import LockPopup from './components/lockpopup'; // Import LockPopup component
 // import DesignText from './components/designtext';
 import { useRef } from "react";
-import SmoothScroll from './components/smoothscroll';
+import LuxurySmoothScroll from './components/smoothscroll';
 
 
 
@@ -25,7 +25,7 @@ const Home = () => {
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
 
   const cardsData = [
-    { title: "CustomFurnish", type: "UX Design", image: "img/customfurnish.png", link: "https://www.customfurnish.com", openInNewTab: true, locked: false },
+    { title: "CustomFurnish", type: "UX Design", image: "img/customfurnish.png", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "MyDeziner", type: "Product Design", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
     { title: "HomeGymr", type: "UX Design", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Petzy", type: "Case Study", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
@@ -64,12 +64,9 @@ const Home = () => {
   };
 
   return (
-    <div className="content cursor" id="content">
-      <SmoothScroll
-        damping={0.01}
-        thumbMinSize={10} 
-        continuousScrolling={true} // 🔥 Enable continuous scrolling
->      
+    <div className="content cursor scroll-smooth" id="content">
+        <LuxurySmoothScroll scrollSpeed={0.9}>
+
         <Header />
         <main className='z-index-11'>
           <section className="fade-in">
@@ -128,7 +125,7 @@ const Home = () => {
           password={currentPassword} // Pass password to LockPopup
           isPasswordIncorrect={isPasswordIncorrect} // Pass incorrect password flag
         />
-      </SmoothScroll>
+  </LuxurySmoothScroll>
 
     </div>
   );

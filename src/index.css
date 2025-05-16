@@ -78,6 +78,10 @@
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
+.scroll-smooth {
+    scroll-behavior: smooth !important;
+}
 .scale-on-scroll {
     --start-scale: 1.0;
     --end-scale: 3.0;

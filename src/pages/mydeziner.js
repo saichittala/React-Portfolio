@@ -6,6 +6,7 @@ import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomOnScroll';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
+import LuxurySmoothScroll from '../components/smoothscroll';
 
 
 const MyDeziner = () => {
@@ -67,6 +68,7 @@ const MyDeziner = () => {
 
   return (
     <div className='cursor overflow-x-h'>
+      
       <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
@@ -89,11 +91,14 @@ const MyDeziner = () => {
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <title>Sai Chittala Portfolio</title>
       </head>
+      <LuxurySmoothScroll scrollSpeed={1.0}>
 
       <Header />
 
       <main>
+
         <section>
+          
           <div className="full-bg">
             <div className=" p-img-1 main-image">
               <img src="img/projects/mydeziner.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-in' />
@@ -645,6 +650,8 @@ const MyDeziner = () => {
         <div className='grain' ></div>
       </main>
       <Footer />
+      </LuxurySmoothScroll>
+
     </div>
   );
 }
