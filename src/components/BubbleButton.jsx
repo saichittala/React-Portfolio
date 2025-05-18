@@ -122,7 +122,7 @@ const BubbleButton = ({
                     }}
                 >
                     <motion.span
-                        className="bubble-button__text "
+                        className="bubble-button__text"
                         initial={false}
                         animate={{
                             opacity: animationPhase === 'visible' ? 1 : 0,
@@ -143,9 +143,26 @@ const BubbleButton = ({
                     </motion.span>
                     {/* Render custom children like icons, divs, etc. */}
                     {children && (
-                        <div className="bubble-button__icon">
+                        <motion.div
+                            className="bubble-button__icon"
+                            initial={false}
+                            animate={{
+                                opacity: animationPhase === 'visible' ? 1 : 0,
+                                scale: animationPhase === 'visible' ? 1 : 0.8
+                            }}
+                            transition={{
+                                opacity: {
+                                    duration: 0.3,
+                                    delay: animationPhase === 'expanding' ? showDelay / 1000 : 0
+                                },
+                                scale: {
+                                    duration: 0.45,
+                                    ease: 'backOut'
+                                }
+                            }}
+                        >
                             {children}
-                        </div>
+                        </motion.div>
                     )}
                 </motion.div>
             )}
