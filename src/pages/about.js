@@ -6,7 +6,7 @@ import useFadeIn from '../components/useFadeIn';
 function About() {
     useFadeIn();
     return (
-        <div className="content cursor light-theme" id="content">
+        <div className="content cursor" id="content">
             <Header />
             <main>
                 <section className="fade-in">

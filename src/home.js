@@ -7,7 +7,8 @@ import useScrollEffect from './components/useScrollEffect';
 import LockPopup from './components/lockpopup'; // Import LockPopup component
 // import DesignText from './components/designtext';
 import { useRef } from "react";
-import LuxurySmoothScroll from './components/smoothscroll';
+// import LuxurySmoothScroll from './components/smoothscroll';
+import { motion } from "framer-motion";
 
 
 
@@ -23,16 +24,17 @@ const Home = () => {
   const [currentPassword, setCurrentPassword] = useState('');
   const [currentLink, setCurrentLink] = useState('');
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
+  const AnimatedComponent = motion.div;
 
   const cardsData = [
-    { title: "CustomFurnish", type: "UX Design", image: "img/customfurnish.png", link: "#/customfurnish", openInNewTab: true, locked: false },
-    { title: "MyDeziner", type: "Product Design", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
-    { title: "HomeGymr", type: "UX Design", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
-    { title: "Petzy", type: "Case Study", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
-    { title: "Yalla Gai", type: "UX Design", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: true, password: "surya@123" },
-    { title: "Temple Address", type: "UX Design", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "1" },
-    { title: "Shruh", type: "UX Design", image: "img/projects/shruh.webp", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
-    { title: "Muzicon", type: "UX Design", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
+    { title: "Redefined User Experience, Increased Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/customfurnish.png", link: "#/customfurnish", openInNewTab: true, locked: false },
+    { title: "Streamlining Workflows For Design Teams", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
+    { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.png", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
+    { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.jpeg", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
+    { title: "Crafting Unified Ride Booking Experience", type: "Yalla Gai", year: "Professional 2022-2023", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: true, password: "surya@123" },
+    { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.png", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
+    { title: "Modernizing Devotion Through Design", type: "Temple Address", year: "Professional 2022-2023", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "1" },
+    { title: "Crafting Connected Listening Journeys", type: "Muzicon", year: "Personal 2021-2022", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
   ];
 
 
@@ -65,67 +67,78 @@ const Home = () => {
 
   return (
     <div className="content cursor scroll-smooth" id="content">
-        <LuxurySmoothScroll scrollSpeed={0.9}>
+      {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
-        <Header />
-        <main className='z-index-11'>
-          <section className="fade-in">
-            <div className="full-bg">
-              <div className="bg-main">
-                <div className="intro-section-main">
-                  <div className="intro-section">
-                    <div className="intro-content">
-                      <p className="intro-white-text fade-in translate-text-down ">
-                        <a className=''>Sai Chittala</a> <br />
-                        <span className="intro-white-text ">Product Designer at </span>
-                        <a className="company-text " href="https://www.customfurnish.com/" target="_blank" rel="noopener noreferrer">
-                          CustomFurnish
-                        </a>
-                        <br />
-                        <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                          Email
-                        </a>
-                        <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                          LinkedIn
-                        </a>
-                        <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                          Upwork
-                        </a>
-                        {/* <div className='say-hi-btn cursor-playful'>
+      <Header />
+      <main className='z-index-11'>
+        <section className="fade-in">
+          <div className="full-bg">
+            <div className="bg-main">
+              <div className="intro-section-main">
+                <div className="intro-section">
+                  <div className="intro-content">
+                    <p className="intro-white-text fade-in translate-text-down ">
+                      <a className=''>Sai Chittala</a> <br />
+                      <span className="intro-white-text ">Product Designer at </span>
+                      <a className="company-text " href="https://www.customfurnish.com/" target="_blank" rel="noopener noreferrer">
+                        CustomFurnish
+                      </a>
+                      <br />
+                      <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        Email
+                      </a>
+                      <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        LinkedIn
+                      </a>
+                      <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        Upwork
+                      </a>
+                      {/* <div className='say-hi-btn cursor-playful'>
                       <img src="img/right-arrow.svg" alt="logo" />
                       <a>Say Hi</a></div> */}
-                      </p>
+                    </p>
 
-                      <div className="cards-container" id="cards-container">
-                        {cardsData.map((card, index) => (
-                          <Card
-                            key={index}
-                            {...card}
-                            onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
-                            password={card.password} // Pass password prop for locked cards
-                          />
-                        ))}
-                      </div>
-                      {/* <DesignText /> */}
+                    <div className="cards-container" id="cards-container">
+                      {cardsData.map((card, index) => (
+                        <Card
+                          key={index}
+                          {...card}
+                          onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
+                          password={card.password} // Pass password prop for locked cards
+                        />
+                      ))}
                     </div>
+
+                    <motion.div
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                      viewport={{ once: true }}
+                    >
+                      <span className='lets-connect-text'>    
+                        Let's Connect
+                        </span>
+                    </motion.div>
+                    {/* <DesignText /> */}
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-        </main>
+          </div>
+        </section>
+      </main>
 
-        <Footer />
+      <Footer />
 
-        {/* LockPopup */}
-        <LockPopup
-          isVisible={isPopupVisible}
-          onClose={closePopup}
-          onUnlock={handleUnlock}
-          password={currentPassword} // Pass password to LockPopup
-          isPasswordIncorrect={isPasswordIncorrect} // Pass incorrect password flag
-        />
-  </LuxurySmoothScroll>
+      {/* LockPopup */}
+      <LockPopup
+        isVisible={isPopupVisible}
+        onClose={closePopup}
+        onUnlock={handleUnlock}
+        password={currentPassword} // Pass password to LockPopup
+        isPasswordIncorrect={isPasswordIncorrect} // Pass incorrect password flag
+      />
+      {/* </LuxurySmoothScroll> */}
 
     </div>
   );

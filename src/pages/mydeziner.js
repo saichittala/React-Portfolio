@@ -91,7 +91,7 @@ const MyDeziner = () => {
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <title>Sai Chittala Portfolio</title>
       </head>
-      <LuxurySmoothScroll scrollSpeed={1.0}>
+      {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
       <Header />
 
@@ -650,7 +650,7 @@ const MyDeziner = () => {
         <div className='grain' ></div>
       </main>
       <Footer />
-      </LuxurySmoothScroll>
+      {/* </LuxurySmoothScroll> */}
 
     </div>
   );

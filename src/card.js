@@ -1,7 +1,7 @@
 import React from 'react';
 import useFadeIn from './components/useFadeIn';
 
-const Card = ({ title, type, image, link, openInNewTab = true, locked, onRequestLockPopup, password }) => {
+const Card = ({ title, type, year, image, link, openInNewTab = true, locked, onRequestLockPopup, password }) => {
   useFadeIn();
 
   const handleCardClick = () => {
@@ -21,8 +21,13 @@ const Card = ({ title, type, image, link, openInNewTab = true, locked, onRequest
       >
         <div className="sub-card">
           <div className="card-content">
-            <div className="main-heading">{title}</div>
-            <div className="heading-type">{type}</div>
+            <div className="main-heading-type">
+                  <div className="main-heading">{title}</div>
+            </div>
+            <div className="sub-heading-type">
+              <div className="heading-type">{type}</div>
+              <div className="heading-year">{year}</div>
+            </div>
           </div>
         </div>
       </div>
