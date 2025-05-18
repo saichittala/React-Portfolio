@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Header from '../components/header';
+import HeaderNonSticky from '../components/header-non-sticky';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
@@ -93,7 +93,7 @@ const MyDeziner = () => {
       </head>
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
-      <Header />
+      <HeaderNonSticky />
 
       <main>
 

@@ -21,7 +21,7 @@
     --border-color: #333333;
     --grey-bg-w-color: #606060;
     --grey-bg-b-color: #808080;
-    /* --black-opacity: rgba(22, 22, 23, 0.8); */
+    --black-opacity-2: rgba(22, 22, 23, 0.8);
     --black-opacity: rgba(0, 0, 0, 0.8);
     --cursor-color: #ffffff30;
 
@@ -121,6 +121,11 @@
         height: 100%;
         object-fit: cover;
     }
+}
+
+
+.position-absolute {
+    position: absolute !important;
 }
 
 .overflow-x-h {
@@ -850,20 +855,66 @@ body {
     }
 }
 
+.lets-connect-bubble {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--black-opacity);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 100;
+}
 
 .lets-connect-text {
-    display: none;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--white-color);
-    text-align: center;
-    padding: 14px 28px;
-    background: var(--black-2-color);
-    border-radius: 99px;
-    width: fit-content;
-    position: relative;
-    backdrop-filter: blur(20px);
-    
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--white-color);
+  white-space: nowrap;
+}
+
+.bubble-button {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--black-opacity-2);
+  backdrop-filter: blur(10px);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 100;
+  will-change: transform, width, height;
+  cursor: pointer;
+}
+
+.bubble-button:hover {
+  background: var(--black-opacity);
+  transition: backdrop-filter 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+  backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+
+
+
+}
+.bubble-button:active {
+  cursor: pointer;
+  transition: backdrop-filter 0.3s ease-in-out, background 0.3s ease-in-out;
+  backdrop-filter: blur(40px);
+}
+
+.bubble-button__text {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--white-color);
+  white-space: nowrap;
+  padding: 0 16px;
 }
 
 .design-text-div {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './card';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -9,15 +9,15 @@ import LockPopup from './components/lockpopup'; // Import LockPopup component
 import { useRef } from "react";
 // import LuxurySmoothScroll from './components/smoothscroll';
 import { motion } from "framer-motion";
+import BubbleButton from './components/BubbleButton';
 
 
 
 
 const Home = () => {
   useFadeIn();
-  useScrollEffect();
-  const textRef = useRef(null); // Define textRef
-
+  useScrollEffect();  
+  const cardsContainerRef = useRef(null);
 
   // Manage popup state
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -71,6 +71,20 @@ const Home = () => {
 
       <Header />
       <main className='z-index-11'>
+        <a href="mailto:sai.chittala@gmail.com" target="_blank" rel="noopener noreferrer">
+          <BubbleButton 
+          activationRef={cardsContainerRef}
+          text="Let's Connect"
+          showDelay={300} // Text appears after 300ms
+          hideDelay={500} // Disappears after 500ms of being small
+          size={{
+            small: 12,
+            large: { width: 140, height: 48 }
+          }}
+          className="custom-bubble-class" // Optional
+        />
+        </a>
+
         <section className="fade-in">
           <div className="full-bg">
             <div className="bg-main">
@@ -98,7 +112,7 @@ const Home = () => {
                       <a>Say Hi</a></div> */}
                     </p>
 
-                    <div className="cards-container" id="cards-container">
+                    <div className="cards-container" id="cards-container" ref={cardsContainerRef}>
                       {cardsData.map((card, index) => (
                         <Card
                           key={index}
@@ -109,16 +123,7 @@ const Home = () => {
                       ))}
                     </div>
 
-                    <motion.div
-                      initial={{ opacity: 0, y: 50 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, ease: "easeOut" }}
-                      viewport={{ once: true }}
-                    >
-                      <span className='lets-connect-text'>    
-                        Let's Connect
-                        </span>
-                    </motion.div>
+
                     {/* <DesignText /> */}
                   </div>
                 </div>
