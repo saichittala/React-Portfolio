@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import Header from '../components/header';
+import HeaderNonSticky from '../components/header-non-sticky';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomonScrollscale';
+import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
+import BubbleButton from '../components/BubbleButton';
 
 
 const CustomFurnish = () => {
@@ -12,55 +14,56 @@ const CustomFurnish = () => {
   FullScrollFadeIn();
   useScrollEffect();
   ZoomOnScroll();
-  useEffect(() => {
+  const customfurnishRef = React.useRef(null);
+  // useEffect(() => {
 
-    const loader = document.getElementById("loader");
-    const circleLoader = document.getElementById("circleloading");
-    const loadingText = document.getElementById("loading-text");
+  //   const loader = document.getElementById("loader");
+  //   const circleLoader = document.getElementById("circleloading");
+  //   const loadingText = document.getElementById("loading-text");
 
 
-    // Set initial opacity of the loader (circle and text)
-    circleLoader.style.opacity = 0;
-    loadingText.style.opacity = 0;
-    loader.style.opacity = 1;
+  //   // Set initial opacity of the loader (circle and text)
+  //   circleLoader.style.opacity = 0;
+  //   loadingText.style.opacity = 0;
+  //   loader.style.opacity = 1;
 
-    // Set a static loading text
-    loadingText.textContent = "Just a minute";
+  //   // Set a static loading text
+  //   loadingText.textContent = "Just a minute";
 
-    // Fade in the loader (circles and text)
-    setTimeout(() => {
-      circleLoader.style.transition = 'opacity 1s';
-      loadingText.style.transition = 'opacity 1s';
-      circleLoader.style.opacity = 1;
-      loadingText.style.opacity = 1;
+  //   // Fade in the loader (circles and text)
+  //   setTimeout(() => {
+  //     circleLoader.style.transition = 'opacity 1s';
+  //     loadingText.style.transition = 'opacity 1s';
+  //     circleLoader.style.opacity = 1;
+  //     loadingText.style.opacity = 1;
 
-      // Fade out loader (text and circles) after content is fully loaded
-      setTimeout(() => {
-        loadingText.style.opacity = 0;
-        circleLoader.style.opacity = 0;
+  //     // Fade out loader (text and circles) after content is fully loaded
+  //     setTimeout(() => {
+  //       loadingText.style.opacity = 0;
+  //       circleLoader.style.opacity = 0;
 
-        setTimeout(() => {
-          loader.style.opacity = '0';
-          setTimeout(() => {
-            loader.style.display = 'none';
-          }, 500);
-        }, 500);
-      }, 2500);
-    }, 500);
+  //       setTimeout(() => {
+  //         loader.style.opacity = '0';
+  //         setTimeout(() => {
+  //           loader.style.display = 'none';
+  //         }, 500);
+  //       }, 500);
+  //     }, 2500);
+  //   }, 500);
 
-  }, []);
+  // }, []);
 
 
   return (
     <div className='cursor overflow-x-h'>
-      <div className="loader-styling" id="loader">
+      {/* <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
           <div className="circle-input"></div>
           <div className="circle-input"></div>
         </div>
         <div id="loading-text">Just a minute</div>
-      </div>
+      </div> */}
 
       <head>
         <meta charset="utf-8" />
@@ -76,10 +79,26 @@ const CustomFurnish = () => {
         <title>Sai Chittala Portfolio</title>
       </head>
 
-      <Header />
+      <HeaderNonSticky />
 
       <main>
-        <section>
+        <section ref={customfurnishRef}>
+          <a href="https://www.customfurnish.com" target="_blank" rel="noopener noreferrer">
+          <BubbleButton
+            activationRef={customfurnishRef}
+            text="Open Live Website"
+            showDelay={300} // Text appears after 300ms
+            hideDelay={500} // Disappears after 500ms of being small
+            size={{
+              small: 12,
+              large: { width: 212.65, height: 52 }
+            }}
+            activateAt={-1.2}
+            className="custom-bubble-class" // Optional
+          >
+              <img src="img/open-web.svg" alt="Arrow" />
+          </BubbleButton>
+        </a>
           <div className="full-bg">
             <div className=" p-img-1 main-image object-fit">
               <img src="img/projects/customfurnish/showcase.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-in' />
@@ -127,13 +146,14 @@ const CustomFurnish = () => {
                         </a>
                       </div>
                     </div>
-                    <div className="pd-main">
-                      <div className="pd-content-main border-none-img">
-                        <div className='imagediv'>
-                          <img src="img/projects/customfurnish/macbook-air.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer interior-image-with-luxury-environment" />
-                        </div>
-                        <int className="fade-in">CustomFurnish is a user-friendly platform offering personalized interior design and furnishing solutions with a focus on style and functionality. Its seamless interface and clear navigation make it an ideal choice for homeowners and professionals alike.</int>
-                        <a href='https://www.customfurnish.com' target='blank' className='project-link-btn'>Open Live Website</a>
+                    <div className="pd-main" >
+                      <div className="   pd-content-main">
+                        <ReactBeforeSliderComponent className='fade-in'
+                          firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.png' }}  // Passing the first image
+                          secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.png' }}  // Passing the first image
+                        />
+                        <int className="fade-in">
+                          <p className=''> Customfurnish’s redesign transformed its interior design services platform by <int>increasing qualified leads by 25%, boosting user engagement by 40%, and improving retention by 10%</int>. By deeply understanding user pain points and business goals, I led a user-centered, data-driven design process that balanced visual appeal with seamless, trust-building interactions — driving measurable growth and business confidence. <int>creativity and functionality.</int></p></int>
                       </div>
                     </div>
                   </div>

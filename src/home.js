@@ -16,7 +16,7 @@ import BubbleButton from './components/BubbleButton';
 
 const Home = () => {
   useFadeIn();
-  useScrollEffect();  
+  useScrollEffect();
   const cardsContainerRef = useRef(null);
 
   // Manage popup state
@@ -25,9 +25,9 @@ const Home = () => {
   const [currentLink, setCurrentLink] = useState('');
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
   const AnimatedComponent = motion.div;
-
+  
   const cardsData = [
-    { title: "Redefined User Experience, Increased Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/customfurnish.png", link: "https://www.customfurnish.com/", openInNewTab: true, locked: false },
+    { title: "Redefined User Experience, Increased Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/customfurnish.png", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Streamlining Workflows For Design Teams", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
     { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.png", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.jpeg", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
@@ -72,17 +72,19 @@ const Home = () => {
       <Header />
       <main className='z-index-11'>
         <a href="mailto:sai.chittala@gmail.com" target="_blank" rel="noopener noreferrer">
-          <BubbleButton 
-          activationRef={cardsContainerRef}
-          text="Let's Connect"
-          showDelay={300} // Text appears after 300ms
-          hideDelay={500} // Disappears after 500ms of being small
-          size={{
-            small: 12,
-            large: { width: 140, height: 48 }
-          }}
-          className="custom-bubble-class" // Optional
-        />
+          <BubbleButton
+            activationRef={cardsContainerRef}
+            text="Let's Connect"
+            showDelay={300} // Text appears after 300ms
+            hideDelay={500} // Disappears after 500ms of being small
+            size={{
+              small: 12,
+              large: { width: 180.25, height: 48 }
+            }}
+            className="custom-bubble-class" // Optional
+          >
+              <img src="img/open-web.svg" alt="Arrow" />
+          </BubbleButton>
         </a>
 
         <section className="fade-in">
