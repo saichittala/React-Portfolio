@@ -127,7 +127,7 @@ const CustomFurnish = () => {
                       </div>
                       <div className="pd-heading-div-main">
                         <a className="fade-in pd-main-heading-2 translate-text-up">Timeline</a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"> 2023-2024
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"> 2024-2025
                         </a>
                       </div>
                       <div className="pd-heading-div-main">
@@ -138,11 +138,15 @@ const CustomFurnish = () => {
                       </div>
                       <div className="pd-heading-div-main">
                         <a className="fade-in pd-main-heading-2 translate-text-up">My Contribution</a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down">Experience Design
+                        </a>
                         <a className="fade-in pd-sub-heading-2 translate-text-down">Visual Design
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down">Service Design
+                        <a className="fade-in pd-sub-heading-2 translate-text-down">Visual Design
                         </a>
                         <a className="fade-in pd-sub-heading-2 translate-text-down"> Interface Design
+                        </a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Usability Testing
                         </a>
                       </div>
                     </div>
