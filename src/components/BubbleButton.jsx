@@ -126,7 +126,7 @@ const BubbleButton = ({
                         initial={false}
                         animate={{
                             opacity: animationPhase === 'visible' ? 1 : 0,
-                            scale: animationPhase === 'visible' ? 1 : 0.8
+                            scale: animationPhase === 'visible' ? 1 : 0.6
                         }}
                         transition={{
                             opacity: {
@@ -148,7 +148,7 @@ const BubbleButton = ({
                             initial={false}
                             animate={{
                                 opacity: animationPhase === 'visible' ? 1 : 0,
-                                scale: animationPhase === 'visible' ? 1 : 0.8
+                                scale: animationPhase === 'visible' ? 1 : 1
                             }}
                             transition={{
                                 opacity: {
