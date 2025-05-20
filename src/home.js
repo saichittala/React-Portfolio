@@ -71,15 +71,15 @@ const Home = () => {
 
       <Header />
       <main className='z-index-11'>
-        <a href="mailto:sai.chittala@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
           <BubbleButton
             activationRef={cardsContainerRef}
-            text="Let's Connect"
+            text="View Recent Work"
             showDelay={300} // Text appears after 300ms
             hideDelay={500} // Disappears after 500ms of being small
             size={{
               small: 12,
-              large: { width: 180.25, height: 48 }
+              large: { width: 208.81, height: 48 } //48
             }}
             className="custom-bubble-class" // Optional
           >

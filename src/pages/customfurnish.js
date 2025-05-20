@@ -15,8 +15,8 @@ const CustomFurnish = () => {
   useScrollEffect();
   ZoomOnScroll();
   const customfurnishRef = React.useRef(null);
-  // useEffect(() => {
 
+  // useEffect(() => {
   //   const loader = document.getElementById("loader");
   //   const circleLoader = document.getElementById("circleloading");
   //   const loadingText = document.getElementById("loading-text");
@@ -91,7 +91,7 @@ const CustomFurnish = () => {
             hideDelay={500} // Disappears after 500ms of being small
             size={{
               small: 12,
-              large: { width: 212.65, height: 52 }
+              large: { width: 216.65, height: 52 }
             }}
             activateAt={-1.2}
             className="custom-bubble-class" // Optional
@@ -138,15 +138,17 @@ const CustomFurnish = () => {
                       </div>
                       <div className="pd-heading-div-main">
                         <a className="fade-in pd-main-heading-2 translate-text-up">My Contribution</a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down">Experience Design
+                        <a className="fade-in pd-sub-heading-2 translate-text-down">UX Research
+                        </a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Product Strategy
+                        </a>
+                        <a className="fade-in pd-sub-heading-2 translate-text-down">Information Architecture
                         </a>
                         <a className="fade-in pd-sub-heading-2 translate-text-down">Visual Design
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down">Visual Design
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Design Systems
                         </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Interface Design
-                        </a>
-                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Usability Testing
+                        <a className="fade-in pd-sub-heading-2 translate-text-down"> Prototyping & Testing
                         </a>
                       </div>
                     </div>
@@ -162,6 +164,32 @@ const CustomFurnish = () => {
                     </div>
                   </div>
                 </div>
+                {/* <div className="bg-full bg-grey">
+                  <div className="bg-main  padding-unset">
+                    <div className="project-details">
+                      <div className="project-breif-heading fade-in">
+                        <span className=''>02</span>
+                        <span className=''>Challenges</span>
+                      </div>
+                      <div className="challenges-main fade-in">
+                        <div className="challenges-sub fade-in">
+                          <div className="challenge-active-card fade-in">
+                            <span className="challenge-heading  fade-in">01</span>
+                            <span className="challenge-content  fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
+                          </div>
+                          <div className="challenge-inactive-card fade-in ">
+                            <span className="challenge-heading  fade-in">02</span>
+                            <span className="challenge-content  fade-in">Simplifying Advanced Features Without Losing Depth</span>
+                          </div>
+                          <div className="challenge-inactive-card fade-in ">
+                            <span className="challenge-heading  fade-in">03</span>
+                            <span className="challenge-content  fade-in">Scaling for Seamless Performance Across Devices</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>
