@@ -1,7 +1,7 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
@@ -60,14 +60,7 @@
 
 
     /* Fonts */
-    --primary-font: -apple-system,
-    system-ui,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+    --primary-font: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", "Inter Tight", "Segoe UI", Arial, sans-serif;
     --secondary-font: -apple-system,
     system-ui,
     BlinkMacSystemFont,
