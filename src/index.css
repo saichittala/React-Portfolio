@@ -60,7 +60,7 @@
 
 
     /* Fonts */
-    --primary-font: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", "Inter Tight", "Segoe UI", Arial, sans-serif;
+    --primary-font: -apple-system, system-ui, BlinkMacSystemFont, "Hanken Grotesk", "Helvetica Neue", "Inter Tight", "Segoe UI", Arial, sans-serif;
     --secondary-font: -apple-system,
     system-ui,
     BlinkMacSystemFont,
@@ -263,8 +263,6 @@ body {
     backdrop-filter: saturate(180%) blur(20px);
     transition: 0.6s transform ease-in-out, opacity 0.3s ease;
     will-change: transform;
-
-
 
     .nav-main {
         transform: translate3d(0px, 2px, 2px);

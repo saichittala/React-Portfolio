@@ -190,6 +190,22 @@ const CustomFurnish = () => {
                     </div>
                   </div>
                 </div> */}
+                <div className="bg-full bg-white margin-unset">
+                  <div className="bg-main  padding-unset">
+                    <div className="project-details">
+                      <div className="thankyou-content-heading fade-in cursor-text">
+                        Pssst... The magic’s still brewing. Meanwhile, sneak a peek at this <a className=''
+                          href="https://www.customfurnish.com" rel="noopener noreferrer"
+                          target="_blank">live project</a>
+                      </div>
+                      {/* <div className="thankyou-content-heading fade-in">
+                        Thank you for viewing. <a
+                          href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
+                          target="_blank">Have a look</a>
+                      </div> */}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
