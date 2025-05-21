@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState ,useEffect } from 'react';
 import HeaderNonSticky from '../components/header-non-sticky';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
@@ -15,6 +15,7 @@ const CustomFurnish = () => {
   useScrollEffect();
   ZoomOnScroll();
   const customfurnishRef = React.useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 674);
 
   // useEffect(() => {
   //   const loader = document.getElementById("loader");
@@ -84,21 +85,20 @@ const CustomFurnish = () => {
       <main>
         <section ref={customfurnishRef}>
           <a href="https://www.customfurnish.com" target="_blank" rel="noopener noreferrer">
-          <BubbleButton
-            activationRef={customfurnishRef}
-            text="Open Live Website"
-            showDelay={300} // Text appears after 300ms
-            hideDelay={500} // Disappears after 500ms of being small
-            size={{
-              small: 12,
-              large: { width: 216.65, height: 52 }
-            }}
-            activateAt={-0.5}
-            className="custom-bubble-class" // Optional
-          >
+            <BubbleButton
+              activationRef={customfurnishRef}
+              text="Open Live Website"
+              showDelay={300} 
+              hideDelay={500} 
+              size={{
+                small: 12,
+                large: { width: 216.65, height: 52 }
+              }}
+              activateAt={isMobile ? -3.8 : -0.5}
+              className="custom-bubble-class" >
               <img src="img/open-web.svg" alt="Arrow" />
-          </BubbleButton>
-        </a>
+            </BubbleButton>
+          </a>
           <div className="full-bg">
             <div className=" p-img-1 main-image object-fit">
               <img src="img/projects/customfurnish/showcase.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-in' />

@@ -2,36 +2,49 @@ import React, { useState, useEffect } from 'react';
 
 function HeaderNonSticky() {
   const [menuActive, setMenuActive] = useState(false);
-  const [showHeader, setShowHeader] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  
+  
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
 
   const controlHeader = () => {
-    if (typeof window !== 'undefined') {
-      const currentScrollY = window.scrollY;
+  if (typeof window !== 'undefined') {
+    const currentScrollY = window.scrollY;
 
-      if (currentScrollY < lastScrollY) {
-        // Scrolling up
-        setShowHeader(true);
-      } else {
-        // Scrolling down
-        setShowHeader(false);
-      }
-
-      setLastScrollY(currentScrollY);
+    // Always show header at top of page
+    if (currentScrollY === 0) {
+      setShowHeader(true);
+    } 
+    // Ignore tiny scroll jitters
+    else if (Math.abs(currentScrollY - lastScrollY) < 5) {
+      return;
+    } 
+    // Show/hide based on scroll direction
+    else if (currentScrollY < lastScrollY) {
+      setShowHeader(true); // Scrolling up
+    } else {
+      setShowHeader(false); // Scrolling down
     }
-  };
+
+    setLastScrollY(currentScrollY);
+  }
+};
+
 
   useEffect(() => {
-    window.addEventListener('scroll', controlHeader);
+  controlHeader(); // handle scroll position on first load
 
-    return () => {
-      window.removeEventListener('scroll', controlHeader);
-    };
-  }, [lastScrollY]);
+  window.addEventListener('scroll', controlHeader);
+
+  return () => {
+    window.removeEventListener('scroll', controlHeader);
+  };
+}, [lastScrollY]);
+
 
   return (
     <div>

@@ -70,7 +70,7 @@ const Home = () => {
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
       <Header />
-      <main className='z-index-11'>
+      <main className='z-index-11 '>
         <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
           <BubbleButton
             activationRef={cardsContainerRef}
