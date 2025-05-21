@@ -122,6 +122,9 @@
 .position-absolute {
     position: absolute !important;
 }
+.sticky {
+  position: fixed;
+}
 
 .overflow-x-h {
     overflow-x: unset;
@@ -258,12 +261,26 @@ body {
     border-bottom: 1px solid transparent;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
+    transition: 0.6s transform ease-in-out, opacity 0.3s ease;
+    will-change: transform;
+
 
 
     .nav-main {
         transform: translate3d(0px, 2px, 2px);
         transition: 0.6s transform ease-in-out;
     }
+}
+
+
+.nav-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 
 
