@@ -93,7 +93,7 @@ const CustomFurnish = () => {
               small: 12,
               large: { width: 216.65, height: 52 }
             }}
-            activateAt={-1.2}
+            activateAt={-0.5}
             className="custom-bubble-class" // Optional
           >
               <img src="img/open-web.svg" alt="Arrow" />
