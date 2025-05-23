@@ -1,4 +1,4 @@
-import React, { useState ,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeaderNonSticky from '../components/header-non-sticky';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
@@ -15,7 +15,7 @@ const CustomFurnish = () => {
   useScrollEffect();
   ZoomOnScroll();
   const customfurnishRef = React.useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 674);
+  const [isMobile] = useState(window.innerWidth <= 674);
 
   // useEffect(() => {
   //   const loader = document.getElementById("loader");
@@ -81,15 +81,14 @@ const CustomFurnish = () => {
       </head>
 
       <HeaderNonSticky />
-
       <main>
         <section ref={customfurnishRef}>
           <a href="https://www.customfurnish.com" target="_blank" rel="noopener noreferrer">
             <BubbleButton
               activationRef={customfurnishRef}
               text="Open Live Website"
-              showDelay={300} 
-              hideDelay={500} 
+              showDelay={300}
+              hideDelay={500}
               size={{
                 small: 12,
                 large: { width: 216.65, height: 52 }
@@ -158,8 +157,11 @@ const CustomFurnish = () => {
                           firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.png' }}  // Passing the first image
                           secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.png' }}  // Passing the first image
                         />
-                        <int className="fade-in">
-                          <p className=''> Customfurnish’s redesign transformed its interior design services platform by <int>increasing qualified leads by 25%, boosting user engagement by 40%, and improving retention by 10%</int>. By deeply understanding user pain points and business goals, I led a user-centered, data-driven design process that balanced visual appeal with seamless, trust-building interactions — driving measurable growth and business confidence. <int>creativity and functionality.</int></p></int>
+                        <div>
+                          <int className="fade-in">
+                            <p className=''> Customfurnish's redesign transformed its interior design services platform by <int>increasing qualified leads by 25%, boosting user engagement by 40%, and improving retention by 10%</int>. By deeply understanding user pain points and business goals, I led a user-centered, data-driven design process that balanced visual appeal with seamless, trust-building interactions — driving measurable growth and business confidence. <int>creativity and functionality.</int></p></int>
+                        </div>
+
                       </div>
                     </div>
                   </div>

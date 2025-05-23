@@ -15,19 +15,16 @@ function HeaderNonSticky() {
   if (typeof window !== 'undefined') {
     const currentScrollY = window.scrollY;
 
-    // Always show header at top of page
     if (currentScrollY === 0) {
       setShowHeader(true);
     } 
-    // Ignore tiny scroll jitters
     else if (Math.abs(currentScrollY - lastScrollY) < 5) {
       return;
     } 
-    // Show/hide based on scroll direction
     else if (currentScrollY < lastScrollY) {
-      setShowHeader(true); // Scrolling up
+      setShowHeader(true); 
     } else {
-      setShowHeader(false); // Scrolling down
+      setShowHeader(false);
     }
 
     setLastScrollY(currentScrollY);

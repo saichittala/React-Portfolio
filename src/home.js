@@ -10,6 +10,11 @@ import { useRef } from "react";
 // import LuxurySmoothScroll from './components/smoothscroll';
 import { motion } from "framer-motion";
 import BubbleButton from './components/BubbleButton';
+import MagnetWrapper from './components/MagneticCursor';
+import ContactForm from './components/ContactForm';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -25,7 +30,7 @@ const Home = () => {
   const [currentLink, setCurrentLink] = useState('');
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
   const AnimatedComponent = motion.div;
-  
+
   const cardsData = [
     { title: "Redefined User Experience, Increased Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/customfurnish.png", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Streamlining Workflows For Design Teams", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
@@ -67,6 +72,12 @@ const Home = () => {
 
   return (
     <div className="content cursor scroll-smooth" id="content">
+      <ToastContainer
+        position="top-center"
+        autoClose={100000}
+        theme="dark"
+        className="sticky-toast"
+      />
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
       <Header />
@@ -83,7 +94,7 @@ const Home = () => {
             }}
             className="custom-bubble-class" // Optional
           >
-              <img src="img/open-web.svg" alt="Arrow" />
+            <img src="img/open-web.svg" alt="Arrow" />
           </BubbleButton>
         </a>
 
@@ -124,6 +135,7 @@ const Home = () => {
                         />
                       ))}
                     </div>
+                    <ContactForm />
 
 
                     {/* <DesignText /> */}

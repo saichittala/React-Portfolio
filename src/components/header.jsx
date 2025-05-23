@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MagnetWrapper from './MagneticCursor';
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
