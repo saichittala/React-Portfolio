@@ -65,7 +65,7 @@ const ContactForm = () => {
                 onSubmit={sendEmail}
                 className="lux-form-wrapper max-w-md mx-auto p-6 space-y-4max-w-md mx-auto p-6 space-y-4 bg-white shadow-md rounded-2xl"
             >
-                <h2 className="pd-main-heading-2">Contact Me</h2>
+                <h2 className="pd-main-heading-2">Get in touch</h2>
                 <input
                     type="text"
                     name="name"
