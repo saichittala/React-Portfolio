@@ -2364,7 +2364,7 @@ p {
 /* Contact Form */
 
 .lux-form-wrapper {
-    background-color: var(--black-2-color);
+    background-color: transparent !important;
     color: var(--white-color);
     border-radius: 36px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
@@ -2374,7 +2374,6 @@ p {
     width: 522px;
     margin: auto;
     gap: 14px;
-    padding: 56px;
     margin-top: 150px;
 
     h2 {
@@ -2385,7 +2384,7 @@ p {
 
 .lux-form-wrapper input,
 .lux-form-wrapper textarea {
-    background-color: var(--black-2-color);
+    background-color: transparent;
     border: 1px solid var(--border-color);
     color: var(--white-color);
     border-radius: var(--border-radius-1);
@@ -2464,8 +2463,6 @@ p {
 @media (max-width: 674px) {
     .lux-form-wrapper {
         width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
-        margin: auto;
-        padding: 36px;
         margin-top: 80px;
     }
 }
