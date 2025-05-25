@@ -74,7 +74,7 @@ const Home = () => {
     <div className="content cursor scroll-smooth" id="content">
       <ToastContainer
         position="top-center"
-        autoClose={100000}
+        autoClose={3000}
         theme="dark"
         className="sticky-toast"
       />
@@ -135,7 +135,6 @@ const Home = () => {
                         />
                       ))}
                     </div>
-                    <ContactForm />
 
 
                     {/* <DesignText /> */}

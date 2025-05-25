@@ -49,6 +49,24 @@
         }
     }
 
+    .dark-theme {
+        --black-color: #000000;
+        --black-2-color: #101010;
+        --white-color: #ffffff;
+        --primary-color: #000000;
+        --secondary-color: #F7F8F9;
+        --teritiary-color: #404040;
+        --text-color: #D0D0D0;
+        --border-color: #333333;
+        --grey-bg-w-color: #606060;
+        --grey-bg-b-color: #808080;
+        --black-opacity: rgba(0, 0, 0, 0.8);
+        --black-opacity-2: rgba(66, 66, 69, 0.7);
+        --black-opacity-3: rgba(44, 44, 49, 0.5);
+        --cursor-color: #ffffff30;
+    }
+
+
 
     /* Responsive */
 
@@ -65,6 +83,7 @@
     --primary-font: -apple-system,
     system-ui,
     BlinkMacSystemFont,
+    "Inter",
     "Hanken Grotesk",
     "Helvetica Neue",
     "Inter Tight",
@@ -104,6 +123,51 @@
 
 .scroll-smooth {
     scroll-behavior: smooth !important;
+}
+
+.color-black {
+    color: var(--black-color) !important;
+}
+
+.color-white {
+    color: var(--white-color) !important;
+}
+
+.color-grey-bg-w {
+    color: var(--grey-bg-w-color) !important;
+}
+
+.color-grey-bg-b {
+    color: var(--grey-bg-b-color) !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+        font-size: 20px;
+}
+
+.width-800 {
+    width: 600px !important;
+    margin: auto;
+    img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 674px) {
+    .width-800 {
+        width: 100% !important;
+        margin: auto;
+    }
+}
+
+.width-height-100 {
+    width: 100% !important;
+    height: 100% !important;
+    img {
+        width: 100% !important;
+        height: 100% !important;    }
 }
 
 .scale-on-scroll {
@@ -901,6 +965,7 @@ body {
 }
 
 .bubble-button {
+    display: inline-flex;
     position: fixed;
     bottom: 24px;
     left: 50%;
@@ -915,6 +980,7 @@ body {
     z-index: 100;
     will-change: transform, width, height;
     cursor: pointer;
+    padding: 6px;
 }
 
 .bubble-button:hover {
@@ -1648,6 +1714,21 @@ a {
     }
 }
 
+
+.content-div-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.content-div-main-heading-2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--white-color);
+    width: 100%;
+}
 .video-content-vr {
     width: 100%;
     background-size: cover;
@@ -1762,7 +1843,7 @@ a {
 p {
     font-size: 18px;
     font-weight: 300 !important;
-    line-height: 34px;
+    line-height: 1.8;
     margin: 0;
     color: var(--grey-bg-b-color);
 }
@@ -2465,4 +2546,16 @@ p {
         width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
         margin-top: 80px;
     }
+
+    .Toastify__toast {
+        width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
+    }
+
+    .sticky-toast.Toastify__toast-container--top-center {
+        width: 90%;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
+
