@@ -81,12 +81,12 @@
 
     /* Fonts */
     --primary-font: -apple-system,
-    system-ui,
-    BlinkMacSystemFont,
     "Inter",
+    BlinkMacSystemFont,
     "Hanken Grotesk",
     "Helvetica Neue",
     "Inter Tight",
+    system-ui,
     "Segoe UI",
     Arial,
     sans-serif;
@@ -159,6 +159,15 @@
     .width-800 {
         width: 100% !important;
         margin: auto;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .width-800 {
+        width: 100% !important;
+        margin: auto;
+
     }
 }
 

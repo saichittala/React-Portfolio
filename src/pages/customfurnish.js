@@ -194,15 +194,15 @@ const CustomFurnish = () => {
                     </div>
                   </div>
                 </div> */}
-                <div className="bg-full bg-white margin-unset">
+                <div className="bg-full margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
-                      {/* <div className="project-breif-heading width-800 fade-in">
+                      <div className="project-breif-heading width-800 fade-in">
                         <span className=''>02</span>
                         <span className=''>Challenges</span>
                       </div>
                       <div className="width-800 fade-in">
-                        <p><int>"Customfurnish was struggling to convert site visitors into paying clients despite strong service offerings and a broad product catalog. Their digital platform lacked clarity, trust-building elements, and modern interactive features."</int></p>
+                        <p><int>Customfurnish was struggling to convert site visitors into paying clients despite strong service offerings and a broad product catalog. Their digital platform lacked clarity, trust-building elements, and modern interactive features.</int></p>
                       </div>
                       <div className="content-div-main fade-in width-800">
                         <a className="fade-in content-div-main-heading-2 translate-text-up ">Key Challenges</a>
@@ -244,14 +244,18 @@ const CustomFurnish = () => {
                         <img src="img/projects/customfurnish/userpersona-2.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
                       </div>
                       <div className="pd-content width-800 fade-in">
-                        <ch className="fade-in translate-text-up">Empathy Map</ch>
-                        <img src="img/projects/customfurnish/empathymap.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                      </div> */}
-                      <div className="thankyou-content-heading fade-in cursor-text">
+                        <ch className="fade-in translate-text-up  width-800">Empathy Map</ch>
+                        <img src="img/projects/customfurnish/empathymap.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                      </div>
+                      <div className="pd-content width-800 fade-in">
+                        <ch className="fade-in translate-text-up  width-800">Competitve Analysis</ch>
+                        <img src="img/projects/customfurnish/companalysis.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                      </div>
+                      {/* <div className="thankyou-content-heading fade-in cursor-text">
                         Pssst... The magic’s still brewing. Meanwhile, sneak a peek at this <a className=''
                           href="https://www.customfurnish.com" rel="noopener noreferrer"
                           target="_blank">live project</a>
-                      </div>
+                      </div> */}
                       {/* <div className="thankyou-content-heading fade-in">
                         Thank you for viewing. <a
                           href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
