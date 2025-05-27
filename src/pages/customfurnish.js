@@ -196,61 +196,27 @@ const CustomFurnish = () => {
                 </div> */}
                 <div className="bg-full margin-unset">
                   <div className="bg-main  padding-unset">
-                    <div className="project-details">
+                    <div className="project-details padding-top-unset">
                       <div className="project-breif-heading width-800 fade-in">
                         <span className=''>02</span>
                         <span className=''>Challenges</span>
                       </div>
-                      <div className="width-800 fade-in">
-                        <p><int>Customfurnish was struggling to convert site visitors into paying clients despite strong service offerings and a broad product catalog. Their digital platform lacked clarity, trust-building elements, and modern interactive features.</int></p>
-                      </div>
-                      <div className="content-div-main fade-in width-800">
-                        <a className="fade-in content-div-main-heading-2 translate-text-up ">Key Challenges</a>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <div className="project-details-internal">
+                        <div className="width-800 fade-in">
+                          <p><int>Customfurnish was struggling to convert site visitors into paying clients despite strong service offerings and a broad product catalog. Their digital platform lacked clarity, trust-building elements, and modern interactive features.</int></p>
+                        </div>
+                        <div className="content-div-main fade-in width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up ">Key Challenges</a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='fade-in'>Low Conversion rate</p>
+                            <p className='fade-in'>Users overwhelmed by navigation and service ambiguity</p>
+                            <p className='fade-in'>High bounce rates on landing and inquiry pages</p>
+                            <p className='fade-in'>Lack of trust signals — testimonials, certifications, or design proof</p>
+                          </div>
+                        </div>
 
-                          <p className='fade-in'>Low Conversion rate</p>
-                          <p className='fade-in'>Users overwhelmed by navigation and service ambiguity</p>
-                          <p className='fade-in'>High bounce rates on landing and inquiry pages</p>
-                          <p className='fade-in'>Lack of trust signals — testimonials, certifications, or design proof</p>
-                        </div>
                       </div>
-                      <div className="project-breif-heading width-800 fade-in">
-                        <span className=''>03</span>
-                        <span className=''>Research</span>
-                      </div>
-                      <div className="content-div-main fade-in width-800">
-                        <a className="fade-in content-div-main-heading-2 translate-text-up">Research Methods
-                        </a>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          <p className='' >
-                            15 interviews with prospective leads</p>
-                          <p className='fade-in'>5 interviews with existing clients</p>
-                          <p className='fade-in'>Clarity session replays, Heatmaps, scroll maps</p>
-                          <p className='fade-in'>Usability testing on key pages</p>
-                          <p className='fade-in'>Google Analytics + funnel tracking</p>
-                          <p className='fade-in'>Journey Mapping & Persona Workshops</p>
-                        </div>
-                      </div>
-                      <div className="pd-content width-800 fade-in">
-                        <ch className="fade-in translate-text-up">User Insights</ch>
-                        <img src="img/projects/customfurnish/userinsights.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                      </div>
-                      <div className="pd-content width-800 fade-in">
-                        <ch className="fade-in translate-text-up">User Persona 1</ch>
-                        <img src="img/projects/customfurnish/userpersona-1.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                      </div>
-                      <div className="pd-content width-800 fade-in">
-                        <ch className="fade-in translate-text-up">User Persona 2</ch>
-                        <img src="img/projects/customfurnish/userpersona-2.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                      </div>
-                      <div className="pd-content width-800 fade-in">
-                        <ch className="fade-in translate-text-up  width-800">Empathy Map</ch>
-                        <img src="img/projects/customfurnish/empathymap.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
-                      </div>
-                      <div className="pd-content width-800 fade-in">
-                        <ch className="fade-in translate-text-up  width-800">Competitve Analysis</ch>
-                        <img src="img/projects/customfurnish/companalysis.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
-                      </div>
+
 
 
                       {/* <div className="thankyou-content-heading fade-in">
@@ -261,7 +227,7 @@ const CustomFurnish = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-full bg-white margin-unset">
+                {/* <div className="bg-full bg-white margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
                     <div className="thankyou-content-heading fade-in cursor-text">
@@ -269,6 +235,162 @@ const CustomFurnish = () => {
                         href="https://www.customfurnish.com" rel="noopener noreferrer"
                         target="_blank">live project</a>
                     </div>
+                    </div>
+                  </div>
+                </div> */}
+                <div className="bg-full margin-unset">
+                  <div className="bg-main  padding-unset">
+                    <div className="project-details padding-top-unset">
+                      <div className="project-details-internal">
+                        <div className="project-breif-heading width-800 fade-in">
+                          <span className=''>03</span>
+                          <span className=''>Research</span>
+                        </div>
+                        <div className="content-div-main fade-in width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up">Research Methods
+                          </a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='' >
+                              15 interviews with prospective leads</p>
+                            <p className='fade-in'>5 interviews with existing clients</p>
+                            <p className='fade-in'>Clarity session replays, Heatmaps, scroll maps</p>
+                            <p className='fade-in'>Usability testing on key pages</p>
+                            <p className='fade-in'>Google Analytics + funnel tracking</p>
+                            <p className='fade-in'>Journey Mapping & Persona Workshops</p>
+                          </div>
+                        </div>
+                        <a className="fade-in content-div-main-heading-2 width-800 translate-text-up">Ok guyss! Let's dive into the project deeply
+                        </a>
+                        <div className='width-800 project-details-subinternal'>
+                          <div className="pd-content width-800 fade-in">
+                            <ch className="fade-in translate-text-up">User Insights</ch>
+                            <img src="img/projects/customfurnish/userinsights.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                          </div>
+                          <p className='width-800'><int>We went beyond the surface with interviews, analytics, and heatmaps. The data revealed where users got stuck—and why they left.</int></p>
+
+                        </div>
+                        <div className='width-800 project-details-subinternal'>
+                          <div className="pd-content width-800 fade-in">
+                            <ch className="fade-in translate-text-up  width-800">Competitve Analysis</ch>
+                            <img src="img/projects/customfurnish/companalysis.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                          </div>
+                          <p className='width-800'><int>We studied key players in the interior design space—what made them trustworthy, where they lost users, and how Customfurnish could stand out with clarity, speed, and immersive features. The goal? Spot the gaps and design to fill them.</int></p>
+                        </div>
+
+                        <div className='width-800 project-details-subinternal'>
+                          <div className='width-800 project-details-internal'>
+                            <div className="pd-content width-800 fade-in">
+                              <ch className="fade-in translate-text-up">User Persona 1</ch>
+                              <img src="img/projects/customfurnish/userpersona-1.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                            </div>
+                            <div className="pd-content width-800 fade-in">
+                              <ch className="fade-in translate-text-up">User Persona 2</ch>
+                              <img src="img/projects/customfurnish/userpersona-2.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                            </div>
+                          </div>
+                          <p className='width-800'><int>These personas reflect the hopes and headaches of our most common users—helping us empathize, prioritize, and humanize every interaction.</int></p>
+                        </div>
+
+                        <div className='width-800 project-details-subinternal'>
+                          <div className="pd-content width-800 fade-in">
+                            <ch className="fade-in translate-text-up  width-800">Empathy Map</ch>
+                            <img src="img/projects/customfurnish/empathymap.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                          </div>
+                          <p className='width-800'><int>This map helped us understand Sushmitha's internal dialogue—why she feels overwhelmed and what would help her feel confident and in control.</int></p>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-full margin-unset">
+                  <div className="bg-main  padding-unset">
+                    <div className="project-details padding-top-unset">
+                      <div className="project-breif-heading width-800 fade-in">
+                        <span className=''>04</span>
+                        <span className=''>Define</span>
+                      </div>
+                      <div className="content-div-main fade-in width-800">
+                        <a className="fade-in content-div-main-heading-2 translate-text-up ">Design Goals</a>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <p className='fade-in'>Simplify paths from landingpage → consultation</p>
+                          <p className='fade-in'>Reduce form drop-offs and boost consultations</p>
+                          <p className='fade-in'>Mobile-first, intuitive design system</p>
+                          <p className='fade-in'>Enable instant decision-making with real-time previews</p>
+                        </div>
+                      </div>
+                      {/* <div className="pd-content width-100 fade-in">
+                          <ch className="fade-in translate-text-up  width-800">Information Architecture</ch>
+                          <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                        </div> */}
+                      <div className="pd-content width-800 fade-in">
+                        <ch className="fade-in translate-text-up  width-800">User Flow</ch>
+                        <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                      </div>
+                      {/* <div className="width-800 fade-in">
+                        <p><int>Let's Dive into the Design !!</int></p> 
+                      </div> */}
+                      {/* <div className="pd-content width-100 fade-in">
+                        <ch className="fade-in translate-text-up  width-800">Low Fedility Wireframes</ch>
+                        <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                      </div>
+                      <div className="pd-content width-100 fade-in">
+                        <ch className="fade-in translate-text-up  width-800">High Fedility Wireframes</ch>
+                        <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                      </div> */}
+                      <div className="pd-content width-100 fade-in">
+                        <ch className="fade-in translate-text-up  width-800">Design System</ch>
+                        <img src="img/projects/customfurnish/designsystem.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="bg-full margin-unset">
+                  <div className="bg-main  padding-unset">
+                    <div className="project-details padding-top-unset">
+                      <div className="project-breif-heading width-800 fade-in">
+                        <span className=''>05</span>
+                        <span className=''>Prototype</span>
+                      </div>
+                      <div className='project-details-internal'>
+                        <div className="width-800 fade-in">
+                          <p><int>Here's the prototype of the final design!</int></p>
+                        </div>
+                        <div className="pd-content width-100 fade-in">
+                          <ch className="fade-in translate-text-up  width-800">Prototype</ch>
+                          <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
+                <div className="bg-full margin-unset">
+                  <div className="bg-main  padding-unset">
+                    <div className="project-details padding-top-unset">
+                      <div className="project-breif-heading width-800 fade-in">
+                        <span className=''>05</span>
+                        <span className=''>Results</span>
+                      </div>
+                      <div className='project-details-internal'>
+                        <div className="pd-content width-100 fade-in">
+                          <p className='width-800 fade-in'><int>Beyond metrics, we earned emotional buy-in from customers and stakeholders alike. The design felt trustworthy and that changed everything.
+
+                          </int></p>
+                          <img src="img/projects/customfurnish/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-800" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-full bg-white margin-unset">
+                  <div className="bg-main  padding-unset">
+                    <div className="project-details">
+                      <div className="thankyou-content-heading fade-in cursor-text">
+                        Thank you for viewing. <a
+                          href="https://www.customfurnish.com" rel="noopener noreferrer"
+                          target="_blank">Have a look at live website</a>
+                      </div>
                     </div>
                   </div>
                 </div>

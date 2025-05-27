@@ -1723,6 +1723,21 @@ a {
     }
 }
 
+.project-details-internal {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+
+
+.project-details-subinternal {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+
 
 .content-div-main {
     display: flex;
