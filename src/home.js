@@ -90,7 +90,7 @@ const Home = () => {
             hideDelay={500} // Disappears after 500ms of being small
             size={{
               small: 12,
-              large: { width: 208.81, height: 48 } //48
+              large: { width: 215.81, height: 48 } //48
             }}
             className="custom-bubble-class" // Optional
           >
