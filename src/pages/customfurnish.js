@@ -339,7 +339,7 @@ const CustomFurnish = () => {
                         <ch className="fade-in translate-text-up  width-800">High Fedility Wireframes</ch>
                         <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
                       </div> */}
-                      <div className="pd-content width-100 fade-in">
+                      <div className="pd-content width-100">
                         <ch className="fade-in translate-text-up  width-800">Design System</ch>
                         <img src="img/projects/customfurnish/designsystem.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
                       </div>
