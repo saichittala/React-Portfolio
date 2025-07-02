@@ -620,7 +620,7 @@ body {
     color: var(--white-color) !important;
     margin: 0;
     line-height: 1.5;
-    margin-bottom: 32vh;
+    margin-bottom: 24vh;
 }
 
 
@@ -807,9 +807,10 @@ body {
 
 .main-card {
     display: flex;
-    height: calc(100vh - 296px);
-    min-height: 536px;
-    max-height: 50vh !important;
+    aspect-ratio: 1;
+    /* height: calc(100vh - 296px);
+    min-height: 536px; */
+    /* max-height: 50vh !important; */
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -1484,7 +1485,7 @@ a {
     }
 
     .main-card {
-        height: 60vh;
+        /* height: 60vh; */
     }
 
     .intro-content {
