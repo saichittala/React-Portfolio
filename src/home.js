@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 import BubbleButton from './components/BubbleButton';
 import MagnetWrapper from './components/MagneticCursor';
 import ContactForm from './components/ContactForm';
-
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -32,7 +31,7 @@ const Home = () => {
   const AnimatedComponent = motion.div;
 
   const cardsData = [
-    { title: "Redefined UX  , Increased Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/customfurnish.png", link: "#/customfurnish", openInNewTab: true, locked: false },
+    { title: "Redefined UX  , Increased Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Streamlining Workflows For Design Teams", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
     { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.png", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.jpeg", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },

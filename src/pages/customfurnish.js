@@ -3,7 +3,7 @@ import HeaderNonSticky from '../components/header-non-sticky';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
-import ZoomOnScroll from '../components/ZoomonScrollscale';
+import ZoomOnScroll from '../components/ZoomOnScroll';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import BubbleButton from '../components/BubbleButton';
@@ -99,8 +99,8 @@ const CustomFurnish = () => {
             </BubbleButton>
           </a>
           <div className="full-bg">
-            <div className=" p-img-1 main-image object-fit">
-              <img src="img/projects/customfurnish/showcase.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-in' />
+            <div className=" p-img-1 main-image object-fit width-height-100">
+              <img src="img/projects/cf.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-in' />
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
@@ -154,7 +154,7 @@ const CustomFurnish = () => {
                     </div>
                     <div className="pd-main" >
                       <div className="   pd-content-main">
-                        <ReactBeforeSliderComponent className='fade-in'
+                        <ReactBeforeSliderComponent className='fade-in '
                           firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.webp' }}  // Passing the first image
                           secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
                         />
@@ -324,8 +324,13 @@ const CustomFurnish = () => {
                           <ch className="fade-in translate-text-up  width-800">Information Architecture</ch>
                           <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
                         </div> */}
+                      <div className="pd-content width-100">
+                        <ch className="fade-in translate-text-up  width-800">Information Architecture</ch>
+                        <img src="img/projects/customfurnish/information-architecture.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                      </div>
+
                       <div className="pd-content width-800 fade-in">
-                        <ch className="fade-in translate-text-up  width-800">User Flow</ch>
+                        <ch className="fade-in translate-text-up  width-800">Leads User Flow</ch>
                         <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
                       </div>
                       {/* <div className="width-800 fade-in">
@@ -341,8 +346,13 @@ const CustomFurnish = () => {
                       </div> */}
                       <div className="pd-content width-100">
                         <ch className="fade-in translate-text-up  width-800">Design System</ch>
-                        <img src="img/projects/customfurnish/designsystem.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                        <img src="img/projects/customfurnish/designsystem.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                       </div>
+                      <div className="pd-content width-100">
+                        <ch className="fade-in translate-text-up  width-800">Components</ch>
+                        <img src="img/projects/customfurnish/Components.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                      </div>
+                      
                     </div>
                   </div>
                 </div>

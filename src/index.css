@@ -9,6 +9,7 @@
 
 
 
+
 :root {
 
     /* Colors */
@@ -145,12 +146,18 @@
 
 .fw-600 {
     font-weight: 600 !important;
-        font-size: 20px;
+    font-size: 20px;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
 }
 
 .width-800 {
     width: 600px !important;
     margin: auto;
+
     img {
         width: 100% !important;
         height: 100% !important;
@@ -176,9 +183,11 @@
 .width-height-100 {
     width: 100% !important;
     height: 100% !important;
+
     img {
         width: 100% !important;
-        height: 100% !important;    }
+        height: 100% !important;
+    }
 }
 
 .scale-on-scroll {
@@ -826,11 +835,12 @@ body {
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
-    backdrop-filter: blur(0px);
+    /* backdrop-filter: blur(0px); */
     opacity: 0;
     visibility: hidden;
     transition: backdrop-filter 0.3s cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s cubic-bezier(0, -.6, 0, 1.07), background-color 0.3s cubic-bezier(0, -.6, 0, 1.07);
-    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0); */
+    background: transparent;
 }
 
 
@@ -849,7 +859,7 @@ body {
 
 
 .main-heading-type {
-    opacity: 0;
+    /* opacity: 0;
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -857,7 +867,28 @@ body {
     width: 100%;
     padding: 36px 36px 64px 36px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 38.94%, rgba(0, 0, 0, 0.00) 100%);
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 36px 36px 64px 36px;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 38.94%, rgba(0, 0, 0, 0.0) 100%);
+
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+
+    mask-image: linear-gradient(to bottom, black 60%, transparent 96.875%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 96.875%);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.4s ease-in-out,
+        backdrop-filter 0.4s ease-in-out,
+        -webkit-backdrop-filter 0.4s ease-in-out;
 }
 
 .main-heading {
@@ -1284,20 +1315,20 @@ body {
     cursor: pointer;
 }
 
-
 .fade-in {
-    opacity: 0;
-    transform: scale(var(--scale-start, 0.98));
-    /* Start with scale 0.9 and slide down */
-    transition: opacity .8s cubic-bezier(0.455, 0.030, 0.515, 0.955), transform .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  opacity: 0;
+  transform: scale(var(--scale-start, 0.98));
+  filter: blur(8px); /* Start blurred */
+  transition: 
+    opacity 0.750s cubic-bezier(0.455, 0.030, 0.515, 0.955), 
+    transform 0.750s cubic-bezier(0.455, 0.030, 0.515, 0.955),
+    filter 0.750s cubic-bezier(0.455, 0.030, 0.515, 0.955); /* Animate blur too */
 }
 
 .fade-in.visible {
-    opacity: 1;
-    transform: scale(var(--scale-start, 1));
-    transform: scale3d(1, 1, 1) translateY(0);
-    /* Scale to 1 and move to original position */
-    transition: opacity .8s cubic-bezier(0.455, 0.030, 0.515, 0.955), transform .8s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  opacity: 1;
+  transform: scale3d(1, 1, 1) translateY(0);
+  filter: blur(0); 
 }
 
 
@@ -1311,7 +1342,7 @@ body {
 }
 
 .zoom-in.zoomed {
-    width: var(--end-width);
+    width: var(--end-width) !important;
     /* Apply the end width defined in the CSS variable */
     border-radius: var(--border-radius-1);
 }
@@ -1755,6 +1786,7 @@ a {
     color: var(--white-color);
     width: 100%;
 }
+
 .video-content-vr {
     width: 100%;
     background-size: cover;
@@ -2175,9 +2207,9 @@ p {
 }
 
 .p-img-1 {
-    width: 100%;
+    width: 100%; 
     height: 90vh;
-    padding: 0 40px;
+    padding: 0 10%;
     border-radius: var(--border-radius-1);
 }
 
@@ -2296,6 +2328,8 @@ p {
     }
 
     .fade-in.visible {
+          filter: blur(0); /* End crystal clear */
+
         overflow: unset !important;
         transform: scale3d(1, 1, 1) !important;
     }
@@ -2383,7 +2417,7 @@ p {
     .main-image {
         width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
         margin: auto;
-        padding: 0;
+        padding: 0 24px;
     }
 
     .project-details-main {
@@ -2584,4 +2618,3 @@ p {
         transform: translateX(-50%);
     }
 }
-
