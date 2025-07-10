@@ -1467,7 +1467,7 @@ a {
     }
 
     .main-card {
-        min-height: 466px;
+        /* min-height: 466px; */
     }
 }
 
