@@ -30,7 +30,7 @@ function Header() {
             <div className="mob-nav-btns">
               <a href="." className="about-button btn-1 mob-btn-1">Work</a>
               <a href="/#about" className="about-button btn-1 mob-btn-1 ">Info</a>
-              <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-1 mob-btn-1">Resume</a>
+              {/* <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-1 mob-btn-1">Resume</a> */}
             </div>
           </div>
 
@@ -38,7 +38,7 @@ function Header() {
           <div className="nav-btns">
             <a href="." className="about-button header-text ">Work</a>
             <a href="/#about" className="about-button header-text ">Info</a>
-            <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text ">Resume</a>
+            {/* <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text ">Resume</a> */}
           </div>
         </div>
       </nav>
