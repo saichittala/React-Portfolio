@@ -352,7 +352,22 @@ const CustomFurnish = () => {
                         <ch className="fade-in translate-text-up  width-800">Components</ch>
                         <img src="img/projects/customfurnish/Components.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                       </div>
-                      
+                      <div className="pd-content width-100">
+                        <ch className="fade-in translate-text-up  width-800">Wireframes</ch>
+                        <img src="img/projects/customfurnish/wireframes.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+
+                      </div>
+                      <div className="pd-content width-100">
+                        <ch className="fade-in translate-text-up  width-800">Prototype</ch>
+                        <iframe
+                          style={{ border: '1px solid rgba(0, 0, 0, 0.1)', width: '100%', aspectRatio: '1.33', height: '100%' }}
+                          width="800"
+                          height="450"
+                          src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/XG1Pa7Mt1XnI4bfxgWB6bG/CF--Changes?page-id=3462%3A1184&node-id=3462-2737&scaling=scale-down&hide-ui=1"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+
                     </div>
                   </div>
                 </div>
