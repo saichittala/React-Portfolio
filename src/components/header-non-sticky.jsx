@@ -73,7 +73,6 @@ function HeaderNonSticky() {
           <div className="nav-btns">
             <a href="." className="about-button header-text">Work</a>
             <a href="/#about" className="about-button header-text">Info</a>
-            <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text">Resume</a>
           </div>
         </div>
       </nav>
