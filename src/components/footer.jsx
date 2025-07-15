@@ -36,7 +36,7 @@ function footer() {
                             {/* Additional Links */}
                             <div className="footer-content">
                                 <a href='/#about' className="footer-white footer-link ">About</a>
-                                <a href="Resume.pdf" className="footer-white footer-link">Resume</a>
+                                <a href="Resumee.pdf" className="footer-white footer-link">Resume</a>
                             </div>
                         </div>
                     </div>
