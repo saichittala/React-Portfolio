@@ -153,17 +153,46 @@ const CustomFurnish = () => {
                       </div>
                     </div>
                     <div className="pd-main" >
-                      <div className="   pd-content-main">
-                        <ReactBeforeSliderComponent className='fade-in '
+                      <div className="   pd-content-main gap-72 margin-100">
+                        {/* <ReactBeforeSliderComponent className='fade-in '
                           firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.webp' }}  // Passing the first image
                           secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
-                        />
-                        <div>
+                        /> */}
+                        <div className="content-div-main fade-in width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up ">About
+                          </a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='fade-in'>At CustomFurnish, a full-service interior design brand, I redesigned the website to turn passive visitors into high-intent leads. Without relying on upfront pricing or 3D visuals, I crafted a trust-first, conversion-focused experience that simplified the user journey, built credibility, and increased consultation bookings - showcasing my ability to drive business results through strategic UX.
+
+                            </p>
+                          </div>
+                        </div>
+                        {/* <div>
                           <int className="fade-in">
                             <p className=''>I led the end-to-end redesign of Customfurnish’s web experience to turn <int>uncertain browsers into confident buyers</int> - real-time consultation, and elegant UX that built trust and drove a <int>25% increase in lead conversions.</int></p></int>
+                        </div> */}
+                        <div></div>
+                        <div className="content-div-main fade-in width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up ">The Problem
+                          </a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='fade-in'>CustomFurnish was losing high-intent users because the website didn’t build trust or guide them to take action. There was no clarity about the process, no emotional connection, and no compelling reason to book a consultation.
+                            </p>
+                          </div>
                         </div>
-
-
+                        <img src="img/projects/customfurnish/customfurnish-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-in' loading="lazy" />
+                        
+                        <div></div>
+                        <div className="content-div-main fade-in  width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up ">The Solution
+                          </a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='fade-in'>I redesigned the experience to drive one clear action: lead capture. By showcasing real projects, simplifying the journey, and embedding trust signals throughout, I turned passive visitors into engaged leads. The goal wasn’t to explain everything - it was to spark just enough interest and confidence for users to reach out. Once they did, our team took over with personalized 3D visuals and pricing.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="img/projects/customfurnish/customfurnish-new.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-in' loading="lazy" />
+                      
                       </div>
                     </div>
                   </div>
