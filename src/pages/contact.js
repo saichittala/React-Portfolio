@@ -13,7 +13,6 @@ function Contact() {
                     <div className="full-bg">
                         <div className="bg-main">
                             <ContactForm />
-
                         </div>
                     </div>
                 </section>
