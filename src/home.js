@@ -129,7 +129,6 @@ const Home = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <Header />
           <div className="full-bg height-100vh bg-op4">
 
             <div className="bg-main height-100vh home-main-container fd-c display-flex alc h-100 ">

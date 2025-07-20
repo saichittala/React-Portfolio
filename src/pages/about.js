@@ -8,7 +8,6 @@ function About() {
     useFadeIn();
     return (
         <div className="content cursor" id="content">
-            <Header />
             <main>
                 <section className="fade-in">
                     <div className="full-bg">
