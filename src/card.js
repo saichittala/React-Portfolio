@@ -44,7 +44,8 @@ const Card = ({
   };
 
   return (
-    <div>
+    <div className='card-container'         onClick={handleCardClick}
+>
       <div
         ref={cardRef}
         className="main-card fade-in cursor-link"
@@ -53,19 +54,25 @@ const Card = ({
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
-        onClick={handleCardClick}
       >
         <div className="sub-card">
           <div className="card-content">
-            <div className="main-heading-type">
+            {/* <div className="main-heading-type">
               <div className="main-heading">{title}</div>
             </div>
             <div className="sub-heading-type">
               <div className="heading-type">{type}</div>
               <div className="heading-year">{year}</div>
-            </div>
+            </div> */}
           </div>
         </div>
+      </div>
+      <div className='card-info df-g8'>
+        <div className="card-title">{title}</div>
+        <div className="card-year">{year}</div>
+        {/* <div className='df-g8 gap-8'>
+          <div className="card-type">{type}</div>
+        </div> */}
       </div>
     </div>
   );

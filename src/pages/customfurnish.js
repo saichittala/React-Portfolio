@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import HeaderNonSticky from '../components/header-non-sticky';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
@@ -79,8 +78,6 @@ const CustomFurnish = () => {
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <title>Sai Chittala Portfolio</title>
       </head>
-
-      <HeaderNonSticky />
       <main>
         <section ref={customfurnishRef}>
           <a href="https://www.customfurnish.com" target="_blank" rel="noopener noreferrer">
@@ -91,7 +88,7 @@ const CustomFurnish = () => {
               hideDelay={500}
               size={{
                 small: 12,
-                large: { width: 216.65, height: 52 }
+                large: { width: 220.65, height: 52 }
               }}
               activateAt={isMobile ? -3.8 : -0.5}
               className="custom-bubble-class" >

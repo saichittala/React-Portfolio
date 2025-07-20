@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import HeaderNonSticky from '../components/header-non-sticky';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
@@ -67,7 +66,6 @@ const MyDeziner = () => {
 
   return (
     <div className='cursor overflow-x-h'>
-      
       <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
@@ -92,7 +90,6 @@ const MyDeziner = () => {
       </head>
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
-      <HeaderNonSticky />
 
       <main>
 

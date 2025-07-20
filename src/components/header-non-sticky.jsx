@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
 
 function HeaderNonSticky() {
   const [menuActive, setMenuActive] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   
+    const location = useLocation();
   
 
   const toggleMenu = () => {
@@ -48,9 +51,9 @@ function HeaderNonSticky() {
       <nav className={`nav-bar ${showHeader ? 'nav-visible' : 'nav-hidden'}`}>
         <div className="nav-main">
           {/* Logo */}
-          <a href="." className='logo animation'>
+          {/* <a href="." className='logo animation'>
             <img src="img/logo.svg" alt="logo" />
-          </a>
+          </a> */}
 
           {/* Menu Icon */}
           <img
@@ -71,9 +74,30 @@ function HeaderNonSticky() {
 
           {/* Desktop Nav */}
           <div className="nav-btns">
-            <a href="." className="about-button header-text">Work</a>
-            <a href="/#about" className="about-button header-text">Info</a>
-          </div>
+                      {/* The 'Home' link is active if the path is exactly "/" */}
+                      <Link to="/" className={`about-button header-text ${location.pathname === '/' ? 'header-text-active' : ''}`}>
+                        <img src="img/home-nav.svg" alt="logo" />
+                        <span>Home</span>
+                      </Link>
+          
+                      {/* The 'Works' link is active if the path is "/works" */}
+                      <Link to="/works" className={`about-button header-text ${location.pathname === '/works' ? 'header-text-active' : ''}`}>
+                        <img src="img/works-nav.svg" alt="logo" />
+                        <span>Works</span>
+                      </Link>
+          
+                      {/* The 'About' link is active if the path is "/about" */}
+                      <Link to="/about" className={`about-button header-text ${location.pathname === '/about' ? 'header-text-active' : ''}`}>
+                        <img src="img/profile-nav.svg" alt="logo" />
+                        <span>About</span>
+                      </Link>
+          
+                      {/* The 'Contact' link is active if the path is "/contact" */}
+                      <Link to="/contact" className={`about-button header-text ${location.pathname === '/contact' ? 'header-text-active' : ''}`}>
+                        <img src="img/contact-nav.svg" alt="logo" />
+                        <span>Contact</span>
+                      </Link>
+                    </div>
         </div>
       </nav>
     </div>

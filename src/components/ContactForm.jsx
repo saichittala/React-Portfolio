@@ -69,20 +69,20 @@ const ContactForm = () => {
                 <input
                     type="text"
                     name="name"
-                    placeholder="Your Name"
+                    placeholder="John Doe"
                     required
                     className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <input
                     type="email"
                     name="email"
-                    placeholder="Your Email"
+                    placeholder="demo@gmail.com"
                     required
                     className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <textarea
                     name="message"
-                    placeholder="Your Message"
+                    placeholder="Hello, I would like to..."
                     required
                     className="w-full border border-gray-300 p-3 rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />

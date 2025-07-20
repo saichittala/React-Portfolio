@@ -29,6 +29,29 @@ const Home = () => {
   const [currentLink, setCurrentLink] = useState('');
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
   const AnimatedComponent = motion.div;
+  const [currentTime, setCurrentTime] = useState('');
+
+
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      // --- CHANGE IS HERE ---
+      // Add `second: '2-digit'` to the options object.
+      const options = {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit', // This line adds the seconds
+        hour12: true,
+      };
+      const timeString = new Date().toLocaleTimeString('en-US', options);
+      setCurrentTime(timeString);
+    }, 1000);
+
+    return () => {
+      clearInterval(timerId);
+    };
+  }, []);
 
   const cardsData = [
     { title: "Boosting Conversions with Smart Interior UX", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
@@ -70,7 +93,9 @@ const Home = () => {
   };
 
   return (
-    <div className="content cursor scroll-smooth" id="content">
+    <div className="content bg-unset cursor scroll-smooth bg-v" id="content">
+      {/* 🔥 Video Background */}
+
       <ToastContainer
         position="top-center"
         autoClose={3000}
@@ -79,7 +104,7 @@ const Home = () => {
       />
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
-      <Header />
+
       <main className='z-index-11 '>
         <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
           <BubbleButton
@@ -98,9 +123,81 @@ const Home = () => {
         </a>
 
         <section className="fade-in">
-          <div className="full-bg">
-            <div className="bg-main">
-              <div className="intro-section-main">
+          <div className="background-video-wrapper">
+            <video autoPlay muted loop playsInline className="background-video">
+              <source src="/img/bg-vvv.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <Header />
+          <div className="full-bg height-100vh bg-op4">
+
+            <div className="bg-main height-100vh home-main-container fd-c display-flex alc h-100 ">
+              <div className='df-g8 width-100 mobile-home-container'>
+                <div className='df-g8 fd-c width-100'>
+                  <div className='btn-4 btn-4-hn'>
+                    <a href='/'>
+                      <img
+                        src={'img/sai.svg'}
+                        alt="menu-icon"
+                      />
+                    </a>
+
+                  </div>
+                  <div className='df-g8' >
+                    <div className='btn-4 btn-4-hn cursor-text'>
+                      UX
+                    </div>
+                    <div className='btn-4 btn-4-hn cursor-text'>
+                      UI
+                    </div>
+                    <div className='btn-4 btn-4-hn cursor-text'>
+                      Product
+                    </div>
+                  </div>
+
+                </div>
+                <div className='df-g8 width-fc'>
+                  <div className='profile-img'>
+                    <img
+                      style={{ width: '150px', borderRadius: '24px' }}
+                      src={'img/profile-test.webp'}
+                      alt="profile-img"
+                    />
+                  </div>
+                </div>
+                <div className='df-g8 fd-c width-100'>
+                  <div className='btn-4 btn-4-hn cursor-text'>
+                    Product Designer helping Companies to build digital products.
+                  </div>
+                  <div className='df-g8'>
+                    <a href='https://www.linkedin.com/in/saichittala/' target="_blank" rel="noopener noreferrer" className='btn-4'>
+                      Linkedin
+                    </a>
+                    <a href='https://www.upwork.com/freelancers/~01762e36a0d1eb9abf' target="_blank" rel="noopener noreferrer" className='btn-4'>
+                      Upwork
+                    </a>
+                  </div>
+                </div>
+                <div className='df-g8 fd-c width-100'>
+                  <div className='btn-4 btn-4-hn cursor-text jc-sb'>
+
+                    <div className='df-g8 fd-c'>
+                      <span className='fs-14'>Based in</span>
+                      <span className='fs-14'> India</span>
+                    </div>
+                    <div className='df-g8 fd-c'>
+                      <span className='ta-r fs-14'>{currentTime || 'Loading...'}</span>
+                      <span className='ta-r fs-14'>Hyderabad</span>
+                    </div>
+                  </div>
+                  <a href='/#works' className='btn-4 blue-opacity-4 btn-4-hn'>
+                    <span>Explore all works</span>
+                    <img src='img/arrow-right.svg' alt="arrow" />
+                  </a>
+                </div>
+              </div>
+              {/* <div className="intro-section-main">
                 <div className="intro-section">
                   <div className="intro-content">
                     <p className="intro-white-text fade-in translate-text-down ">
@@ -119,33 +216,34 @@ const Home = () => {
                       <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Upwork
                       </a>
-                      {/* <div className='say-hi-btn cursor-playful'>
+                      <div className='say-hi-btn cursor-playful'>
                       <img src="img/right-arrow.svg" alt="logo" />
-                      <a>Say Hi</a></div> */}
+                      <a>Say Hi</a></div>
                     </p>
 
-                    <div className="cards-container" id="cards-container" ref={cardsContainerRef}>
-                      {cardsData.map((card, index) => (
-                        <Card
-                          key={index}
-                          {...card}
-                          onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
-                          password={card.password} // Pass password prop for locked cards
-                        />
-                      ))}
-                    </div>
+                    
 
 
-                    {/* <DesignText /> */}
+                    <DesignText />
                   </div>
                 </div>
-              </div>
+              </div>  */}
+                {/* <div className="cards-container" id="cards-container" ref={cardsContainerRef}>
+                  {cardsData.map((card, index) => (
+                    <Card
+                      key={index}
+                      {...card}
+                      onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
+                      password={card.password} // Pass password prop for locked cards
+                    />
+                  ))}
+                </div> */}
             </div>
           </div>
         </section>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
 
       {/* LockPopup */}
       <LockPopup

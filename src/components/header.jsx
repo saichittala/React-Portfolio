@@ -1,44 +1,67 @@
 import React, { useState } from 'react';
-import MagnetWrapper from './MagneticCursor';
+// 1. Import Link and useLocation from react-router-dom
+import { Link, useLocation } from 'react-router-dom';
+
+// I'm assuming MagnetWrapper is a component you have.
+// import MagnetWrapper from './MagneticCursor';
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
+  // 2. Get the current location object
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
 
+  // 3. The onClick handler for scrolling is no longer needed.
+  // React Router's <Link> component will handle navigation.
+
   return (
     <div>
       <nav className="nav-bar">
         <div className="nav-main">
-          {/* Logo */}
-          <a href="." className='logo animation'>
-            <img src="img/logo.svg" alt="logo" />
-          </a>
-
           {/* Menu Icon */}
-          <img
+          {/* <img
             className={`menu-icon ${menuActive ? 'clicked' : ''}`}
             src={menuActive ? 'img/close.svg' : 'img/menu.svg'}
             alt="menu-icon"
             onClick={toggleMenu}
-          />
+          /> */}
 
-          {/* Mobile Menu Container */}
-          <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
+          {/* Mobile Menu Container - Updated to use Link */}
+          {/* <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
             <div className="mob-nav-btns">
-              <a href="." className="about-button btn-1 mob-btn-1">Work</a>
-              <a href="/#about" className="about-button btn-1 mob-btn-1 ">Info</a>
-              {/* <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-1 mob-btn-1">Resume</a> */}
+              <Link to="/works" className="about-button btn-1 mob-btn-1">Work</Link>
+              <Link to="/about" className="about-button btn-1 mob-btn-1 ">Info</Link>
             </div>
-          </div>
+          </div> */}
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Updated to use Link and dynamic classes */}
           <div className="nav-btns">
-            <a href="." className="about-button header-text ">Work</a>
-            <a href="/#about" className="about-button header-text ">Info</a>
-            {/* <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className="header-text ">Resume</a> */}
+            {/* The 'Home' link is active if the path is exactly "/" */}
+            <Link to="/" className={`about-button header-text ${location.pathname === '/' ? 'header-text-active' : ''}`}>
+              <img src="img/home-nav.svg" alt="logo" />
+              <span>Home</span>
+            </Link>
+
+            {/* The 'Works' link is active if the path is "/works" */}
+            <Link to="/works" className={`about-button header-text ${location.pathname === '/works' ? 'header-text-active' : ''}`}>
+              <img src="img/works-nav.svg" alt="logo" />
+              <span>Works</span>
+            </Link>
+
+            {/* The 'About' link is active if the path is "/about" */}
+            <Link to="/about" className={`about-button header-text ${location.pathname === '/about' ? 'header-text-active' : ''}`}>
+              <img src="img/profile-nav.svg" alt="logo" />
+              <span>About</span>
+            </Link>
+
+            {/* The 'Contact' link is active if the path is "/contact" */}
+            <Link to="/contact" className={`about-button header-text ${location.pathname === '/contact' ? 'header-text-active' : ''}`}>
+              <img src="img/contact-nav.svg" alt="logo" />
+              <span>Contact</span>
+            </Link>
           </div>
         </div>
       </nav>
