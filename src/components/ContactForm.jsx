@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { color } from 'framer-motion';
 
 const ContactForm = () => {
     const form = useRef();
@@ -66,6 +67,8 @@ const ContactForm = () => {
                 className="lux-form-wrapper max-w-md mx-auto p-6 space-y-4max-w-md mx-auto p-6 space-y-4 bg-white shadow-md rounded-2xl"
             >
                 <h2 className="pd-main-heading-2">Get in touch</h2>
+                <div className='df-g8 fd-c gap-8'>
+                <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Name</span>
                 <input
                     type="text"
                     name="name"
@@ -73,6 +76,11 @@ const ContactForm = () => {
                     required
                     className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+
+                </div>
+                <div className='df-g8 fd-c gap-8'>
+                <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Email</span>
+                
                 <input
                     type="email"
                     name="email"
@@ -80,12 +88,16 @@ const ContactForm = () => {
                     required
                     className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                </div>
+                <div className='df-g8 fd-c gap-8'>
+                <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Message</span>
                 <textarea
                     name="message"
                     placeholder="Hello, I would like to..."
                     required
                     className="w-full border border-gray-300 p-3 rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                </div>
                 <button
                     type="submit"
                     disabled={isSending}

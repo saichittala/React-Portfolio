@@ -249,7 +249,7 @@
     --start-scale: 1.0;
     --end-scale: 3.0;
     transform-origin: top center;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s cubic-bezier(0, -.6, 0, 1.07);
     height: 200vh;
     overflow: hidden;
 }
@@ -315,7 +315,7 @@ body {
     height: 6px;
     background-color: var(--grey-bg-b-color);
     border-radius: 100%;
-    animation: translateCircle 1.2s ease-in-out infinite;
+    animation: translateCircle 1.2s cubic-bezier(0, -.6, 0, 1.07) infinite;
 }
 
 
@@ -331,7 +331,7 @@ body {
     transform: translate(-50%, -50%) scale(1);
     z-index: 10000;
     border: 1px solid #00000020;
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: width 0.2s cubic-bezier(0, -.6, 0, 1.07), height 0.2s cubic-bezier(0, -.6, 0, 1.07), background-color 0.2s cubic-bezier(0, -.6, 0, 1.07);
     /* mix-blend-mode: difference; */
 }
 
@@ -416,12 +416,12 @@ body {
     border-bottom: 1px solid transparent;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    transition: 0.6s transform ease-in-out, opacity 0.3s ease;
+    transition: 0.6s transform cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s ease;
     will-change: transform;
 
     .nav-main {
         transform: translate3d(0px, 2px, 2px);
-        transition: 0.6s transform ease-in-out;
+        transition: 0.6s transform cubic-bezier(0, -.6, 0, 1.07);
     }
 } */
 
@@ -435,14 +435,14 @@ body {
     border-bottom: 1px solid transparent;
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    transition: 0.6s transform ease-in-out, opacity 0.3s ease;
+    transition: 0.6s transform cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s ease;
     will-change: transform;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-1);
 
     .nav-main {
         /* transform: translate3d(0px, 2px, 2px); */
-        transition: 0.6s transform ease-in-out;
+        transition: 0.6s transform cubic-bezier(0, -.6, 0, 1.07);
     }
 }
 
@@ -503,7 +503,7 @@ body {
     top: 0;
     width: 100%;
     background: #00000050;
-    transition: position .3s ease-in-out;
+    transition: position .3s cubic-bezier(0, -.6, 0, 1.07);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     visibility: hidden;
@@ -536,13 +536,13 @@ body {
         max-height: 0;
         max-width: 0;
         overflow: hidden;
-        transition: width .3s ease-in-out;
+        transition: width .3s cubic-bezier(0, -.6, 0, 1.07);
     }
 
-    transition: padding .5s ease-in-out, transform .2s ease-in-out, filter .2s ease-in-out;
+    transition: padding .5s cubic-bezier(0, -.6, 0, 1.07), transform .2s cubic-bezier(0, -.6, 0, 1.07), filter .2s cubic-bezier(0, -.6, 0, 1.07);
     img {
         filter: brightness(0) saturate(100%) invert(49%) sepia(21%) saturate(0%) hue-rotate(181deg) brightness(98%) contrast(90%);
-        transition: color .2s ease-in-out, filter .2s ease-in-out;
+        transition: color .2s cubic-bezier(0, -.6, 0, 1.07), filter .2s cubic-bezier(0, -.6, 0, 1.07);
     }
 }
 
@@ -550,7 +550,7 @@ body {
     padding: 4px 12px 4px 8px;
     background: var(--white-color);
     color: var(--black-color);
-    transition: padding .5s ease-in-out, transform .2s ease-in-out, filter .2s ease-in-out;
+    transition: padding .5s cubic-bezier(0, -.6, 0, 1.07), transform .2s cubic-bezier(0, -.6, 0, 1.07), filter .2s cubic-bezier(0, -.6, 0, 1.07);
 
     span {
         opacity: 1;
@@ -575,14 +575,14 @@ body {
     }
 
     color: var(--black-2-color);
-    transition: color .2s ease-in-out, filter .2s ease-in-out;
+    transition: color .2s cubic-bezier(0, -.6, 0, 1.07), filter .2s cubic-bezier(0, -.6, 0, 1.07);
 }
 .header-text:active {
-    transition: transform .4s ease-in-out, filter .2s ease-in-out;
+    transition: transform .4s cubic-bezier(0, -.6, 0, 1.07), filter .2s cubic-bezier(0, -.6, 0, 1.07);
     transform: scale3d(0.98, 0.98, 0.98);
 }
 .header-text-active:active {
-    transition: transform .4s ease-in-out, filter .2s ease-in-out;
+    transition: transform .4s cubic-bezier(0, -.6, 0, 1.07), filter .2s cubic-bezier(0, -.6, 0, 1.07);
     transform: scale3d(0.98, 0.98, 0.98);
 }
 
@@ -592,7 +592,7 @@ body {
     align-items: flex-start;
     gap: 10px;
     background: var(--black-2-color);
-    transition: 0.2s ease-in-out;
+    transition: 0.2s cubic-bezier(0, -.6, 0, 1.07);
     cursor: pointer;
 
     text-decoration: none;
@@ -613,7 +613,7 @@ body {
     padding: 10px 24px;
     align-items: flex-start;
     gap: 10px;
-    transition: 0.2s ease-in-out;
+    transition: 0.2s cubic-bezier(0, -.6, 0, 1.07);
     /* cursor: pointer; */
     cursor: pointer;
     color: var(--grey-bg-b-color);
@@ -632,7 +632,7 @@ body {
     padding: 10px 24px;
     align-items: flex-start;
     gap: 10px;
-    transition: 0.2s ease-in-out;
+    transition: 0.2s cubic-bezier(0, -.6, 0, 1.07);
     /* cursor: pointer; */
     cursor: pointer;
     background: var(--teritiary-color);
@@ -652,7 +652,7 @@ body {
     padding: 36px;
     align-items: flex-start;
     gap: 10px;
-    transition: 0.2s ease-in-out;
+    transition: 0.2s cubic-bezier(0, -.6, 0, 1.07);
     /* cursor: pointer; */
     cursor: pointer;
     color: var(--white-color);
@@ -893,7 +893,7 @@ body {
 
 .company-text:hover {
     background-image: linear-gradient(158deg, #0895FF, #C952DD 34%, #FF2E55 68%, #FF9014);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s cubic-bezier(0, -.6, 0, 1.07);
 }
 
 
@@ -910,7 +910,7 @@ body {
     width: fit-content;
     gap: 10px;
     color: var(--grey-bg-b-color);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s cubic-bezier(0, -.6, 0, 1.07);
     border-radius: 99px;
     /* cursor: pointer; */
     cursor: pointer;
@@ -924,7 +924,7 @@ body {
 }
 
 .scroll-btn img {
-    transition: 0.2s ease-in-out;
+    transition: 0.2s cubic-bezier(0, -.6, 0, 1.07);
 }
 
 .scroll-btn:hover {
@@ -1101,7 +1101,7 @@ body {
     gap: 10px;
     align-self: stretch;
     background: var(--secondary-color);
-    transition: transform .2s ease-in-out, border-radius .2s ease-in-out, box-shadow .2s ease-in-out !important;
+    transition: transform .2s cubic-bezier(0, -.6, 0, 1.07), border-radius .2s cubic-bezier(0, -.6, 0, 1.07), box-shadow .2s cubic-bezier(0, -.6, 0, 1.07) !important;
     background-position: center;
     background-size: cover;
     cursor: pointer;
@@ -1178,7 +1178,7 @@ body {
     width: 100%;
     height: 100%;
     justify-content: space-between;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s cubic-bezier(0, -.6, 0, 1.07);
 
 }
 
@@ -1192,7 +1192,7 @@ body {
     width: 100%;
     padding: 36px 36px 64px 36px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 38.94%, rgba(0, 0, 0, 0.00) 100%);
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; */
+    transition: opacity 0.3s cubic-bezier(0, -.6, 0, 1.07), visibility 0.3s cubic-bezier(0, -.6, 0, 1.07); */
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -1211,9 +1211,9 @@ body {
     visibility: hidden;
 
     transition:
-        opacity 0.4s ease-in-out,
-        backdrop-filter 0.4s ease-in-out,
-        -webkit-backdrop-filter 0.4s ease-in-out;
+        opacity 0.4s cubic-bezier(0, -.6, 0, 1.07),
+        backdrop-filter 0.4s cubic-bezier(0, -.6, 0, 1.07),
+        -webkit-backdrop-filter 0.4s cubic-bezier(0, -.6, 0, 1.07);
 }
 
 .main-heading {
@@ -1235,7 +1235,7 @@ body {
     width: 100%;
     padding: 64px 36px 36px 36px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: opacity 0.3s cubic-bezier(0, -.6, 0, 1.07), visibility 0.3s cubic-bezier(0, -.6, 0, 1.07);
 }
 
 .heading-type {
@@ -1286,7 +1286,7 @@ body {
 
     transition-duration: 0.3s !important;
     transition-property: all;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0, -.6, 0, 1.07);
     box-shadow: 2px 4px 16px #ffffff29;
     transform: scale3d(1.01, 1.01, 1.01) !important;
     border: 1px solid var(--border-color);
@@ -1359,7 +1359,7 @@ body {
 
 .bubble-button:hover {
     background: var(--black-opacity);
-    transition: backdrop-filter 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+    transition: backdrop-filter 0.3s cubic-bezier(0, -.6, 0, 1.07), background 0.3s cubic-bezier(0, -.6, 0, 1.07), border 0.3s cubic-bezier(0, -.6, 0, 1.07);
     backdrop-filter: blur(20px);
     border: 1px solid var(--border-color);
 
@@ -1373,7 +1373,7 @@ body {
 
 .bubble-button:active {
     cursor: pointer;
-    transition: backdrop-filter 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+    transition: backdrop-filter 0.3s cubic-bezier(0, -.6, 0, 1.07), background 0.3s cubic-bezier(0, -.6, 0, 1.07), border 0.3s cubic-bezier(0, -.6, 0, 1.07);
     backdrop-filter: blur(40px);
     background: var(--black-opacity-3);
 }
@@ -1400,12 +1400,12 @@ body {
     background: #0172EA;
     padding: 11px;
     border-radius: 99px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s cubic-bezier(0, -.6, 0, 1.07);
 
     img {
         width: 100%;
         height: 100%;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s cubic-bezier(0, -.6, 0, 1.07);
     }
 }
 
@@ -1446,7 +1446,7 @@ body {
     align-items: center;
     z-index: 100000;
     overflow-y: hidden !important;
-    animation: fadeIn 0.1s ease-in-out;
+    animation: fadeIn 0.1s cubic-bezier(0, -.6, 0, 1.07);
     backdrop-filter: blur(50px);
     overflow: hidden;
 }
@@ -1461,7 +1461,7 @@ body {
     text-align: center;
     transform: scale3d(0.5, 0.5, 0.5);
     /* Initial scale */
-    animation: scaleIn 0.1s ease-in-out forwards;
+    animation: scaleIn 0.1s cubic-bezier(0, -.6, 0, 1.07) forwards;
     /* Apply scale animation */
     position: relative;
     border: 1px solid var(--border-color);
@@ -1515,7 +1515,7 @@ body {
     cursor: pointer;
     width: fit-content;
     height: fit-content;
-    transition: transform .2s ease-in-out;
+    transition: transform .2s cubic-bezier(0, -.6, 0, 1.07);
 }
 
 .close-button:hover {
@@ -1555,7 +1555,7 @@ body {
     gap: 10px;
     align-self: stretch;
     color: var(--black-color);
-    transition: all .3s ease-in-out;
+    transition: all .3s cubic-bezier(0, -.6, 0, 1.07);
     border: 1px solid transparent;
     border-radius: var(--border-radius-1);
 }
@@ -1694,7 +1694,7 @@ body {
 @media (max-width:674px) {
     .zoom-in {
         --end-width: 100%;
-        transition: all .3s ease-in-out;
+        transition: all .3s cubic-bezier(0, -.6, 0, 1.07);
     }
 
     .zoom-in.zoomed {
@@ -1721,17 +1721,17 @@ body {
 
 .translate-text-b {
     transform: translateY(-20px);
-    transition: opacity 1.5s ease-in-out transform 1.5s;
+    transition: opacity 1.5s cubic-bezier(0, -.6, 0, 1.07) transform 1.5s;
 }
 
 .translate-text-down {
     transform: translateY(20px);
-    transition: opacity 1.5s ease-in-out transform 1.5s;
+    transition: opacity 1.5s cubic-bezier(0, -.6, 0, 1.07) transform 1.5s;
 }
 
 .translate-text-up {
     transform: translateY(-20px);
-    transition: opacity 1.5s ease-in-out transform 1.5s;
+    transition: opacity 1.5s cubic-bezier(0, -.6, 0, 1.07) transform 1.5s;
 }
 
 
@@ -1912,7 +1912,7 @@ a {
         padding: 40px 0px;
         justify-content: flex-start;
         transform: translateY(-20px);
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, height 0.5s ease-in-out;
+        transition: opacity 0.5s cubic-bezier(0, -.6, 0, 1.07), transform 0.5s cubic-bezier(0, -.6, 0, 1.07), height 0.5s cubic-bezier(0, -.6, 0, 1.07);
         opacity: 0;
         height: 10vh;
         background: var(--black-color);
@@ -2220,11 +2220,10 @@ a {
     justify-content: space-between;
     width: 100%;
     gap: 40px;
-
     int {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 500 !important;
-        line-height: 34px;
+        line-height: 1.6;
         margin: 0;
         color: var(--white-color);
     }
