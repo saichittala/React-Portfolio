@@ -167,7 +167,9 @@ const Home = () => {
                 </div>
                 <div className='df-g8 fd-c width-100'>
                   <div className='btn-4 btn-4-hn cursor-text'>
-                    Product Designer helping Companies to build digital products.
+                    <span>
+                      Product Designer helping Companies to build digital products.
+                    </span>
                   </div>
                   <div className='df-g8'>
                     <a href='https://www.linkedin.com/in/saichittala/' target="_blank" rel="noopener noreferrer" className='btn-4'>
@@ -190,7 +192,7 @@ const Home = () => {
                       <span className='ta-r fs-14'>Hyderabad</span>
                     </div>
                   </div>
-                  <a href='/#works' className='btn-4 blue-opacity-4 btn-4-hn'>
+                  <a href='/#works' className='btn-4 rotating-border'>
                     <span>Explore all works</span>
                     <img src='img/arrow-right.svg' alt="arrow" />
                   </a>
