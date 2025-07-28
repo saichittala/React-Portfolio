@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // 1. Import Link and useLocation from react-router-dom
 import { Link, useLocation } from 'react-router-dom';
 
@@ -9,10 +9,24 @@ function Header() {
   const [menuActive, setMenuActive] = useState(false);
   // 2. Get the current location object
   const location = useLocation();
+  const iconRef = useRef(null);
+
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
+
+  useEffect(() => {
+    if (iconRef.current) {
+      const isActive = location.pathname === '/folder';
+      iconRef.current.setAttribute(
+        'colors',
+        isActive
+          ? 'primary:#000000,secondary:#000000'
+          : 'primary:#737373,secondary:#737373'
+      );
+    }
+  }, [location.pathname]);
 
   // 3. The onClick handler for scrolling is no longer needed.
   // React Router's <Link> component will handle navigation.
@@ -41,12 +55,29 @@ function Header() {
           <div className="nav-btns">
             {/* The 'Home' link is active if the path is exactly "/" */}
             <Link to="/" className={`about-button header-text ${location.pathname === '/' ? 'header-text-active' : ''}`}>
+              {/* <lord-icon
+                ref={iconRef}
+                src="https://cdn.lordicon.com/szzviyeh.json"
+                trigger="hover"
+                style={{ width: "28px", height: "28px" }}
+                className="home-icon"
+              ></lord-icon> */}
               <img src="img/home-nav.svg" alt="logo" />
+
               <span>Home</span>
             </Link>
 
             {/* The 'Works' link is active if the path is "/works" */}
             <Link to="/works" className={`about-button header-text ${location.pathname === '/works' ? 'header-text-active' : ''}`}>
+              {/* <lord-icon
+                ref={iconRef}
+                src="https://cdn.lordicon.com/rrfthkgx.json"
+                trigger="hover"
+                style={{ width: "28px", height: "28px" }}
+                className="home-icon"
+                colors="primary:#737373,secondary:#08a88a"
+
+              ></lord-icon> */}
               <img src="img/works-nav.svg" alt="logo" />
               <span>Works</span>
             </Link>

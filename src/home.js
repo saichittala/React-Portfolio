@@ -94,8 +94,6 @@ const Home = () => {
 
   return (
     <div className="content bg-unset cursor scroll-smooth bg-v" id="content">
-      {/* 🔥 Video Background */}
-
       <ToastContainer
         position="top-center"
         autoClose={3000}
@@ -103,15 +101,13 @@ const Home = () => {
         className="sticky-toast"
       />
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
-
-
       <main className='z-index-11 '>
         <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
           <BubbleButton
             activationRef={cardsContainerRef}
             text="View Recent Work"
-            showDelay={300} // Text appears after 300ms
-            hideDelay={500} // Disappears after 500ms of being small
+            showDelay={300}
+            hideDelay={500}
             size={{
               small: 12,
               large: { width: 215, height: 48 } //48
@@ -141,7 +137,6 @@ const Home = () => {
                         alt="menu-icon"
                       />
                     </a>
-
                   </div>
                   <div className='df-g8' >
                     <div className='btn-4 btn-4-hn cursor-text'>
@@ -160,7 +155,7 @@ const Home = () => {
                   <div className='profile-img'>
                     <img
                       style={{ width: '150px', borderRadius: '24px' }}
-                      src={'img/profile-test.webp'}
+                      src={'img/profile-png.webp'}
                       alt="profile-img"
                     />
                   </div>
@@ -192,7 +187,7 @@ const Home = () => {
                       <span className='ta-r fs-14'>Hyderabad</span>
                     </div>
                   </div>
-                  <a href='/#works' className='btn-4 rotating-border'>
+                  <a href='/#works' className='btn-4 btn-4-img rotating-border'>
                     <span>Explore all works</span>
                     <img src='img/arrow-right.svg' alt="arrow" />
                   </a>

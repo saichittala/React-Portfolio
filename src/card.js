@@ -44,8 +44,8 @@ const Card = ({
   };
 
   return (
-    <div className='card-container'         onClick={handleCardClick}
->
+    <div className='card-container' onClick={handleCardClick}
+    >
       <div
         ref={cardRef}
         className="main-card fade-in cursor-link"

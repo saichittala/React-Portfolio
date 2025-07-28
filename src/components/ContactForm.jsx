@@ -61,6 +61,19 @@ const ContactForm = () => {
 
     return (
         <>
+            <ToastContainer
+                position="top-center"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                className="sticky-toast"  // 👈 your custom class
+            />
             <form
                 ref={form}
                 onSubmit={sendEmail}
@@ -68,35 +81,36 @@ const ContactForm = () => {
             >
                 <h2 className="pd-main-heading-2">Get in touch</h2>
                 <div className='df-g8 fd-c gap-8'>
-                <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Name</span>
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="John Doe"
-                    required
-                    className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                    <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Name</span>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="John Doe"
+                        required
+                        className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
 
                 </div>
                 <div className='df-g8 fd-c gap-8'>
-                <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Email</span>
-                
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="demo@gmail.com"
-                    required
-                    className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                    <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Email</span>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="demo@gmail.com"
+                        required
+                        className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
                 </div>
                 <div className='df-g8 fd-c gap-8'>
-                <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Message</span>
-                <textarea
-                    name="message"
-                    placeholder="Hello, I would like to..."
-                    required
-                    className="w-full border border-gray-300 p-3 rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                    <span style={{ color: '#808080', fontSize: '14px', lineHeight: '1.6' }}>Message</span>
+                    <textarea
+                        name="message"
+                        placeholder="Hello, I would like to..."
+                        required
+                        cols="100"
+                        className="border border-gray-300 p-3 rounded-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
                 </div>
                 <button
                     type="submit"

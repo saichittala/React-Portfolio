@@ -6,7 +6,6 @@ import ZoomOnScroll from '../components/ZoomOnScroll';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import BubbleButton from '../components/BubbleButton';
-import { use } from 'react';
 
 
 const CustomFurnish = () => {
@@ -16,31 +15,9 @@ const CustomFurnish = () => {
   ZoomOnScroll();
   const customfurnishRef = React.useRef(null);
   const [isMobile] = useState(window.innerWidth <= 674);
-  useEffect(() => {
-    const heading = document.querySelector('.pd-main-heading, .pd-main-heading-2');
-    if (!heading) return;
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = Math.min(scrollY / maxScroll, 1);
-      const intensity = scrollPercent * 100;
-
-      heading.style.textShadow = `
-        rgba(0, 0, 0, 0.25) 0px 4px 4px,
-        rgba(255, 255, 255, ${0.2 + scrollPercent * 0.8}) 0px 4px ${100 + intensity}px,
-        rgba(255, 255, 255, ${0.2 + scrollPercent * 0.8}) 0px 4px ${40 + intensity * 0.5}px,
-        rgba(255, 255, 255, ${0.2 + scrollPercent * 0.8}) 0px 4px ${26 + intensity * 0.3}px,
-        rgba(255, 255, 255, ${0.2 + scrollPercent * 0.8}) 0px 0px ${10 + intensity * 0.2}px
-      `;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // useEffect(() => {
-  //   const loader = document.getElementById("loader");
+  //   const loader = doccument.getElementById("loader");
   //   const circleLoader = document.getElementById("circleloading");
   //   const loadingText = document.getElementById("loading-text");
 
@@ -201,7 +178,7 @@ const CustomFurnish = () => {
                           </div>
                         </div>
                         <img src="img/projects/customfurnish/customfurnish-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-in' loading="lazy" />
-
+                        
                         <div></div>
                         <div className="content-div-main fade-in  width-800">
                           <a className="fade-in content-div-main-heading-2 translate-text-up ">The Solution
@@ -212,7 +189,7 @@ const CustomFurnish = () => {
                           </div>
                         </div>
                         <img src="img/projects/customfurnish/customfurnish-new.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-in' loading="lazy" />
-
+                      
                       </div>
                     </div>
                   </div>
@@ -347,6 +324,8 @@ const CustomFurnish = () => {
                           </div>
                           <p className='width-800'><int>This map helped us understand Sushmitha's internal dialogue—why she feels overwhelmed and what would help her feel confident and in control.</int></p>
                         </div>
+
+
                       </div>
                     </div>
                   </div>
