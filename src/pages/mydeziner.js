@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-import HeaderNonSticky from '../components/header-non-sticky';
-import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomOnScroll';
@@ -92,7 +90,6 @@ const MyDeziner = () => {
       </head>
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
-      <HeaderNonSticky />
 
       <main>
 
@@ -648,7 +645,6 @@ const MyDeziner = () => {
         </section>
         <div className='grain' ></div>
       </main>
-      <Footer />
       {/* </LuxurySmoothScroll> */}
 
     </div>
