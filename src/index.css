@@ -1076,9 +1076,9 @@ body {
 }
 
 .about-main {
-    display: flex;
+    display: grid;
     gap: 56px;
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     padding-top: 20vh;
 
     a {
@@ -1103,7 +1103,6 @@ body {
 
 .about-main img {
     width: 100%;
-    height: 70vh;
     object-fit: cover;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-1);
@@ -1965,6 +1964,7 @@ a {
 
     .about-main,
     .footer-main {
+        display: flex;
         flex-direction: column;
     }
 

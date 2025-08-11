@@ -103,15 +103,15 @@ const CustomFurnish = () => {
       </head>
       <main>
         <section ref={customfurnishRef}>
-          <a href="https://www.customfurnish.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.figma.com/design/IHX8O0ZQrwEwOcPHjjZUFH/Customfurnish?node-id=0-1&t=tfbAj8cpIn9eWmee-1" target="_blank" rel="noopener noreferrer">
             <BubbleButton
               activationRef={customfurnishRef}
-              text="Open Live Website"
+              text="Open Figma Design"
               showDelay={300}
               hideDelay={500}
               size={{
                 small: 12,
-                large: { width: 220.65, height: 52 }
+                large: { width: 221, height: 52 }
               }}
               activateAt={isMobile ? -3.8 : -0.5}
               className="custom-bubble-class" >
