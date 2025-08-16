@@ -214,11 +214,18 @@ const Home = () => {
                 <CardSwipe
                   images={cardsData.map(card => ({
                     src: card.image,
-                    alt: card.title
+                    alt: card.title,
+                    title: card.title,
+                    year: card.year,
+                    link: card.link,
+                    locked: card.locked,
+                    password: card.password
                   }))}
-                  autoplayDelay={2000}
-                  slideShadows={false}
+                  autoplayDelay={100000}
+                  slideShadows={true}
+                  onRequestLockPopup={handleRequestLockPopup} // Pass the popup handler
                 />
+
               </div> */}
             </div>
           </div>

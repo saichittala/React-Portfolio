@@ -10,7 +10,7 @@ import "swiper/css/effect-coverflow"
 // Minimal badge replacement
 function Badge({ children, className = "" }) {
   return (
-    <span className={`px-2 py-1 text-xs rounded-md bg-gray-200 text-gray-700 ${className}`}>
+    <span className={`px-3 py-1 text-xs font-semibold rounded-full bg-pink-100 text-pink-700 ${className}`}>
       {children}
     </span>
   )
@@ -18,73 +18,154 @@ function Badge({ children, className = "" }) {
 
 /**
  * @param {Object} props
- * @param {{ src: string, alt: string }[]} props.images
+ * @param {{ src: string, alt: string, title?: string, year?: string }[]} props.images
  * @param {number} [props.autoplayDelay]
  * @param {boolean} props.slideShadows
  */
 export const CardSwipe = ({
   images,
-  autoplayDelay = 1500,
-  slideShadows = false,
+  autoplayDelay = 2000,
+  slideShadows = true,
+    onRequestLockPopup, // ✅ add here
+
 }) => {
   const css = `
     .swiper {
       width: 100%;
-      padding-bottom: 50px;
+      padding-bottom: 60px;
     }
-    
+
     .swiper-slide {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease;
+      background-color: #111;
+      border: 1px solid var(--border-color);
+    }
+
+    .swiper-slide:hover {
+      .ps-24 {
+        opacity: 1;
+        width: fit-content;
+        height: fit-content;
+
+    right: 24px;
+    top: -300px;
+      }
+    }
+
+    .swiper-slide:hover {
+      transform: scale(1.05);
+    }
+
+    .slide-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 24px;
+      aspect-ratio: 1;
+    }
+
+    .slide-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 96px 24px 24px 24px;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.99));
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-radius: 0 0 24px 24px;
+    }
+
+    .slide-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: left;
+    line-height: 1.7;
+    }
+
+    .slide-year {
+    font-size: 14px;
+    font-weight: 300;
+    color: #909090;
+    text-transform: capitalize;
+    text-align: left;
+    line-height: 1.7;
+    }
+
+    .ps-24 {
+    opacity: 0;
+    position: absolute;
+    right: 24px;
+    top: -290px;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px 4px 4px 14px;
+    border-radius: 99px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    img {
+      width: 12px;
+      height: 12px;
+    }
+    .bubble-button__icon {
+      width: 32px;
+      height: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 18px;
-      font-size: 22px;
-      font-weight: bold;
-      color: #fff;
-    }
-    
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 1;
-      border-radius: var(--border-radius-1);
-      object-fit: cover;
+      padding: 0 !important;
     }
   `
 
   return (
-    <section className="w-full space-y-4">
+    <section className="w-full py-8">
       <style>{css}</style>
-      <div className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
-        <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-100 p-4 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-6">
-          
-
-          <div className="flex w-full items-center justify-center gap-4">
-            <div className="w-full">
-              <Swiper
-                autoplay={{
-                  delay: autoplayDelay,
-                  disableOnInteraction: false,
-                }}
-                effect="cards"
-                grabCursor
-                loop
-                slidesPerView="auto"
-                rewind
-                cardsEffect={{
-                  slideShadows: slideShadows,
-                }}
-                modules={[EffectCards, Autoplay, Pagination, Navigation]}
-              >
-                {images.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
-        </div>
+      <div className="mx-auto w-full max-w-5xl">
+        <Swiper
+          autoplay={{ delay: autoplayDelay, disableOnInteraction: false }}
+          effect="cards"
+          grabCursor
+          loop
+          slidesPerView="auto"
+          rewind
+          cardsEffect={{ slideShadows }}
+          modules={[EffectCards, Autoplay, Pagination, Navigation]}
+        >
+          {images.map((card, index) => (
+            <SwiperSlide key={index} className="relative cursor-pointer"
+              onClick={() => {
+                if (card.locked) {
+                  onRequestLockPopup?.(card.link, card.password)
+                } else {
+                  window.open(card.link, "_blank")
+                }
+              }}
+            >
+              <img src={card.src} alt={card.alt} className="slide-image w-full h-full object-cover rounded-xl" />
+              <div className="slide-overlay absolute bottom-4 left-4 text-white">
+                {card.title && <div className="slide-title font-bold text-lg">{card.title}</div>}
+                {card.year && <div className="slide-year text-sm opacity-80">{card.year}</div>}
+                <button className="btn-4 ps-24">
+                  <span>View</span>
+                  <div className="bubble-button__icon">
+                    <img src="img/open-web.svg" alt="Arrow" />
+                  </div>
+                </button>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   )

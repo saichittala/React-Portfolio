@@ -1,9 +1,5 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Overpass+Mono:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&family=Overpass+Mono:wght@300..700&display=swap');
 
 
 
@@ -32,6 +28,7 @@
     --black-opacity-3: rgba(44, 44, 49, 0.5);
     --black-opacity-4: rgba(0, 0, 0, 0.8);
     --black-opacity-5: rgba(0, 0, 0, 0.9);
+    --black-type-1: linear-gradient(to bottom, #171717, #0a0a0a);
     --blue-opacity-4: #0172EA80;
     --blue-opacity-5: #0172EA90;
     --cursor-color: #ffffff30;
@@ -45,7 +42,7 @@
         --secondary-color: #f7f8f9;
         --teritiary-color: #c0c0c0;
         --text-color: #404040;
-        --border-color: #DDDDDD;
+        --border-color: rgba(0, 0, 0, 0.14);
         --grey-bg-w-color: #909090;
         --grey-bg-b-color: #404040;
         --black-opacity: rgba(255, 255, 255, 0.8);
@@ -53,7 +50,7 @@
         --black-opacity-3: rgba(244, 244, 244, 0.5);
         --black-opacity-4: rgba(255, 255, 255, 0.7);
         --black-opacity-5: rgba(255, 255, 255, 0.9);
-
+        --black-type-1: linear-gradient(to bottom, #fafafa, #e5e5e5);
         --white-opacity-1: rgba(0, 0, 0, 0.1);
 
 
@@ -73,7 +70,7 @@
         --secondary-color: #F7F8F9;
         --teritiary-color: #404040;
         --text-color: #D0D0D0;
-        --border-color: #333333;
+        --border-color: rgba(255, 255, 255, 0.14);
         --grey-bg-w-color: #606060;
         --grey-bg-b-color: #808080;
         --black-opacity: rgba(0, 0, 0, 0.8);
@@ -81,6 +78,8 @@
         --black-opacity-3: rgba(44, 44, 49, 0.5);
         --black-opacity-4: rgba(0, 0, 0, 0.8);
         --black-opacity-5: rgba(0, 0, 0, 0.9);
+        --black-type-1: linear-gradient(to bottom, #171717, #0a0a0a);
+
         --cursor-color: #ffffff30;
         --white-opacity-1: rgba(255, 255, 255, 0.1);
 
@@ -1225,7 +1224,7 @@ body.light-theme .theme-toggle-btn {
     display: grid;
     gap: 56px;
     grid-template-columns: 1fr 1fr;
-    padding-top: 20vh;
+    padding: 20vh 0;
 
     a {
         font-weight: 400;
@@ -2161,6 +2160,7 @@ a {
 
     .home-main-container {
         padding-top: 32% !important;
+        padding-bottom: 20vh;
     }
 
     .mobile-home-container {
