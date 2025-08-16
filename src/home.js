@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Card from './card';
-import Header from './components/header';
-import Footer from './components/footer';
 import useFadeIn from './components/useFadeIn';
 import useScrollEffect from './components/useScrollEffect';
 import LockPopup from './components/lockpopup'; // Import LockPopup component
-// import DesignText from './components/designtext';
 import { useRef } from "react";
-// import LuxurySmoothScroll from './components/smoothscroll';
 import { motion } from "framer-motion";
 import BubbleButton from './components/BubbleButton';
-import MagnetWrapper from './components/MagneticCursor';
-import ContactForm from './components/ContactForm';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -184,14 +178,17 @@ const Home = () => {
                     <span>
                       I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.                    </span>
                     <div className='df-g8'>
-                      <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                      {/* <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Email
-                      </a>
+                      </a> */}
                       <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         LinkedIn
                       </a>
                       <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Upwork
+                      </a>
+                      <a href="Resume.pdf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        Resume
                       </a>
                     </div>
                   </div>

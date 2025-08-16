@@ -1,13 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-// 1. Import Link and useLocation from react-router-dom
 import { Link, useLocation } from 'react-router-dom';
 
-// I'm assuming MagnetWrapper is a component you have.
-// import MagnetWrapper from './MagneticCursor';
-
-function Header() {
+function Header({ toggleTheme, theme }) {
   const [menuActive, setMenuActive] = useState(false);
-  // 2. Get the current location object
   const location = useLocation();
   const iconRef = useRef(null);
 
@@ -93,6 +88,19 @@ function Header() {
               <img src="img/contact-nav.svg" alt="logo" />
               <span>Contact</span>
             </Link>
+            <button
+              className="theme-toggle-btn"
+              onClick={toggleTheme}
+            >
+              {theme === "light" ? 
+              <div className='header-text padding-4'>
+                <img  src="img/dark-nav.svg" alt="Light Mode" />  
+              </div>
+               : <div className='header-text padding-4'>
+                   <img src="img/light-nav.svg" alt="Dark Mode" />
+                 </div>}
+            </button>
+
           </div>
         </div>
       </nav>
