@@ -39,54 +39,9 @@ const CustomFurnish = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // useEffect(() => {
-  //   const loader = document.getElementById("loader");
-  //   const circleLoader = document.getElementById("circleloading");
-  //   const loadingText = document.getElementById("loading-text");
-
-
-  //   // Set initial opacity of the loader (circle and text)
-  //   circleLoader.style.opacity = 0;
-  //   loadingText.style.opacity = 0;
-  //   loader.style.opacity = 1;
-
-  //   // Set a static loading text
-  //   loadingText.textContent = "Just a minute";
-
-  //   // Fade in the loader (circles and text)
-  //   setTimeout(() => {
-  //     circleLoader.style.transition = 'opacity 1s';
-  //     loadingText.style.transition = 'opacity 1s';
-  //     circleLoader.style.opacity = 1;
-  //     loadingText.style.opacity = 1;
-
-  //     // Fade out loader (text and circles) after content is fully loaded
-  //     setTimeout(() => {
-  //       loadingText.style.opacity = 0;
-  //       circleLoader.style.opacity = 0;
-
-  //       setTimeout(() => {
-  //         loader.style.opacity = '0';
-  //         setTimeout(() => {
-  //           loader.style.display = 'none';
-  //         }, 500);
-  //       }, 500);
-  //     }, 2500);
-  //   }, 500);
-
-  // }, []);
-
 
   return (
     <div className='cursor overflow-x-h'>
-      {/* <div className="loader-styling" id="loader">
-        <div id="circleloading" className="circle-loader">
-          <div className="circle-input"></div>
-          <div className="circle-input"></div>
-          <div className="circle-input"></div>
-        </div>
-        <div id="loading-text">Just a minute</div>
-      </div> */}
 
       <head>
         <meta charset="utf-8" />
@@ -217,32 +172,6 @@ const CustomFurnish = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="bg-full bg-grey">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details">
-                      <div className="project-breif-heading fade-in">
-                        <span className=''>02</span>
-                        <span className=''>Challenges</span>
-                      </div>
-                      <div className="challenges-main fade-in">
-                        <div className="challenges-sub fade-in">
-                          <div className="challenge-active-card fade-in">
-                            <span className="challenge-heading  fade-in">01</span>
-                            <span className="challenge-content  fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
-                          </div>
-                          <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading  fade-in">02</span>
-                            <span className="challenge-content  fade-in">Simplifying Advanced Features Without Losing Depth</span>
-                          </div>
-                          <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading  fade-in">03</span>
-                            <span className="challenge-content  fade-in">Scaling for Seamless Performance Across Devices</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
                 <div className="bg-full margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details padding-top-unset">
@@ -265,28 +194,9 @@ const CustomFurnish = () => {
                         </div>
 
                       </div>
-
-
-
-                      {/* <div className="thankyou-content-heading fade-in">
-                        Thank you for viewing. <a
-                          href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
-                          target="_blank">Have a look</a>
-                      </div> */}
                     </div>
                   </div>
                 </div>
-                {/* <div className="bg-full bg-white margin-unset">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details">
-                    <div className="thankyou-content-heading fade-in cursor-text">
-                      Pssst... The magic’s still brewing. Meanwhile, sneak a peek at this <a className=''
-                        href="https://www.customfurnish.com" rel="noopener noreferrer"
-                        target="_blank">live project</a>
-                    </div>
-                    </div>
-                  </div>
-                </div> */}
                 <div className="bg-full margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details padding-top-unset">
@@ -367,10 +277,6 @@ const CustomFurnish = () => {
                           <p className='fade-in'>Enable instant decision-making with real-time previews</p>
                         </div>
                       </div>
-                      {/* <div className="pd-content width-100 fade-in">
-                          <ch className="fade-in translate-text-up  width-800">Information Architecture</ch>
-                          <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
-                        </div> */}
                       <div className="pd-content width-100">
                         <ch className="fade-in translate-text-up  width-800">Information Architecture</ch>
                         <img src="img/projects/customfurnish/information-architecture.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
@@ -380,17 +286,6 @@ const CustomFurnish = () => {
                         <ch className="fade-in translate-text-up  width-800">Leads User Flow</ch>
                         <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
                       </div>
-                      {/* <div className="width-800 fade-in">
-                        <p><int>Let's Dive into the Design !!</int></p> 
-                      </div> */}
-                      {/* <div className="pd-content width-100 fade-in">
-                        <ch className="fade-in translate-text-up  width-800">Low Fedility Wireframes</ch>
-                        <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
-                      </div>
-                      <div className="pd-content width-100 fade-in">
-                        <ch className="fade-in translate-text-up  width-800">High Fedility Wireframes</ch>
-                        <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
-                      </div> */}
                       <div className="pd-content width-100">
                         <ch className="fade-in translate-text-up  width-800">Design System</ch>
                         <img src="img/projects/customfurnish/designsystem.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
@@ -418,25 +313,6 @@ const CustomFurnish = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="bg-full margin-unset">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details padding-top-unset">
-                      <div className="project-breif-heading width-800 fade-in">
-                        <span className=''>05</span>
-                        <span className=''>Prototype</span>
-                      </div>
-                      <div className='project-details-internal'>
-                        <div className="width-800 fade-in">
-                          <p><int>Here's the prototype of the final design!</int></p>
-                        </div>
-                        <div className="pd-content width-100 fade-in">
-                          <ch className="fade-in translate-text-up  width-800">Prototype</ch>
-                          <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
                 <div className="bg-full margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details padding-top-unset">

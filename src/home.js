@@ -160,7 +160,7 @@ const Home = () => {
                       Hi, I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> I love turning complex workflows into simple, intuitive products that just feel right.
                     </span>
                     <span>
-                      Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I built MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
+                      Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
                     </span>
                     <div className='df-g8 fd-c gap-12 display-none'>
                       <white>
@@ -196,37 +196,6 @@ const Home = () => {
 
                 </div>
               </div>
-              {/* <div className="intro-section-main">
-                <div className="intro-section">
-                  <div className="intro-content">
-                    <p className="intro-white-text fade-in translate-text-down ">
-                      <a className=''>Sai Chittala</a> <br />
-                      <span className="intro-white-text ">Product Designer at </span>
-                      <a className="company-text " href="https://www.customfurnish.com/" target="_blank" rel="noopener noreferrer">
-                        CustomFurnish
-                      </a>
-                      <br />
-                      <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        Email
-                      </a>
-                      <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        LinkedIn
-                      </a>
-                      <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        Upwork
-                      </a>
-                      <div className='say-hi-btn cursor-playful'>
-                      <img src="img/right-arrow.svg" alt="logo" />
-                      <a>Say Hi</a></div>
-                    </p>
-
-                    
-
-
-                    <DesignText />
-                  </div>
-                </div>
-              </div>  */}
               <div className="cards-container home-cards-container width-450" id="cards-container" ref={cardsContainerRef}>
                 {cardsData.map((card, index) => (
                   <Card

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomOnScroll';
@@ -13,39 +14,39 @@ const MyDeziner = () => {
   ZoomOnScroll();
   useEffect(() => {
 
-    const loader = document.getElementById("loader");
-    const circleLoader = document.getElementById("circleloading");
-    const loadingText = document.getElementById("loading-text");
+    // const loader = document.getElementById("loader");
+    // const circleLoader = document.getElementById("circleloading");
+    // const loadingText = document.getElementById("loading-text");
 
 
-    // Set initial opacity of the loader (circle and text)
-    circleLoader.style.opacity = 0;
-    loadingText.style.opacity = 0;
-    loader.style.opacity = 1;
+    // // Set initial opacity of the loader (circle and text)
+    // circleLoader.style.opacity = 0;
+    // loadingText.style.opacity = 0;
+    // loader.style.opacity = 1;
 
-    // Set a static loading text
-    loadingText.textContent = "Just a minute";
+    // // Set a static loading text
+    // loadingText.textContent = "Just a minute";
 
-    // Fade in the loader (circles and text)
-    setTimeout(() => {
-      circleLoader.style.transition = 'opacity 1s';
-      loadingText.style.transition = 'opacity 1s';
-      circleLoader.style.opacity = 1;
-      loadingText.style.opacity = 1;
+    // // Fade in the loader (circles and text)
+    // setTimeout(() => {
+    //   circleLoader.style.transition = 'opacity 1s';
+    //   loadingText.style.transition = 'opacity 1s';
+    //   circleLoader.style.opacity = 1;
+    //   loadingText.style.opacity = 1;
 
-      // Fade out loader (text and circles) after content is fully loaded
-      setTimeout(() => {
-        loadingText.style.opacity = 0;
-        circleLoader.style.opacity = 0;
+    //   // Fade out loader (text and circles) after content is fully loaded
+    //   setTimeout(() => {
+    //     loadingText.style.opacity = 0;
+    //     circleLoader.style.opacity = 0;
 
-        setTimeout(() => {
-          loader.style.opacity = '0';
-          setTimeout(() => {
-            loader.style.display = 'none';
-          }, 500);
-        }, 500);
-      }, 2500);
-    }, 500);
+    //     setTimeout(() => {
+    //       loader.style.opacity = '0';
+    //       setTimeout(() => {
+    //         loader.style.display = 'none';
+    //       }, 500);
+    //     }, 500);
+    //   }, 2500);
+    // }, 500);
 
     // Video Autoplay
     const video = document.getElementById('myVideo');
@@ -65,15 +66,14 @@ const MyDeziner = () => {
 
   return (
     <div className='cursor overflow-x-h'>
-      
-      <div className="loader-styling" id="loader">
+      {/* <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
           <div className="circle-input"></div>
           <div className="circle-input"></div>
         </div>
         <div id="loading-text">Just a minute</div>
-      </div>
+      </div> */}
 
       <head>
         <meta charset="utf-8" />
@@ -94,7 +94,7 @@ const MyDeziner = () => {
       <main>
 
         <section>
-          
+
           <div className="full-bg">
             <div className=" p-img-1 main-image">
               <img src="img/projects/mydeziner.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-in' />
@@ -144,299 +144,129 @@ const MyDeziner = () => {
                         <a className="fade-in pd-sub-heading-2 translate-text-down "> Interaction Design </a>
                       </div>
                     </div>
-                    <div className="pd-main">
-                      <div className="   pd-content-main">
-                        <ReactBeforeSliderComponent className='fade-in'
-                          firstImage={{ "imageUrl": 'img/projects/mydeziner/mydeziner-new.png' }}  // Passing the first image
-                          secondImage={{ "imageUrl": 'img/projects/mydeziner/mydeziner-old.png' }}  // Passing the first image
-                        />
-                        {/* <video 
-                          className="fade-in"
-                          loading="lazy"
-                          preload="metadata"
-                          id="myVideo"
-                          loop
-                          muted
-                          autoPlay
-                          playsInline
-                          disablePictureInPicture>
-                          <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video> */}
-                        <int className="fade-in">
-                          <p className=''><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
+                    <div className="pd-main" >
+                      <div className="   pd-content-main gap-72 margin-100">
+                        {/* <ReactBeforeSliderComponent className='fade-in '
+                          firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.webp' }}  // Passing the first image
+                          secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
+                        /> */}
+                        <div className="content-div-main fade-in width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up ">About
+                          </a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='fade-in'>MyDeziner is a powerful interior design software that enables designers to draw, configure, and render hyper-realistic interiors—all in one place. From layout creation to photorealistic renders, it simplifies complex workflows and brings unmatched control to interior professionals.
+                            </p>
+                          </div>
+                        </div>
+                        {/* <div>
+                          <int className="fade-in">
+                            <p className=''>I led the end-to-end redesign of Customfurnish’s web experience to turn <int>uncertain browsers into confident buyers</int> - real-time consultation, and elegant UX that built trust and drove a <int>25% increase in lead conversions.</int></p></int>
+                        </div> */}
+                        <div></div>
+                        <div className="content-div-main fade-in width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up ">The Problem
+                          </a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='fade-in'>Interior designers were stuck in repetitive, frustrating loops—applying the same materials, properties, and styles over and over for each object. No global controls. No smart search. No way to copy styles quickly. This made designing slow, inconsistent, and honestly... painful.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-in' loading="lazy" />
+                        <div></div>
+                        <div className="content-div-main fade-in  width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up ">The Solution
+                          </a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='fade-in'>We introduced a multi-scope property manager, lightning-fast property search, and copy-paste styling tools that let designers work at 10x speed. Now they can define preferences at the object, room, or project level—and reuse them instantly.
+                            </p>
+                          </div>
+                        </div>
+                        <img src="img/projects/mydeziner/mydeziner-new.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-in' loading="lazy" />
+
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-full bg-grey">
+
+                <div className="bg-full margin-unset">
                   <div className="bg-main  padding-unset">
-                    <div className="project-details">
-                      <div className="project-breif-heading fade-in">
+                    <div className="project-details padding-top-unset">
+                      <div className="project-breif-heading width-800 fade-in">
                         <span className=''>02</span>
-                        <span className=''>Challenges</span>
+                        <span className=''>Research</span>
                       </div>
-                      <div className="challenges-main fade-in">
-                        <div className="challenges-sub fade-in">
-                          <div className="challenge-active-card fade-in">
-                            <span className="challenge-heading  fade-in">01</span>
-                            <span className="challenge-content  fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
-                          </div>
-                          <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading  fade-in">02</span>
-                            <span className="challenge-content  fade-in">Simplifying Advanced Features Without Losing Depth</span>
-                          </div>
-                          <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading  fade-in">03</span>
-                            <span className="challenge-content  fade-in">Scaling for Seamless Performance Across Devices</span>
+                      <div className="project-details-internal">
+                        {/* <div className="width-800 fade-in">
+                          <p><int>Here's my design process :</int></p>
+                        </div> */}
+                        <div className="content-div-main fade-in width-800">
+                          <a className="fade-in content-div-main-heading-2 translate-text-up ">Design Process</a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <p className='fade-in'>User Research – Interviews + task shadowing</p>
+                            <p className='fade-in'>Defined Core UX Problems – Found 60%+ time wasted on repetition</p>
+                            <p className='fade-in'>Wireframes & Prototypes – Tested ideas fast with Figma + live mockups</p>
+                            <p className='fade-in'>Usability Testing – 3 rounds, 6 designers</p>
+                            <p className='fade-in'>Behavior Analysis – Clarity + click heatmaps</p>
                           </div>
                         </div>
+                        <img src="img/projects/mydeziner/mydeziner-new.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-in' loading="lazy" />
                       </div>
-                    </div>
-                  </div>
-                </div>
+                      <div className='width-800 project-details-subinternal'>
+                        <div className="pd-content width-800 fade-in">
+                          <ch className="fade-in translate-text-up">User Insights</ch>
+                          {/* <img src="img/projects/customfurnish/userinsights.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" /> */}
+                        </div>
+                        <p className='width-800'><int>We didn’t stop at assumptions—we spoke to 6 interior designers and observed them using MyDeziner and competitor tools.</int></p>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <p className='fade-in'>Users repeatedly applied the same materials to multiple objects (and got annoyed doing it one by one).
 
-                <div className="bg-full bg-white margin-unset">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details">
-                      <div className="challenges-content-heading fade-in ">
-                        Imagine a design tool empowering everyone, balancing simplicity and functionality.                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-full bg-darkgrey">
-                  <div className="project-details">
-                    <div className="pd-challenges-main ">
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 "> 02-01 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up "> User-Driven Design</ch>
-                          <p className='fade-in '>Every interface was created based on input from professional designers to ensure usability and precision.
                           </p>
-                          <img src="img/projects/mydeziner/02/02-01.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" />
-                        </div>
-                      </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 "> 02-02 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up ">Effortless Navigation</ch>
-                          <p className='fade-in '>A perfect blend of simplicity and power ensures users can create, modify, and render projects with ease.
+                          <p className='fade-in'>Long property lists overwhelmed users—they forgot what they were looking for halfway through scrolling.</p>
+                          <p className='fade-in'>Users struggled to maintain visual consistency across objects and rooms.
+
                           </p>
-                          <video 
-                          className="fade-in"
-                          loading="lazy"
-                          preload="metadata"
-                          id="myVideo"
-                          loop
-                          muted
-                          autoPlay
-                          playsInline
-                          disablePictureInPicture>
-                          <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
 
-                <div className="bg-full bg-grey">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details">
-                      <div className="project-breif-heading fade-in">
-                        <span className=' fade-in'>02</span>
-                        <span className=' fade-in'>Challenges</span>
                       </div>
-                      <div className="challenges-main fade-in">
-                        <div className="challenges-sub fade-in">
-                          <div className="challenge-inactive-card fade-in">
-                            <span className="challenge-heading  fade-in">01</span>
-                            <span className="challenge-content  fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
-                          </div>
-                          <div className="challenge-active-card fade-in ">
-                            <span className="challenge-heading  fade-in">02</span>
-                            <span className="challenge-content  fade-in">Simplifying Advanced Features Without Losing Depth</span>
-                          </div>
-                          <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading  fade-in">03</span>
-                            <span className="challenge-content  fade-in">Scaling for Seamless Performance Across Devices</span>
-                          </div>
+                      <div className='width-800 project-details-subinternal'>
+                        <p className='width-800'><int>We explored major players like Foyr, SketchUp, and Homestyler to understand what made them work—and where they failed:
+                        </int></p>
+                        <div className="pd-content width-800 fade-in">
+                          <ch className="fade-in translate-text-up  width-800">Competitve Analysis</ch>
+                          <img src="img/projects/mydeziner/companalysis.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                      <div className='width-800 project-details-subinternal'>
+                        <div className='width-800 project-details-internal'>
+                          <div className="pd-content width-800 fade-in">
+                            <ch className="fade-in translate-text-up">User Persona 1</ch>
+                            <img src="img/projects/customfurnish/userpersona-1.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                          </div>
+                          <div className="pd-content width-800 fade-in">
+                            <ch className="fade-in translate-text-up">User Persona 2</ch>
+                            <img src="img/projects/customfurnish/userpersona-2.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                          </div>
+                        </div>
+                        <p className='width-800'><int>These personas reflect the hopes and headaches of our most common users—helping us empathize, prioritize, and humanize every interaction.</int></p>
+                      </div>
 
-                <div className="bg-full bg-white margin-unset">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details">
-                      <div className="challenges-content-heading  fade-in">
-                        What if complex design features felt intuitive and effortless to use?
+                      <div className='width-800 project-details-subinternal'>
+                        <div className="pd-content width-800 fade-in">
+                          <ch className="fade-in translate-text-up  width-800">Empathy Map</ch>
+                          <img src="img/projects/customfurnish/empathymap.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in width-100" loading="lazy" />
+                        </div>
+                        <p className='width-800'><int>This map helped us understand Sushmitha's internal dialogue—why she feels overwhelmed and what would help her feel confident and in control.</int></p>
                       </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="bg-full bg-darkgrey">
-                  <div className="project-details">
-                    <div className="pd-challenges-main ">
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className=" fade-in pd-main-heading-2 "> 02-03 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up ">Custom Material Uploading</ch>
-                          <p className='fade-in '>Upload your own materials in various formats to make each design uniquely yours.</p>
-                          <img src="img/projects/mydeziner/02/02-03.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" />
-                        </div>
-                      </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 "> 02-04 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up ">Effortless Material Swapping</ch>
-                          <p className='fade-in '>Redefine customization with the ability to swap materials instantly, ensuring that every design reflects the user’s unique style.</p>
-                          <video
-                            className="fade-in"
-                            loading="lazy"
-                            preload="metadata"
-                            disablePictureInPicture
-                            id="myVideo"
-                            loop
-                            muted
-                            autoPlay
-                            playsInline>
-                            <source src="img/projects/mydeziner/02/02-04.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                      </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 "> 02-05 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up ">IES Lighting Integration</ch>
-                          <p className='fade-in '>Improved render quality with customizable lighting for more realistic outputs.</p>
-                          <ReactBeforeSliderComponent className='fade-in'
-                            firstImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-before.png' }}  // Passing the first image
-                            secondImage={{ "imageUrl": 'img/projects/mydeziner/02/02-03-after.png' }}  // Passing the first image
-                          />
-                        </div>
-                      </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 "> 02-06 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up ">Material Copying Made Simple</ch>
-                          <p className='fade-in '>Streamline design workflows by copying and pasting materials across multiple objects, ensuring consistency and efficiency in projects.</p>
-                          <video
-                            className="fade-in"
-                            loading="lazy"
-                            preload="metadata"
-                            disablePictureInPicture
-                            id="myVideo"
-                            loop
-                            muted
-                            autoPlay
-                            playsInline>
-                            <source src="img/projects/mydeziner/02/02-06.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                      </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 "> 02-07 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up ">Material Favorites for Quick Access</ch>
-                          <p className='fade-in '>Users can save their go-to materials and access them instantly for smoother workflows.</p>
-                          <video
-                            className="fade-in"
-                            loading="lazy"
-                            preload="metadata"
-                            disablePictureInPicture
-                            id="myVideo"
-                            loop
-                            muted
-                            autoPlay
-                            playsInline>
-                            <source src="img/projects/mydeziner/02/02-07.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                      </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 "> 02-08 </a>
-                        </div>
-                        <div className="pd-content">
-                          <ch className="fade-in translate-text-up ">Multi-Level Property Control</ch>
-                          <p className='fade-in '>Revolutionize project customization with intuitive property manipulation and room switching, enabling tailored adjustments across spaces.</p>
-                          <video
-                            className="fade-in"
-                            loading="lazy"
-                            preload="metadata"
-                            disablePictureInPicture
-                            id="myVideo"
-                            loop
-                            muted
-                            autoPlay
-                            playsInline>
-                            <source src="img/projects/mydeziner/02/02-08.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                      </div>
-                      <div className="challenges-content-flow">
-                        <div className="pd-heading-div">
-                          <a className="fade-in pd-main-heading-2 "> 02-09 </a>
-                        </div>
-                        <div className="pd-content ">
-                          <ch className="fade-in translate-text-up ">Custom Model Uploading</ch>
-                          <p className='fade-in'>Seamlessly integrates user-created 3D models for full creative control.</p>
-                          {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in"
-                            loading="lazy" /> */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="bg-full bg-grey">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details">
-                      <div className="project-breif-heading fade-in">
-                        <span className=''>02</span>
-                        <span className=''>Challenges</span>
-                      </div>
-                      <div className="challenges-main fade-in">
-                        <div className="challenges-sub fade-in">
-                          <div className="challenge-inactive-card fade-in">
-                            <span className="challenge-heading  fade-in">01</span>
-                            <span className="challenge-content  fade-in">Designing MyDeziner Where Innovation Meets Imagination</span>
-                          </div>
-                          <div className="challenge-inactive-card fade-in ">
-                            <span className="challenge-heading  fade-in">02</span>
-                            <span className="challenge-content  fade-in">Simplifying Advanced Features Without Losing Depth</span>
-                          </div>
-                          <div className="challenge-active-card fade-in ">
-                            <span className="challenge-heading ">03</span>
-                            <span className="challenge-content ">Scaling for Seamless Performance Across Devices</span>
-                          </div>
-                        </div>
-                      </div>
+
+                      {/* <div className="thankyou-content-heading fade-in">
+                        Thank you for viewing. <a
+                          href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
+                          target="_blank">Have a look</a>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -492,80 +322,8 @@ const MyDeziner = () => {
                 </div>
 
 
-                <div className="bg-full bg-grey">
-                  <div className="bg-main  padding-unset width-unset">
-                    <div className="project-details width-unset">
-                      <div className="project-breif-heading fade-in">
-                        <span className=''>03</span>
-                        <span className=''>Process</span>
-                      </div>
-                      <div className='pd-challenges-main'>
-                        <div className="pd-content width-100">
-                          <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'><pcard className='cursor-text'>01 Discovery</pcard></a>
-                            <div className='process-card-sub'>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>User Interviews</pcard></div>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Problem Identification</pcard></div>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Competitor Analysis</pcard></div>
-                            </div>
-                          </div>
-                          <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'><pcard className='cursor-text'>02 Ideation</pcard></a>
-                            <div className='process-card-sub'>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Low Fedility Wireframes</pcard></div>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>User Feedback Loop</pcard></div>
-                            </div>
-                          </div>
-                          <div className='process-card-main fade-in'>
-                            <a className='process-card-heading'><pcard className='cursor-text'>03 Design</pcard></a>
-                            <div className='process-card-sub fade-in'>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Moodboards</pcard></div>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>High-Fidelity Wireframes</pcard></div>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Interactive Prototypes</pcard></div>
-                              
-                            </div>
-                          </div>
-                          <div className='process-card-main fade-in'>
-                            <a className='process-card-heading fade-in'><pcard className='cursor-text'>04 Development Collaboration</pcard></a>
-                            <div className='process-card-sub'>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Design System</pcard></div>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>Handoff to Developers</pcard></div>
-                              <div className='process-card-info fade-in'><pcard className='cursor-text'>QA & Iterations</pcard></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-full bg-white">
-                  <div className="bg-main  padding-unset width-unset">
-                    <div className="project-details width-unset">
-                      <div className="project-breif-heading fade-in">
-                        <span className=''>04</span>
-                        <span className=''>Brand Design</span>
-                      </div>
-                      <div className='pd-challenges-main'>
-                        <div className="pd-content width-100">
-                          <ch className="fade-in translate-text-up light-theme bg-main padding-unset ">Colors used</ch>
-                          <div className='zoom-image df'>
-                            <img src="img/projects/mydeziner/03/brand.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="zoom-in" loading="lazy" />
-                          </div>
-                        </div>
-                        <div className="p-2imgs-2 padding-unset bg-main light-theme">
-                          <div className="pd-content width-100">
-                            <ch className="fade-in translate-text-up light-theme ">Typography</ch>
-                            <img src="img/projects/mydeziner/03/typeface.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                          </div>
-                          <div className="pd-content width-100">
-                            <ch className="fade-in translate-text-up light-theme ">Logo</ch>
-                            <img src="img/projects/mydeziner/03/logo.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+
 
                 {/* <div className="project-details">
                   <div className="p-main-imgs padding-bottom-unset">
@@ -578,26 +336,6 @@ const MyDeziner = () => {
                     </div>
                   </div>
                 </div> */}
-
-                <div className="project-details ">
-                  <div className="project-breif-section">
-                    <div className="project-breif-heading fade-in">
-                      <span className=''>05</span>
-                      <span className=''>Result</span>
-                    </div>
-                    <div className="pd-content width-100">
-                      {/* <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" /> */}
-                      <p className='fade-in '><ch >Good Website Structure</ch> and <ch >clear navigation.</ch>
-                      </p>
-                      <p className='fade-in '><ch >50% Faster Workflows</ch> streamlined tools accelerate project completion.
-                      </p>
-                      <p className='fade-in '>Users praise the tool for its balance of simplicity and power rated <ch>9.4/10 User Satisfaction</ch>
-                      </p>
-                      <p className='fade-in '><ch>Flawless Multi-Device Experience</ch> Optimized performance on mobile, tablet, and desktop ensures every user can work efficiently.
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
                 {/* <div className="project-details padding-top-unset">
                   <div className="project-final-section">
@@ -645,6 +383,7 @@ const MyDeziner = () => {
         </section>
         <div className='grain' ></div>
       </main>
+      <Footer />
       {/* </LuxurySmoothScroll> */}
 
     </div>
