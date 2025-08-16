@@ -122,7 +122,7 @@ const Home = () => {
           <div className="full-bg bg-black">
 
             <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
-              <div className='df-g8 gap-28 mobile-home-container fd-c width-450'>
+              <div className='df-g8 gap-36 mobile-home-container fd-c width-450'>
                 <div className='df-g8 fd-c width-100 display-none'>
                   <div className='btn-4 btn-4-hn'>
                     <a href='/'>
@@ -160,7 +160,7 @@ const Home = () => {
                       Hi, I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> I love turning complex workflows into simple, intuitive products that just feel right.
                     </span>
                     <span>
-                      I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I built MyDeziner (<white>10x faster workflows</white> for interior designers) and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
+                      Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I built MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
                     </span>
                     <div className='df-g8 fd-c gap-12 display-none'>
                       <white>

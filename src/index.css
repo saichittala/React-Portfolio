@@ -3149,7 +3149,7 @@ p {
     border-radius: var(--border-radius-1);
     font-size: 13px;
     font-weight: 400;
-    padding: 20px;
+    padding: 14px 20px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     cursor: text;
 }
