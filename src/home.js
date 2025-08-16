@@ -8,9 +8,13 @@ import { motion } from "framer-motion";
 import BubbleButton from './components/BubbleButton';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { CardSwipe } from './components/CardSwipe';
 
-
-
+const images = [
+  { src: "img/projects/cf.webp", alt: "Image 1" },
+  { src: "img/projects/mydeziner.webp", alt: "Image 2" },
+  { src: "img/projects/homegymr.png", alt: "Image 3" },
+]
 
 const Home = () => {
   useFadeIn();
@@ -206,6 +210,16 @@ const Home = () => {
                   />
                 ))}
               </div>
+              {/* <div className='width-450'>
+                <CardSwipe
+                  images={cardsData.map(card => ({
+                    src: card.image,
+                    alt: card.title
+                  }))}
+                  autoplayDelay={2000}
+                  slideShadows={false}
+                />
+              </div> */}
             </div>
           </div>
         </section>
