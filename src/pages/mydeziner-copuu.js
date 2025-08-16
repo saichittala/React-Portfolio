@@ -155,9 +155,6 @@ const MyDeziner = () => {
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                             <p className='fade-in'>MyDeziner is a powerful interior design software that enables designers to draw, configure, and render hyper-realistic interiors—all in one place. From layout creation to photorealistic renders, it simplifies complex workflows and brings unmatched control to interior professionals.
-
-
-
                             </p>
                           </div>
                         </div>

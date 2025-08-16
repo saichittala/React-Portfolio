@@ -110,7 +110,7 @@ const Home = () => {
             hideDelay={500}
             size={{
               small: 12,
-              large: { width: 215, height: 48 } //48
+              large: { width: 199, height: 48 } //48
             }}
             className="custom-bubble-class" // Optional
           >
@@ -125,11 +125,11 @@ const Home = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className="full-bg height-100vh bg-op4">
+          <div className="full-bg bg-black">
 
-            <div className="bg-main height-100vh home-main-container fd-c display-flex alc h-100 ">
-              <div className='df-g8 width-100 mobile-home-container'>
-                <div className='df-g8 fd-c width-100'>
+            <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
+              <div className='df-g8 gap-16 mobile-home-container fd-c width-450'>
+                <div className='df-g8 fd-c width-100 display-none'>
                   <div className='btn-4 btn-4-hn'>
                     <a href='/'>
                       <img
@@ -138,7 +138,7 @@ const Home = () => {
                       />
                     </a>
                   </div>
-                  <div className='df-g8' >
+                  <div className='df-g8 display-none' >
                     <div className='btn-4 btn-4-hn cursor-text'>
                       UX
                     </div>
@@ -161,36 +161,42 @@ const Home = () => {
                   </div>
                 </div>
                 <div className='df-g8 fd-c width-100'>
-                  <div className='btn-4 btn-4-hn cursor-text'>
+                  <div className='home-main-text df-g8 gap-16 fd-c'>
                     <span>
-                      Product Designer helping Companies to build digital products.
+                      <white>Hi, I’m Sai Chittala - a digital product designer based in India.</white> I love turning complex workflows into simple, intuitive products that just feel right.
                     </span>
+                    <span>
+                      I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I built MyDeziner (10x faster workflows for interior designers) and redesigned CustomFurnish (38% higher lead conversions and 29% reduced dropouts).
+                    </span>
+                    <div className='df-g8 fd-c gap-12 display-none'>
+                      <white>
+                        Some things I’ve worked on:
+                      </white>
+                      <div className='df-g8 fd-c gap-8'>
+                        <span>
+                          • MyDeziner – SaaS tool that cut design workflow time by 40%
+                        </span>
+                        <span>
+                          • CustomFurnish – redesigned flows that boosted conversions by 30%
+                        </span>
+                      </div>
+                    </div>
+                    <span>
+                      I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.                    </span>
+                    <div className='df-g8'>
+                      <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        Email
+                      </a>
+                      <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        LinkedIn
+                      </a>
+                      <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        Upwork
+                      </a>
+                    </div>
                   </div>
-                  <div className='df-g8'>
-                    <a href='https://www.linkedin.com/in/saichittala/' target="_blank" rel="noopener noreferrer" className='btn-4'>
-                      Linkedin
-                    </a>
-                    <a href='https://www.upwork.com/freelancers/~01762e36a0d1eb9abf' target="_blank" rel="noopener noreferrer" className='btn-4'>
-                      Upwork
-                    </a>
-                  </div>
-                </div>
-                <div className='df-g8 fd-c width-100'>
-                  <div className='btn-4 btn-4-hn cursor-text jc-sb'>
 
-                    <div className='df-g8 fd-c'>
-                      <span className='fs-14'>Based in</span>
-                      <span className='fs-14'> India</span>
-                    </div>
-                    <div className='df-g8 fd-c'>
-                      <span className='ta-r fs-14'>{currentTime || 'Loading...'}</span>
-                      <span className='ta-r fs-14'>Hyderabad</span>
-                    </div>
-                  </div>
-                  <a href='/#works' className='btn-4 btn-4-img rotating-border'>
-                    <span>Explore all works</span>
-                    <img src='img/arrow-right.svg' alt="arrow" />
-                  </a>
+
                 </div>
               </div>
               {/* <div className="intro-section-main">
@@ -224,16 +230,16 @@ const Home = () => {
                   </div>
                 </div>
               </div>  */}
-                {/* <div className="cards-container" id="cards-container" ref={cardsContainerRef}>
-                  {cardsData.map((card, index) => (
-                    <Card
-                      key={index}
-                      {...card}
-                      onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
-                      password={card.password} // Pass password prop for locked cards
-                    />
-                  ))}
-                </div> */}
+              <div className="cards-container home-cards-container width-450" id="cards-container" ref={cardsContainerRef}>
+                {cardsData.map((card, index) => (
+                  <Card
+                    key={index}
+                    {...card}
+                    onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
+                    password={card.password} // Pass password prop for locked cards
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>

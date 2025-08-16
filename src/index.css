@@ -17,7 +17,7 @@
     /* Colors */
 
     --black-color: #000000;
-    --black-2-color: #101010;
+    --black-2-color: #0C0A09;
     --white-color: #ffffff;
     --card-white-color: #ffffff;
     --primary-color: #000000;
@@ -30,7 +30,7 @@
     --black-opacity: rgba(0, 0, 0, 0.8);
     --black-opacity-2: rgba(66, 66, 69, 0.7);
     --black-opacity-3: rgba(44, 44, 49, 0.5);
-    --black-opacity-4: rgba(0, 0, 0, 0.5);
+    --black-opacity-4: rgba(0, 0, 0, 0.9);
     --blue-opacity-4: #0172EA80;
     --blue-opacity-5: #0172EA90;
     --cursor-color: #ffffff30;
@@ -90,7 +90,7 @@
 
 
     /* Fonts */
-    /* --primary-font: Gi-apple-system,
+    --primary-font: Gi-apple-system,
     "Inter",
     BlinkMacSystemFont,
     "Hanken Grotesk",
@@ -107,14 +107,14 @@
     Roboto,
     "Helvetica Neue",
     Arial,
-    sans-serif; */
+    sans-serif;
     /* 
     --primary-font: 'Hanken Grotesk', sans-serif;
     --secondary-font: 'Hanken Grotesk', sans-serif; */
-    --primary-font: "JetBrains Mono",
+    /* --primary-font: "JetBrains Mono",
     monospace;
     --secondary-font: "JetBrains Mono",
-    monospace;
+    monospace; */
     /* --primary-font: "Geist Mono",
     monospace;
     --secondary-font: "Geist Mono",
@@ -198,6 +198,10 @@
     }
 }
 
+.width-450 {
+    width: 500px !important;
+}
+
 
 .margin-100 {
     margin-top: 100px !important;
@@ -250,6 +254,11 @@
 
 .bg-op4 {
     background-color: var(--black-opacity-4) !important;
+}
+
+.bg-black {
+    background-color: var(--black-opacity-4) !important;
+  backdrop-filter: blur(120px);
 }
 
 .scale-on-scroll {
@@ -366,6 +375,11 @@ body {
     .cards-container {
         grid-template-columns: 1fr 1fr !important;
     }
+
+.home-cards-container {
+    grid-template-columns: 1fr;
+
+}
 }
 
 @media (max-width: 674px) {
@@ -818,6 +832,20 @@ body {
 
 }
 
+
+.home-main-text {
+    width: 100%;
+    font-size: 14px;
+    color: var(--grey-bg-b-color);
+    font-weight: 300;
+    line-height: 1.6;
+
+    white {
+        color: var(--white-color) !important;
+        font-weight: 500;
+    }
+}
+
 .main-image {
     padding-top: 100px !important;
 }
@@ -828,6 +856,22 @@ body {
 
 .width-100 {
     width: 100% !important;
+}
+
+.gap-16 {
+    gap: 16px !important;
+}
+
+.gap-20 {
+    gap: 20px !important;
+}
+
+.gap-12 {
+    gap: 12px !important;
+}
+
+.gap-8 {
+    gap: 8px !important;
 }
 
 .ta-l {
@@ -931,13 +975,18 @@ body {
     margin-right: 16px;
     /* cursor: pointer; */
     cursor: pointer;
+    transition: all 0.2s cubic-bezier(0, -.6, 0, 1.07);
+}
+
+.intro-link:hover {
+    color: var(--white-color) !important;
 }
 
 .profile-img {
     display: flex;
 
     img {
-        width: 170px !important;
+        width: 120px !important;
         height: 100%;
         object-fit: cover;
     }
@@ -1061,9 +1110,18 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.home-cards-container {
+    grid-template-columns: 1fr !important;
+
+}
+
 @media (min-width: 1920px) {
     .cards-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .home-cards-container {
+        grid-template-columns: 1fr !important;
     }
 }
 
@@ -1160,8 +1218,8 @@ body {
 }
 
 .home-main-container {
-    gap: 150px !important;
-    padding-top: 18% !important;
+    gap: 72px !important;
+    padding-top: 11% !important;
     overflow-y: scroll;
 
     ::-webkit-scrollbar {
@@ -1227,7 +1285,7 @@ body {
 }
 
 .card-title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--white-color);
     text-transform: capitalize;
@@ -1245,7 +1303,7 @@ body {
 }
 
 .card-year {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 100;
     color: var(--grey-bg-b-color);
     text-transform: capitalize;
@@ -1536,6 +1594,9 @@ body {
 @media (max-width: 674px) {
     .design-text-div {
         width: 100%;
+    }
+    .width-450 {
+        width: 100% !important;
     }
 }
 
@@ -1913,10 +1974,6 @@ a {
         padding: 80px 0;
     }
 
-    .main-card {
-        /* min-height: 466px; */
-    }
-
 }
 
 
@@ -1930,10 +1987,6 @@ a {
     .intro-section-main {
         padding-top: unset;
         margin-bottom: unset;
-    }
-
-    .main-card {
-        /* height: 60vh; */
     }
 
     .intro-content {
@@ -3132,7 +3185,7 @@ p {
     left: 0;
     z-index: -1;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     pointer-events: none;
     /* prevent any accidental clicks */
