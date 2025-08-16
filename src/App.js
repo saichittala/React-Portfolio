@@ -15,7 +15,7 @@ function App() {
   const [manualOverride, setManualOverride] = useState(false);
   const [animating, setAnimating] = useState(false);
 
-  // ✅ Toggle theme with ripple animation
+  // ✅ Toggle theme with overlay animation
   const toggleTheme = () => {
     setAnimating(true);
     setManualOverride(true);
@@ -49,7 +49,7 @@ function App() {
     }
   }, [theme, manualOverride]);
 
-  // 3️⃣ System preference listener (only works if no manual override)
+  // 3️⃣ Listen to system theme changes (desktop + mobile)
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -59,8 +59,21 @@ function App() {
       }
     };
 
-    mediaQuery.addEventListener("change", handler);
-    return () => mediaQuery.removeEventListener("change", handler);
+    // Modern browsers
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handler);
+    } else {
+      // Safari < 14 fallback
+      mediaQuery.addListener(handler);
+    }
+
+    return () => {
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", handler);
+      } else {
+        mediaQuery.removeListener(handler);
+      }
+    };
   }, [manualOverride]);
 
   return (
