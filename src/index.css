@@ -926,6 +926,16 @@ body.light-theme .theme-toggle-btn {
 .gap-20 {
     gap: 20px !important;
 }
+.gap-24 {
+    gap: 24px !important;
+}
+.gap-28 {
+    gap: 28px !important;
+}
+
+.gap-36 {
+    gap: 36px !important;
+}
 
 .gap-12 {
     gap: 12px !important;

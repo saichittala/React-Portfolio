@@ -122,7 +122,7 @@ const Home = () => {
           <div className="full-bg bg-black">
 
             <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
-              <div className='df-g8 gap-16 mobile-home-container fd-c width-450'>
+              <div className='df-g8 gap-28 mobile-home-container fd-c width-450'>
                 <div className='df-g8 fd-c width-100 display-none'>
                   <div className='btn-4 btn-4-hn'>
                     <a href='/'>
@@ -155,7 +155,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className='df-g8 fd-c width-100'>
-                  <div className='home-main-text df-g8 gap-16 fd-c'>
+                  <div className='home-main-text df-g8 gap-20 fd-c'>
                     <span>
                       Hi, I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> I love turning complex workflows into simple, intuitive products that just feel right.
                     </span>
@@ -166,7 +166,7 @@ const Home = () => {
                       <white>
                         Some things I’ve worked on:
                       </white>
-                      <div className='df-g8 fd-c gap-8'>
+                      <div className='df-g8 fd-c gap-16'>
                         <span>
                           • MyDeziner – SaaS tool that cut design workflow time by 40%
                         </span>
@@ -187,7 +187,7 @@ const Home = () => {
                       <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Upwork
                       </a>
-                      <a href="Resume.pdf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                      <a href="/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Resume
                       </a>
                     </div>
