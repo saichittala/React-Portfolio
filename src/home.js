@@ -9,6 +9,7 @@ import BubbleButton from './components/BubbleButton';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { CardSwipe } from './components/CardSwipe';
+import SmoothScrollProvider from './components/Scrollsmooth';
 
 const images = [
   { src: "img/projects/cf.webp", alt: "Image 1" },
@@ -53,10 +54,10 @@ const Home = () => {
 
   const cardsData = [
     { title: "Boosting Conversions with Smart Interior UX", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
-    { title: "Streamlining Workflows For Design Teams", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
+    { title: "Designing efficiency for interior designers", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
     { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.png", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.jpeg", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
-    { title: "Crafting Unified Ride Booking Experience", type: "Yalla Gai", year: "Professional 2022-2023", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: true, password: "surya@123" },
+    { title: "Crafting Unified Ride Booking Experience", type: "Yalla Gai", year: "Professional 2022-2023", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: false, password: "surya@123" },
     { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.png", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
     { title: "Modernizing Devotion Through Design", type: "Temple Address", year: "Professional 2022-2023", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "1" },
     { title: "Crafting Connected Listening Journeys", type: "Muzicon", year: "Personal 2021-2022", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
@@ -99,6 +100,8 @@ const Home = () => {
         className="sticky-toast"
       />
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
+          <SmoothScrollProvider duration={1.2}>
+
       <main className='z-index-11 '>
         <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
           <BubbleButton
@@ -191,13 +194,11 @@ const Home = () => {
                       <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Upwork
                       </a>
-                      <a href="/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                      <a href="Resume.pdf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Resume
                       </a>
                     </div>
                   </div>
-
-
                 </div>
               </div>
               <div className="cards-container home-cards-container width-450" id="cards-container" ref={cardsContainerRef}>
@@ -210,27 +211,33 @@ const Home = () => {
                   />
                 ))}
               </div>
-              {/* <div className='width-450'>
-                <CardSwipe
-                  images={cardsData.map(card => ({
-                    src: card.image,
-                    alt: card.title,
-                    title: card.title,
-                    year: card.year,
-                    link: card.link,
-                    locked: card.locked,
-                    password: card.password
-                  }))}
-                  autoplayDelay={100000}
-                  slideShadows={true}
-                  onRequestLockPopup={handleRequestLockPopup} // Pass the popup handler
-                />
 
+              {/* <div className='df-g8 fd-c gap-36'>
+                <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
+                </a>
+                <div className='width-450 width-slider'>
+                  <CardSwipe
+                    images={cardsData.map(card => ({
+                      src: card.image,
+                      alt: card.title,
+                      title: card.title,
+                      year: card.year,
+                      link: card.link,
+                      locked: card.locked,
+                      password: card.password
+                    }))}
+                    autoplayDelay={100000}
+                    slideShadows={true}
+                    onRequestLockPopup={handleRequestLockPopup} // Pass the popup handler
+                  />
+
+                </div>
               </div> */}
             </div>
           </div>
         </section>
       </main>
+      </SmoothScrollProvider>
 
       {/* <Footer /> */}
 

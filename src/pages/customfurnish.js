@@ -7,6 +7,7 @@ import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import BubbleButton from '../components/BubbleButton';
 import { use } from 'react';
+import SmoothScrollProvider from '../components/Scrollsmooth';
 
 
 const CustomFurnish = () => {
@@ -56,6 +57,8 @@ const CustomFurnish = () => {
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <title>Sai Chittala Portfolio</title>
       </head>
+      <SmoothScrollProvider duration={1.2}>
+      
       <main>
         <section ref={customfurnishRef}>
           <a href="https://www.figma.com/design/IHX8O0ZQrwEwOcPHjjZUFH/Customfurnish?node-id=0-1&t=tfbAj8cpIn9eWmee-1" target="_blank" rel="noopener noreferrer">
@@ -347,6 +350,7 @@ const CustomFurnish = () => {
           </div>
         </section>
       </main>
+      </SmoothScrollProvider>
       <Footer />
     </div>
   );

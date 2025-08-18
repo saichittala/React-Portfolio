@@ -13,39 +13,39 @@ const MyDeziner = () => {
   ZoomOnScroll();
   useEffect(() => {
 
-    const loader = document.getElementById("loader");
-    const circleLoader = document.getElementById("circleloading");
-    const loadingText = document.getElementById("loading-text");
+    // const loader = document.getElementById("loader");
+    // const circleLoader = document.getElementById("circleloading");
+    // const loadingText = document.getElementById("loading-text");
 
 
-    // Set initial opacity of the loader (circle and text)
-    circleLoader.style.opacity = 0;
-    loadingText.style.opacity = 0;
-    loader.style.opacity = 1;
+    // // Set initial opacity of the loader (circle and text)
+    // circleLoader.style.opacity = 0;
+    // loadingText.style.opacity = 0;
+    // loader.style.opacity = 1;
 
-    // Set a static loading text
-    loadingText.textContent = "Just a minute";
+    // // Set a static loading text
+    // loadingText.textContent = "Just a minute";
 
-    // Fade in the loader (circles and text)
-    setTimeout(() => {
-      circleLoader.style.transition = 'opacity 1s';
-      loadingText.style.transition = 'opacity 1s';
-      circleLoader.style.opacity = 1;
-      loadingText.style.opacity = 1;
+    // // Fade in the loader (circles and text)
+    // setTimeout(() => {
+    //   circleLoader.style.transition = 'opacity 1s';
+    //   loadingText.style.transition = 'opacity 1s';
+    //   circleLoader.style.opacity = 1;
+    //   loadingText.style.opacity = 1;
 
-      // Fade out loader (text and circles) after content is fully loaded
-      setTimeout(() => {
-        loadingText.style.opacity = 0;
-        circleLoader.style.opacity = 0;
+    //   // Fade out loader (text and circles) after content is fully loaded
+    //   setTimeout(() => {
+    //     loadingText.style.opacity = 0;
+    //     circleLoader.style.opacity = 0;
 
-        setTimeout(() => {
-          loader.style.opacity = '0';
-          setTimeout(() => {
-            loader.style.display = 'none';
-          }, 500);
-        }, 500);
-      }, 2500);
-    }, 500);
+    //     setTimeout(() => {
+    //       loader.style.opacity = '0';
+    //       setTimeout(() => {
+    //         loader.style.display = 'none';
+    //       }, 500);
+    //     }, 500);
+    //   }, 2500);
+    // }, 500);
 
     // Video Autoplay
     const video = document.getElementById('myVideo');
@@ -61,19 +61,23 @@ const MyDeziner = () => {
       // No observer to clean up anymore
     };
   }, []);
+  useEffect(() => {
+  const el = document.querySelector('a[href*="/before-signing-up"]');
+  if (el) el.style.display = "none";
+}, []);
 
 
   return (
     <div className='cursor overflow-x-h'>
-      
-      <div className="loader-styling" id="loader">
+
+      {/* <div className="loader-styling" id="loader">
         <div id="circleloading" className="circle-loader">
           <div className="circle-input"></div>
           <div className="circle-input"></div>
           <div className="circle-input"></div>
         </div>
         <div id="loading-text">Just a minute</div>
-      </div>
+      </div> */}
 
       <head>
         <meta charset="utf-8" />
@@ -94,7 +98,7 @@ const MyDeziner = () => {
       <main>
 
         <section>
-          
+
           <div className="full-bg">
             <div className=" p-img-1 main-image">
               <img src="img/projects/mydeziner.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-in' />
@@ -163,6 +167,23 @@ const MyDeziner = () => {
                           <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video> */}
+                        <div className='tll-video' style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+                          <iframe
+                            src="https://www.tella.tv/video/cmefkw96o00320cl2fm0w3opk/embed?b=1&title=0&a=1&loop=0&autoPlay=true&t=0&muted=1&wt=0"
+                            style={{
+                              position: "absolute",
+                              top: 0,
+                              left: 0,
+                              width: "100%",
+                              height: "100%",
+                              border: 0,
+                            }}
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowTransparency={true}
+                            allowFullScreen
+                            title="Tella Video"
+                          />
+                        </div>                        
                         <int className="fade-in">
                           <p className=''><int>MyDeziner is a game-changing tool</int> for interior designers, crafted from scratch to empower both professionals and everyday users. From designing spaces effortlessly to delivering high-quality renders, it bridges the gap between <int>creativity and functionality.</int></p></int>
                       </div>
@@ -227,19 +248,19 @@ const MyDeziner = () => {
                           <ch className="fade-in translate-text-up ">Effortless Navigation</ch>
                           <p className='fade-in '>A perfect blend of simplicity and power ensures users can create, modify, and render projects with ease.
                           </p>
-                          <video 
-                          className="fade-in"
-                          loading="lazy"
-                          preload="metadata"
-                          id="myVideo"
-                          loop
-                          muted
-                          autoPlay
-                          playsInline
-                          disablePictureInPicture>
-                          <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
+                          <video
+                            className="fade-in"
+                            loading="lazy"
+                            preload="metadata"
+                            id="myVideo"
+                            loop
+                            muted
+                            autoPlay
+                            playsInline
+                            disablePictureInPicture>
+                            <source src="img/projects/mydeziner/main.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
                       </div>
                     </div>
@@ -522,7 +543,7 @@ const MyDeziner = () => {
                               <div className='process-card-info fade-in'><pcard className='cursor-text'>Moodboards</pcard></div>
                               <div className='process-card-info fade-in'><pcard className='cursor-text'>High-Fidelity Wireframes</pcard></div>
                               <div className='process-card-info fade-in'><pcard className='cursor-text'>Interactive Prototypes</pcard></div>
-                              
+
                             </div>
                           </div>
                           <div className='process-card-main fade-in'>

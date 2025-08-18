@@ -1,9 +1,11 @@
 import useFadeIn from '../components/useFadeIn';
+import SmoothScrollProvider from '../components/Scrollsmooth';
 
 function About() {
     useFadeIn();
     return (
         <div className="content cursor" id="content">
+            <SmoothScrollProvider duration={1.3}>
             <main>
                 <section className="fade-in">
                     <div className="full-bg">
@@ -23,6 +25,7 @@ function About() {
                     </div>
                 </section>
             </main>
+            </SmoothScrollProvider>
             {/* <Footer /> */}
         </div>
     )

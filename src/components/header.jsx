@@ -88,6 +88,9 @@ function Header({ toggleTheme, theme }) {
               <img src="img/contact-nav.svg" alt="logo" />
               <span>Contact</span>
             </Link>
+            <div className='df-g8 aic'>
+              <div className="divider"></div>
+            </div>
             <button
               className="theme-toggle-btn"
               onClick={toggleTheme}

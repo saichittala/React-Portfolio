@@ -126,6 +126,12 @@ export const CardSwipe = ({
       justify-content: center;
       padding: 0 !important;
     }
+
+    @media (max-width: 674px) {
+    .slide-image {
+    aspect-ratio: 0.75;
+    }
+    }
   `
 
   return (
@@ -136,9 +142,9 @@ export const CardSwipe = ({
           autoplay={{ delay: autoplayDelay, disableOnInteraction: false }}
           effect="cards"
           grabCursor
-          loop
           slidesPerView="auto"
           rewind
+          // loop
           cardsEffect={{ slideShadows }}
           modules={[EffectCards, Autoplay, Pagination, Navigation]}
         >
