@@ -9,7 +9,6 @@ import CustomFurnish from './pages/customfurnish.js';
 import About from './pages/about.js';
 import Contact from './pages/contact.js';
 import Works from './pages/works.js';
-import SmoothScrollProvider from './components/Scrollsmooth.jsx';
 
 // ✅ Wrapper to hook into route changes
 function ThemeWatcher({ setTheme, manualOverride }) {

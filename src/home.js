@@ -194,7 +194,7 @@ const Home = () => {
                       <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Upwork
                       </a>
-                      <a href="Resume.pdf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                      <a href="/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Resume
                       </a>
                     </div>
