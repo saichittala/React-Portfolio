@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer';
+import useFadeIn from '../components/useFadeIn';
+
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomOnScroll';
@@ -12,7 +14,8 @@ import SmoothScrollProvider from '../components/Scrollsmooth';
 
 const CustomFurnish = () => {
 
-  FullScrollFadeIn();
+  // FullScrollFadeIn();
+  useFadeIn();
   useScrollEffect();
   ZoomOnScroll();
   const customfurnishRef = React.useRef(null);

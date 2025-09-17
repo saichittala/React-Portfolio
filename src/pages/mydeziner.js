@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Footer from '../components/footer';
 import FullScrollFadeIn from '../components/FullScrollFadeIn';
+import useFadeIn from '../components/useFadeIn';
+
 import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomOnScroll';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
@@ -11,7 +13,8 @@ import SmoothScrollProvider from '../components/Scrollsmooth';
 
 const MyDeziner = () => {
 
-  FullScrollFadeIn();
+  // FullScrollFadeIn();
+  useFadeIn();
   useScrollEffect();
   ZoomOnScroll();
   const customfurnishRef = React.useRef(null);

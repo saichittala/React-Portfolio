@@ -1,35 +1,49 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-const useFadeIn = () => {
+const useFadeIn = (selector = ".fade-in", offset = 0.9) => {
   useEffect(() => {
-    const fadeIns = document.querySelectorAll('.fade-in');
+    const elements = document.querySelectorAll(selector);
+    if (!elements.length) return;
 
-    const options = {
-      root: null, // Use the viewport
-      rootMargin: '0px',
-      threshold: 0.1 // Trigger when 10% of the element is visible
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible'); // Add visible class
-          observer.unobserve(entry.target); // Stop observing once animated
+    const revealOnFrame = () => {
+      elements.forEach((el) => {
+        if (el.classList.contains("visible")) return; // skip if already visible
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * offset) {
+          el.classList.add("visible");
         }
       });
-    }, options);
-
-    fadeIns.forEach(fadeIn => {
-      observer.observe(fadeIn); // Observe each fade-in section
-    });
-
-    // Cleanup observer when the component is unmounted
-    return () => {
-      fadeIns.forEach(fadeIn => {
-        observer.unobserve(fadeIn);
-      });
     };
-  }, []); // Empty dependency array ensures this runs only once on mount
+
+    let frameId;
+
+    const animate = () => {
+      revealOnFrame();
+      frameId = requestAnimationFrame(animate);
+    };
+
+    // If Lenis exists, hook into its raf
+    if (window.lenis) {
+      window.lenis.on("scroll", revealOnFrame);
+      frameId = requestAnimationFrame(animate);
+    } else {
+      // fallback to native scroll + RAF
+      window.addEventListener("scroll", revealOnFrame, { passive: true });
+      frameId = requestAnimationFrame(animate);
+    }
+
+    // Run once immediately
+    revealOnFrame();
+
+    return () => {
+      if (window.lenis) {
+        window.lenis.off("scroll", revealOnFrame);
+      } else {
+        window.removeEventListener("scroll", revealOnFrame);
+      }
+      cancelAnimationFrame(frameId);
+    };
+  }, [selector, offset]);
 };
 
 export default useFadeIn;

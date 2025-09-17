@@ -27,30 +27,10 @@ const Home = () => {
   const [currentPassword, setCurrentPassword] = useState('');
   const [currentLink, setCurrentLink] = useState('');
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
-  const AnimatedComponent = motion.div;
-  const [currentTime, setCurrentTime] = useState('');
 
 
 
-  useEffect(() => {
-    const timerId = setInterval(() => {
-      // --- CHANGE IS HERE ---
-      // Add `second: '2-digit'` to the options object.
-      const options = {
-        timeZone: 'Asia/Kolkata',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit', // This line adds the seconds
-        hour12: true,
-      };
-      const timeString = new Date().toLocaleTimeString('en-US', options);
-      setCurrentTime(timeString);
-    }, 1000);
 
-    return () => {
-      clearInterval(timerId);
-    };
-  }, []);
 
   const cardsData = [
     { title: "Boosting Conversions with Smart Interior UX", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
@@ -100,119 +80,119 @@ const Home = () => {
         className="sticky-toast"
       />
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
-          <SmoothScrollProvider duration={1.2}>
+      <SmoothScrollProvider duration={1.2}>
 
-      <main className='z-index-11 '>
-        <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
-          <BubbleButton
-            activationRef={cardsContainerRef}
-            text="View Recent Work"
-            showDelay={300}
-            hideDelay={500}
-            size={{
-              small: 12,
-              large: { width: 199, height: 48 } //48
-            }}
-            className="custom-bubble-class" // Optional
-          >
-            <img src="img/open-web.svg" alt="Arrow" />
-          </BubbleButton>
-        </a>
+        <main className='z-index-11 '>
+          <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
+            <BubbleButton
+              activationRef={cardsContainerRef}
+              text="View Recent Work"
+              showDelay={300}
+              hideDelay={500}
+              size={{
+                small: 12,
+                large: { width: 199, height: 48 } //48
+              }}
+              className="custom-bubble-class" // Optional
+            >
+              <img src="img/open-web.svg" alt="Arrow" />
+            </BubbleButton>
+          </a>
 
-        <section className="fade-in">
-          <div className="background-video-wrapper">
-            <video autoPlay muted loop playsInline className="background-video">
-              <source src="/img/bg-vvv.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div className="full-bg bg-black">
+          <section className="fade-in">
+            <div className="background-video-wrapper">
+              <video autoPlay muted loop playsInline className="background-video">
+                <source src="/img/bg-vvv.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="full-bg bg-black">
 
-            <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
-              <div className='df-g8 gap-36 mobile-home-container fd-c width-450'>
-                <div className='df-g8 fd-c width-100 display-none'>
-                  <div className='btn-4 btn-4-hn'>
-                    <a href='/'>
-                      <img
-                        src={'img/sai.svg'}
-                        alt="menu-icon"
-                      />
-                    </a>
-                  </div>
-                  <div className='df-g8 display-none' >
-                    <div className='btn-4 btn-4-hn cursor-text'>
-                      UX
+              <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
+                <div className='df-g8 gap-36 mobile-home-container fd-c width-450'>
+                  <div className='df-g8 fd-c width-100 display-none'>
+                    <div className='btn-4 btn-4-hn'>
+                      <a href='/'>
+                        <img
+                          src={'img/sai.svg'}
+                          alt="menu-icon"
+                        />
+                      </a>
                     </div>
-                    <div className='btn-4 btn-4-hn cursor-text'>
-                      UI
-                    </div>
-                    <div className='btn-4 btn-4-hn cursor-text'>
-                      Product
-                    </div>
-                  </div>
-
-                </div>
-                <div className='df-g8 width-fc'>
-                  <div className='profile-img'>
-                    <img
-                      style={{ width: '150px', borderRadius: '24px' }}
-                      src={'img/profile-png.webp'}
-                      alt="profile-img"
-                    />
-                  </div>
-                </div>
-                <div className='df-g8 fd-c width-100'>
-                  <div className='home-main-text df-g8 gap-20 fd-c'>
-                    <span>
-                      Hi, I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> I love turning complex workflows into simple, intuitive products that just feel right.
-                    </span>
-                    <span>
-                      Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
-                    </span>
-                    <div className='df-g8 fd-c gap-12 display-none'>
-                      <white>
-                        Some things I’ve worked on:
-                      </white>
-                      <div className='df-g8 fd-c gap-16'>
-                        <span>
-                          • MyDeziner – SaaS tool that cut design workflow time by 40%
-                        </span>
-                        <span>
-                          • CustomFurnish – redesigned flows that boosted conversions by 30%
-                        </span>
+                    <div className='df-g8 display-none' >
+                      <div className='btn-4 btn-4-hn cursor-text'>
+                        UX
+                      </div>
+                      <div className='btn-4 btn-4-hn cursor-text'>
+                        UI
+                      </div>
+                      <div className='btn-4 btn-4-hn cursor-text'>
+                        Product
                       </div>
                     </div>
-                    <span>
-                      I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.                    </span>
-                    <div className='df-g8'>
-                      {/* <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+
+                  </div>
+                  <div className='df-g8 width-fc'>
+                    <div className='profile-img'>
+                      <img
+                        style={{ width: '150px', borderRadius: '24px' }}
+                        src={'img/profile-png.webp'}
+                        alt="profile-img"
+                      />
+                    </div>
+                  </div>
+                  <div className='df-g8 fd-c width-100'>
+                    <div className='home-main-text df-g8 gap-20 fd-c'>
+                      <span>
+                        Hi, I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> I love turning complex workflows into simple, intuitive products that just feel right.
+                      </span>
+                      <span>
+                        Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
+                      </span>
+                      <div className='df-g8 fd-c gap-12 display-none'>
+                        <white>
+                          Some things I’ve worked on:
+                        </white>
+                        <div className='df-g8 fd-c gap-16'>
+                          <span>
+                            • MyDeziner – SaaS tool that cut design workflow time by 40%
+                          </span>
+                          <span>
+                            • CustomFurnish – redesigned flows that boosted conversions by 30%
+                          </span>
+                        </div>
+                      </div>
+                      <span>
+                        I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.                    </span>
+                      <div className='df-g8'>
+                        {/* <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Email
                       </a> */}
-                      <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        LinkedIn
-                      </a>
-                      <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        Upwork
-                      </a>
-                      <a href="/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        Resume
-                      </a>
+                        <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                          LinkedIn
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                          Upwork
+                        </a>
+                        <a href="/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                          Resume
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="cards-container home-cards-container width-450" id="cards-container" ref={cardsContainerRef}>
-                {cardsData.map((card, index) => (
-                  <Card
-                    key={index}
-                    {...card}
-                    onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
-                    password={card.password} // Pass password prop for locked cards
-                  />
-                ))}
-              </div>
+                <div className="cards-container home-cards-container width-450" id="cards-container" ref={cardsContainerRef}>
+                  {cardsData.map((card, index) => (
+                    <Card
+                      key={index}
+                      {...card}
+                      onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
+                      password={card.password} // Pass password prop for locked cards
+                    />
+                  ))}
+                </div>
 
-              {/* <div className='df-g8 fd-c gap-36'>
+                {/* <div className='df-g8 fd-c gap-36'>
                 <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
                 </a>
                 <div className='width-450 width-slider'>
@@ -233,10 +213,10 @@ const Home = () => {
 
                 </div>
               </div> */}
+              </div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
       </SmoothScrollProvider>
 
       {/* <Footer /> */}

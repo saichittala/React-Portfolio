@@ -1,40 +1,76 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const FullScrollFadeIn = () => {
-    useEffect(() => {
-        const fadeElements = document.querySelectorAll('.fade-in');
+  useEffect(() => {
+    const fadeElements = document.querySelectorAll(".fade-in");
+    if (!fadeElements.length) return;
 
-        const handleScroll = () => {
-            fadeElements.forEach((el) => {
-                const rect = el.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
+    const handleScroll = () => {
+      fadeElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-                const visibleFromBottom = windowHeight - rect.top;
+        const visibleFromBottom = windowHeight - rect.top;
+        const fadeStart = 50;
+        const fadeEnd = rect.height * 0.5;
 
-                const fadeStart = 50;
-                const fadeEnd = rect.height * 0.5; 
+        const fadeRatio = Math.min(
+          Math.max((visibleFromBottom - fadeStart) / fadeEnd, 0),
+          1
+        );
 
-                const fadeRatio = Math.min(Math.max((visibleFromBottom - fadeStart) / fadeEnd, 0), 1); 
+        el.style.opacity = fadeRatio;
+        el.style.transform = `translateY(${(1 - fadeRatio) * 20}px)`;
+        el.style.filter = `blur(${(1 - fadeRatio) * 8}px)`;
+      });
+    };
 
-                el.style.opacity = fadeRatio; 
-                el.style.transform = `translateY(${(1 - fadeRatio) * 20}px)`; 
-                el.style.transition = 'opacity .8s cubic-bezier(0.455, 0.030, 0.515, 0.955), transform .8s cubic-bezier(0.455, 0.030, 0.515, 0.955)'; // Smooth transitions
-                el.style.filter = `blur(${(1 - fadeRatio) * 8}px)`; // From 5px (start) to 0px (end)
+    let detachScroll = () => {};
 
-            });
-        };
+    const attachNativeScroll = () => {
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      detachScroll = () =>
+        window.removeEventListener("scroll", handleScroll);
+    };
 
-        // Attach scroll event listener
-        window.addEventListener('scroll', handleScroll);
+    const attachLenisScroll = () => {
+      if (!window.lenis) return;
+      window.lenis.on("scroll", handleScroll);
+      detachScroll = () => {
+        if (window.lenis) {
+          window.lenis.off("scroll", handleScroll);
+        }
+      };
+    };
 
-        // Perform initial calculation
-        handleScroll();
+    if (window.lenis) {
+      attachLenisScroll();
+    } else {
+      attachNativeScroll();
 
-        // Cleanup event listener on component unmount
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+      const interval = setInterval(() => {
+        if (window.lenis) {
+          detachScroll(); // remove native listener
+          attachLenisScroll(); // switch to Lenis
+          clearInterval(interval);
+        }
+      }, 100);
+
+      const oldDetach = detachScroll;
+      detachScroll = () => {
+        oldDetach();
+        clearInterval(interval);
+      };
+    }
+
+    handleScroll();
+
+    return () => {
+      detachScroll();
+    };
+  }, []);
+
+  return null;
 };
 
 export default FullScrollFadeIn;
