@@ -3,7 +3,7 @@ import React from 'react'
 function footer() {
     return (
         <footer>
-            <section className="fade-in">
+            <section className="fade-inn">
                 <div className="full-bg">
                     <div className="bg-footer">
                         <div className="footer-main">

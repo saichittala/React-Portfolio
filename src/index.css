@@ -297,7 +297,7 @@
 }
 
 .bg-black {
-    background-color: var(--black-opacity-4) !important;
+    background-color: var(--black-color) !important;
     backdrop-filter: blur(120px);
 }
 
@@ -933,7 +933,7 @@ body.light-theme .theme-toggle-btn {
     font-size: 14px;
     color: var(--grey-bg-b-color);
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.9;
 
     white {
         color: var(--white-color) !important;
@@ -1281,7 +1281,7 @@ body.light-theme .theme-toggle-btn {
     font-size: 14px;
     font-weight: 300 !important;
     width: 100%;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .about-main img {
@@ -2621,7 +2621,7 @@ p,
 li {
     font-size: 14px;
     font-weight: 300 !important;
-    line-height: 1.8;
+    line-height: 1.9;
     margin: 0;
     color: var(--grey-bg-b-color);
 }
@@ -2944,6 +2944,7 @@ ul {
     background-color: #f2f2f2;
     border-radius: var(--border-radius-1);
     outline: 1px solid var(--border-color);
+    object-fit: cover;
 
 
 }

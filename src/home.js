@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from './card';
-import useFadeIn from './components/useFadeIn';
-import useScrollEffect from './components/useScrollEffect';
+// import useFadeIn from './components/useFadeIn';
+// import useScrollEffect from './components/useScrollEffect';
 import LockPopup from './components/lockpopup'; // Import LockPopup component
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -9,7 +9,7 @@ import BubbleButton from './components/BubbleButton';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { CardSwipe } from './components/CardSwipe';
-import SmoothScrollProvider from './components/Scrollsmooth';
+// import SmoothScrollProvider from './components/Scrollsmooth';
 
 const images = [
   { src: "img/projects/cf.webp", alt: "Image 1" },
@@ -18,8 +18,8 @@ const images = [
 ]
 
 const Home = () => {
-  useFadeIn();
-  useScrollEffect();
+  // useFadeIn();
+  // useScrollEffect();
   const cardsContainerRef = useRef(null);
 
   // Manage popup state
@@ -35,7 +35,7 @@ const Home = () => {
   const cardsData = [
     { title: "Boosting Conversions with Smart Interior UX", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Designing efficiency for interior designers", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
-    { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.png", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
+    // { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.png", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.jpeg", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
     { title: "Crafting Unified Ride Booking Experience", type: "Yalla Gai", year: "Professional 2022-2023", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: false, password: "surya@123" },
     { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.png", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
@@ -80,7 +80,7 @@ const Home = () => {
         className="sticky-toast"
       />
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
-      <SmoothScrollProvider duration={1.2}>
+      {/* <SmoothScrollProvider duration={1.2}> */}
 
         <main className='z-index-11 '>
           <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
@@ -181,7 +181,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="cards-container home-cards-container width-450" id="cards-container" ref={cardsContainerRef}>
+                <div className="cards-container home-cards-container width-450 display-none" id="cards-container" ref={cardsContainerRef}>
                   {cardsData.map((card, index) => (
                     <Card
                       key={index}
@@ -192,7 +192,7 @@ const Home = () => {
                   ))}
                 </div>
 
-                {/* <div className='df-g8 fd-c gap-36'>
+                <div className='df-g8 fd-c gap-36'>
                 <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
                 </a>
                 <div className='width-450 width-slider'>
@@ -212,12 +212,12 @@ const Home = () => {
                   />
 
                 </div>
-              </div> */}
+              </div>
               </div>
             </div>
           </section>
         </main>
-      </SmoothScrollProvider>
+      {/* </SmoothScrollProvider> */}
 
       {/* <Footer /> */}
 
