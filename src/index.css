@@ -930,7 +930,7 @@ body.light-theme .theme-toggle-btn {
 
 .home-main-text {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--grey-bg-b-color);
     font-weight: 300;
     line-height: 1.9;
@@ -1110,8 +1110,8 @@ body.light-theme .theme-toggle-btn {
     display: flex;
 
     img {
-        width: 150px !important;
-        height: 150px !important;
+        width: 200px !important;
+        height: 210px !important;
         object-fit: cover;
         border: 1px solid var(--border-color);
     }
@@ -1278,7 +1278,7 @@ body.light-theme .theme-toggle-btn {
 
 .about-main p {
     color: var(--grey-bg-b-color);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300 !important;
     width: 100%;
     line-height: 1.9;
@@ -1729,7 +1729,7 @@ body.light-theme .theme-toggle-btn {
         width: 100% !important;
     }
     .width-slider {
-        width: 85% !important;
+        width: 90% !important;
     }
 
 .slide-image {
@@ -2581,7 +2581,7 @@ a {
     gap: 40px;
 
     int {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 500 !important;
         line-height: 1.6;
         margin: 0;
@@ -2619,7 +2619,7 @@ a {
 
 p,
 li {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300 !important;
     line-height: 1.9;
     margin: 0;
@@ -2974,7 +2974,7 @@ ul {
 }
 
 .pd-sub-heading-2 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--grey-bg-b-color);
     margin-bottom: 16px;

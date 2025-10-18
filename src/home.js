@@ -136,7 +136,7 @@ const Home = () => {
                     <div className='profile-img'>
                       <img
                         style={{ width: '150px', borderRadius: '24px' }}
-                        src={'img/profile-png.webp'}
+                        src={'img/profile-2test.jpeg'}
                         alt="profile-img"
                       />
                     </div>
@@ -144,7 +144,7 @@ const Home = () => {
                   <div className='df-g8 fd-c width-100'>
                     <div className='home-main-text df-g8 gap-20 fd-c'>
                       <span>
-                        Hi, I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> I love turning complex workflows into simple, intuitive products that just feel right.
+                        I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> turning complex workflows into seamless, high-performing experiences. I craft products that boost efficiency, clarity, and growth.
                       </span>
                       <span>
                         Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
@@ -162,8 +162,8 @@ const Home = () => {
                           </span>
                         </div>
                       </div>
-                      <span>
-                        I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.                    </span>
+                      {/* <span>
+                        I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.                    </span> */}
                       <div className='df-g8'>
                         {/* <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Email
