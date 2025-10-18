@@ -3143,7 +3143,7 @@ ul {
     .main-image {
         width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
         margin: auto;
-        padding: 0 24px;
+        padding: 0 0;
     }
 
     .project-details-main {
