@@ -8,7 +8,7 @@ import ZoomOnScroll from '../components/ZoomOnScroll';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import BubbleButton from '../components/BubbleButton';
-import SmoothScrollProvider from '../components/Scrollsmooth';
+// import SmoothScrollProvider from '../components/Scrollsmooth';
 
 
 const MyDeziner = () => {
@@ -88,7 +88,7 @@ const MyDeziner = () => {
       </head>
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
 
-      <SmoothScrollProvider duration={1.1}>
+      {/* <SmoothScrollProvider duration={1.1}> */}
 
         <main>
 
@@ -111,7 +111,7 @@ const MyDeziner = () => {
 
             <div className="full-bg">
               <div className=" p-img-1 main-image">
-                <img src="img/projects/mydeziner.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-in' />
+                <img src="img/projects/mydeziner.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-inn' />
               </div>
               <div className="bg-main width-unset mobile-bg-main">
                 <div className="project-details-main">
@@ -125,47 +125,47 @@ const MyDeziner = () => {
                     </div>
 
                     <div className="project-breif-section">
-                      <div className="project-breif-heading fade-in">
+                      <div className="project-breif-heading fade-inn">
                         <span className=''>01</span>
                         <span className=''>Project Overview</span>
                       </div>
-                      <div className="project-breif-main fade-in">
+                      <div className="project-breif-main fade-inn">
                         <div className="pd-heading-sub-div">
-                          <a className="fade-in pd-main-heading-2 translate-text-up "> Project Type
+                          <a className="fade-inn pd-main-heading-2 translate-text-up "> Project Type
                           </a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down "> Product
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down "> Product
                             Design</a>
                         </div>
                         <div className="pd-heading-div-main">
-                          <a className="fade-in pd-main-heading-2 translate-text-up ">Timeline</a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down "> 2024-2025
+                          <a className="fade-inn pd-main-heading-2 translate-text-up ">Timeline</a>
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down "> 2024-2025
                           </a>
                         </div>
                         <div className="pd-heading-div-main">
-                          <a className="fade-in pd-main-heading-2 translate-text-up ">Contributors</a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down "> Sai Chittala
+                          <a className="fade-inn pd-main-heading-2 translate-text-up ">Contributors</a>
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down "> Sai Chittala
                           </a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down "> Tulasiram Kadiyala </a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down "> Boyapati Ravi Kumar </a>
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down "> Tulasiram Kadiyala </a>
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down "> Boyapati Ravi Kumar </a>
                         </div>
                         <div className="pd-heading-div-main">
-                          <a className="fade-in pd-main-heading-2 translate-text-up ">My Contribution</a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down ">Experience Design
+                          <a className="fade-inn pd-main-heading-2 translate-text-up ">My Contribution</a>
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down ">Experience Design
                           </a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down ">Interface Design
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down ">Interface Design
                           </a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down ">Product Design
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down ">Product Design
                           </a>
-                          <a className="fade-in pd-sub-heading-2 translate-text-down ">Interaction Design</a>
+                          <a className="fade-inn pd-sub-heading-2 translate-text-down ">Interaction Design</a>
                         </div>
                       </div>
                       <div className="pd-main" >
                         <div className="   pd-content-main gap-72 margin-100">
-                          {/* <ReactBeforeSliderComponent className='fade-in '
+                          {/* <ReactBeforeSliderComponent className='fade-inn '
                           firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.webp' }}  // Passing the first image
                           secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
                         /> */}
-                          <div className="content-div-main fade-in width-800">
+                          <div className="content-div-main fade-inn width-800">
                             <a className=" content-div-main-heading-2 translate-text-up ">About
                             </a>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
@@ -174,11 +174,11 @@ const MyDeziner = () => {
                             </div>
                           </div>
                           {/* <div>
-                          <int className="fade-in">
+                          <int className="fade-inn">
                             <p className=''>I led the end-to-end redesign of Customfurnish’s web experience to turn <int>uncertain browsers into confident buyers</int> - real-time consultation, and elegant UX that built trust and drove a <int>25% increase in lead conversions.</int></p></int>
                         </div> */}
                           <div></div>
-                          <div className="content-div-main fade-in width-800">
+                          <div className="content-div-main fade-inn width-800">
                             <a className=" content-div-main-heading-2 translate-text-up ">The Problem
                             </a>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
@@ -195,12 +195,12 @@ const MyDeziner = () => {
 
                             </div>
                           </div>
-                          <img src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-in' loading="lazy" />
+                          <img src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-inn' loading="lazy" />
                           <div></div>
-                          <div className="content-div-main fade-in  width-800">
-                            <a className="fade-in content-div-main-heading-2 translate-text-up ">The Challenge
+                          <div className="content-div-main fade-inn  width-800">
+                            <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Challenge
                             </a>
-                            <div className='fade-in' style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                            <div className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                               <p>Interior design is a game of speed and imagination. When a customer comes to CustomFurnish, they expect to see options and quotes quickly. The problem was that MyDeziner’s workflow wasn’t optimized for efficiency:
                               </p>
                               <ul className='df-g8 fd-c gap-12 margin-unset'>
@@ -214,10 +214,10 @@ const MyDeziner = () => {
                               </p>
                             </div>
                           </div>
-                          <div className="content-div-main fade-in  width-800">
-                            <a className="fade-in content-div-main-heading-2 translate-text-up ">The Solution
+                          <div className="content-div-main fade-inn  width-800">
+                            <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Solution
                             </a>
-                            <div className='fade-in' style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                            <div className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                               <p >To address these bottlenecks, I redesigned MyDeziner as an intelligent design companion for interior designers at CustomFurnish. The core improvements revolved around three pillars:
                               </p>
                               <ul className='df-g8 fd-c gap-12 margin-unset'>
@@ -248,10 +248,10 @@ const MyDeziner = () => {
                           />
                         </div>      */}
                           <div className='df-g8 fd-c gap-24 margin-unset'>
-                            <a className="fade-in content-div-main-heading-2 translate-text-up width-800">Solution 1 : From Clutter to Clarity: The New Way to Manage Properties
+                            <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 1 : From Clutter to Clarity: The New Way to Manage Properties
                             </a>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-in content-div-main-heading-4 translate-text-up width-800 margin-unset">How I Approached the Problem
+                              <a className="fade-inn content-div-main-heading-4 translate-text-up width-800 margin-unset">How I Approached the Problem
                               </a>
                               <p className='fs-italic'>I began by sitting with the people who live this challenge every day - interior design managers. Across 5 interviews, one pattern stood out:
                               </p>
@@ -265,7 +265,7 @@ const MyDeziner = () => {
                                 </p>
                               </div>
                             </div>
-                            <div className="tll-video fade-in">
+                            <div className="tll-video fade-inn">
                               <iframe
                                 src="https://www.tella.tv/video/cmeh5z6rd001a0bl1eo2a2cyo/embed?b=0&title=0&a=0&loop=0&autoPlay=true&t=0&muted=1&wt=0"
                                 allowFullScreen
@@ -274,7 +274,7 @@ const MyDeziner = () => {
                               ></iframe>
                             </div>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-in content-div-main-heading-4 translate-text-up width-800 margin-unset">The Breakthrough
+                              <a className="fade-inn content-div-main-heading-4 translate-text-up width-800 margin-unset">The Breakthrough
                               </a>
                               <p>Now, what once took 30–40 minutes happens in 2–3 minutes.
                               </p>
@@ -285,10 +285,10 @@ const MyDeziner = () => {
                             </div>
                           </div>
                           <div className='df-g8 fd-c gap-24 margin-unset'>
-                            <a className="fade-in content-div-main-heading-2 translate-text-up width-800">Solution 2: Stop Hunting, Start Finding – Smarter Property Search
+                            <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 2: Stop Hunting, Start Finding – Smarter Property Search
                             </a>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-in content-div-main-heading-4 translate-text-up width-800 margin-unset">How I Approached the Problem
+                              <a className="fade-inn content-div-main-heading-4 translate-text-up width-800 margin-unset">How I Approached the Problem
                               </a>
                               <p className='fs-italic'>Designers told me the same pain over and over:
                               </p>
@@ -303,7 +303,7 @@ const MyDeziner = () => {
                               </div>
                             </div>
 
-                            <div className="tll-video fade-in">
+                            <div className="tll-video fade-inn">
                               <iframe
                                 src="https://www.tella.tv/video/cmeh77dok00000bk1h2r3bjpl/embed?b=0&title=0&a=0&loop=1&autoPlay=true&t=0&muted=1&wt=0"
                                 allowFullScreen
@@ -312,7 +312,7 @@ const MyDeziner = () => {
                               ></iframe>
                             </div>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-in content-div-main-heading-4 translate-text-up width-800 margin-unset">The Breakthrough
+                              <a className="fade-inn content-div-main-heading-4 translate-text-up width-800 margin-unset">The Breakthrough
                               </a>
                               <p>Instead of making them remember, I made the system do the remembering.
                               </p>
@@ -325,10 +325,10 @@ const MyDeziner = () => {
                           </div>
 
                           <div className='df-g8 fd-c gap-24 margin-unset'>
-                            <a className="fade-in content-div-main-heading-2 translate-text-up width-800">Solution 3 : Copy Once, Apply Everywhere – Smarter Material Duplication
+                            <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 3 : Copy Once, Apply Everywhere – Smarter Material Duplication
                             </a>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-in content-div-main-heading-4 translate-text-up width-800 margin-unset">How I Approached the Problem
+                              <a className="fade-inn content-div-main-heading-4 translate-text-up width-800 margin-unset">How I Approached the Problem
                               </a>
                               <p className='fs-italic'>Through shadowing 4 senior designers, one friction point kept resurfacing:
                               </p>
@@ -342,7 +342,7 @@ const MyDeziner = () => {
                                 </p>
                               </div>
                             </div>
-                            <div className="tll-video fade-in">
+                            <div className="tll-video fade-inn">
                               <iframe
                                 src="https://www.tella.tv/video/cmeh5yeqf00140bie36vu05se/embed?b=0&title=0&a=0&loop=1&autoPlay=true&t=0&muted=1&wt=0"
                                 allowFullScreen
@@ -351,7 +351,7 @@ const MyDeziner = () => {
                               ></iframe>
                             </div>
                             <div className='df-g8 fd-c gap-16 margin-unset'>
-                              <a className="fade-in content-div-main-heading-4 translate-text-up width-800 mb-unset">The Breakthrough
+                              <a className="fade-inn content-div-main-heading-4 translate-text-up width-800 mb-unset">The Breakthrough
                               </a>
                               <p className='width-800'>Now, what took 20+ manual steps can be done in just 2 clicks.
                               </p>
@@ -376,23 +376,23 @@ const MyDeziner = () => {
                   {/* <div className="project-details">
                   <div className="p-main-imgs padding-bottom-unset">
                     <div className="p-2imgs-2">
-                      <img src="img/projects/petzy.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
-                      <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                      <img src="img/projects/petzy.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                      <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                     </div>
                     <div >
-                      <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                      <img src="img/projects/shruh.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                     </div>
                   </div>
                 </div> */}
 
                   {/* <div className="project-details padding-top-unset">
                   <div className="project-final-section">
-                    <div className="project-breif-heading fade-in">
+                    <div className="project-breif-heading fade-inn">
                       <span>05</span>
                       <span>Conclusion</span>
                     </div>
                     <div className="pd-content">
-                      <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-in" loading="lazy" />
+                      <img src="img/projects/customfurnish.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                       <p>MyDeziner redefines what interior design tools can do, empowering users to turn their creative visions into reality.</p>
                       <p>This project demonstrates my ability to:</p>
                       <p>	•	Build user-centered tools from scratch that address real-world needs.
@@ -409,29 +409,29 @@ const MyDeziner = () => {
                   </div>
                 </div> */}
 
-                  <div className="bg-full bg-white margin-unset">
+                  {/* <div className="bg-full bg-white margin-unset">
                     <div className="bg-main  padding-unset">
                       <div className="project-details">
-                        <div className="thankyou-content-heading fade-in cursor-text">
+                        <div className="thankyou-content-heading fade-inn cursor-text">
                           Thank you for viewing. <a className=''
                             href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
                             target="_blank">Have a look</a>
                         </div>
-                        {/* <div className="thankyou-content-heading fade-in">
+                        <div className="thankyou-content-heading fade-inn">
                         Thank you for viewing. <a
                           href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
                           target="_blank">Have a look</a>
-                      </div> */}
+                      </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           </section>
           <div className='grain' ></div>
         </main>
-      </SmoothScrollProvider>
+      {/* </SmoothScrollProvider> */}
       <Footer />
 
     </div>

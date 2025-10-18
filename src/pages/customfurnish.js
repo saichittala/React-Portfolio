@@ -229,7 +229,7 @@ const CustomFurnish = () => {
                         {/* <div className='width-800 project-details-subinternal'>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Insights</ch>
-                            <img src="img/projects/customfurnish/userinsights.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                            <img src="img/projects/customfurnish/userinsights.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                           </div>
                           <p className='width-800'><int>We went beyond the surface with interviews, analytics, and heatmaps. The data revealed where users got stuck—and why they left.</int></p>
 
@@ -237,7 +237,7 @@ const CustomFurnish = () => {
                         <div className='width-800 project-details-subinternal'>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up  width-800">Competitve Analysis</ch>
-                            <img src="img/projects/customfurnish/companalysis.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                            <img src="img/projects/customfurnish/companalysis.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                           </div>
                           <p className='width-800'><int>We studied key players in the interior design space—what made them trustworthy, where they lost users, and how Customfurnish could stand out with clarity, speed, and immersive features. The goal? Spot the gaps and design to fill them.</int></p>
                         </div> */}
@@ -246,11 +246,11 @@ const CustomFurnish = () => {
                           <div className='width-800 project-details-internal'>
                             <div className="pd-content width-800 fade-inn">
                               <ch className="fade-inn translate-text-up">User Persona 1</ch>
-                              <img src="img/projects/customfurnish/userpersona-1.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                              <img src="img/projects/customfurnish/userpersona-1.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                             </div>
                             <div className="pd-content width-800 fade-inn">
                               <ch className="fade-inn translate-text-up">User Persona 2</ch>
-                              <img src="img/projects/customfurnish/userpersona-2.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                              <img src="img/projects/customfurnish/userpersona-2.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                             </div>
                           </div>
                           <p className='width-800'><int>These personas reflect the hopes and headaches of our most common users—helping us empathize, prioritize, and humanize every interaction.</int></p>
@@ -259,7 +259,7 @@ const CustomFurnish = () => {
                         <div className='width-800 project-details-subinternal'>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up  width-800">Empathy Map</ch>
-                            <img src="img/projects/customfurnish/empathymap.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                            <img src="img/projects/customfurnish/empathymap.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                           </div>
                           <p className='width-800'><int>This map helped us understand Sushmitha's internal dialogue - why she feels overwhelmed and what would help her feel confident and in control.</int></p>
                         </div>
@@ -285,24 +285,24 @@ const CustomFurnish = () => {
                       </div>
                       <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Information Architecture</ch>
-                        <img src="img/projects/customfurnish/information-architecture.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                        <img src="img/projects/customfurnish/information-architecture.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                       </div>
 
                       <div className="pd-content width-800 fade-inn">
                         <ch className="fade-inn translate-text-up  width-800">Leads User Flow</ch>
-                        <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                        <img src="img/projects/customfurnish/userflow.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                       </div>
                       <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Design System</ch>
-                        <img src="img/projects/customfurnish/designsystem.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                        <img src="img/projects/customfurnish/designsystem.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                       </div>
                       <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Components</ch>
-                        <img src="img/projects/customfurnish/Components.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                        <img src="img/projects/customfurnish/Components.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                       </div>
                       <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Wireframes</ch>
-                        <img src="img/projects/customfurnish/wireframes.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                        <img src="img/projects/customfurnish/wireframes.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
 
                       </div>
                       {/* <div className="pd-content width-100">
@@ -331,7 +331,7 @@ const CustomFurnish = () => {
                           <p className='width-800 fade-inn'><int>Beyond metrics, we earned emotional buy-in from customers and stakeholders alike. The design felt trustworthy and that changed everything.
 
                           </int></p>
-                          <img src="img/projects/customfurnish/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
+                          <img src="img/projects/customfurnish/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
                         </div>
                       </div>
                     </div>
