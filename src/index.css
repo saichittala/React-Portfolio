@@ -933,7 +933,7 @@ body.light-theme .theme-toggle-btn {
     font-size: 16px;
     color: var(--grey-bg-b-color);
     font-weight: 300;
-    line-height: 1.9;
+    line-height: 2.1;
 
     white {
         color: var(--white-color) !important;

@@ -7,7 +7,6 @@ import "swiper/css"
 import "swiper/css/effect-cards"
 import "swiper/css/effect-coverflow"
 
-// Minimal badge replacement
 function Badge({ children, className = "" }) {
   return (
     <span className={`px-3 py-1 text-xs font-semibold rounded-full bg-pink-100 text-pink-700 ${className}`}>
@@ -26,7 +25,7 @@ export const CardSwipe = ({
   images,
   autoplayDelay = 2000,
   slideShadows = true,
-    onRequestLockPopup, // ✅ add here
+    onRequestLockPopup, 
 
 }) => {
   const css = `
