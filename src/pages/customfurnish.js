@@ -10,6 +10,7 @@ import 'react-before-after-slider-component/dist/build.css';
 import BubbleButton from '../components/BubbleButton';
 import { use } from 'react';
 // import SmoothScrollProvider from '../components/Scrollsmooth';
+import LazyImage from '../components/LazyImage';
 
 
 const CustomFurnish = () => {
@@ -161,7 +162,7 @@ const CustomFurnish = () => {
                             </p>
                           </div>
                         </div>
-                        <img src="img/projects/customfurnish/customfurnish-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
+                        <LazyImage src="img/projects/customfurnish/customfurnish-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
 
                         <div></div>
                         <div className="content-div-main fade-inn  width-800">

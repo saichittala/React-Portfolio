@@ -27,6 +27,10 @@ const Home = () => {
   const [currentPassword, setCurrentPassword] = useState('');
   const [currentLink, setCurrentLink] = useState('');
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
+  const [showAll, setShowAll] = useState(false); // 🔹 For View More/Less toggle
+  const RESUME_PASSWORD = "design@123"; // set your desired password
+
+
 
 
 
@@ -52,6 +56,7 @@ const Home = () => {
     setCurrentLink(link); // Store the link here
     setIsPasswordIncorrect(false); // Reset incorrect password flag
   };
+
 
   // Handle unlock logic
   const handleUnlock = (enteredPassword) => {
@@ -82,120 +87,148 @@ const Home = () => {
       {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
       {/* <SmoothScrollProvider duration={1.2}> */}
 
-        <main className='z-index-11 '>
-          <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
-            <BubbleButton
-              activationRef={cardsContainerRef}
-              text="View Recent Work"
-              showDelay={300}
-              hideDelay={500}
-              size={{
-                small: 12,
-                large: { width: 199, height: 48 } //48
-              }}
-              className="custom-bubble-class" // Optional
-            >
-              <img src="img/open-web.svg" alt="Arrow" />
-            </BubbleButton>
-          </a>
+      <main className='z-index-11 '>
+        <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
+          <BubbleButton
+            activationRef={cardsContainerRef}
+            text="View Recent Work"
+            showDelay={300}
+            hideDelay={500}
+            size={{
+              small: 12,
+              large: { width: 199, height: 48 } //48
+            }}
+            className="custom-bubble-class" // Optional
+          >
+            <img src="img/open-web.svg" alt="Arrow" />
+          </BubbleButton>
+        </a>
 
-          <section className="fade-in">
-            <div className="background-video-wrapper">
-              <video autoPlay muted loop playsInline className="background-video">
-                <source src="/img/bg-vvv.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className="full-bg bg-black">
+        <section className="fade-in">
+          <div className="background-video-wrapper">
+            <video autoPlay muted loop playsInline className="background-video">
+              <source src="/img/bg-vvv.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div className="full-bg bg-black">
 
-              <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
-                <div className='df-g8 gap-36 mobile-home-container fd-c width-450'>
-                  <div className='df-g8 fd-c width-100 display-none'>
-                    <div className='btn-4 btn-4-hn'>
-                      <a href='/'>
-                        <img
-                          src={'img/sai.svg'}
-                          alt="menu-icon"
-                        />
-                      </a>
-                    </div>
-                    <div className='df-g8 display-none' >
-                      <div className='btn-4 btn-4-hn cursor-text'>
-                        UX
-                      </div>
-                      <div className='btn-4 btn-4-hn cursor-text'>
-                        UI
-                      </div>
-                      <div className='btn-4 btn-4-hn cursor-text'>
-                        Product
-                      </div>
-                    </div>
-
-                  </div>
-                  <div className='df-g8 width-fc'>
-                    <div className='profile-img'>
+            <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
+              <div className='df-g8 gap-36 mobile-home-container fd-c width-450'>
+                <div className='df-g8 fd-c width-100 display-none'>
+                  <div className='btn-4 btn-4-hn'>
+                    <a href='/'>
                       <img
-                        style={{ width: '150px', borderRadius: '24px' }}
-                        src={'img/profile-2test.jpeg'}
-                        alt="profile-img"
+                        src={'img/sai.svg'}
+                        alt="menu-icon"
                       />
+                    </a>
+                  </div>
+                  <div className='df-g8 display-none' >
+                    <div className='btn-4 btn-4-hn cursor-text'>
+                      UX
+                    </div>
+                    <div className='btn-4 btn-4-hn cursor-text'>
+                      UI
+                    </div>
+                    <div className='btn-4 btn-4-hn cursor-text'>
+                      Product
                     </div>
                   </div>
-                  <div className='df-g8 fd-c width-100'>
-                    <div className='home-main-text df-g8 gap-20 fd-c'>
-                      <span>
-                        I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> turning complex workflows into seamless, high-performing experiences. I craft products that boost efficiency, clarity, and growth.
-                      </span>
-                      <span>
-                        Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
-                      </span>
-                      <div className='df-g8 fd-c gap-12 display-none'>
-                        <white>
-                          Some things I’ve worked on:
-                        </white>
-                        <div className='df-g8 fd-c gap-16'>
-                          <span>
-                            • MyDeziner – SaaS tool that cut design workflow time by 40%
-                          </span>
-                          <span>
-                            • CustomFurnish – redesigned flows that boosted conversions by 30%
-                          </span>
-                        </div>
+
+                </div>
+                <div className='df-g8 width-fc'>
+                  <div className='profile-img'>
+                    <img
+                      style={{ width: '150px', borderRadius: '24px' }}
+                      src={'img/profile-2test.jpeg'}
+                      alt="profile-img"
+                    />
+                  </div>
+                </div>
+                <div className='df-g8 fd-c width-100'>
+                  <div className='home-main-text df-g8 gap-20 fd-c'>
+                    <span>
+                      I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> turning complex workflows into seamless, high-performing experiences. I craft products that boost efficiency, clarity, and growth.
+                    </span>
+                    <span>
+                      Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
+                    </span>
+                    <div className='df-g8 fd-c gap-12 display-none'>
+                      <white>
+                        Some things I’ve worked on:
+                      </white>
+                      <div className='df-g8 fd-c gap-16'>
+                        <span>
+                          • MyDeziner – SaaS tool that cut design workflow time by 40%
+                        </span>
+                        <span>
+                          • CustomFurnish – redesigned flows that boosted conversions by 30%
+                        </span>
                       </div>
-                      {/* <span>
+                    </div>
+                    {/* <span>
                         I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.                    </span> */}
-                      <div className='df-g8'>
-                        {/* <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                    <div className='df-g8'>
+                      {/* <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Email
                       </a> */}
-                        <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                          LinkedIn
-                        </a>
-                        <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                          Upwork
-                        </a>
-                        <a href="Resume.pdf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                          Resume
-                        </a>
-                      </div>
+                      <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        LinkedIn
+                      </a>
+                      <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
+                        Upwork
+                      </a>
+                      <a
+                        className="intro-grey-text intro-link"
+                        onClick={() => handleRequestLockPopup("Resume.pdf", RESUME_PASSWORD)}
+                      >
+                        Resume
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div className="cards-container home-cards-container width-450 display-none" id="cards-container" ref={cardsContainerRef}>
-                  {cardsData.map((card, index) => (
-                    <Card
-                      key={index}
-                      {...card}
-                      onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
-                      password={card.password} // Pass password prop for locked cards
-                    />
-                  ))}
-                </div>
+              </div>
+              {/* Cards Section */}
+              <motion.div
+                layout
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="cards-container home-cards-container width-450"
+                id="cards-container"
+                ref={cardsContainerRef}
+              >
+                {(showAll ? cardsData : cardsData.slice(0, 4)).map((card, index) => (
+                  <Card
+                    key={index}
+                    {...card}
+                    onRequestLockPopup={handleRequestLockPopup}
+                    password={card.password}
+                  />
+                ))}
+              </motion.div>
 
-                <div className='df-g8 fd-c gap-36'>
+              {/* View More / Less Button */}
+              {cardsData.length > 4 && (
+                <div >
+                  <button
+                    className="btn-1"
+                    onClick={() => {
+                      setShowAll(!showAll);
+                      if (showAll) {
+                        // scroll back to top of cards when collapsing
+                        cardsContainerRef.current?.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                  >
+                    {showAll ? "View Less" : "View More"}
+                  </button>
+                </div>
+              )}
+
+              <div className='df-g8 fd-c gap-36 display-none'>
                 <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
                 </a>
-                <div className='width-450 width-slider'>
+                <div className='width-450 width-slider '>
                   <CardSwipe
                     images={cardsData.map(card => ({
                       src: card.image,
@@ -213,10 +246,10 @@ const Home = () => {
 
                 </div>
               </div>
-              </div>
             </div>
-          </section>
-        </main>
+          </div>
+        </section>
+      </main>
       {/* </SmoothScrollProvider> */}
 
       {/* <Footer /> */}

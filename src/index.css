@@ -142,6 +142,29 @@
     monospace; */
 }
 
+
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f5f5f5 37%,
+    #e0e0e0 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
 .border-none-img {
     img {
         border: none !important;
@@ -746,6 +769,7 @@ body.light-theme .theme-toggle-btn {
     text-decoration: none;
     color: var(--white-color);
     border-radius: 99px;
+    border: 1px solid var(--border-color);
 }
 
 .btn-1:hover {
