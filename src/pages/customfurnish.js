@@ -293,19 +293,19 @@ const CustomFurnish = () => {
                         <ch className="fade-inn translate-text-up  width-800">Leads User Flow</ch>
                         <img src="img/projects/customfurnish/userflow.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                       </div>
-                      <div className="pd-content width-100">
+                      {/* <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Design System</ch>
                         <img src="img/projects/customfurnish/designsystem.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
-                      </div>
+                      </div> */}
                       <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Components</ch>
                         <img src="img/projects/customfurnish/Components.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                       </div>
-                      <div className="pd-content width-100">
+                      {/* <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Wireframes</ch>
                         <img src="img/projects/customfurnish/wireframes.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
 
-                      </div>
+                      </div> */}
                       {/* <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Prototype</ch>
                         <iframe
