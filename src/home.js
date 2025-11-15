@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Card from './card';
-// import useFadeIn from './components/useFadeIn';
-// import useScrollEffect from './components/useScrollEffect';
 import LockPopup from './components/lockpopup'; // Import LockPopup component
 import { useRef } from "react";
 import { motion } from "framer-motion";
@@ -9,7 +7,8 @@ import BubbleButton from './components/BubbleButton';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { CardSwipe } from './components/CardSwipe';
-// import SmoothScrollProvider from './components/Scrollsmooth';
+import TestimonialsCard from './components/TestimonialsCard';
+
 
 const images = [
   { src: "img/projects/cf.webp", alt: "Image 1" },
@@ -18,8 +17,6 @@ const images = [
 ]
 
 const Home = () => {
-  // useFadeIn();
-  // useScrollEffect();
   const cardsContainerRef = useRef(null);
 
   // Manage popup state
@@ -28,7 +25,7 @@ const Home = () => {
   const [currentLink, setCurrentLink] = useState('');
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
   const [showAll, setShowAll] = useState(false); // 🔹 For View More/Less toggle
-  const RESUME_PASSWORD = "design@123"; // set your desired password
+  const RESUME_PASSWORD = "surya@123"; // set your desired password
 
 
 
@@ -105,38 +102,9 @@ const Home = () => {
         </a>
 
         <section className="fade-in">
-          <div className="background-video-wrapper">
-            <video autoPlay muted loop playsInline className="background-video">
-              <source src="/img/bg-vvv.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
           <div className="full-bg bg-black">
-
             <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
               <div className='df-g8 gap-36 mobile-home-container fd-c width-450'>
-                <div className='df-g8 fd-c width-100 display-none'>
-                  <div className='btn-4 btn-4-hn'>
-                    <a href='/'>
-                      <img
-                        src={'img/sai.svg'}
-                        alt="menu-icon"
-                      />
-                    </a>
-                  </div>
-                  <div className='df-g8 display-none' >
-                    <div className='btn-4 btn-4-hn cursor-text'>
-                      UX
-                    </div>
-                    <div className='btn-4 btn-4-hn cursor-text'>
-                      UI
-                    </div>
-                    <div className='btn-4 btn-4-hn cursor-text'>
-                      Product
-                    </div>
-                  </div>
-
-                </div>
                 <div className='df-g8 width-fc'>
                   <div className='profile-img'>
                     <img
@@ -243,9 +211,26 @@ const Home = () => {
                     slideShadows={true}
                     onRequestLockPopup={handleRequestLockPopup} // Pass the popup handler
                   />
-
+                </div>
+                <div className='width-450 '>
+                  <CardSwipe
+                    images={cardsData.map(card => ({
+                      src: card.image,
+                      alt: card.title,
+                      title: card.title,
+                      year: card.year,
+                      link: card.link,
+                      locked: card.locked,
+                      password: card.password
+                    }))}
+                    autoplayDelay={100000}
+                    slideShadows={true}
+                    onRequestLockPopup={handleRequestLockPopup} // Pass the popup handler
+                  />
                 </div>
               </div>
+              <TestimonialsCard />
+
             </div>
           </div>
         </section>

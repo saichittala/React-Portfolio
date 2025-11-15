@@ -821,7 +821,6 @@ body.light-theme .theme-toggle-btn {
 
 .btn-4 {
     display: flex;
-    padding: 36px;
     align-items: flex-start;
     gap: 10px;
     transition: 0.2s cubic-bezier(0, -.6, 0, 1.07);
@@ -833,13 +832,14 @@ body.light-theme .theme-toggle-btn {
     backdrop-filter: blur(20px);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-1);
-    width: 100%;
     align-items: center;
     justify-content: center;
     font-size: 12px;
     height: 100%;
     line-height: 1.6;
     will-change: transform;
+    width: 40px !important;
+    height: 40px;
 }
 
 
@@ -1063,10 +1063,18 @@ body.light-theme .theme-toggle-btn {
 .jc-sb {
     justify-content: space-between !important;
 }
+.jc-c {
+    justify-content: center !important;
+}
 
 .width-fc {
     width: fit-content !important;
 }
+
+.height-fc {
+    height: fit-content !important;
+}
+
 
 .df-g8 {
     display: flex;
@@ -1648,6 +1656,79 @@ body.light-theme .theme-toggle-btn {
         opacity: 1;
     }
 }
+
+
+
+/* Testimonial */
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 36px;
+    background: var(--black-opacity-4);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-1);
+}
+
+.testimonial-text {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--grey-bg-b-color);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.quote-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.quote-image {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--border-color);
+}
+
+.testimonial-name {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+.testimonial-role {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--grey-bg-b-color);
+    padding-top: 8px;
+}
+
+.testimonial-count {
+    display: flex;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--border-color)
+}
+
+.bubble-dots {
+    width: 8% !important;
+    height: 8px !important;
+    border: none !important;
+    border-radius: 99px;
+    transition: all 0.3s ease;
+}
+
+.bubble-dots-active {
+    background: #ffffff !important;
+}
+
+.bubble-dots-inactive {
+    background: var(--grey-bg-b-color) !important;
+    opacity: 0.3;
+}
+
+
 
 .lets-connect-bubble {
     position: fixed;
