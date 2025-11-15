@@ -1106,6 +1106,10 @@ body.light-theme .theme-toggle-btn {
     display: none !important;
 }
 
+.border-none {
+    border: none !important;
+}
+
 .df {
     display: flex;
     flex-direction: column;
@@ -1669,6 +1673,7 @@ body.light-theme .theme-toggle-btn {
     background: var(--black-opacity-4);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-1);
+    cursor: grab;
 }
 
 .testimonial-text {

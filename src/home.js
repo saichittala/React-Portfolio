@@ -231,6 +231,12 @@ const Home = () => {
               </div>
               <TestimonialsCard />
 
+              <div className='df-g8 fd-c gap-36 '>
+                <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
+                </a>
+                
+              </div>
+
             </div>
           </div>
         </section>
@@ -239,7 +245,7 @@ const Home = () => {
 
       {/* <Footer /> */}
 
-      {/* LockPopup */}
+      {/* LockPopup */} 
       <LockPopup
         isVisible={isPopupVisible}
         onClose={closePopup}

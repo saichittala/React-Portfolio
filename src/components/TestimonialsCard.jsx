@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const TestimonialsCard = () => {
   const testimonials = [
@@ -23,21 +22,33 @@ const TestimonialsCard = () => {
 
   const [index, setIndex] = useState(0);
 
-  // Auto-slide every 10 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 10000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const handleNext = () => {
+  const goNext = () => {
     setIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const handlePrev = () => {
+  const goPrev = () => {
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  // Auto-slide every 10 seconds
+  useEffect(() => {
+    const t = setInterval(goNext, 10000);
+    return () => clearInterval(t);
+  }, []);
+
+  // Detect swipe direction
+  const handleDragEnd = (event, info) => {
+    const swipe = info.offset.x;
+
+    // If swiped left → next
+    if (swipe < -50) {
+      goNext();
+    }
+
+    // If swiped right → previous
+    if (swipe > 50) {
+      goPrev();
+    }
   };
 
   return (
@@ -50,47 +61,39 @@ const TestimonialsCard = () => {
         </a>
 
         <div className="display-flex gap-8">
-          <button
-            onClick={handlePrev}
-            className="btn-4"
-          >
-            <img src="img/left-arrow.svg" alt={testimonials[index].name} />
+          <button onClick={goPrev} className="btn-4">
+            <img src="img/left-arrow.svg" alt="prev" />
           </button>
 
-          <button
-            onClick={handleNext}
-            className="btn-4"
-          >
-            <img src="img/right-arrow.svg" alt={testimonials[index].name} />
+          <button onClick={goNext} className="btn-4">
+            <img src="img/right-arrow.svg" alt="next" />
           </button>
         </div>
       </div>
 
-      {/* Carousel - One card only */}
+      {/* Carousel */}
       <div className="relative w-full overflow-hidden min-h-[230px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={handleDragEnd}
+            dragElastic={0.3}
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -40 }}
-            transition={{ duration: 0.5 }}
-            className="w-full"
+            transition={{ duration: 0.45 }}
+            className="w-full cursor-grab active:cursor-grabbing"
           >
             <div className="testimonial-card">
-              <img src="img/quote.svg" alt={testimonials[index].name} className="quote-icon" />
+              <img src="img/quote.svg" alt="quote" className="quote-icon" />
 
               <p className="testimonial-text opacity-90 testimonial-content leading-relaxed">
                 “{testimonials[index].text}”
               </p>
 
               <div className="testimonial-info df-g8 gap-12 mt-3">
-                <img
-                  src={testimonials[index].image}
-                  alt={testimonials[index].name}
-                  className="quote-image display-none"
-                />
-
                 <div className="df-g8 fd-c">
                   <span className="testimonial-name">{testimonials[index].name}</span>
                   <span className="text-sm opacity-75 testimonial-role">{testimonials[index].role}</span>
@@ -101,6 +104,7 @@ const TestimonialsCard = () => {
         </AnimatePresence>
       </div>
 
+      {/* Dots */}
       <div className="df-g8 width-100 jc-c">
         <div className="display-flex justify-center items-center testimonial-count gap-8 mt-2">
           {testimonials.map((_, i) => (
@@ -108,15 +112,13 @@ const TestimonialsCard = () => {
               key={i}
               onClick={() => setIndex(i)}
               className={`
-    bubble-dots
-    ${i === index ? "bubble-dots-active" : "bubble-dots-inactive"}
-  `}
+                bubble-dots
+                ${i === index ? "bubble-dots-active" : "bubble-dots-inactive"}
+              `}
             ></button>
-
           ))}
         </div>
       </div>
-
 
     </section>
   );
