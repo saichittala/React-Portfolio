@@ -78,7 +78,7 @@ const TestimonialsCard = () => {
             className="w-full"
           >
             <div className="testimonial-card">
-              <img src="img/Quote.svg" alt={testimonials[index].name} className="quote-icon" />
+              <img src="img/quote.svg" alt={testimonials[index].name} className="quote-icon" />
 
               <p className="testimonial-text opacity-90 testimonial-content leading-relaxed">
                 “{testimonials[index].text}”

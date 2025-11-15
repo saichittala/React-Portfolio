@@ -1726,6 +1726,7 @@ body.light-theme .theme-toggle-btn {
 .bubble-dots-inactive {
     background: var(--grey-bg-b-color) !important;
     opacity: 0.3;
+    cursor: pointer;
 }
 
 
