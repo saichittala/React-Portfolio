@@ -54,14 +54,14 @@ const TestimonialsCard = () => {
             onClick={handlePrev}
             className="btn-4"
           >
-            <img src="./img/left-arrow.svg" alt={testimonials[index].name} />
+            <img src="img/left-arrow.svg" alt={testimonials[index].name} />
           </button>
 
           <button
             onClick={handleNext}
             className="btn-4"
           >
-            <img src="./img/right-arrow.svg" alt={testimonials[index].name} />
+            <img src="img/right-arrow.svg" alt={testimonials[index].name} />
           </button>
         </div>
       </div>
@@ -78,7 +78,7 @@ const TestimonialsCard = () => {
             className="w-full"
           >
             <div className="testimonial-card">
-              <img src="./img/Quote.svg" alt={testimonials[index].name} className="quote-icon" />
+              <img src="img/Quote.svg" alt={testimonials[index].name} className="quote-icon" />
 
               <p className="testimonial-text opacity-90 testimonial-content leading-relaxed">
                 “{testimonials[index].text}”
