@@ -93,9 +93,9 @@ const Home = () => {
             hideDelay={500}
             size={{
               small: 12,
-              large: { width: 199, height: 48 } //48
+              large: { width: 199, height: 48 } 
             }}
-            className="custom-bubble-class" // Optional
+            className="custom-bubble-class" 
           >
             <img src="img/open-web.svg" alt="Arrow" />
           </BubbleButton>
@@ -136,7 +136,7 @@ const Home = () => {
                       </div>
                     </div>
                     {/* <span>
-                        I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.                    </span> */}
+                        I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.</span> */}
                     <div className='df-g8'>
                       {/* <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         Email
@@ -157,7 +157,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              {/* Cards Section */}
+              
               <motion.div
                 layout
                 transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -175,7 +175,7 @@ const Home = () => {
                 ))}
               </motion.div>
 
-              {/* View More / Less Button */}
+              
               {cardsData.length > 4 && (
                 <div >
                   <button
@@ -183,7 +183,7 @@ const Home = () => {
                     onClick={() => {
                       setShowAll(!showAll);
                       if (showAll) {
-                        // scroll back to top of cards when collapsing
+                        
                         cardsContainerRef.current?.scrollIntoView({ behavior: "smooth" });
                       }
                     }}
@@ -209,7 +209,7 @@ const Home = () => {
                     }))}
                     autoplayDelay={100000}
                     slideShadows={true}
-                    onRequestLockPopup={handleRequestLockPopup} // Pass the popup handler
+                    onRequestLockPopup={handleRequestLockPopup}
                   />
                 </div>
                 <div className='width-450 '>
@@ -225,17 +225,16 @@ const Home = () => {
                     }))}
                     autoplayDelay={100000}
                     slideShadows={true}
-                    onRequestLockPopup={handleRequestLockPopup} // Pass the popup handler
+                    onRequestLockPopup={handleRequestLockPopup}
                   />
                 </div>
               </div>
               <TestimonialsCard />
 
-              <div className='df-g8 fd-c gap-36 '>
+              {/* <div className='df-g8 fd-c gap-36 '>
                 <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
                 </a>
-                
-              </div>
+              </div> */}
 
             </div>
           </div>
