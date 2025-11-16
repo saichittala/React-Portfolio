@@ -4,19 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const TestimonialsCard = () => {
   const testimonials = [
     {
-      text: "Sai has a deep understanding of both user experience and business goals. His designs improved our dashboard’s clarity and reduced user errors significantly.",
-      name: "Ananya Rao",
-      role: "Product Manager, CustomFurnish",
+      text: "Sai delivered outstanding results with complete professionalism. His attention to detail and patience made the entire process smooth and stress-free. The final outcome was far better than expected. If you want reliable, high-quality work, I strongly recommend Sai - you won’t be disappointed.",
+      name: "Boyapati Ravi Kumar",
+      role: "Senior Consultant, Visa",
     },
     {
-      text: "Working with Sai was a great experience. He transformed our concept into a polished, user-friendly tool that saved designers hours each week.",
-      name: "Ravi Sharma",
-      role: "Design Lead, MyDeziner",
-    },
-    {
-      text: "Professional, thoughtful, and detail-oriented — Sai’s design work consistently elevates our products’ usability and appeal.",
-      name: "Priya Mehta",
-      role: "Founder, HomeGymr",
+      text: "Thank you for your great effort. The work was completed perfectly. Sai paid attention to every detail and even the smallest adjustments, and he had the patience to work through everything. Thank you… There will definitely be more work between us, and I highly recommend him.",
+      name: "Abydas Abu",
+      role: "CEO, Yalla Gai",
     },
   ];
 
