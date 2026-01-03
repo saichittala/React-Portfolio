@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 // Import components
 import Header from './components/header.jsx';
@@ -101,6 +102,8 @@ function App() {
         <Route path="/works" element={<Works />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <Analytics />
     </HashRouter>
   );
 }
