@@ -1,5 +1,6 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Overpass+Mono:wght@300..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/switzer');
 
 
 
@@ -108,10 +109,13 @@
     --box-shadow-1: 0 8px 24px 2px #ffffff1f,
     0 0 0 1px #333;
 
+        --primary-font: 'Switzer', sans-serif;
+    --secondary-font: 'Switzer', sans-serif;
+
 
 
     /* Fonts */
-    --primary-font: Gi-apple-system,
+    /* --primary-font: Gi-apple-system,
     "Inter",
     BlinkMacSystemFont,
     "Hanken Grotesk",
@@ -128,7 +132,7 @@
     Roboto,
     "Helvetica Neue",
     Arial,
-    sans-serif;
+    sans-serif; */
     /* 
     --primary-font: 'Hanken Grotesk', sans-serif;
     --secondary-font: 'Hanken Grotesk', sans-serif; */
@@ -140,6 +144,16 @@
     monospace;
     --secondary-font: "Geist Mono",
     monospace; */
+    
+
+    /* --primary-font: "JetBrains Mono",
+    monospace;
+    --secondary-font: "JetBrains Mono",
+    monospace; */
+    /* --primary-font: "Geist Mono",
+    monospace;
+    --secondary-font: "Geist Mono",
+    monospace;
 }
 
 
@@ -183,8 +197,6 @@
 .cursor {
     overflow: hidden;
     /* Hide the overflow */
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .scroll-smooth {

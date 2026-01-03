@@ -93,9 +93,9 @@ const Home = () => {
             hideDelay={500}
             size={{
               small: 12,
-              large: { width: 199, height: 48 } 
+              large: { width: 199, height: 48 }
             }}
-            className="custom-bubble-class" 
+            className="custom-bubble-class"
           >
             <img src="img/open-web.svg" alt="Arrow" />
           </BubbleButton>
@@ -117,7 +117,7 @@ const Home = () => {
                 <div className='df-g8 fd-c width-100'>
                   <div className='home-main-text df-g8 gap-20 fd-c'>
                     <span>
-                      I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> turning complex workflows into seamless, high-performing experiences. I craft products that boost efficiency, clarity, and growth.
+                      I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> who turns complex systems into revenue-driving experiences.
                     </span>
                     <span>
                       Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
@@ -157,41 +157,48 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              
-              <motion.div
-                layout
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="cards-container home-cards-container width-450"
-                id="cards-container"
-                ref={cardsContainerRef}
-              >
-                {(showAll ? cardsData : cardsData.slice(0, 4)).map((card, index) => (
-                  <Card
-                    key={index}
-                    {...card}
-                    onRequestLockPopup={handleRequestLockPopup}
-                    password={card.password}
-                  />
-                ))}
-              </motion.div>
 
-              
-              {cardsData.length > 4 && (
-                <div >
-                  <button
-                    className="btn-1"
-                    onClick={() => {
-                      setShowAll(!showAll);
-                      if (showAll) {
-                        
-                        cardsContainerRef.current?.scrollIntoView({ behavior: "smooth" });
-                      }
-                    }}
-                  >
-                    {showAll ? "View Less" : "View More"}
-                  </button>
-                </div>
-              )}
+              <div className='df-g8 fd-c gap-36 '>
+                <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
+                </a>
+                <motion.div
+                  layout
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="cards-container home-cards-container width-450"
+                  id="cards-container"
+                  ref={cardsContainerRef}
+                >
+                  {(showAll ? cardsData : cardsData.slice(0, 4)).map((card, index) => (
+                    <Card
+                      key={index}
+                      {...card}
+                      onRequestLockPopup={handleRequestLockPopup}
+                      password={card.password}
+                    />
+                  ))}
+                </motion.div>
+
+
+                {cardsData.length > 4 && (
+                  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <button
+                      className="btn-1"
+                      onClick={() => {
+                        setShowAll(!showAll);
+                        if (showAll) {
+
+                          cardsContainerRef.current?.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                    >
+                      {showAll ? "View Less" : "View More"}
+                    </button>
+                  </div>
+                )}
+              </div>
+
+
+
 
               <div className='df-g8 fd-c gap-36 display-none'>
                 <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
@@ -244,7 +251,7 @@ const Home = () => {
 
       {/* <Footer /> */}
 
-      {/* LockPopup */} 
+      {/* LockPopup */}
       <LockPopup
         isVisible={isPopupVisible}
         onClose={closePopup}
