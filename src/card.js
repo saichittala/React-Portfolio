@@ -9,6 +9,7 @@ const Card = ({
   link,
   openInNewTab = true,
   locked,
+  confidential,
   onRequestLockPopup,
   password
 }) => {
@@ -55,11 +56,26 @@ const Card = ({
           backgroundPosition: 'center',
         }}
       >
-        <div className="sub-card">
-          <div className="card-content">
+        {confidential && (
+          <div
+            className="confidential-badge"
+            title="This project is under NDA. Happy to discuss it during the interview."
+          >
+            <img
+              src="img/lock-1.svg"
+              alt="lock"
+              className="confidential-icon"
+            />
+            <span className="confidential-text">Confidential</span>
           </div>
+        )}
+
+
+        <div className="sub-card">
+          <div className="card-content"></div>
         </div>
       </div>
+
       <div className='card-info df-g8'>
         <div className="card-title">{title}</div>
         <div className="card-year">{year}</div>

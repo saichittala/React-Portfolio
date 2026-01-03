@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Card from './card';
-import LockPopup from './components/lockpopup'; // Import LockPopup component
+import LockPopup from './components/lockpopup'; 
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import BubbleButton from './components/BubbleButton';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { CardSwipe } from './components/CardSwipe';
+// import { CardSwipe } from './components/CardSwipe';
 import TestimonialsCard from './components/TestimonialsCard';
 
 
@@ -35,13 +35,13 @@ const Home = () => {
 
   const cardsData = [
     { title: "Boosting Conversions with Smart Interior UX", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
-    { title: "Designing efficiency for interior designers", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: false },
+    { title: "Designing efficiency for interior designers", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: true, confidential: true, password: "surya@123" },
     // { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
     { title: "Crafting Unified Ride Booking Experience", type: "Yalla Gai", year: "Professional 2022-2023", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: false, password: "surya@123" },
-    { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.webp", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
+    // { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.webp", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
     // { title: "Modernizing Devotion Through Design", type: "Temple Address", year: "Professional 2022-2023", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "1" },
-    { title: "Crafting Connected Listening Journeys", type: "Muzicon", year: "Personal 2021-2022", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
+    // { title: "Crafting Connected Listening Journeys", type: "Muzicon", year: "Personal 2021-2022", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
   ];
 
 
@@ -122,25 +122,7 @@ const Home = () => {
                     <span>
                       Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
                     </span>
-                    <div className='df-g8 fd-c gap-12 display-none'>
-                      <white>
-                        Some things I’ve worked on:
-                      </white>
-                      <div className='df-g8 fd-c gap-16'>
-                        <span>
-                          • MyDeziner – SaaS tool that cut design workflow time by 40%
-                        </span>
-                        <span>
-                          • CustomFurnish – redesigned flows that boosted conversions by 30%
-                        </span>
-                      </div>
-                    </div>
-                    {/* <span>
-                        I love figuring out messy problems, but my goal is always to make things simple. Always open to talk about design, systems, AI, or the future of products.</span> */}
                     <div className='df-g8'>
-                      {/* <a href="mailto:sai.chittala@gmail.com" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        Email
-                      </a> */}
                       <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         LinkedIn
                       </a>
@@ -159,7 +141,7 @@ const Home = () => {
               </div>
 
               <div className='df-g8 fd-c gap-36 '>
-                <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
+                <a className="fade-in content-div-main-heading-2 translate-text-up width-450 margin-unset"> Selected Works
                 </a>
                 <motion.div
                   layout
@@ -200,7 +182,7 @@ const Home = () => {
 
 
 
-              <div className='df-g8 fd-c gap-36 display-none'>
+              {/* <div className='df-g8 fd-c gap-36 display-none'>
                 <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
                 </a>
                 <div className='width-450 width-slider '>
@@ -235,7 +217,7 @@ const Home = () => {
                     onRequestLockPopup={handleRequestLockPopup}
                   />
                 </div>
-              </div>
+              </div> */}
               <TestimonialsCard />
 
               {/* <div className='df-g8 fd-c gap-36 '>

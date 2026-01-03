@@ -10,7 +10,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
       passwordInputRef.current.focus();
     }
     if (isVisible) {
-      setErrorMessage(''); 
+      setErrorMessage('');
     }
   }, [isVisible]);
 
@@ -19,7 +19,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
   };
 
   const handlePasswordSubmit = () => {
-    onUnlock(enteredPassword.trim()) 
+    onUnlock(enteredPassword.trim())
   };
 
   const handleKeyPress = (event) => {
@@ -34,7 +34,9 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
     <div id="passwordPopup" className="popup" style={{ display: 'flex', zIndex: 1001 }}>
       <div className="popup-content">
         <div className="popup-header">
-          <img className="popup-lock-img" src="img/lock.svg" alt="lock" />
+          <div className='df-g8 popup-lock-img '>
+            <img className="icon-theme" src="img/lock-1.svg" alt="lock" />
+          </div>
           <img
             className="close-button cursor-link"
             src="img/close-popup.svg"
@@ -43,7 +45,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
           />
         </div>
         <div className="popup-body">
-          <p>Enter password to continue</p>
+          <p className="popup-label">Enter password to continue</p>
           <input
             className="cursor-text"
             ref={passwordInputRef}
@@ -54,16 +56,35 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
             onKeyDown={handleKeyPress}
           />
           {/* Display error message */}
-          {isPasswordIncorrect && 
+          {isPasswordIncorrect &&
             <p className="error-message" style={{ color: 'red', marginBottom: '0px', fontsize: '12px' }}>
               {errorMessage}
               Incorrect password. Please try again.</p>
           }
+
+          
         </div>
+        <div>
         <div className="unlock-projects cursor-link" onClick={handlePasswordSubmit}>
-          <img src="img/unlock.svg" alt="unlock" />
+          {/* <img src="img/unlock.svg" alt="unlock" /> */}
           <a>Unlock</a>
         </div>
+        <p className="popup-info-text df-g8 gap-8">
+            <img src="img/info.svg" alt="lock" />
+            <div>
+              {"Protected. Available upon "}
+              <a
+                href="mailto:sai.chittala@gmail.com"
+                className="popup-contact-link"
+              >
+                request</a>
+            </div>
+
+          </p>
+
+        </div>
+
+        
       </div>
     </div>
   );

@@ -63,6 +63,10 @@
         .menu-icon {
             filter: brightness(0) saturate(100%) invert(0%) sepia(90%) saturate(7460%) hue-rotate(152deg) brightness(108%) contrast(109%);
         }
+
+        .icon-theme {
+            filter: brightness(0) saturate(100%) invert(0%) sepia(12%) saturate(4486%) hue-rotate(349deg) brightness(79%) contrast(80%);
+        }
     }
 
     .dark-theme {
@@ -102,6 +106,8 @@
     /* Border Radius */
     --border-radius-1: 24px;
     --border-radius-2: 20px;
+    --border-radius-3: 16px;
+    --border-radius-4: 12px;
     --img-border-radius-1: 4px;
     --img-border-radius-2: 8px;
 
@@ -109,8 +115,10 @@
     --box-shadow-1: 0 8px 24px 2px #ffffff1f,
     0 0 0 1px #333;
 
-        --primary-font: 'Switzer', sans-serif;
-    --secondary-font: 'Switzer', sans-serif;
+    --primary-font: 'Switzer',
+    sans-serif;
+    --secondary-font: 'Switzer',
+    sans-serif;
 
 
 
@@ -144,7 +152,7 @@
     monospace;
     --secondary-font: "Geist Mono",
     monospace; */
-    
+
 
     /* --primary-font: "JetBrains Mono",
     monospace;
@@ -1075,6 +1083,7 @@ body.light-theme .theme-toggle-btn {
 .jc-sb {
     justify-content: space-between !important;
 }
+
 .jc-c {
     justify-content: center !important;
 }
@@ -1504,6 +1513,31 @@ body.light-theme .theme-toggle-btn {
 }
 
 
+.confidential-badge {
+    cursor: help;
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px 6px 9px;
+    background: rgba(176, 32, 32, 0.80);
+    backdrop-filter: blur(40px);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--card-white-color);
+    border-radius: var(--border-radius-3);
+    border: 1px solid var(--border-color);
+}
+
+.confidential-icon {
+    opacity: 0.9;
+}
+
+
+
 
 
 
@@ -1577,7 +1611,6 @@ body.light-theme .theme-toggle-btn {
     text-align: left;
     width: 75%;
     line-height: 1.2;
-
 }
 
 .sub-heading-type {
@@ -1713,6 +1746,7 @@ body.light-theme .theme-toggle-btn {
     font-weight: 400;
     color: var(--white-color);
 }
+
 .testimonial-role {
     font-size: 14px;
     font-weight: 300;
@@ -1934,15 +1968,51 @@ body.light-theme .theme-toggle-btn {
     font-size: 16px;
 }
 
+.popup-label {
+    font-size: 14px !important;
+    color: var(--grey-bg-b-color);
+    text-align: left;
+    margin-bottom: 4px !important;
+    font-weight: 300;
+}
+
 .popup-content img {
     border-radius: var(--border-radius-1) !important;
 }
 
 .popup-lock-img {
+    width: 56px;
+    height: 56px;
+    padding: 12px;
+    background: var(--black-2-color);
     border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-4);
+}
+
+
+.error-message {
+    font-size: 14px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+}
+
+.popup-info-text {
+    font-size: 14px !important;
+    color: var(--white-color);
+    text-align: left;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    font-weight: 300;
+    /* background: #0A84FF20; */
+    padding: 4px 12px;
+    border-radius: var(--border-radius-4);
+    margin-top: 12px !important;
+    font-style: normal !important;
+    justify-content: center;
 }
 
 /* Optional fade-in effect for the background */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1977,21 +2047,30 @@ body.light-theme .theme-toggle-btn {
     min-width: 310px;
     padding: 14px;
     font-size: 14px;
-    background: #000;
+    background: var(--black-2-color);
     border-width: 1px;
-    border-color: #ffffff40;
-    color: #fff;
-    border-radius: var(--border-radius-1);
+    border-color: var(--border-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius-4);
     font-weight: 400;
-
 }
+
+
 
 .popup-content input:hover {
     border-color: #ffffff60;
 }
 
+.popup-contact-link {
+    font-weight: 400;
+    font-style: normal !important;
+}
+
+.popup-contact-link:hover {
+    text-decoration: underline;
+}
+
 .unlock-projects {
-    /* cursor: pointer; */
     cursor: pointer;
     background: var(--white-color);
     display: flex;
@@ -2003,7 +2082,7 @@ body.light-theme .theme-toggle-btn {
     color: var(--black-color);
     transition: all .3s cubic-bezier(0, -.6, 0, 1.07);
     border: 1px solid transparent;
-    border-radius: var(--border-radius-1);
+    border-radius: var(--border-radius-4);
 }
 
 .unlock-projects a {
