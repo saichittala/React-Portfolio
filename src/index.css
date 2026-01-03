@@ -1986,6 +1986,7 @@ body.light-theme .theme-toggle-btn {
     padding: 12px;
     background: var(--black-2-color);
     border-radius: var(--border-radius-4);
+    border: 0.2px solid var(--border-color);
 }
 
 
