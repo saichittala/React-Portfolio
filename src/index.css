@@ -3475,10 +3475,10 @@ ul {
     background-color: transparent;
     border: 1px solid var(--border-color);
     color: var(--white-color);
-    border-radius: var(--border-radius-1);
+    border-radius: var(--border-radius-4);
     font-size: 13px;
     font-weight: 400;
-    padding: 14px 20px;
+    padding: 14px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     cursor: text;
 }
@@ -3508,7 +3508,7 @@ ul {
     color: #fff;
     font-weight: 400;
     border: none;
-    border-radius: var(--border-radius-1);
+    border-radius: var(--border-radius-4);
     padding: 14px;
     cursor: pointer;
     transition: background-color 0.2s ease;
