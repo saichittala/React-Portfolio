@@ -102,24 +102,24 @@ const CustomFurnish = () => {
                     </div>
                     <div className="project-breif-main fade-inn">
                       <div className="pd-heading-sub-div">
-                        <a className="fade-inn pd-main-heading-2 pt-40 translate-text-up"> Project Type
+                        <a className="fade-inn pd-main-heading-2    translate-text-up"> Project Type
                         </a>
                         <a className="fade-inn pd-sub-heading-2 translate-text-down"> UX
                           Design</a>
                       </div>
                       <div className="pd-heading-div-main">
-                        <a className="fade-inn pd-main-heading-2 pt-40 translate-text-up">Timeline</a>
+                        <a className="fade-inn pd-main-heading-2    translate-text-up">Timeline</a>
                         <a className="fade-inn pd-sub-heading-2 translate-text-down"> 2024-2025
                         </a>
                       </div>
                       <div className="pd-heading-div-main">
-                        <a className="fade-inn pd-main-heading-2 pt-40 translate-text-up">Contributors</a>
+                        <a className="fade-inn pd-main-heading-2    translate-text-up">Contributors</a>
                         <a className="fade-inn pd-sub-heading-2 translate-text-down"> Sai Chittala
                         </a>
                         <a className="fade-inn pd-sub-heading-2 translate-text-down"> Boyapati Ravi Kumar </a>
                       </div>
                       <div className="pd-heading-div-main">
-                        <a className="fade-inn pd-main-heading-2 pt-40 translate-text-up">My Contribution</a>
+                        <a className="fade-inn pd-main-heading-2    translate-text-up">My Contribution</a>
                         <a className="fade-inn pd-sub-heading-2 translate-text-down">UX Research
                         </a>
                         <a className="fade-inn pd-sub-heading-2 translate-text-down"> Product Strategy

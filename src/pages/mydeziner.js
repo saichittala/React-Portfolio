@@ -131,25 +131,25 @@ const MyDeziner = () => {
                       </div>
                       <div className="project-breif-main fade-inn">
                         <div className="pd-heading-sub-div">
-                          <a className="fade-inn pd-main-heading-2 pt-40 translate-text-up "> Project Type
+                          <a className="fade-inn pd-main-heading-2   translate-text-up "> Project Type
                           </a>
                           <a className="fade-inn pd-sub-heading-2 translate-text-down "> Product
                             Design</a>
                         </div>
                         <div className="pd-heading-div-main">
-                          <a className="fade-inn pd-main-heading-2 pt-40 translate-text-up ">Timeline</a>
+                          <a className="fade-inn pd-main-heading-2   translate-text-up ">Timeline</a>
                           <a className="fade-inn pd-sub-heading-2 translate-text-down "> 2024-2025
                           </a>
                         </div>
                         <div className="pd-heading-div-main">
-                          <a className="fade-inn pd-main-heading-2 pt-40 translate-text-up ">Contributors</a>
+                          <a className="fade-inn pd-main-heading-2   translate-text-up ">Contributors</a>
                           <a className="fade-inn pd-sub-heading-2 translate-text-down "> Sai Chittala
                           </a>
                           <a className="fade-inn pd-sub-heading-2 translate-text-down "> Tulasiram Kadiyala </a>
                           <a className="fade-inn pd-sub-heading-2 translate-text-down "> Boyapati Ravi Kumar </a>
                         </div>
                         <div className="pd-heading-div-main">
-                          <a className="fade-inn pd-main-heading-2 pt-40 translate-text-up ">My Contribution</a>
+                          <a className="fade-inn pd-main-heading-2   translate-text-up ">My Contribution</a>
                           <a className="fade-inn pd-sub-heading-2 translate-text-down ">Experience Design
                           </a>
                           <a className="fade-inn pd-sub-heading-2 translate-text-down ">Interface Design
@@ -251,7 +251,7 @@ const MyDeziner = () => {
                             <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 1 : From Clutter to Clarity: The New Way to Manage Properties
                             </a>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-inn content-div-main-heading-4 pt-40 translate-text-up width-800 margin-unset">How I Approached the Problem
+                              <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
                               </a>
                               <p className='fs-italic'>I began by sitting with the people who live this challenge every day - interior design managers. Across 5 interviews, one pattern stood out:
                               </p>
@@ -274,7 +274,7 @@ const MyDeziner = () => {
                               ></iframe>
                             </div>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-inn content-div-main-heading-4 pt-40 translate-text-up width-800 margin-unset">The Breakthrough
+                              <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">The Breakthrough
                               </a>
                               <p>Now, what once took 30–40 minutes happens in 2–3 minutes.
                               </p>
@@ -288,7 +288,7 @@ const MyDeziner = () => {
                             <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 2: Stop Hunting, Start Finding – Smarter Property Search
                             </a>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-inn content-div-main-heading-4 pt-40 translate-text-up width-800 margin-unset">How I Approached the Problem
+                              <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
                               </a>
                               <p className='fs-italic'>Designers told me the same pain over and over:
                               </p>
@@ -312,7 +312,7 @@ const MyDeziner = () => {
                               ></iframe>
                             </div>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-inn content-div-main-heading-4 pt-40 translate-text-up width-800 margin-unset">The Breakthrough
+                              <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">The Breakthrough
                               </a>
                               <p>Instead of making them remember, I made the system do the remembering.
                               </p>
@@ -328,7 +328,7 @@ const MyDeziner = () => {
                             <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 3 : Copy Once, Apply Everywhere – Smarter Material Duplication
                             </a>
                             <div className='df-g8 fd-c gap-16 width-800'>
-                              <a className="fade-inn content-div-main-heading-4 pt-40 translate-text-up width-800 margin-unset">How I Approached the Problem
+                              <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
                               </a>
                               <p className='fs-italic'>Through shadowing 4 senior designers, one friction point kept resurfacing:
                               </p>
@@ -351,7 +351,7 @@ const MyDeziner = () => {
                               ></iframe>
                             </div>
                             <div className='df-g8 fd-c gap-16 margin-unset'>
-                              <a className="fade-inn content-div-main-heading-4 pt-40 translate-text-up width-800 mb-unset">The Breakthrough
+                              <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 mb-unset">The Breakthrough
                               </a>
                               <p className='width-800'>Now, what took 20+ manual steps can be done in just 2 clicks.
                               </p>
