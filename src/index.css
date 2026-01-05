@@ -1995,7 +1995,7 @@ body.light-theme .theme-toggle-btn {
     margin-top: 0px !important;
     margin-left: 0px !important;
 }
-
+m
 .popup-info-text {
     font-size: 14px !important;
     color: var(--white-color);
@@ -2245,7 +2245,7 @@ body.light-theme .theme-toggle-btn {
 
 
 
-.translate-text-b {
+/* .translate-text-b {
     transform: translateY(-20px);
     transition: opacity 1.5s cubic-bezier(0, -.6, 0, 1.07) transform 1.5s;
 }
@@ -2258,7 +2258,7 @@ body.light-theme .theme-toggle-btn {
 .translate-text-up {
     transform: translateY(-20px);
     transition: opacity 1.5s cubic-bezier(0, -.6, 0, 1.07) transform 1.5s;
-}
+} */
 
 
 
