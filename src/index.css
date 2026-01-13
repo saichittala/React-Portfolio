@@ -454,7 +454,6 @@ body {
 
 .cursor-text:hover~.round-cursor {
     background-color: #0172EA;
-    /* Bright orange for example */
 }
 
 .cursor-link,
@@ -2059,6 +2058,12 @@ body.light-theme .theme-toggle-btn {
 
 .popup-content input:hover {
     border-color: #ffffff60;
+}
+
+.popup-content input:focus {
+    border-color: #0172ea;
+    box-shadow: 0 0 0 3px #0172ea4d;
+    outline: none;
 }
 
 .popup-contact-link {
