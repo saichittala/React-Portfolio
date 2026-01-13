@@ -93,7 +93,7 @@ const Home = () => {
             hideDelay={500}
             size={{
               small: 12,
-              large: { width: 199, height: 48 }
+              large: { width: 195, height: 48 }
             }}
             className="custom-bubble-class"
           >

@@ -73,7 +73,7 @@ const CustomFurnish = () => {
               hideDelay={500}
               size={{
                 small: 12,
-                large: { width: 211.65, height: 52 }
+                large: { width: 204, height: 52 }
               }}
               activateAt={isMobile ? -3.8 : -0.5}
               className="custom-bubble-class" >
