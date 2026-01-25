@@ -31,9 +31,9 @@ function Header({ toggleTheme, theme }) {
       <nav className="nav-bar width-nav">
 
         <div className='df-g8 jc-sb'>
-          <div className='df-g8 alc logo'>
+          <a href='/home' className='df-g8 alc logo'>
             <img src="img/logo-main.svg" alt="" className='logo' />
-          </div>
+          </a>
           <div className="nav-main">
             {/* Menu Icon */}
             <img
@@ -47,7 +47,8 @@ function Header({ toggleTheme, theme }) {
             <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
             <div className="mob-nav-btns">
               <Link to="/works" className="about-button btn-1 mob-btn-1">Work</Link>
-              <Link to="/about" className="about-button btn-1 mob-btn-1 ">Info</Link>
+              <Link to="/about" className="about-button btn-1 mob-btn-1 ">About</Link>
+              <Link to="/about" className="about-button btn-1 mob-btn-1 ">Contact</Link>
             </div>
           </div>
 
