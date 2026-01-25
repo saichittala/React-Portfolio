@@ -11,6 +11,11 @@ function Header({ toggleTheme, theme }) {
     setMenuActive(!menuActive);
   };
 
+  const handleMobileNavClick = () => {
+  setMenuActive(false);
+};
+
+
   useEffect(() => {
     if (iconRef.current) {
       const isActive = location.pathname === '/folder';
@@ -37,29 +42,50 @@ function Header({ toggleTheme, theme }) {
           <div className="nav-main">
             {/* Menu Icon */}
             <img
-            className={`menu-icon ${menuActive ? 'clicked' : ''}`}
-            src={menuActive ? 'img/close.svg' : 'img/menu.svg'}
-            alt="menu-icon"
-            onClick={toggleMenu}
-          />
+              className={`menu-icon ${menuActive ? 'clicked' : ''}`}
+              src={menuActive ? 'img/close.svg' : 'img/menu.svg'}
+              alt="menu-icon"
+              onClick={toggleMenu}
+            />
 
             {/* Mobile Menu Container - Updated to use Link */}
             <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
-            <div className="mob-nav-btns">
-              <Link to="/works" className="about-button btn-1 mob-btn-1">Work</Link>
-              <Link to="/about" className="about-button btn-1 mob-btn-1 ">About</Link>
-              <Link to="/about" className="about-button btn-1 mob-btn-1 ">Contact</Link>
+              <div className="mob-nav-btns">
+                <Link
+                  to="/works"
+                  className="about-button btn-1 mob-btn-1"
+                  onClick={handleMobileNavClick}
+                >
+                  Work
+                </Link>
+
+                <Link
+                  to="/about"
+                  className="about-button btn-1 mob-btn-1"
+                  onClick={handleMobileNavClick}
+                >
+                  About
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="about-button btn-1 mob-btn-1"
+                  onClick={handleMobileNavClick}
+                >
+                  Contact
+                </Link>
+              </div>
             </div>
-          </div>
+
 
             {/* Desktop Navigation - Updated to use Link and dynamic classes */}
             <div className="nav-btns">
               {/* The 'Home' link is active if the path is exactly "/" */}
-              <Link to="/" className={`about-button menu-nav header-text-1 ${location.pathname === '/' ? 'header-text-active' : ''}`}>
+              {/* <Link to="/" className={`about-button menu-nav header-text-1 ${location.pathname === '/' ? 'header-text-active' : ''}`}>
                 <img src="img/home-nav.svg" alt="logo" />
 
                 <span>Home</span>
-              </Link>
+              </Link> */}
 
               {/* The 'Works' link is active if the path is "/works" */}
               <Link to="/works" className={`about-button menu-nav header-text-1 ${location.pathname === '/works' ? 'header-text-active' : ''}`}>
