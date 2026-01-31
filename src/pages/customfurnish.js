@@ -144,7 +144,7 @@ const CustomFurnish = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">About
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p className='fade-inn'>At CustomFurnish, a full-service interior design brand, I redesigned the website to turn passive visitors into high-intent leads. Without relying on upfront pricing or 3D visuals, I crafted a trust-first, conversion-focused experience that simplified the user journey, built credibility, and increased consultation bookings - showcasing my ability to drive business results through strategic UX.
+                            <p className='fade-inn'>CustomFurnish is a full-service interior design company with strong offline expertise. However, the website worked more like a display page than a lead-generation platform. The redesign focused on turning the website into a clear, simple, and trust-first experience that supports both users and the sales team.
 
                             </p>
                           </div>
@@ -158,7 +158,7 @@ const CustomFurnish = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Problem
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p className='fade-inn'>CustomFurnish was losing high-intent users because the website didn’t build trust or guide them to take action. There was no clarity about the process, no emotional connection, and no compelling reason to book a consultation.
+                            <p className='fade-inn'>Initially, the website was not effective from a user or business point of view. The layout felt unstructured, there were no testimonials to build trust, and the project images did not clearly show the quality of work. There was also no clear “Consult Us” form to capture lead information, which caused many interested users to leave without contacting the company. As a result, the website failed to support lead generation and sales efforts.
                             </p>
                           </div>
                         </div>
@@ -169,7 +169,7 @@ const CustomFurnish = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Solution
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p className='fade-inn'>I redesigned the experience to drive one clear action: lead capture. By showcasing real projects, simplifying the journey, and embedding trust signals throughout, I turned passive visitors into engaged leads. The goal wasn’t to explain everything - it was to spark just enough interest and confidence for users to reach out. Once they did, our team took over with personalized 3D visuals and pricing.
+                            <p className='fade-inn'>The website was redesigned with one clear focus: helping users book a consultation easily. The experience was simplified to guide users step by step. Trust was built using real project examples and clear explanations of the service process. Distractions were reduced, and a clear consultation form was added to capture lead details. Pricing and 3D designs were intentionally shared later by the sales team after users showed interest.
                             </p>
                           </div>
                         </div>
@@ -188,7 +188,7 @@ const CustomFurnish = () => {
                       </div>
                       <div className="project-details-internal">
                         <div className="width-800 fade-inn">
-                          <p><int>Customfurnish was struggling to convert site visitors into paying clients despite strong service offerings and a broad product catalog. Their digital platform lacked clarity, trust-building elements, and modern interactive features.</int></p>
+                          <p><int>The main challenge was to build trust without showing pricing upfront while keeping the website simple and easy to use. The design needed to work well on mobile devices and support marketing and sales goals without confusing users. Every decision was carefully made to reduce hesitation and help users move forward confidently.</int></p>
                         </div>
                         <div className="content-div-main fade-inn width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">Key Challenges</a>
@@ -217,12 +217,12 @@ const CustomFurnish = () => {
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                             <p className='' >
-                              15 interviews with prospective leads</p>
-                            <p className='fade-inn'>5 interviews with existing clients</p>
+                              Design decisions were based on real user data and behavior. Insights from Google Analytics and Microsoft Clarity were used to study user behavior such as rage clicks, dead clicks, heatmaps, scroll activity, and engagement patterns. This research clearly showed where users were getting confused, where they dropped off, and what prevented them from taking action. These insights helped guide improvements across layout, content, and user flow.</p>
+                            {/* <p className='fade-inn'>5 interviews with existing clients</p>
                             <p className='fade-inn'>Clarity session replays, Heatmaps, scroll maps</p>
                             <p className='fade-inn'>Usability testing on key pages</p>
                             <p className='fade-inn'>Google Analytics + funnel tracking</p>
-                            <p className='fade-inn'>Journey Mapping & Persona Workshops</p>
+                            <p className='fade-inn'>Journey Mapping & Persona Workshops</p> */}
                           </div>
                         </div>
                         {/* <a className="fade-inn content-div-main-heading-2 width-800 translate-text-up">Ok guyss! Let's dive into the project deeply
@@ -278,10 +278,10 @@ const CustomFurnish = () => {
                       <div className="content-div-main fade-inn width-800">
                         <a className="fade-inn content-div-main-heading-2 translate-text-up ">Design Goals</a>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          <p className='fade-inn'>Simplify paths from landingpage → consultation</p>
-                          <p className='fade-inn'>Reduce form drop-offs and boost consultations</p>
+                          <p className='fade-inn'>The redesign followed clear principles. The path to booking a consultation had to be simple and visible. Each page focused on one main action. The content was kept short and easy to understand, and the design was created with a mobile-first approach to reduce effort and confusion.</p>
+                          {/* <p className='fade-inn'>Reduce form drop-offs and boost consultations</p>
                           <p className='fade-inn'>Mobile-first, intuitive design system</p>
-                          <p className='fade-inn'>Enable instant decision-making with real-time previews</p>
+                          <p className='fade-inn'>Enable instant decision-making with real-time previews</p> */}
                         </div>
                       </div>
                       <div className="pd-content width-100">
@@ -295,7 +295,7 @@ const CustomFurnish = () => {
                       </div>
                       {/* <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Design System</ch>
-                        <img src="img/projects/customfurnish/designsystem.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+             cle           <img src="img/projects/customfurnish/designsystem.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                       </div> */}
                       <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Components</ch>
