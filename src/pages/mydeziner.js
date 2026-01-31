@@ -177,7 +177,6 @@ const MyDeziner = () => {
                           <int className="fade-inn">
                             <p className=''>I led the end-to-end redesign of Customfurnish’s web experience to turn <int>uncertain browsers into confident buyers</int> - real-time consultation, and elegant UX that built trust and drove a <int>25% increase in lead conversions.</int></p></int>
                         </div> */}
-                          <div></div>
                           <div className="content-div-main fade-inn width-800">
                             <a className=" content-div-main-heading-2 translate-text-up ">The Problem
                             </a>

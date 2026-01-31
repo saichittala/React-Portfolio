@@ -291,7 +291,7 @@ const CustomFurnish = () => {
 
                       <div className="pd-content width-800 fade-inn">
                         <ch className="fade-inn translate-text-up  width-800">Leads User Flow</ch>
-                        <img src="img/projects/customfurnish/userflow.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                        <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                       </div>
                       {/* <div className="pd-content width-100">
                         <ch className="fade-inn translate-text-up  width-800">Design System</ch>
@@ -332,7 +332,7 @@ const CustomFurnish = () => {
                           <p className='width-800 fade-inn'><int>Beyond metrics, we earned emotional buy-in from customers and stakeholders alike. The design felt trustworthy and that changed everything.
 
                           </int></p>
-                          <img src="img/projects/customfurnish/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
+                          <img src="img/projects/customfurnish/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
                         </div>
                       </div>
                     </div>
