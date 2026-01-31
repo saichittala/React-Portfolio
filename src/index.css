@@ -560,7 +560,7 @@ body {
     transition: 0.6s transform cubic-bezier(0, -.6, 0, 1.07), opacity 0.3s ease;
     will-change: transform;
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-4);
+    border-radius: var(--border-radius-1);
     padding: 8px 8px 8px 16px;
 
 
