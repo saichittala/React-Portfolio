@@ -12,8 +12,8 @@ function Header({ toggleTheme, theme }) {
   };
 
   const handleMobileNavClick = () => {
-  setMenuActive(false);
-};
+    setMenuActive(false);
+  };
 
 
   useEffect(() => {
@@ -35,6 +35,34 @@ function Header({ toggleTheme, theme }) {
     <div>
       <nav className="nav-bar width-nav">
 
+        <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
+              <div className="mob-nav-btns">
+                <Link
+                  to="/works"
+                  className="about-button btn-1 mob-btn-1 border-none"
+                  onClick={handleMobileNavClick}
+                >
+                  Work
+                </Link>
+
+                <Link
+                  to="/about"
+                  className="about-button btn-1 mob-btn-1 border-none"
+                  onClick={handleMobileNavClick}
+                >
+                  About
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="about-button btn-1 mob-btn-1 border-none"
+                  onClick={handleMobileNavClick}
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+
         <div className='df-g8 jc-sb'>
           <a href='/home' className='df-g8 alc logo'>
             <img src="img/logo-main.svg" alt="" className='logo' />
@@ -49,33 +77,7 @@ function Header({ toggleTheme, theme }) {
             />
 
             {/* Mobile Menu Container - Updated to use Link */}
-            <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
-              <div className="mob-nav-btns">
-                <Link
-                  to="/works"
-                  className="about-button btn-1 mob-btn-1"
-                  onClick={handleMobileNavClick}
-                >
-                  Work
-                </Link>
 
-                <Link
-                  to="/about"
-                  className="about-button btn-1 mob-btn-1"
-                  onClick={handleMobileNavClick}
-                >
-                  About
-                </Link>
-
-                <Link
-                  to="/contact"
-                  className="about-button btn-1 mob-btn-1"
-                  onClick={handleMobileNavClick}
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
 
 
             {/* Desktop Navigation - Updated to use Link and dynamic classes */}
