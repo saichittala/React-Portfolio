@@ -2596,11 +2596,12 @@ a {
         transform: translateY(0);
         /* Slide down to the original position */
         visibility: visible;
-        height: auto;
+               height: auto;
         padding: 36px;
         border-radius: var(--border-radius-1);
         border: 1px solid var(--border-color);
         transition: .4s padding cubic-bezier(0, -.6, 0, 1.07), opacity 0.5s cubic-bezier(0, -.6, 0, 1.07), transform 0.5s cubic-bezier(0, -.6, 0, 1.07), height 0.5s cubic-bezier(0, -.6, 0, 1.07);
+ 
     }
 
 
