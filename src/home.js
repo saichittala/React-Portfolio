@@ -133,7 +133,7 @@ const Home = () => {
                       </a>
                       <a
                         className="intro-grey-text intro-link"
-                        onClick={() => handleRequestLockPopup("Resume.pdf", RESUME_PASSWORD)}
+                        onClick={() => handleRequestLockPopup("SaiChittala-Product-Designer-Resume.pdf", RESUME_PASSWORD)}
                       >
                         Resume
                       </a>
