@@ -119,7 +119,7 @@ const MyDeziner = () => {
 
                   <div className="pd-main">
                     <div className="pd-heading-div p-head-arrow">
-                      <a className=" pd-main-heading ">MyDeziner</a>
+                      <a className=" pd-main-heading ">GroundHog</a>
                       <img src="img/arrow-down.svg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer arrow-down" />
                     </div>
                   </div>
@@ -166,16 +166,6 @@ const MyDeziner = () => {
                           secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
                         /> */}
                         <div className="content-div-main fade-inn width-800">
-                          <a className=" content-div-main-heading-2 translate-text-up ">Outcome
-                          </a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p>After the redesign, MyDeziner helped interior designers work significantly faster while maintaining consistency across projects. Tasks that earlier took 30–40 minutes were completed in 2–3 minutes, repetitive manual steps were reduced, and designers were able to respond faster during client discussions. The tool evolved from being powerful but slow into a reliable daily workspace that supported both design speed and business growth.
-                            </p>
-                            <img src="img/projects/mydeziner/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
-
-                          </div>
-                        </div>
-                        <div className="content-div-main fade-inn width-800">
                           <a className=" content-div-main-heading-2 translate-text-up ">About
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
@@ -190,28 +180,23 @@ const MyDeziner = () => {
                         <div className="content-div-main fade-inn width-800">
                           <a className=" content-div-main-heading-2 translate-text-up ">The Problem
                           </a>
-                          {/* <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                             <p >CustomFurnish is a premium interior design company helping homeowners transform their spaces with tailor-made interiors. To deliver these experiences, their designers rely on MyDeziner, a B2B SaaS tool that converts architectural drawings into hyper-realistic interior renders - making it easier to visualize and quote designs for clients.
                             </p>
                             <p>But while the output was stunning, the workflow wasn’t. Designers were losing precious hours on repetitive tasks like material swapping, property search, and render updates. These inefficiencies slowed down project delivery, frustrated designers, and ultimately risked losing clients to faster-moving competitors.
                             </p>
                             <p>My role was to reimagine the MyDeziner experience - making it faster, smarter, and more intuitive for designers, so CustomFurnish could scale without sacrificing quality or client trust.
-                            </p> */}
-                          {/* <ul>
+                            </p>
+                            {/* <ul>
                               <li>Repetitive tasks: Designers often find themselves repeating the same actions for different elements, leading to inefficiencies.</li>
                               <li>Inadequate tools: Existing software solutions fall short in providing the necessary features for modern design workflows.</li>
                             </ul> */}
 
-                          {/* </div> */}
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
-                            <p >Although MyDeziner produced high-quality renders, the workflow was not efficient. Designers spent a lot of time repeating the same actions across rooms and objects. Managing properties and materials was difficult, searching for specific options required multiple clicks, and applying the same material across different objects was time-consuming. These issues slowed down project delivery, increased frustration, and affected the speed at which designs and quotes could be shared with clients.
-                            </p>
                           </div>
                         </div>
-
                         <img src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-inn' loading="lazy" />
                         <div></div>
-                        {/* <div className="content-div-main fade-inn  width-800">
+                        <div className="content-div-main fade-inn  width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Challenge
                           </a>
                           <div className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
@@ -227,20 +212,20 @@ const MyDeziner = () => {
                             <p>The challenge was clear: <int>speed up the workflow, without compromising on quality.</int>
                             </p>
                           </div>
-                        </div> */}
+                        </div>
                         <div className="content-div-main fade-inn  width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Solution
                           </a>
                           <div className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
-                            <p >To address these bottlenecks, MyDeziner was redesigned as a smarter and more supportive tool for interior designers. The focus was on removing repetitive work and reducing cognitive load. Key improvements included smart property management, faster property search, and easier material reuse. The overall workflow was streamlined into a clear sequence—design on the canvas, apply render settings efficiently, and generate final renders—helping designers iterate faster, get approvals sooner, and deliver better client experiences.
+                            <p >To address these bottlenecks, I redesigned MyDeziner as an intelligent design companion for interior designers at CustomFurnish. The core improvements revolved around three pillars:
                             </p>
-                            {/* <ul className='df-g8 fd-c gap-12 margin-unset'>
+                            <ul className='df-g8 fd-c gap-12 margin-unset'>
                               <li>Developed MyDeziner, a B2B SaaS tool that transforms interior design drawings into realistic renders, speeding up client delivery.</li>
                               <li>Implemented Smart Property Management, enabling designers to store, organize, and reuse frequently used materials and furniture for consistency and efficiency.</li>
                               <li>Introduced Copy & Apply Material, allowing designers to replicate finishes across different elements in seconds instead of repeating manual steps.</li>
                               <li>Added Advanced Property Search, making it effortless to locate any property or material within the system, reducing time wasted in browsing.</li>
                               <li>Streamlined the Workflow into Draw → Apply Render Settings → Generate Gallery, ensuring faster iteration, quicker approvals, and improved client satisfaction.</li>
-                            </ul> */}
+                            </ul>
 
                           </div>
                         </div>
@@ -265,7 +250,7 @@ const MyDeziner = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 1 : From Clutter to Clarity: The New Way to Manage Properties
                           </a>
                           <div className='df-g8 fd-c gap-16 width-800'>
-                            {/* <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
+                            <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
                             </a>
                             <p className='fs-italic'>I began by sitting with the people who live this challenge every day - interior design managers. Across 5 interviews, one pattern stood out:
                             </p>
@@ -277,14 +262,6 @@ const MyDeziner = () => {
                             <div className='df-g8 fd-c gap-36 margin-unset'>
                               <p>The insight was clear: designers didn’t need more effort, they needed smarter scope.
                               </p>
-                            </div> */}
-                            <div className='df-g8 fd-c gap-36 margin-unset'>
-                              <p>To understand the problem deeply, I worked closely with interior design managers who use the tool daily. Interviews revealed that material changes were consuming hours on every project, often stretching timelines to two days or more. Designers repeated the same actions again and again, which slowed down delivery and affected business outcomes. The insight was simple: designers didn’t need more effort, they needed better control.
-                              </p>
-                            </div>
-                            <div className='df-g8 fd-c gap-36 margin'>
-                              <p>To solve this, a property management system was introduced that allows designers to manage properties and materials at three levels—object level, room level, and project level. This made it possible to update one element and reflect the change across multiple rooms instantly. Tasks that earlier took 30–40 minutes were reduced to just a few minutes, while maintaining consistency across the entire project.
-                              </p>
                             </div>
                           </div>
                           <div className="tll-video fade-inn">
@@ -295,7 +272,7 @@ const MyDeziner = () => {
                               title='Property management'
                             ></iframe>
                           </div>
-                          {/* <div className='df-g8 fd-c gap-16 width-800'>
+                          <div className='df-g8 fd-c gap-16 width-800'>
                             <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">The Breakthrough
                             </a>
                             <p>Now, what once took 30–40 minutes happens in 2–3 minutes.
@@ -304,13 +281,13 @@ const MyDeziner = () => {
                               <li>Update one handle? It updates across every room.</li>
                               <li>Swap a material? The system ensures instant consistency everywhere.</li>
                             </ul>
-                          </div> */}
+                          </div>
                         </div>
                         <div className='df-g8 fd-c gap-24 margin-unset'>
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 2: Stop Hunting, Start Finding – Smarter Property Search
                           </a>
                           <div className='df-g8 fd-c gap-16 width-800'>
-                            {/* <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
+                            <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
                             </a>
                             <p className='fs-italic'>Designers told me the same pain over and over:
                             </p>
@@ -321,14 +298,6 @@ const MyDeziner = () => {
                             </ul>
                             <div className='df-g8 fd-c gap-36 margin-unset'>
                               <p>The insight was clear: designers didn’t need more tools, they needed smarter scope.
-                              </p>
-                            </div> */}
-                            <div className='df-g8 fd-c gap-36 margin-unset'>
-                              <p>Designers repeatedly shared the same frustration. Important properties such as hardware, transform, and construction were buried deep inside multiple panels. Even small changes required several clicks, breaking focus and slowing down live design discussions. Over time, this created mental fatigue and reduced efficiency.
-                              </p>
-                            </div>
-                            <div className='df-g8 fd-c gap-36 margin'>
-                              <p>To address this, a property-level search was introduced. Instead of navigating through panels, designers can now simply type what they are looking for and access the required property instantly. The system remembers where things live so designers don’t have to. This reduced clicks, lowered cognitive load, and helped designers stay focused on design rather than navigation.
                               </p>
                             </div>
                           </div>
@@ -341,7 +310,7 @@ const MyDeziner = () => {
                               title='Property Search'
                             ></iframe>
                           </div>
-                          {/* <div className='df-g8 fd-c gap-16 width-800'>
+                          <div className='df-g8 fd-c gap-16 width-800'>
                             <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">The Breakthrough
                             </a>
                             <p>Instead of making them remember, I made the system do the remembering.
@@ -351,16 +320,16 @@ const MyDeziner = () => {
                               <li>No endless expansion, no hunting through panels, no brain drain.</li>
                               <li>With Property Search, designers don’t need to remember where something lives. They just type “handle” or “hinge” and land on the exact property instantly.</li>
                             </ul>
-                          </div> */}
+                          </div>
                         </div>
 
                         <div className='df-g8 fd-c gap-24 margin-unset'>
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">Solution 3 : Copy Once, Apply Everywhere – Smarter Material Duplication
                           </a>
                           <div className='df-g8 fd-c gap-16 width-800'>
-                            {/* <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
-                            </a> */}
-                            {/* <p className='fs-italic'>Through shadowing 4 senior designers, one friction point kept resurfacing:
+                            <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 margin-unset">How I Approached the Problem
+                            </a>
+                            <p className='fs-italic'>Through shadowing 4 senior designers, one friction point kept resurfacing:
                             </p>
                             <ul className='df-g8 fd-c gap-12 margin-unset'>
                               <li>Copying materials wasn’t copy-paste simple. It was tedious.</li>
@@ -370,16 +339,7 @@ const MyDeziner = () => {
                             <div className='df-g8 fd-c gap-36 margin-unset'>
                               <p>The realization? Designers didn’t need a longer workflow. They needed a smarter shortcut.
                               </p>
-                            </div> */}
-                            <div className='df-g8 fd-c gap-36 margin-unset'>
-                              <p>Shadowing senior designers revealed another major source of wasted time. Applying materials required multiple steps—selecting the object, opening materials, choosing finishes, brands, grades, and thickness. While this worked for one object, repeating the same process across multiple rooms became tedious. Designers often recreated the same finishes five or six times in a single project.
-                              </p>
                             </div>
-                            <div className='df-g8 fd-c gap-36 margin'>
-                              <p>To solve this, a copy-and-apply material feature was introduced. Designers can now copy materials from one object and apply them to others instantly. This removed repetitive steps, reduced errors, and ensured consistent finishes across the entire project, allowing designers to focus more on refining designs instead of repeating actions.
-                              </p>
-                            </div>
-
                           </div>
                           <div className="tll-video fade-inn">
                             <iframe
@@ -389,7 +349,7 @@ const MyDeziner = () => {
                               title='Copy Materials'
                             ></iframe>
                           </div>
-                          {/* <div className='df-g8 fd-c gap-16 margin-unset'>
+                          <div className='df-g8 fd-c gap-16 margin-unset'>
                             <a className="fade-inn content-div-main-heading-4   translate-text-up width-800 mb-unset">The Breakthrough
                             </a>
                             <p className='width-800'>Now, what took 20+ manual steps can be done in just 2 clicks.
@@ -399,29 +359,19 @@ const MyDeziner = () => {
                               <li>No rework. No missed details.</li>
                               <li>A consistent look across every project, delivered in seconds.</li>
                             </ul>
-                          </div> */}
-                        </div>
-                        <div className='df-g8 fd-c gap-24 margin-unset'>
-                          <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">What Didn’t Work Initially
-                          </a>
-                          <div className='df-g8 fd-c gap-16 width-800'>
-                            
-                            <div className='df-g8 fd-c gap-36 margin-unset'>
-                              <p>Early versions of the solutions tried to offer too much flexibility, which increased complexity instead of reducing it. Some features were powerful but not easy to discover, and designers needed time to adapt to the new workflows. Based on feedback and testing, the designs were simplified further to better match real-world usage.
-                              </p>
-                            </div>
                           </div>
                         </div>
                         <div className="bg-full margin-unset">
                           <div className="bg-main  padding-unset">
                             <div className="project-details padding-top-unset">
                               <div className="project-breif-heading width-800 fade-inn">
-                                {/* <span className=''>05</span> */}
+                                <span className=''>05</span>
                                 <span className=''>Results</span>
                               </div>
                               <div className='project-details-internal'>
                                 <div className="pd-content width-100 fade-inn">
-                                  <p className='width-800 fade-inn'>These changes significantly reduced repetitive work and improved overall efficiency. Designers were able to work faster, maintain consistency across projects, and respond quickly during client discussions. The product shifted from being powerful but time-consuming to becoming a reliable daily tool that supports speed, quality, and business growth.
+                                  <p className='width-800 fade-inn'>Beyond measurable gains, MyDeziner shifted perception.
+                                    What once felt complex and time-consuming became a reliable, everyday design companion.
 
                                   </p>
                                   <img src="img/projects/mydeziner/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
