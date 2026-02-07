@@ -424,7 +424,7 @@ const MyDeziner = () => {
                                   <p className='width-800 fade-inn'>These changes significantly reduced repetitive work and improved overall efficiency. Designers were able to work faster, maintain consistency across projects, and respond quickly during client discussions. The product shifted from being powerful but time-consuming to becoming a reliable daily tool that supports speed, quality, and business growth.
 
                                   </p>
-                                  <img src="img/projects/mydeziner/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
+                                  {/* <img src="img/projects/mydeziner/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" /> */}
                                 </div>
                               </div>
                             </div>
