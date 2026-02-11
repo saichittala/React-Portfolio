@@ -577,6 +577,12 @@ body {
     }
 }
 
+@media (max-width: 674px) {
+    .nav-bar {
+            padding: 14px 14px 14px 16px;
+
+    }
+}
 
 
 
@@ -1402,7 +1408,7 @@ body.light-theme .theme-toggle-btn {
 
 .about-main p {
     color: var(--grey-bg-b-color);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300 !important;
     width: 100%;
     line-height: 2.1;
