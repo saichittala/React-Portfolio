@@ -110,7 +110,7 @@ const Home = () => {
                   <div className='profile-img'>
                     <img
                       style={{ width: '150px', borderRadius: '24px' }}
-                      src={'img/profile-2test.jpeg'}
+                      src={'img/profilee.webp'}
                       alt="profile-img"
                     />
                   </div>
