@@ -158,7 +158,8 @@ const CustomFurnish = () => {
                           <LazyImage src="img/projects/customfurnish/customfurnish-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '36px' }} className='width-800'>
                             <div className='pd-content'>
-                              <ch className="fade-inn translate-text-up">Previous Scenario</ch>
+                              <ch className="fade-inn translate-text-up" style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>Previous Scenario</ch>                          
+
                             </div>
                             <p className='fade-inn'>
                               Before the redesign, the website acted more like a portfolio gallery. Users could view projects, but the platform did not clearly guide them toward the next step. Important elements like testimonials, structured service explanations, and a strong consultation call-to-action were missing.
