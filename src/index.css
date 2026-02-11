@@ -1,6 +1,8 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Overpass+Mono:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/georgia');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 
 
@@ -120,8 +122,12 @@
     sans-serif;
     --secondary-font: 'Switzer',
     sans-serif;
-    --tertiary-font: 'Mona Sans',
-    sans-serif;
+    /* --tertiary-font: 'Mona Sans',
+    sans-serif; */
+    /* --tertiary-font: 'Georgia',
+    serif; */
+    --tertiary-font: 'Source Serif 4',
+    serif;
 
 
 
@@ -765,6 +771,7 @@ body.light-theme .theme-toggle-btn {
     transition: padding .5s cubic-bezier(0, -.6, 0, 1.07),
     transform .2s cubic-bezier(0, -.6, 0, 1.07),
     filter .2s cubic-bezier(0, -.6, 0, 1.07);
+    background: #33333310;
 
     span {
         opacity: 1;
@@ -2913,9 +2920,9 @@ a {
 }
 
 p,
-li {
+li, int {
     font-size: 20px;
-    font-weight: 300 !important;
+    font-weight: 350 !important;
     line-height: 2.1;
     margin: 0;
     color: var(--grey-bg-b-color);
