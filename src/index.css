@@ -1,6 +1,7 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Overpass+Mono:wght@300..700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/switzer');
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+
 
 
 
@@ -118,6 +119,8 @@
     --primary-font: 'Switzer',
     sans-serif;
     --secondary-font: 'Switzer',
+    sans-serif;
+    --tertiary-font: 'Mona Sans',
     sans-serif;
 
 
@@ -254,7 +257,7 @@
 }
 
 .width-800 {
-    width: 700px !important;
+    width: 760px !important;
     margin: auto;
 
     img {
@@ -672,12 +675,12 @@ body {
 }
 
 .header-text-1 {
-    font-size: 15px;
+    font-size: 18px;
     color: var(--grey-bg-b-color);
     font-weight: 200;
     display: flex;
     gap: 4px;
-    padding: 4px 8px;
+    padding: 10px 20px;
     border-radius: var(--border-radius-2);
     align-items: center;
 
@@ -750,7 +753,7 @@ body.light-theme .theme-toggle-btn {
         display: none;
     }
 
-    padding: 4px 8px;
+    padding: 10px 20px;
     color: var(--white-color);
     font-weight: 400;
     transition: padding .5s cubic-bezier(0, -.6, 0, 1.07),
@@ -831,6 +834,7 @@ body.light-theme .theme-toggle-btn {
     color: var(--white-color);
     border-radius: 99px;
     border: 1px solid var(--border-color);
+    font-size: 16px;
 }
 
 .btn-1:hover {
@@ -1032,7 +1036,7 @@ body.light-theme .theme-toggle-btn {
 
 .home-main-text {
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--grey-bg-b-color);
     font-weight: 300;
     line-height: 2.1;
@@ -1531,7 +1535,7 @@ body.light-theme .theme-toggle-btn {
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--white-color);
     text-transform: capitalize;
@@ -1549,7 +1553,7 @@ body.light-theme .theme-toggle-btn {
 }
 
 .card-year {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--grey-bg-b-color);
     text-transform: capitalize;
@@ -2764,7 +2768,7 @@ a {
 
 
 .content-div-main-heading-2 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 20px;
     color: var(--white-color);
@@ -2904,11 +2908,12 @@ a {
 
 p,
 li {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300 !important;
     line-height: 2.1;
     margin: 0;
     color: var(--grey-bg-b-color);
+    font-family: var(--tertiary-font);
 }
 
 ul {
@@ -2943,7 +2948,7 @@ ul {
 
 
 .pd-content ch {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--white-color);
 }
@@ -3020,7 +3025,7 @@ ul {
 .project-breif-heading {
     border-top: 1px solid var(--border-color);
     color: var(--white-color);
-    font-size: 20px;
+    font-size: 24px;
     padding: 20px 0;
     border-bottom: 1px solid var(--border-color);
     display: flex;
@@ -3249,20 +3254,20 @@ ul {
 }
 
 .pd-main-heading-2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 20px;
     color: var(--white-color);
-    position: sticky;
-    top: 80px;
     width: 100%;
+    line-height: 150%;
 }
 
 .pd-sub-heading-2 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     color: var(--grey-bg-b-color);
     margin-bottom: 16px;
+    line-height: 150%;
 }
 
 

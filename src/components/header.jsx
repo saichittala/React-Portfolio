@@ -106,10 +106,10 @@ function Header({ toggleTheme, theme }) {
                 <img src="img/contact-nav.svg" alt="logo" />
                 <span>Contact</span>
               </Link>
-              <div className='df-g8 aic'>
+              {/* <div className='df-g8 aic'>
                 <div className="divider"></div>
-              </div>
-              <button
+              </div> */}
+              {/* <button
                 className="theme-toggle-btn"
                 onClick={toggleTheme}
               >
@@ -120,7 +120,7 @@ function Header({ toggleTheme, theme }) {
                   : <div className='header-text padding-4'>
                     <img src="img/light-nav.svg" alt="Dark Mode" />
                   </div>}
-              </button>
+              </button> */}
             </div>
 
           </div>

@@ -104,7 +104,7 @@ const CustomFurnish = () => {
                       <div className="pd-heading-sub-div">
                         <a className="fade-inn pd-main-heading-2    translate-text-up"> Project Type
                         </a>
-                        <a className="fade-inn pd-sub-heading-2 translate-text-down"> UX
+                        <a className="fade-inn pd-sub-heading-2 translate-text-down"> Product
                           Design</a>
                       </div>
                       <div className="pd-heading-div-main">
