@@ -216,7 +216,7 @@ const CustomFurnish = () => {
                         <a className="fade-inn content-div-main-heading-2 translate-text-up ">Discover</a>
                         <p className='fade-inn'>Research focused on understanding why users were leaving without contacting the company.</p>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          <div className='pd-content' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '12px', marginTop: '12px', fontStyle: 'Italic' }}>
+                          <div className='pd-content' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>
                             <ch className="fade-inn translate-text-up">Qualitative Research Questions</ch>
                           </div>
                           <ul className='df-g8 fd-c gap-12 margin-unset'>
@@ -228,7 +228,7 @@ const CustomFurnish = () => {
 
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          <div className='pd-content' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '12px', marginTop: '12px', fontStyle: 'Italic' }}>
+                          <div className='pd-content' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>
                             <ch className="fade-inn translate-text-up">Quantative Research Questions</ch>
                           </div>
                           <ul className='df-g8 fd-c gap-12 margin-unset'>
