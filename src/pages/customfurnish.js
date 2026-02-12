@@ -82,8 +82,18 @@ const CustomFurnish = () => {
           </a>
           <div className="full-bg">
             <div className=" p-img-1 main-image bg-black">
-              <img src="img/projects/cf.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-inn' />
-            </div>
+              {/* <img src="img/projects/cf.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-inn' /> */}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="fade-inn"
+                style={{width: '100%'}}
+              >
+                <source src="img/projects/cf-promo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>            </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
                 <div className="project-details padding-top-unset">
@@ -158,7 +168,7 @@ const CustomFurnish = () => {
                           <LazyImage src="img/projects/customfurnish/customfurnish-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '36px' }} className='width-800'>
                             <div className='pd-content'>
-                              <ch className="fade-inn translate-text-up" style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>Previous Scenario</ch>                          
+                              <ch className="fade-inn translate-text-up" style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>Previous Scenario</ch>
 
                             </div>
                             <p className='fade-inn'>
@@ -336,17 +346,17 @@ const CustomFurnish = () => {
                         <span className=''>Impact</span>
                       </div>
                       <div className="content-div-main fade-inn width-800">
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px'}}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                           <p className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px' }}>Beyond metrics, the redesign built confidence among users and internal stakeholders.</p>
                           <img src="img/projects/customfurnish/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
                         </div>
                       </div>
-                      
+
 
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-full bg-white margin-unset">
                   <div className="bg-main  padding-unset">
                     <div className="project-details">
