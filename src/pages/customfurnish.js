@@ -252,9 +252,9 @@ const CustomFurnish = () => {
 
                         </div>
                       </div>
-                      <div className="content-div-main fade-inn width-800" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                      <div className="content-div-main fade-inn width-800" style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                         <a className="fade-inn content-div-main-heading-2 translate-text-up ">Define</a>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Persona 1</ch>
                             <img src="img/projects/customfurnish/userpersona-1.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
@@ -264,7 +264,7 @@ const CustomFurnish = () => {
                             <img src="img/projects/customfurnish/userpersona-2.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                           </div>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up  width-800">Empathy Map</ch>
                             <img src="img/projects/customfurnish/empathymap.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
@@ -273,9 +273,9 @@ const CustomFurnish = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="content-div-main fade-inn width-800" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                      <div className="content-div-main fade-inn width-800" style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                         <a className="fade-inn content-div-main-heading-2 translate-text-up ">Ideate</a>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Flow</ch>
                             <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />

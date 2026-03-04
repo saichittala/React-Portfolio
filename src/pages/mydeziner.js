@@ -9,6 +9,8 @@ import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import BubbleButton from '../components/BubbleButton';
 // import SmoothScrollProvider from '../components/Scrollsmooth';
+import LazyImage from '../components/LazyImage';
+
 
 
 const MyDeziner = () => {
@@ -166,20 +168,31 @@ const MyDeziner = () => {
                           secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
                         /> */}
                         <div className="content-div-main fade-inn width-800">
-                          <a className=" content-div-main-heading-2 translate-text-up ">Outcome
-                          </a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p>After the redesign, MyDeziner helped interior designers work significantly faster while maintaining consistency across projects. Tasks that earlier took 30–40 minutes were completed in 2–3 minutes, repetitive manual steps were reduced, and designers were able to respond faster during client discussions. The tool evolved from being powerful but slow into a reliable daily workspace that supported both design speed and business growth.
-                            </p>
-                            <img src="img/projects/mydeziner/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
-
-                          </div>
-                        </div>
-                        <div className="content-div-main fade-inn width-800">
                           <a className=" content-div-main-heading-2 translate-text-up ">About
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p>MyDeziner is a B2B SaaS platform powerful interior design software that enables designers to draw, configure, and render hyper-realistic interiors - all in one place. From layout creation to photorealistic renders, it simplifies complex workflows and brings unmatched control to interior professionals.
+                            <p>MyDeziner is a B2B SaaS platform used by interior designers to draw layouts, configure materials, and generate hyper-realistic interior renders. While the output quality was strong, the internal workflow was slowing designers down. The goal of this redesign was to improve efficiency, reduce repetitive work, and support faster project delivery without compromising design control or flexibility.
+                            </p>
+                            {/* <img src="img/projects/mydeziner/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" /> */}
+
+                          </div>
+                        </div>
+                        <div className="content-div-main fade-inn ">
+                          <a className="fade-inn content-div-main-heading-2 translate-text-up width-800 ">Understanding the Problem Statement
+                          </a>
+                          <LazyImage src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '36px' }} className='width-800'>
+                            <div className='pd-content'>
+                              <ch className="fade-inn translate-text-up" style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>Previous Scenario</ch>
+
+                            </div>
+                            <p className='fade-inn'>
+                              Before the redesign, MyDeziner supported complex configuration, but everyday workflows required excessive manual effort. Designers had to repeatedly manage materials, properties, and room-level consistency across projects.
+                            </p>
+                            <p className='fade-inn'>
+                              Although the rendering quality was impressive, the workflow felt heavy.                            </p>
+                            <p className='fade-inn' style={{fontWeight: '600'}}>
+                              "Powerful output, but slow execution."
                             </p>
                           </div>
                         </div>
@@ -405,7 +418,7 @@ const MyDeziner = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800">What Didn’t Work Initially
                           </a>
                           <div className='df-g8 fd-c gap-16 width-800'>
-                            
+
                             <div className='df-g8 fd-c gap-36 margin-unset'>
                               <p>Early versions of the solutions tried to offer too much flexibility, which increased complexity instead of reducing it. Some features were powerful but not easy to discover, and designers needed time to adapt to the new workflows. Based on feedback and testing, the designs were simplified further to better match real-world usage.
                               </p>

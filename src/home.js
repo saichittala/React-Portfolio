@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from './card';
-import LockPopup from './components/lockpopup'; 
+import LockPopup from './components/lockpopup';
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import BubbleButton from './components/BubbleButton';
@@ -35,14 +35,14 @@ const Home = () => {
 
   const cardsData = [
     { title: "Turning Website Traffic into Qualified Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
-    { title: "Reducing Friction in Interior Design Workflows", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, },
+    { title: "Reducing Workflow Friction in Interior Design SaaS", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, },
     // { title: "Designing efficiency for interior designers", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: true, confidential: true, password: "surya@123" },
     // { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
-    { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
     { title: "Crafting Unified Ride Booking Experience", type: "Yalla Gai", year: "Professional 2022-2023", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: false, password: "surya@123" },
-    { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.webp", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
-    { title: "Modernizing Devotion Through Design", type: "Temple Address", year: "Professional 2022-2023", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "1" },
-    { title: "Crafting Connected Listening Journeys", type: "Muzicon", year: "Personal 2021-2022", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
+    { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
+    // { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.webp", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
+    // { title: "Modernizing Devotion Through Design", type: "Temple Address", year: "Professional 2022-2023", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "1" },
+    // { title: "Crafting Connected Listening Journeys", type: "Muzicon", year: "Personal 2021-2022", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
   ];
 
 
@@ -105,8 +105,8 @@ const Home = () => {
         <section className="fade-in">
           <div className="full-bg bg-black">
             <div className="bg-main height-100 home-main-container fd-c display-flex alc h-100 ">
-              <div className='df-g8 gap-36 mobile-home-container fd-c width-450'>
-                <div className='df-g8 width-fc'>
+              <div className='df-g8 gap-36 mobile-home-container fd-rr'>
+                <div className='df-g8 width-fc display-none'>
                   <div className='profile-img'>
                     <img
                       style={{ width: '150px', borderRadius: '24px' }}
@@ -115,16 +115,26 @@ const Home = () => {
                     />
                   </div>
                 </div>
-                <div className='df-g8 fd-c width-100'>
-                  <div className='home-main-text df-g8 gap-20 fd-c'>
+                <div className='df-g8 fd-c width-100  jc-c'>
+                  <div className='home-main-text df-g8 gap-20 fd-c width-320px jc-c al-c'>
+                    <div className='df-g8 al-c jc-c'>
+                      <img
+                      style={{ width: '150px', height: '150px', borderRadius: '999px', objectFit: 'cover' }}
+                      src={'img/profile-2test.jpeg'}
+                      alt="profile-img"
+                    />
+
+                    </div>
+                    
                     <span>
-                      I’m <white>Sai Chittala</white> - <white>a digital product designer based in India.</white> who turns complex systems into revenue-driving experiences.
+                      <white>I'm Sai Chittala</white> - <white>Product Designer</white> based in India
                     </span>
-                    <span>
+                    
+                    {/* <span>
                       
                       Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
-                    </span>
-                    <div className='df-g8'>
+                    </span> */}
+                    {/* <div className='df-g8'>
                       <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
                         LinkedIn
                       </a>
@@ -137,18 +147,18 @@ const Home = () => {
                       >
                         Resume
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
 
-              <div className='df-g8 fd-c gap-36 '>
-                <a className="fade-in content-div-main-heading-2 translate-text-up width-450 margin-unset"> Selected Works
+              <div className='df-g8 fd-c gap-36 width-100 '>
+                <a className="fade-in content-div-main-heading-2 translate-text-up  margin-unset"> Shipped Products
                 </a>
                 <motion.div
                   layout
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="cards-container home-cards-container width-450"
+                  className="cards-container home-cards-container "
                   id="cards-container"
                   ref={cardsContainerRef}
                 >
@@ -180,6 +190,7 @@ const Home = () => {
                   </div>
                 )}
               </div>
+
 
 
 
@@ -221,6 +232,84 @@ const Home = () => {
                 </div>
               </div> */}
               <TestimonialsCard />
+              <div className='df-g8 fd-c gap-36 width-450'>
+                <a className="fade-in content-div-main-heading-2 translate-text-up margin-unset">
+                  Experience
+                </a>
+
+                <div className='df-g8 fd-c' style={{ gap: '0px', paddingLeft: '8px' }}>
+                  {[
+                    { company: "Groundhog Apps", role: "Product Designer", dates: "Oct 2025 – Present", current: true },
+                    { company: "Customfurnish", role: "UI/UX Designer", dates: "Jan 2024 – Jul 2025" },
+                    { company: "FirstRicoz", role: "UI/UX Designer", dates: "Jan 2023 – Dec 2023" },
+                    { company: "YallaGai", role: "Freelance Product Designer", dates: "Feb 2022 – Dec 2022" },
+                  ].map((exp, index, arr) => (
+                    <div key={index} className='df-g8' style={{ gap: '16px', alignItems: 'stretch' }}>
+
+                      {/* Tree Line + Dot */}
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '16px' }}>
+                        {/* Dot */}
+                        <div style={{
+                          width: exp.current ? '12px' : '8px',
+                          height: exp.current ? '12px' : '8px',
+                          borderRadius: '50%',
+                          backgroundColor: exp.current ? 'var(--white-color)' : 'rgba(0,0,0,0.3)',
+                          boxShadow: exp.current ? '0 0 8px rgba(0,0,0,0.6)' : 'none',
+                          flexShrink: 0,
+                          marginTop: '4px',
+                          transition: 'all 0.3s ease',
+                        }} />
+                        {/* Vertical line (not after last item) */}
+                        {index < arr.length - 1 && (
+                          <div style={{
+                            width: '1px',
+                            flex: 1,
+                            minHeight: '40px',
+                            background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.04))',
+                            margin: '6px 0',
+                          }} />
+                        )}
+                      </div>
+
+                      {/* Content */}
+                      <div className='df-g8' style={{
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
+                        flex: 1,
+                        paddingBottom: index < arr.length - 1 ? '28px' : '0px',
+                      }}>
+                        <div className='df-g8 fd-c' style={{ gap: '4px' }}>
+                          <span style={{ color: 'var(--white-color)', fontWeight: '500', fontSize: '18px' }}>
+                            {exp.company}
+                          </span>
+                          <span style={{ color: 'var(--white-color)', fontSize: '16px', opacity: '0.6' }}>
+                            {exp.role}
+                          </span>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
+                          <span style={{ color: 'var(--white-color)', fontSize: '14px', opacity: '0.4', whiteSpace: 'nowrap', fontWeight: '300' }}>
+                            {exp.dates}
+                          </span>
+                          {exp.current && (
+                            <span style={{
+                              fontSize: '12px',
+                              fontWeight: '400',
+                              padding: '2px 8px',
+                              borderRadius: '20px',
+                              background: 'rgba(0,0,0,0.06)',
+                              color: 'var(--white-color)',
+                              opacity: '1',
+                            }}>
+                              Current
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               {/* <div className='df-g8 fd-c gap-36 '>
                 <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
@@ -245,7 +334,7 @@ const Home = () => {
       />
       {/* </LuxurySmoothScroll> */}
 
-    </div>
+    </div >
   );
 };
 

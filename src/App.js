@@ -119,6 +119,7 @@ import CustomFurnish from './pages/customfurnish.js';
 import About from './pages/about.js';
 import Contact from './pages/contact.js';
 import Works from './pages/works.js';
+import PageTransition from './components/PageTransition.jsx';
 
 function App() {
 
@@ -146,17 +147,26 @@ function App() {
     <HashRouter>
       {animating && <div className="theme-transition-overlay"></div>}
 
-      {/* Toggle removed from Header */}
       <Header />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mydeziner" element={<MyDeziner />} />
-        <Route path="/customfurnish" element={<CustomFurnish />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/works" element={<Works />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <PageTransition
+        animateRoutes={[  
+          "/mydeziner",
+          "/customfurnish",
+          "/works",
+          "/about"
+        ]}
+      >
+        {(location) => (
+          <Routes location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/mydeziner" element={<MyDeziner />} />
+            <Route path="/customfurnish" element={<CustomFurnish />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/works" element={<Works />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        )}
+      </PageTransition>
     </HashRouter>
   );
 }
