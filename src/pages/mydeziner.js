@@ -222,7 +222,7 @@ const MyDeziner = () => {
                           </div>
                         </div>
 
-                        <img src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-inn' loading="lazy" />
+                        {/* <img src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-inn' loading="lazy" /> */}
                         <div></div>
                         {/* <div className="content-div-main fade-inn  width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Challenge
