@@ -113,7 +113,7 @@ const MyDeziner = () => {
 
           <div className="full-bg">
             <div className=" p-img-1 main-image">
-              <img src="img/projects/mydeziner.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-inn' />
+              <img src="img/projects/mydeziner.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-inn' />
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
