@@ -18,8 +18,11 @@ const TestimonialsCard = () => {
   const [index, setIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
 
-  const LIMIT = 180;
-  const isLong = testimonials[index].text.length > LIMIT;
+  const LIMIT = 152;
+
+  const currentText = testimonials[index].text;
+  const isLong = currentText.length > LIMIT;
+  const truncatedText = currentText.slice(0, LIMIT);
 
   const goNext = () => {
     setIndex((prev) => (prev + 1) % testimonials.length);
@@ -43,7 +46,6 @@ const TestimonialsCard = () => {
   // Swipe detection
   const handleDragEnd = (event, info) => {
     const swipe = info.offset.x;
-
     if (swipe < -50) goNext();
     if (swipe > 50) goPrev();
   };
@@ -86,26 +88,34 @@ const TestimonialsCard = () => {
             <div className="testimonial-card">
               <img src="img/quote.svg" alt="quote" className="quote-icon" />
 
-              {/* Text */}
-              <p
-                className={`testimonial-text opacity-90 leading-relaxed transition-all duration-300 ${
-                  !expanded && isLong ? "line-clamp-3" : ""
-                }`}
-              >
-                “{testimonials[index].text}”
+              {/* Text with inline Show More */}
+              <p className="testimonial-text opacity-90 leading-relaxed">
+                {!expanded ? (
+                  <>
+                    “{isLong ? truncatedText + "..." : currentText}”
+                    {isLong && (
+                      <span
+                        onClick={() => setExpanded(true)}
+                        className="testimonial-toggle"
+                      >
+                        {" "}Show more
+                      </span>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    “{currentText}”
+                    {isLong && (
+                      <span
+                        onClick={() => setExpanded(false)}
+                        className="testimonial-toggle"
+                      >
+                        {" "}Show less
+                      </span>
+                    )}
+                  </>
+                )}
               </p>
-
-              {/* Show More / Less */}
-              {isLong && (
-                <motion.button
-                  onClick={() => setExpanded(!expanded)}
-                  whileTap={{ scale: 0.95 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="text-sm mt-2 opacity-80 hover:opacity-100 underline"
-                >
-                  {expanded ? "Show less" : "Show more"}
-                </motion.button>
-              )}
 
               {/* Info */}
               <div className="testimonial-info df-g8 gap-12 mt-3">

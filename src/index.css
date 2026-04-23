@@ -1834,11 +1834,23 @@ body.light-theme .theme-toggle-btn {
     cursor: grab;
 }
 
-.line-clamp-3 {
+/* .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+} */
+
+.testimonial-toggle {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.testimonial-toggle:hover {
+  opacity: 1;
 }
 
 .testimonial-text {
@@ -1898,6 +1910,129 @@ body.light-theme .theme-toggle-btn {
     background: var(--grey-bg-b-color) !important;
     opacity: 0.3;
     cursor: pointer;
+}
+
+
+
+
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 520px;
+}
+
+.section-title {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-row {
+  display: flex;
+  gap: 16px;
+}
+
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+}
+
+.logo-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--black-2-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--box-shadow-1);
+  overflow: hidden;
+}
+
+.logo-wrapper img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.timeline-line {
+  width: 1px;
+  flex: 1;
+  margin-top: 8px;
+  background: linear-gradient(
+    to bottom,
+    var(--border-color),
+    transparent
+  );
+}
+
+.timeline-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.company-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.company-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+.role {
+  font-size: 14px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.dates {
+  font-size: 13px;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.current-badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--white-opacity-1);
+  color: var(--white-color);
+}
+
+.row-divider {
+  height: 1px;
+  margin: 16px 0;
+  background: var(--border-color);
+  opacity: 0.4;
 }
 
 

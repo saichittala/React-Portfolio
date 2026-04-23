@@ -119,17 +119,17 @@ const Home = () => {
                   <div className='home-main-text df-g8 gap-20 fd-c width-320px jc-c al-c'>
                     <div className='df-g8 al-c jc-c'>
                       <img
-                      style={{ width: '150px', height: '150px', borderRadius: '999px', objectFit: 'cover' }}
-                      src={'img/profile-2test.jpeg'}
-                      alt="profile-img"
-                    />
+                        style={{ width: '150px', height: '150px', borderRadius: '999px', objectFit: 'cover' }}
+                        src={'img/profile-2test.jpeg'}
+                        alt="profile-img"
+                      />
 
                     </div>
-                    
+
                     <span>
                       <white>I'm Sai Chittala</white> - <white>Product Designer</white> based in India
                     </span>
-                    
+
                     {/* <span>
                       
                       Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
@@ -232,7 +232,7 @@ const Home = () => {
                 </div>
               </div> */}
               <TestimonialsCard />
-              <div className='df-g8 fd-c gap-36 width-450'>
+              {/* <div className='df-g8 fd-c gap-36 width-450'>
                 <a className="fade-in content-div-main-heading-2 translate-text-up margin-unset">
                   Experience
                 </a>
@@ -246,9 +246,7 @@ const Home = () => {
                   ].map((exp, index, arr) => (
                     <div key={index} className='df-g8' style={{ gap: '16px', alignItems: 'stretch' }}>
 
-                      {/* Tree Line + Dot */}
                       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '16px' }}>
-                        {/* Dot */}
                         <div style={{
                           width: exp.current ? '12px' : '8px',
                           height: exp.current ? '12px' : '8px',
@@ -259,7 +257,6 @@ const Home = () => {
                           marginTop: '4px',
                           transition: 'all 0.3s ease',
                         }} />
-                        {/* Vertical line (not after last item) */}
                         {index < arr.length - 1 && (
                           <div style={{
                             width: '1px',
@@ -271,7 +268,6 @@ const Home = () => {
                         )}
                       </div>
 
-                      {/* Content */}
                       <div className='df-g8' style={{
                         justifyContent: 'space-between',
                         alignItems: 'flex-start',
@@ -306,6 +302,70 @@ const Home = () => {
                         </div>
                       </div>
 
+                    </div>
+                  ))}
+                </div>
+              </div> */}
+              <div className="experience-container">
+                <a className="fade-in content-div-main-heading-2 translate-text-up margin-unset">
+                  Experience
+                </a>
+                <div className="timeline">
+                  {[
+                    {
+                      company: "Groundhog Apps",
+                      role: "Product Designer",
+                      dates: "Oct 2025 – Present",
+                      logo: "/img/logos/groundhog.png",
+                      current: true,
+                    },
+                    {
+                      company: "Customfurnish",
+                      role: "UI/UX Designer",
+                      dates: "Jan 2024 – Jul 2025",
+                      logo: "/img/logos/customfurnish.png",
+                    },
+                    {
+                      company: "FirstRicoz",
+                      role: "UI/UX Designer",
+                      dates: "Jan 2023 – Dec 2023",
+                      logo: "/img/logos/firstricoz.png",
+                    },
+                    {
+                      company: "YallaGai",
+                      role: "Freelance Product Designer",
+                      dates: "Feb 2022 – Dec 2022",
+                      logo: "/img/logos/yallagai.png",
+                    },
+                  ].map((exp, index, arr) => (
+                    <div key={index} className="timeline-row">
+
+                      {/* LEFT: Logo + Line */}
+                      <div className="timeline-left">
+                        <div className="logo-wrapper">
+                          <img src={exp.logo} alt={exp.company} />
+                        </div>
+
+                        {index < arr.length - 1 && <div className="timeline-line" />}
+                      </div>
+
+                      {/* RIGHT: Content */}
+                      <div className="timeline-content">
+                        <div className="timeline-top">
+                          <div className="company-block">
+                            <span className="company-name">{exp.company}</span>
+                            <span className="role">{exp.role}</span>
+                          </div>
+
+                          <div className="date-block">
+                            <span className="dates">{exp.dates}</span>
+                            {exp.current && <span className="current-badge">Current</span>}
+                          </div>
+                        </div>
+
+                        {/* Divider like reference */}
+                        {index < arr.length - 1 && <div className="row-divider" />}
+                      </div>
                     </div>
                   ))}
                 </div>
