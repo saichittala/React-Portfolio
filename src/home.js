@@ -232,68 +232,145 @@ const Home = () => {
                 </div>
               </div> */}
               <TestimonialsCard />
-              <div className="experience-container">
+              {/* <div className='df-g8 fd-c gap-36 width-450'>
                 <a className="fade-in content-div-main-heading-2 translate-text-up margin-unset">
                   Experience
                 </a>
-                <div className="timeline">
+
+                <div className='df-g8 fd-c' style={{ gap: '0px', paddingLeft: '8px' }}>
                   {[
-                    {
-                      company: "Groundhog Apps",
-                      role: "Product Designer",
-                      dates: "Oct 2025 – Present",
-                      logo: "/img/logos/groundhog.png",
-                      current: true,
-                    },
-                    {
-                      company: "Customfurnish",
-                      role: "UI/UX Designer",
-                      dates: "Jan 2024 – Jul 2025",
-                      logo: "/img/logos/customfurnish.png",
-                    },
-                    {
-                      company: "FirstRicoz",
-                      role: "UI/UX Designer",
-                      dates: "Jan 2023 – Dec 2023",
-                      logo: "/img/logos/firstricoz.png",
-                    },
-                    {
-                      company: "YallaGai",
-                      role: "Freelance Product Designer",
-                      dates: "Feb 2022 – Dec 2022",
-                      logo: "/img/logos/yallagai.png",
-                    },
+                    { company: "Groundhog Apps", role: "Product Designer", dates: "Oct 2025 – Present", current: true },
+                    { company: "Customfurnish", role: "UI/UX Designer", dates: "Jan 2024 – Jul 2025" },
+                    { company: "FirstRicoz", role: "UI/UX Designer", dates: "Jan 2023 – Dec 2023" },
+                    { company: "YallaGai", role: "Freelance Product Designer", dates: "Feb 2022 – Dec 2022" },
                   ].map((exp, index, arr) => (
-                    <div key={index} className="timeline-row">
+                    <div key={index} className='df-g8' style={{ gap: '16px', alignItems: 'stretch' }}>
 
-                      {/* LEFT: Logo + Line */}
-                      <div className="timeline-left">
-                        <div className="logo-wrapper">
-                          <img src={exp.logo} alt={exp.company} />
-                        </div>
-
-                        {index < arr.length - 1 && <div className="timeline-line" />}
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '16px' }}>
+                        <div style={{
+                          width: exp.current ? '12px' : '8px',
+                          height: exp.current ? '12px' : '8px',
+                          borderRadius: '50%',
+                          backgroundColor: exp.current ? 'var(--white-color)' : 'rgba(0,0,0,0.3)',
+                          boxShadow: exp.current ? '0 0 0 5px rgba(0,0,0,0.10)' : 'none',
+                          flexShrink: 0,
+                          marginTop: '4px',
+                          transition: 'all 0.3s ease',
+                        }} />
+                        {index < arr.length - 1 && (
+                          <div style={{
+                            width: '1px',
+                            flex: 1,
+                            minHeight: '40px',
+                            background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.04))',
+                            margin: '6px 0',
+                          }} />
+                        )}
                       </div>
 
-                      {/* RIGHT: Content */}
-                      <div className="timeline-content">
-                        <div className="timeline-top">
-                          <div className="company-block">
-                            <span className="company-name">{exp.company}</span>
-                            <span className="role">{exp.role}</span>
-                          </div>
-
-                          <div className="date-block">
-                            <span className="dates">{exp.dates}</span>
-                            {exp.current && <span className="current-badge">Current</span>}
-                          </div>
+                      <div className='df-g8' style={{
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
+                        flex: 1,
+                        paddingBottom: index < arr.length - 1 ? '28px' : '0px',
+                      }}>
+                        <div className='df-g8 fd-c' style={{ gap: '4px' }}>
+                          <span style={{ color: 'var(--white-color)', fontWeight: '500', fontSize: '18px' }}>
+                            {exp.company}
+                          </span>
+                          <span style={{ color: 'var(--white-color)', fontSize: '16px', opacity: '0.6' }}>
+                            {exp.role}
+                          </span>
                         </div>
-
-                        {/* Divider like reference */}
-                        {index < arr.length - 1 && <div className="row-divider" />}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
+                          <span style={{ color: 'var(--white-color)', fontSize: '14px', opacity: '0.4', whiteSpace: 'nowrap', fontWeight: '300' }}>
+                            {exp.dates}
+                          </span>
+                          {exp.current && (
+                            <span style={{
+                              fontSize: '12px',
+                              fontWeight: '400',
+                              padding: '2px 8px',
+                              borderRadius: '20px',
+                              background: 'rgba(0,0,0,0.06)',
+                              color: 'var(--white-color)',
+                              opacity: '1',
+                            }}>
+                              Current
+                            </span>
+                          )}
+                        </div>
                       </div>
+
                     </div>
                   ))}
+                </div>
+              </div> */}
+              <div className='df-g8 fd-c gap-36 width-450'>
+
+                <div className="experience-container">
+                  <a className="fade-in content-div-main-heading-2 translate-text-up margin-unset">
+                    Experience
+                  </a>
+                  <div className="timeline">
+                    {[
+                      {
+                        company: "Groundhog Apps",
+                        role: "Product Designer",
+                        dates: "Oct 2025 – Present",
+                        logo: "/img/logos/groundhog.png",
+                        current: true,
+                      },
+                      {
+                        company: "Customfurnish",
+                        role: "UI/UX Designer",
+                        dates: "Jan 2024 – Jul 2025",
+                        logo: "/img/logos/customfurnish.png",
+                      },
+                      {
+                        company: "FirstRicoz",
+                        role: "UI/UX Designer",
+                        dates: "Jan 2023 – Dec 2023",
+                        logo: "/img/logos/firstricoz.png",
+                      },
+                      {
+                        company: "YallaGai",
+                        role: "Freelance Product Designer",
+                        dates: "Feb 2022 – Dec 2022",
+                        logo: "/img/logos/yallagai.png",
+                      },
+                    ].map((exp, index, arr) => (
+                      <div key={index} className="timeline-row">
+
+                        {/* LEFT: Logo + Line */}
+                        <div className="timeline-left">
+                          <div className="logo-wrapper">
+                            <img src={exp.logo} alt={exp.company} />
+                          </div>
+
+                          {index < arr.length - 1 && <div className="timeline-line" />}
+                        </div>
+
+                        {/* RIGHT: Content */}
+                        <div className="timeline-content">
+                          <div className="timeline-top">
+                            <div className="company-block">
+                              <span className="company-name">{exp.company}</span>
+                              <span className="role">{exp.role}</span>
+                            </div>
+
+                            <div className="date-block">
+                              <span className="dates">{exp.dates}</span>
+                              {exp.current && <span className="current-badge">Current</span>}
+                            </div>
+                          </div>
+
+                          {/* Divider like reference */}
+                          {index < arr.length - 1 && <div className="row-divider" />}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
