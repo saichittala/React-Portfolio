@@ -318,7 +318,7 @@ const Home = () => {
                         company: "Groundhog Apps",
                         role: "Product Designer",
                         dates: "Oct 2025 – Present",
-                        logo: "/img/logos/groundhog.png",
+                        logo: "/img/logos/gh.png",
                         current: true,
                       },
                       {
