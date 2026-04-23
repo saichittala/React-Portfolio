@@ -81,7 +81,14 @@ const CustomFurnish = () => {
             </BubbleButton>
           </a>
           <div className="full-bg">
-            <div className=" p-img-1 main-image bg-black">
+            <div
+              className="p-img-1 main-image bg-black"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               {/* <img src="img/projects/cf.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-inn' /> */}
               <video
                 autoPlay
@@ -89,7 +96,7 @@ const CustomFurnish = () => {
                 muted
                 playsInline
                 className="fade-inn"
-                style={{width: '100%'}}
+                style={{ width: '100%' }, { height: '100%' }}
               >
                 <source src="img/projects/cf-promo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

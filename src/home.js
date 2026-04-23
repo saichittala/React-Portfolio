@@ -254,7 +254,7 @@ const Home = () => {
                           height: exp.current ? '12px' : '8px',
                           borderRadius: '50%',
                           backgroundColor: exp.current ? 'var(--white-color)' : 'rgba(0,0,0,0.3)',
-                          boxShadow: exp.current ? '0 0 8px rgba(0,0,0,0.6)' : 'none',
+                          boxShadow: exp.current ? '0 0 0 5px rgba(0,0,0,0.10)' : 'none',
                           flexShrink: 0,
                           marginTop: '4px',
                           transition: 'all 0.3s ease',

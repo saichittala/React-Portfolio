@@ -16,6 +16,10 @@ const TestimonialsCard = () => {
   ];
 
   const [index, setIndex] = useState(0);
+  const [expanded, setExpanded] = useState(false);
+
+  const LIMIT = 180;
+  const isLong = testimonials[index].text.length > LIMIT;
 
   const goNext = () => {
     setIndex((prev) => (prev + 1) % testimonials.length);
@@ -25,31 +29,29 @@ const TestimonialsCard = () => {
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  // Auto-slide every 10 seconds
+  // Auto-slide
   useEffect(() => {
     const t = setInterval(goNext, 10000);
     return () => clearInterval(t);
   }, []);
 
-  // Detect swipe direction
+  // Reset expanded when slide changes
+  useEffect(() => {
+    setExpanded(false);
+  }, [index]);
+
+  // Swipe detection
   const handleDragEnd = (event, info) => {
     const swipe = info.offset.x;
 
-    // If swiped left → next
-    if (swipe < -50) {
-      goNext();
-    }
-
-    // If swiped right → previous
-    if (swipe > 50) {
-      goPrev();
-    }
+    if (swipe < -50) goNext();
+    if (swipe > 50) goPrev();
   };
 
   return (
     <section className="testimonials-section width-450 display-flex fd-c flex-col gap-36 fade-in">
 
-      {/* Heading + Arrows */}
+      {/* Heading */}
       <div className="display-flex justify-between items-center">
         <a className="fade-in content-div-main-heading-2 translate-text-up">
           Testimonials
@@ -84,14 +86,36 @@ const TestimonialsCard = () => {
             <div className="testimonial-card">
               <img src="img/quote.svg" alt="quote" className="quote-icon" />
 
-              <p className="testimonial-text opacity-90 testimonial-content leading-relaxed">
+              {/* Text */}
+              <p
+                className={`testimonial-text opacity-90 leading-relaxed transition-all duration-300 ${
+                  !expanded && isLong ? "line-clamp-3" : ""
+                }`}
+              >
                 “{testimonials[index].text}”
               </p>
 
+              {/* Show More / Less */}
+              {isLong && (
+                <motion.button
+                  onClick={() => setExpanded(!expanded)}
+                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="text-sm mt-2 opacity-80 hover:opacity-100 underline"
+                >
+                  {expanded ? "Show less" : "Show more"}
+                </motion.button>
+              )}
+
+              {/* Info */}
               <div className="testimonial-info df-g8 gap-12 mt-3">
                 <div className="df-g8 fd-c">
-                  <span className="testimonial-name">{testimonials[index].name}</span>
-                  <span className="text-sm opacity-75 testimonial-role">{testimonials[index].role}</span>
+                  <span className="testimonial-name">
+                    {testimonials[index].name}
+                  </span>
+                  <span className="text-sm opacity-75 testimonial-role">
+                    {testimonials[index].role}
+                  </span>
                 </div>
               </div>
             </div>
@@ -106,15 +130,15 @@ const TestimonialsCard = () => {
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`
-                bubble-dots
-                ${i === index ? "bubble-dots-active" : "bubble-dots-inactive"}
-              `}
+              className={`bubble-dots ${
+                i === index
+                  ? "bubble-dots-active"
+                  : "bubble-dots-inactive"
+              }`}
             ></button>
           ))}
         </div>
       </div>
-
     </section>
   );
 };

@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/georgia');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 
 
 
@@ -18,7 +20,7 @@
 
     --black-color: #000000;
     --black-2-color: #0C0A09;
-    --white-color: #ffffff;
+    --white-color: #E2e2e2;
     --card-white-color: #ffffff;
     --primary-color: #000000;
     --secondary-color: #F7F8F9;
@@ -76,7 +78,7 @@
     .dark-theme {
         --black-color: #000000;
         --black-2-color: #101010;
-        --white-color: #ffffff;
+        --white-color: #E2E2E2;
         --primary-color: #000000;
         --bg-trial-color: #212121;
         --secondary-color: #F7F8F9;
@@ -142,7 +144,7 @@
 
 
     /* Fonts */
-    --primary-font: "Inter",Gi-apple-system,
+    /* --primary-font: "Inter",Gi-apple-system,
     BlinkMacSystemFont,
     "Hanken Grotesk",
     "Helvetica Neue",
@@ -166,10 +168,10 @@
     Roboto,
     "Helvetica Neue",
     Arial,
-    sans-serif;
-    /* 
-    --primary-font: 'Hanken Grotesk', sans-serif;
-    --secondary-font: 'Hanken Grotesk', sans-serif; */
+    sans-serif; */
+    
+    --primary-font: 'Bricolage Grotesque', sans-serif;
+    --secondary-font: 'Bricolage Grotesque', sans-serif;
     /* --primary-font: "JetBrains Mono",
     monospace;
     --secondary-font: "JetBrains Mono",
@@ -177,7 +179,7 @@
     /* --primary-font: "Geist Mono",
     monospace;
     --secondary-font: "Geist Mono",
-    monospace; */
+    monospace;
 
 
     /* --primary-font: "JetBrains Mono",
@@ -1424,7 +1426,7 @@ body.light-theme .theme-toggle-btn {
     }
 
     .home-cards-container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
     }
 }
 
@@ -1583,7 +1585,7 @@ body.light-theme .theme-toggle-btn {
     flex-direction: column;
     gap: 2px;
     width: 100%;
-    padding: 24px;
+    padding: 24px 0;
     box-sizing: border-box;
     position: relative;
 }
@@ -1830,6 +1832,13 @@ body.light-theme .theme-toggle-btn {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-1);
     cursor: grab;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .testimonial-text {
@@ -2830,7 +2839,7 @@ a {
 
 
 .content-div-main-heading-2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 36px;
     color: var(--white-color);
@@ -2971,7 +2980,7 @@ a {
 p,
 li,
 int {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300 !important;
     line-height: 2.1;
     margin: 0;
