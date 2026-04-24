@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import RecruiterToggle from "./RecruiterToggle";
 
-function Header({ toggleTheme, theme }) {
+function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
   const [menuActive, setMenuActive] = useState(false);
   const location = useLocation();
   const iconRef = useRef(null);
+
 
 
   const toggleMenu = () => {
@@ -36,32 +38,32 @@ function Header({ toggleTheme, theme }) {
       <nav className="nav-bar width-nav">
 
         <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
-              <div className="mob-nav-btns">
-                <Link
-                  to="/works"
-                  className="about-button btn-1 mob-btn-1 border-none"
-                  onClick={handleMobileNavClick}
-                >
-                  Work
-                </Link>
+          <div className="mob-nav-btns">
+            <Link
+              to="/works"
+              className="about-button btn-1 mob-btn-1 border-none"
+              onClick={handleMobileNavClick}
+            >
+              Work
+            </Link>
 
-                <Link
-                  to="/about"
-                  className="about-button btn-1 mob-btn-1 border-none"
-                  onClick={handleMobileNavClick}
-                >
-                  About
-                </Link>
+            <Link
+              to="/about"
+              className="about-button btn-1 mob-btn-1 border-none"
+              onClick={handleMobileNavClick}
+            >
+              About
+            </Link>
 
-                <Link
-                  to="/contact"
-                  className="about-button btn-1 mob-btn-1 border-none"
-                  onClick={handleMobileNavClick}
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
+            <Link
+              to="/contact"
+              className="about-button btn-1 mob-btn-1 border-none"
+              onClick={handleMobileNavClick}
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
 
         <div className='df-g8 jc-sb'>
           <a href='/home' className='df-g8 alc logo'>
@@ -88,6 +90,14 @@ function Header({ toggleTheme, theme }) {
 
                 <span>Home</span>
               </Link> */}
+              <div className="df-g8 aic">
+                {/* Recruiter Mode */}
+                <RecruiterToggle className={`about-button display-none menu-nav header-text-1`}
+                  recruiterMode={recruiterMode}
+                  setRecruiterMode={setRecruiterMode}
+                />
+
+              </div>
 
               {/* The 'Works' link is active if the path is "/works" */}
               <Link to="/works" className={`about-button menu-nav header-text-1 ${location.pathname === '/works' ? 'header-text-active' : ''}`}>
@@ -131,3 +141,4 @@ function Header({ toggleTheme, theme }) {
 }
 
 export default Header;
+

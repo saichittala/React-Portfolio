@@ -96,7 +96,7 @@ const CustomFurnish = () => {
                 muted
                 playsInline
                 className="fade-inn"
-                style={{ width: '100%' }, { height: '100%' }}
+                style={{ width: '100%', height: '100%' }}
               >
                 <source src="img/projects/cf-promo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

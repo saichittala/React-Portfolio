@@ -1,49 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import RecruiterToggle from "./RecruiterToggle";
 
 
 function HeaderNonSticky() {
   const [menuActive, setMenuActive] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  
-    const location = useLocation();
-  
+
+  const location = useLocation();
+
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
 
   const controlHeader = () => {
-  if (typeof window !== 'undefined') {
-    const currentScrollY = window.scrollY;
+    if (typeof window !== 'undefined') {
+      const currentScrollY = window.scrollY;
 
-    if (currentScrollY === 0) {
-      setShowHeader(true);
-    } 
-    else if (Math.abs(currentScrollY - lastScrollY) < 5) {
-      return;
-    } 
-    else if (currentScrollY < lastScrollY) {
-      setShowHeader(true); 
-    } else {
-      setShowHeader(false);
+      if (currentScrollY === 0) {
+        setShowHeader(true);
+      }
+      else if (Math.abs(currentScrollY - lastScrollY) < 5) {
+        return;
+      }
+      else if (currentScrollY < lastScrollY) {
+        setShowHeader(true);
+      } else {
+        setShowHeader(false);
+      }
+
+      setLastScrollY(currentScrollY);
     }
-
-    setLastScrollY(currentScrollY);
-  }
-};
+  };
 
 
   useEffect(() => {
-  controlHeader(); // handle scroll position on first load
+    controlHeader(); // handle scroll position on first load
 
-  window.addEventListener('scroll', controlHeader);
+    window.addEventListener('scroll', controlHeader);
 
-  return () => {
-    window.removeEventListener('scroll', controlHeader);
-  };
-}, [lastScrollY]);
+    return () => {
+      window.removeEventListener('scroll', controlHeader);
+    };
+  }, [lastScrollY]);
 
 
   return (
@@ -74,30 +75,34 @@ function HeaderNonSticky() {
 
           {/* Desktop Nav */}
           <div className="nav-btns">
-                      {/* The 'Home' link is active if the path is exactly "/" */}
-                      <Link to="/" className={`about-button header-text ${location.pathname === '/' ? 'header-text-active' : ''}`}>
-                        <img src="img/home-nav.svg" alt="logo" />
-                        <span>Home</span>
-                      </Link>
-          
-                      {/* The 'Works' link is active if the path is "/works" */}
-                      <Link to="/works" className={`about-button header-text ${location.pathname === '/works' ? 'header-text-active' : ''}`}>
-                        <img src="img/works-nav.svg" alt="logo" />
-                        <span>Works</span>
-                      </Link>
-          
-                      {/* The 'About' link is active if the path is "/about" */}
-                      <Link to="/about" className={`about-button header-text ${location.pathname === '/about' ? 'header-text-active' : ''}`}>
-                        <img src="img/profile-nav.svg" alt="logo" />
-                        <span>About</span>
-                      </Link>
-          
-                      {/* The 'Contact' link is active if the path is "/contact" */}
-                      <Link to="/contact" className={`about-button header-text ${location.pathname === '/contact' ? 'header-text-active' : ''}`}>
-                        <img src="img/contact-nav.svg" alt="logo" />
-                        <span>Contact</span>
-                      </Link>
-                    </div>
+            {/* The 'Home' link is active if the path is exactly "/" */}
+            <Link to="/" className={`about-button header-text ${location.pathname === '/' ? 'header-text-active' : ''}`}>
+              <img src="img/home-nav.svg" alt="logo" />
+              <span>Home</span>
+            </Link>
+
+            {/* The 'Works' link is active if the path is "/works" */}
+            <Link to="/works" className={`about-button header-text ${location.pathname === '/works' ? 'header-text-active' : ''}`}>
+              <img src="img/works-nav.svg" alt="logo" />
+              <span>Works</span>
+            </Link>
+
+            {/* The 'About' link is active if the path is "/about" */}
+            <Link to="/about" className={`about-button header-text ${location.pathname === '/about' ? 'header-text-active' : ''}`}>
+              <img src="img/profile-nav.svg" alt="logo" />
+              <span>About</span>
+            </Link>
+
+            {/* The 'Contact' link is active if the path is "/contact" */}
+            <Link to="/contact" className={`about-button header-text ${location.pathname === '/contact' ? 'header-text-active' : ''}`}>
+              <img src="img/contact-nav.svg" alt="logo" />
+              <span>Contact</span>
+            </Link>
+            <RecruiterToggle
+              recruiterMode={recruiterMode}
+              setRecruiterMode={setRecruiterMode}
+            />
+          </div>
         </div>
       </nav>
     </div>

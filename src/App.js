@@ -10,6 +10,7 @@ import About from './pages/about.js';
 import Contact from './pages/contact.js';
 import Works from './pages/works.js';
 import PageTransition from './components/PageTransition.jsx';
+import RecruiterModal from './components/RecruiterModal.jsx';
 
 function App() {
   const getSystemTheme = () =>
@@ -25,12 +26,29 @@ function App() {
     mode === "system" ? getSystemTheme() : mode
   );
 
+
+  const [recruiterMode, setRecruiterMode] = useState(false);
+  const [showRecruiterModal, setShowRecruiterModal] = useState(false);
+  useEffect(() => {
+    if (recruiterMode) {
+      // delay = premium feel
+      const timer = setTimeout(() => {
+        setShowRecruiterModal(true);
+      }, 300);
+
+      return () => clearTimeout(timer);
+    } else {
+      setShowRecruiterModal(false);
+    }
+  }, [recruiterMode]);
+
   const [animating, setAnimating] = useState(false);
+
+
 
   const toggleTheme = () => {
     setAnimating(true);
 
-    // simple toggle between light/dark (manual override)
     const next = theme === "light" ? "dark" : "light";
 
     setMode(next);
@@ -39,18 +57,19 @@ function App() {
     setTimeout(() => setAnimating(false), 700);
   };
 
+
   // 🎨 Apply theme
   useEffect(() => {
     document.body.classList.remove("light-theme", "dark-theme");
     document.body.classList.add(`${theme}-theme`);
   }, [theme]);
 
-  // 💾 Persist mode (NOT theme)
+  // 💾 Persist mode
   useEffect(() => {
     localStorage.setItem("mode", mode);
   }, [mode]);
 
-  // ⚡ LIVE system sync (instant, no reload)
+  // ⚡ System theme sync
   useEffect(() => {
     const media = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -61,7 +80,6 @@ function App() {
     };
 
     media.addEventListener('change', handleChange);
-
     return () => media.removeEventListener('change', handleChange);
   }, [mode]);
 
@@ -69,8 +87,23 @@ function App() {
     <HashRouter>
       {animating && <div className="theme-transition-overlay"></div>}
 
-      <Header toggleTheme={toggleTheme} theme={theme} mode={mode} />
+      {/* Header */}
+      <Header
+        toggleTheme={toggleTheme}
+        theme={theme}
+        mode={mode}
+        recruiterMode={recruiterMode}
+        setRecruiterMode={setRecruiterMode}
+      />
 
+      {/* Recruiter Modal */}
+      <RecruiterModal
+        show={showRecruiterModal}
+        recruiterMode={recruiterMode}
+        setRecruiterMode={setRecruiterMode}
+      />
+
+      {/* Routes */}
       <PageTransition
         animateRoutes={[
           "/mydeziner",
@@ -81,7 +114,7 @@ function App() {
       >
         {(location) => (
           <Routes location={location}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home recruiterMode={recruiterMode} />} />
             <Route path="/mydeziner" element={<MyDeziner />} />
             <Route path="/customfurnish" element={<CustomFurnish />} />
             <Route path="/about" element={<About />} />
