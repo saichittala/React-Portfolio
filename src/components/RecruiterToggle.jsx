@@ -12,9 +12,9 @@ function RecruiterToggle({ recruiterMode, setRecruiterMode }) {
       onClick={toggle}
       role="switch"
       aria-checked={recruiterMode}
-      className="recruiter-toggle-wrapper display-none"
+      className="recruiter-toggle-wrapper "
     >
-      <span className={`header-text-1 ${recruiterMode ? "active" : ""}`}>
+      <span className={`header-text-1 recruiter-toggle-text ${recruiterMode ? "active" : ""}`}>
         Recruiter
       </span>
 

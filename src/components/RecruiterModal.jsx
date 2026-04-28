@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import RecruiterToggle from "./RecruiterToggle";
 
 // 🧠 Resume intelligence
 const resumeSkills = {
@@ -107,6 +108,15 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
         }
     }, [step, result]);
 
+    const handleReset = () => {
+    setStep("idle");
+    setJobDesc("");
+    setResult(null);
+    setDisplayScore(0);
+    setTypedText("");
+    setVisiblePoints(0);
+};
+
     // 🎬 Progressive reveal
     useEffect(() => {
         if (step === "result") {
@@ -124,29 +134,53 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
     if (!recruiterMode) return null;
 
     return (
+
         <div
             className="recruiter-overlay"
             onClick={() => setRecruiterMode(false)}
         >
+
+
             <div
                 className="recruiter-modal"
                 onClick={(e) => e.stopPropagation()}
+
             >
+                <div>
+                    <img
+                        className="close-button-recruiter cursor-link"
+                        src="img/close-popup.svg"
+                        alt="close-popup"
+                        onClick={() => setRecruiterMode(false)}
+                    />
+                </div>
+
                 {/* ✨ Glow Layer */}
-                <div className="chat-glow"></div>
+                <div className="chat-glow">
+                </div>
+
+
 
                 {/* ✨ Content Wrapper (important for layering) */}
                 <div className="modal-content">
+
                     {/* Header */}
                     <div className="modal-header">
 
                         {/* Left */}
-                        <span>AI Job Match Analysis</span>
+                        <div className="df-g8 gap-8 aic">
+                            <span>AI Job Match Analysis</span>
+                            <span className="beta-tag">Beta</span>
+                        </div>
 
                         {/* Right */}
                         <div className="df-g8 aic">
 
                             {/* Toggle */}
+                            <RecruiterToggle
+                                recruiterMode={recruiterMode}
+                                setRecruiterMode={setRecruiterMode}
+                            />
                             {/* <button
                                 className="mini-toggle"
                                 onClick={() => setRecruiterMode(false)}
@@ -155,12 +189,13 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
                             </button> */}
 
                             {/* Close button */}
-                            <button
+                            {/* <button
                                 className="close-btn"
                                 onClick={() => setRecruiterMode(false)}
                             >
                                 ✕
-                            </button>
+                            </button> */}
+
 
                         </div>
                     </div>
@@ -174,7 +209,7 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
                                 onChange={(e) => setJobDesc(e.target.value)}
                             />
 
-                            <button onClick={handleAnalyze} className="analyze-btn">
+                            <button onClick={handleAnalyze} className="analyze-btn btn-1 jc-c">
                                 Analyze Match
                             </button>
                         </>
@@ -184,7 +219,7 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
                     {step === "loading" && (
                         <div className="loading">
                             <div className="loader"></div>
-                            <span>Analyzing experience...</span>
+                            <span className="loading-rec">Analyzing experience...</span>
                         </div>
                     )}
 
@@ -209,18 +244,25 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
 
                             {/* Progressive matched skills */}
                             <div className="chips success">
+                                {/* <p>Matched</p> */}
                                 {result.matched.slice(0, visiblePoints).map((s) => (
                                     <span key={s}>{s}</span>
                                 ))}
                             </div>
 
                             {/* Progressive missing skills */}
+                            
                             <div className="chips danger">
+                                {/* <p>Missing</p> */}
                                 {result.missing.slice(0, visiblePoints).map((s) => (
                                     <span key={s}>{s}</span>
                                 ))}
                             </div>
 
+                            {/* 👉 Reset CTA */}
+                            <button onClick={handleReset} className="reset-btn-rec btn-1 jc-c">
+                                Reset
+                            </button>
                         </div>
                     )}
 

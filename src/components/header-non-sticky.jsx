@@ -98,10 +98,10 @@ function HeaderNonSticky() {
               <img src="img/contact-nav.svg" alt="logo" />
               <span>Contact</span>
             </Link>
-            <RecruiterToggle
+            {/* <RecruiterToggle
               recruiterMode={recruiterMode}
               setRecruiterMode={setRecruiterMode}
-            />
+            /> */}
           </div>
         </div>
       </nav>

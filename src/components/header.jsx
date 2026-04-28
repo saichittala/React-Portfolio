@@ -70,6 +70,10 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
             <img src="img/logo-main.svg" alt="" className='logo' />
           </a>
           <div className="nav-main">
+            <RecruiterToggle className={`about-button display-none menu-nav header-text-1 recruiter-toggle-mobile`}
+                  recruiterMode={recruiterMode}
+                  setRecruiterMode={setRecruiterMode}
+                />
             {/* Menu Icon */}
             <img
               className={`menu-icon ${menuActive ? 'clicked' : ''}`}
@@ -77,6 +81,7 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
               alt="menu-icon"
               onClick={toggleMenu}
             />
+            
 
             {/* Mobile Menu Container - Updated to use Link */}
 
@@ -92,11 +97,10 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
               </Link> */}
               <div className="df-g8 aic">
                 {/* Recruiter Mode */}
-                <RecruiterToggle className={`about-button display-none menu-nav header-text-1`}
+                {/* <RecruiterToggle className={`about-button display-none menu-nav header-text-1 recruiter-toggle-header`}
                   recruiterMode={recruiterMode}
                   setRecruiterMode={setRecruiterMode}
-                />
-
+                /> */}
               </div>
 
               {/* The 'Works' link is active if the path is "/works" */}
