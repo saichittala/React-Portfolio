@@ -2055,6 +2055,10 @@ textarea {
     background: linear-gradient(135deg, #7c3aed, #a855f7);
     box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
 }
+.analyze-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 .ai-summary {
     margin-top: 28px;
@@ -2127,7 +2131,7 @@ textarea {
 }
 
 .percent {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 600;
     color: #22c55e;
 

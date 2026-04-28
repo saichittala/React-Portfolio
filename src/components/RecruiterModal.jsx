@@ -1,17 +1,83 @@
 import React, { useState, useEffect } from "react";
 import RecruiterToggle from "./RecruiterToggle";
-
-// 🧠 Resume intelligence
+// 🧠 Enhanced Resume Intelligence
 const resumeSkills = {
-    "UX Design": ["ux", "user experience"],
-    "UI Design": ["ui", "user interface"],
-    "Product Design": ["product design"],
-    "User Research": ["research", "user research"],
-    "Design Systems": ["design system"],
-    "Prototyping": ["prototype"],
-    "Figma": ["figma"],
-    "A/B Testing": ["a/b", "testing"],
-    "Analytics": ["analytics", "ga4"],
+    "UX Design": {
+        keywords: ["ux", "user experience", "ux design", "experience design"],
+        weight: 1.5,
+    },
+    "UI Design": {
+        keywords: ["ui", "user interface", "visual design"],
+        weight: 1.2,
+    },
+    "Product Design": {
+        keywords: ["product design", "end-to-end", "0 to 1", "product thinking"],
+        weight: 2,
+    },
+    "User Research": {
+        keywords: ["user research", "research", "usability testing", "interviews"],
+        weight: 1.5,
+    },
+    "Design Systems": {
+        keywords: ["design system", "component library", "tokens"],
+        weight: 1.8,
+    },
+    "Prototyping": {
+        keywords: ["prototype", "prototyping", "wireframe"],
+        weight: 1,
+    },
+    "Figma": {
+        keywords: ["figma"],
+        weight: 0.8,
+    },
+    "A/B Testing": {
+        keywords: ["a/b", "ab testing", "experiment"],
+        weight: 1.2,
+    },
+    "Analytics": {
+        keywords: ["analytics", "ga4", "metrics", "data"],
+        weight: 1.3,
+    },
+};
+
+const calculateMatch = (text) => {
+    const jd = text.toLowerCase();
+
+    let matched = [];
+    let missing = [];
+    let notMentioned = [];
+
+    let totalWeight = 0;
+    let matchedWeight = 0;
+
+    Object.entries(resumeSkills).forEach(([skill, data]) => {
+        totalWeight += data.weight;
+
+        const found = data.keywords.some((keyword) =>
+            jd.includes(keyword)
+        );
+
+        if (found) {
+            matched.push(skill);
+            matchedWeight += data.weight;
+        } else {
+            // Only consider "missing" if it's an important skill
+            if (data.weight >= 1.3) {
+                missing.push(skill);
+            } else {
+                notMentioned.push(skill);
+            }
+        }
+    });
+
+    const score = Math.round((matchedWeight / totalWeight) * 100);
+
+    return {
+        score,
+        matched,
+        missing,        // High-value gaps
+        notMentioned,   // Skills you have but JD didn’t mention
+    };
 };
 
 function RecruiterModal({ recruiterMode, setRecruiterMode }) {
@@ -22,54 +88,29 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
     const [typedText, setTypedText] = useState("");
     const [visiblePoints, setVisiblePoints] = useState(0);
 
-    // 🧠 Matching logic
-    const calculateMatch = (text) => {
-        const jd = text.toLowerCase();
-
-        let matched = [];
-        let missing = [];
-
-        Object.entries(resumeSkills).forEach(([skill, keywords]) => {
-            const found = keywords.some((k) => jd.includes(k));
-            if (found) matched.push(skill);
-            else missing.push(skill);
-        });
-
-        const score = Math.round(
-            (matched.length / Object.keys(resumeSkills).length) * 100
-        );
-
-        return { score, matched, missing };
-    };
-
-    // ✨ AI summary
     const generateSummary = (score, matched, missing) => {
-        if (score > 80)
-            return `Strong alignment with ${matched.slice(0, 3).join(
-                ", "
-            )}. Minor gaps in ${missing.slice(0, 2).join(", ")}.`;
-
-        if (score > 60)
-            return `Good match with strengths in ${matched.slice(
-                0,
-                2
-            ).join(", ")}. Some gaps in ${missing.slice(0, 3).join(", ")}.`;
-
-        return `Partial match. Relevant in ${matched
-            .slice(0, 2)
-            .join(", ")} but lacks ${missing.slice(0, 3).join(", ")}.`;
+        if (score > 80) {
+            return `Excellent match! His experience aligns well with ${matched.length} key requirements.`;
+        } else if (score > 60) {
+            // return `Good match! You have ${matched.length} matching skills. Consider developing: ${missing.slice(0, 2).join(", ")}.`;
+            return `Good match! He has ${matched.length} matching skills.`;
+        } else {
+            return `There's potential! He matches ${matched.length} skills. Focus on: ${missing.slice(0, 3).join(", ")}.`;
+        }
     };
 
     const handleAnalyze = () => {
         if (!jobDesc.trim()) return;
 
         setStep("loading");
-
         setTimeout(() => {
-            const res = calculateMatch(jobDesc);
-            setResult(res);
+            const analysisResult = calculateMatch(jobDesc);
+            setResult(analysisResult);
             setStep("result");
-        }, 1200);
+            setDisplayScore(0);
+            setTypedText("");
+            setVisiblePoints(0);
+        }, 1500);
     };
 
     // 🎯 Score animation
@@ -109,13 +150,13 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
     }, [step, result]);
 
     const handleReset = () => {
-    setStep("idle");
-    setJobDesc("");
-    setResult(null);
-    setDisplayScore(0);
-    setTypedText("");
-    setVisiblePoints(0);
-};
+        setStep("idle");
+        setJobDesc("");
+        setResult(null);
+        setDisplayScore(0);
+        setTypedText("");
+        setVisiblePoints(0);
+    };
 
     // 🎬 Progressive reveal
     useEffect(() => {
@@ -209,7 +250,11 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
                                 onChange={(e) => setJobDesc(e.target.value)}
                             />
 
-                            <button onClick={handleAnalyze} className="analyze-btn btn-1 jc-c">
+                            <button
+                                onClick={handleAnalyze}
+                                className="analyze-btn btn-1 jc-c"
+                                disabled={!jobDesc.trim()}
+                            >
                                 Analyze Match
                             </button>
                         </>
@@ -251,7 +296,7 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
                             </div>
 
                             {/* Progressive missing skills */}
-                            
+
                             <div className="chips danger">
                                 {/* <p>Missing</p> */}
                                 {result.missing.slice(0, visiblePoints).map((s) => (
