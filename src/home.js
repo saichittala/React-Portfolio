@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import { CardSwipe } from './components/CardSwipe';
 import TestimonialsCard from './components/TestimonialsCard';
+import Footer from './components/footer';
 
 
 
@@ -126,12 +127,12 @@ const Home = () => {
                       /> */}
 
                     </div>
-                        
 
-                        <span>
+
+                    <span>
                       Hey, I'm Sai Chittala
-                          </span>
-                    
+                    </span>
+
                     <span>
                       I take products from <white>idea to scale</white> - strategically.
                     </span>
@@ -176,7 +177,7 @@ const Home = () => {
                     />
                   ))}
                 </motion.div>
-                
+
 
 
                 {cardsData.length > 4 && (
@@ -197,7 +198,7 @@ const Home = () => {
                 )}
               </div>
               <div className='df-g8 fd-c al-c work-in-progress-container'>
-                <white>Work in progress. Stay tuned.</white>
+                <white>Working on two case studies, stay tuned</white>
               </div>
 
 
@@ -394,7 +395,7 @@ const Home = () => {
       </main>
       {/* </SmoothScrollProvider> */}
 
-      {/* <Footer /> */}
+      <Footer />
 
       {/* LockPopup */}
       <LockPopup

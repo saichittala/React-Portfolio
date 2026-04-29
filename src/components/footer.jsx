@@ -1,6 +1,6 @@
 import React from 'react'
 
-function footer() {
+function Footer() {
     return (
         <footer>
             <section className="fade-inn">
@@ -45,4 +45,4 @@ function footer() {
         </footer>
     );
 }
-export default footer
+export default Footer
