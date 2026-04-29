@@ -1096,11 +1096,15 @@ body.light-theme .theme-toggle-btn {
 
 .work-in-progress-container {
     font-size: 14px;
-    border: 0.8px solid var(--border-color);
-    color: var(--white-color);
-        padding: 8px 12px;
+    border: 0.8px solid rgba(44, 182, 125, 0.25);
+    color: #2CB67D;
+    padding: 8px 12px;
     border-radius: var(--border-radius-1);
-
+    background: linear-gradient(120deg,
+            rgba(30, 111, 92, 0.15),
+            rgba(44, 182, 125, 0.18),
+            rgba(124, 255, 214, 0.15),
+            rgba(30, 111, 92, 0.15));
 }
 
 .main-image {
@@ -1843,7 +1847,7 @@ body.light-theme .theme-toggle-btn {
     border: none;
 }
 
-.recruiter-toggle-text { 
+.recruiter-toggle-text {
     padding: 0 14px !important;
 }
 
@@ -1934,6 +1938,7 @@ body.light-theme .theme-toggle-btn {
     .recruiter-modal {
         width: calc(100% - 48px) !important;
     }
+
     .analyze-btn {
         width: 100% !important;
     }
@@ -2057,9 +2062,10 @@ textarea {
     background: linear-gradient(135deg, #7c3aed, #a855f7);
     box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
 }
+
 .analyze-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .ai-summary {
