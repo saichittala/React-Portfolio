@@ -63,6 +63,9 @@ const MyDeziner = () => {
     // Video Autoplay
   }, []);
 
+  
+
+
 
   return (
     <div className='cursor overflow-x-h'>
@@ -191,7 +194,7 @@ const MyDeziner = () => {
                             </p>
                             <p className='fade-inn'>
                               Although the rendering quality was impressive, the workflow felt heavy.                            </p>
-                            <p className='fade-inn' style={{fontWeight: '600'}}>
+                            <p className='fade-inn' style={{ fontWeight: '600' }}>
                               "Powerful output, but slow execution."
                             </p>
                           </div>

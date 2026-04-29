@@ -9,17 +9,16 @@ import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import BubbleButton from '../components/BubbleButton';
 import { use } from 'react';
-// import SmoothScrollProvider from '../components/Scrollsmooth';
 import LazyImage from '../components/LazyImage';
 
 
-const CustomFurnish = () => {
+const lmsgh = () => {
 
   // FullScrollFadeIn();
   // useFadeIn();
   // useScrollEffect();
   // ZoomOnScroll();
-  const customfurnishRef = React.useRef(null);
+  const lmsghRef = React.useRef(null);
   const [isMobile] = useState(window.innerWidth <= 674);
   useEffect(() => {
     const heading = document.querySelector('.pd-main-heading, .pd-main-heading-2');
@@ -44,17 +43,6 @@ const CustomFurnish = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    // force light theme
-    document.body.classList.remove("dark-theme");
-    document.body.classList.add("light-theme");
-
-    return () => {
-      // restore back (optional: system or previous)
-      document.body.classList.remove("light-theme");
-    };
-  }, []);
-
 
   return (
     <div className='cursor overflow-x-h'>
@@ -75,10 +63,10 @@ const CustomFurnish = () => {
       {/* <SmoothScrollProvider duration={1.2}> */}
 
       <main>
-        <section ref={customfurnishRef}>
-          <a href="https://www.figma.com/design/IHX8O0ZQrwEwOcPHjjZUFH/Customfurnish?node-id=0-1&t=tfbAj8cpIn9eWmee-1" target="_blank" rel="noopener noreferrer">
+        <section ref={lmsghRef}>
+          <a href="https://www.figma.com/design/IHX8O0ZQrwEwOcPHjjZUFH/lmsgh?node-id=0-1&t=tfbAj8cpIn9eWmee-1" target="_blank" rel="noopener noreferrer">
             <BubbleButton
-              activationRef={customfurnishRef}
+              activationRef={lmsghRef}
               text="Open Figma Design"
               showDelay={300}
               hideDelay={500}
@@ -118,7 +106,7 @@ const CustomFurnish = () => {
 
                   <div className="pd-main">
                     <div className="pd-heading-div p-head-arrow">
-                      <a className=" pd-main-heading">CustomFurnish</a>
+                      <a className=" pd-main-heading">lmsgh</a>
                       <img src="img/arrow-down.svg" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer arrow-down" />
                     </div>
                   </div>
@@ -165,25 +153,25 @@ const CustomFurnish = () => {
                     <div className="pd-main" >
                       <div className="   pd-content-main gap-72 margin-100">
                         {/* <ReactBeforeSliderComponent className='fade-inn '
-                          firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.webp' }}  // Passing the first image
-                          secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
+                          firstImage={{ "imageUrl": 'img/projects/lmsgh/lmsgh-new.webp' }}  // Passing the first image
+                          secondImage={{ "imageUrl": 'img/projects/lmsgh/lmsgh-old.webp' }}  // Passing the first image
                         /> */}
                         <div className="content-div-main fade-inn width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">About
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p className='fade-inn'>CustomFurnish is a full-service interior design company with strong offline expertise. However, the website worked more like a display page than a lead-generation platform. The redesign focused on turning the website into a clear, simple, and trust-first experience that supports both users and the sales team.
+                            <p className='fade-inn'>lmsgh is a full-service interior design company with strong offline expertise. However, the website worked more like a display page than a lead-generation platform. The redesign focused on turning the website into a clear, simple, and trust-first experience that supports both users and the sales team.
                             </p>
                           </div>
                         </div>
                         {/* <div>
                           <int className="fade-inn">
-                            <p className=''>I led the end-to-end redesign of Customfurnish’s web experience to turn <int>uncertain browsers into confident buyers</int> - real-time consultation, and elegant UX that built trust and drove a <int>25% increase in lead conversions.</int></p></int>
+                            <p className=''>I led the end-to-end redesign of lmsgh’s web experience to turn <int>uncertain browsers into confident buyers</int> - real-time consultation, and elegant UX that built trust and drove a <int>25% increase in lead conversions.</int></p></int>
                         </div> */}
                         <div className="content-div-main fade-inn ">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800 ">Understanding the Problem Statement
                           </a>
-                          <LazyImage src="img/projects/customfurnish/customfurnish-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
+                          <LazyImage src="img/projects/lmsgh/lmsgh-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer lmsgh" className='fade-inn' loading="lazy" />
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '36px' }} className='width-800'>
                             <div className='pd-content'>
                               <ch className="fade-inn translate-text-up" style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>Previous Scenario</ch>
@@ -218,7 +206,7 @@ const CustomFurnish = () => {
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                             <p className='fade-inn'>To define scope and direction, I clarified four key areas:
                             </p>
-                            <img src="img/projects/customfurnish/Cl-Questions-1.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" style={{ display: 'flex', flexDirection: 'column', marginTop: '20px' }} />
+                            <img src="img/projects/lmsgh/Cl-Questions-1.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer lmsgh" className='fade-inn' loading="lazy" style={{ display: 'flex', flexDirection: 'column', marginTop: '20px' }} />
 
                           </div>
                         </div>
@@ -226,7 +214,7 @@ const CustomFurnish = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">Problem Statement
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p className='fade-inn'>How might we transform CustomFurnish’s website from a static design showcase into a trust-driven, conversion-focused platform that encourages high-intent users to book consultations?
+                            <p className='fade-inn'>How might we transform lmsgh’s website from a static design showcase into a trust-driven, conversion-focused platform that encourages high-intent users to book consultations?
                             </p>
                           </div>
                         </div>
@@ -275,17 +263,17 @@ const CustomFurnish = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Persona 1</ch>
-                            <img src="img/projects/customfurnish/userpersona-1.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                            <img src="img/projects/lmsgh/userpersona-1.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                           </div>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Persona 2</ch>
-                            <img src="img/projects/customfurnish/userpersona-2.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                            <img src="img/projects/lmsgh/userpersona-2.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                           </div>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up  width-800">Empathy Map</ch>
-                            <img src="img/projects/customfurnish/empathymap.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                            <img src="img/projects/lmsgh/empathymap.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                             <p className='fade-inn'>Key insight: Users needed reassurance and process clarity more than more content.</p>
 
                           </div>
@@ -296,15 +284,15 @@ const CustomFurnish = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Flow</ch>
-                            <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                            <img src="img/projects/lmsgh/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                           </div>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">Information Architecture</ch>
-                            <img src="img/projects/customfurnish/information-architecture.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                            <img src="img/projects/lmsgh/information-architecture.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                           </div>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">Components</ch>
-                            <img src="img/projects/customfurnish/Components.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                            <img src="img/projects/lmsgh/Components.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
                             <p className='fade-inn'>Each step reduced cognitive load and guided users forward.</p>
                           </div>
                         </div>
@@ -321,7 +309,7 @@ const CustomFurnish = () => {
                           <span className=''>Outcome</span>
                         </div>
                         <div className="content-div-main fade-inn ">
-                          <img src="img/projects/customfurnish/customfurnish-new.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
+                          <img src="img/projects/lmsgh/lmsgh-new.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer lmsgh" className='fade-inn' loading="lazy" />
                           <p style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginTop: '24px' }} className='fade-inn width-800'>
                             The redesigned website became a clear, trust-first platform that guided users toward consultation booking. Instead of overwhelming users with too much information, the experience focused on clarity, confidence, and structured decision-making.</p>
                           <div >
@@ -338,7 +326,7 @@ const CustomFurnish = () => {
                         {/* <div className='width-800 project-details-subinternal'>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Insights</ch>
-                            <img src="img/projects/customfurnish/userinsights.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                            <img src="img/projects/lmsgh/userinsights.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
                           </div>
                           <p className='width-800'><int>We went beyond the surface with interviews, analytics, and heatmaps. The data revealed where users got stuck—and why they left.</int></p>
 
@@ -346,9 +334,9 @@ const CustomFurnish = () => {
                         <div className='width-800 project-details-subinternal'>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up  width-800">Competitve Analysis</ch>
-                            <img src="img/projects/customfurnish/companalysis.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                            <img src="img/projects/lmsgh/companalysis.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                           </div>
-                          <p className='width-800'><int>We studied key players in the interior design space—what made them trustworthy, where they lost users, and how Customfurnish could stand out with clarity, speed, and immersive features. The goal? Spot the gaps and design to fill them.</int></p>
+                          <p className='width-800'><int>We studied key players in the interior design space—what made them trustworthy, where they lost users, and how lmsgh could stand out with clarity, speed, and immersive features. The goal? Spot the gaps and design to fill them.</int></p>
                         </div> */}
 
 
@@ -366,7 +354,7 @@ const CustomFurnish = () => {
                       <div className="content-div-main fade-inn width-800">
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                           <p className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px' }}>Beyond metrics, the redesign built confidence among users and internal stakeholders.</p>
-                          <img src="img/projects/customfurnish/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
+                          <img src="img/projects/lmsgh/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
                         </div>
                       </div>
 
@@ -380,7 +368,7 @@ const CustomFurnish = () => {
                     <div className="project-details">
                       <div className="thankyou-content-heading fade-inn cursor-text">
                         Thank you for viewing. <a
-                          href="https://www.customfurnish.com" rel="noopener noreferrer"
+                          href="https://www.lmsgh.com" rel="noopener noreferrer"
                           target="_blank">Have a look at live website</a>
                       </div>
                     </div>
@@ -397,4 +385,4 @@ const CustomFurnish = () => {
   );
 }
 
-export default CustomFurnish;
+export default lmsgh;
