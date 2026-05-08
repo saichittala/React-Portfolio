@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer';
-// import useFadeIn from '../components/useFadeIn';
-
-// import FullScrollFadeIn from '../components/FullScrollFadeIn';
-// import useScrollEffect from '../components/useScrollEffect';
-// import ZoomOnScroll from '../components/ZoomOnScroll';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 import BubbleButton from '../components/BubbleButton';

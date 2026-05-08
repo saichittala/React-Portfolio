@@ -4,6 +4,7 @@ import RecruiterToggle from "./RecruiterToggle";
 
 function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
   const [menuActive, setMenuActive] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const iconRef = useRef(null);
 
@@ -29,15 +30,64 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
       );
     }
   }, [location.pathname]);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const [showNavbar, setShowNavbar] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Add background blur/shadow after slight scroll
+      setScrolled(currentScrollY > 20);
+
+      // Prevent navbar flickering near top
+      if (currentScrollY < 40) {
+        setShowNavbar(true);
+      }
+      // Scrolling DOWN
+      else if (currentScrollY > lastScrollY) {
+        setShowNavbar(false);
+      }
+      // Scrolling UP
+      else {
+        setShowNavbar(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // 3. The onClick handler for scrolling is no longer needed.
   // React Router's <Link> component will handle navigation.
 
   return (
     <div>
-      <nav className="nav-bar width-nav">
-
-        <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
+      <nav
+        className={`
+    nav-bar
+    ${scrolled ? 'nav-scrolled' : ''}
+    ${showNavbar ? 'nav-visible' : 'nav-hidden'}
+  `}
+      >        <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
           <div className="mob-nav-btns">
             <Link
               to="/works"
@@ -71,9 +121,9 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
           </a>
           <div className="nav-main">
             <RecruiterToggle className={`about-button display-none menu-nav header-text-1 recruiter-toggle-mobile`}
-                  recruiterMode={recruiterMode}
-                  setRecruiterMode={setRecruiterMode}
-                />
+              recruiterMode={recruiterMode}
+              setRecruiterMode={setRecruiterMode}
+            />
             {/* Menu Icon */}
             <img
               className={`menu-icon ${menuActive ? 'clicked' : ''}`}
@@ -81,7 +131,7 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
               alt="menu-icon"
               onClick={toggleMenu}
             />
-            
+
 
             {/* Mobile Menu Container - Updated to use Link */}
 
