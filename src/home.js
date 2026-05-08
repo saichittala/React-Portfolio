@@ -36,7 +36,7 @@ const Home = () => {
 
 
   const cardsData = [
-    { title: "Onboarding Process of LMS GroundHog", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.png", link: "#/customfurnish", openInNewTab: true, locked: false },
+    // { title: "Onboarding Process of LMS GroundHog", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.png", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Turning Website Traffic into Qualified Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Reducing Workflow Friction in Interior Design SaaS", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.png", link: "#/mydeziner", openInNewTab: true, locked: true, password: "surya@123" },
     // { title: "Designing efficiency for interior designers", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: true, confidential: true, password: "surya@123" },
