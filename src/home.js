@@ -28,7 +28,7 @@ const Home = () => {
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
   const [showAll, setShowAll] = useState(false); // 🔹 For View More/Less toggle
   const RESUME_PASSWORD = "surya@123"; // set your desired password
-
+  const [heroTag, setHeroTag] = useState("Now reaching you ✦");
 
 
 
@@ -68,6 +68,42 @@ const Home = () => {
       setIsPasswordIncorrect(true); // Set incorrect flag if password is wrong
     }
   };
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const res = await fetch("https://ipapi.co/json");
+        const data = await res.json();
+
+        const state = data.region;
+        const country = data.country_name;
+
+        const location =
+          state && country
+            ? `${state}, ${country}`
+            : country;
+
+        const tags = [
+          `Now reaching ${location} ✦`,
+          `${state}, you've got taste ✦`,
+          `A quiet hello to ${location} ✦`,
+          `Nice to see ${state} here ✦`,
+          `Currently reaching ${location} ✦`,
+          `Look who's visiting from ${state} ✦`,
+        ];
+
+        const randomTag =
+          tags[Math.floor(Math.random() * tags.length)];
+
+        setHeroTag(randomTag);
+
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchLocation();
+  }, []);
 
   // Close the popup
   const closePopup = () => {
@@ -119,7 +155,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className='df-g8 fd-c width-100  jc-c'>
-                  <div className='home-main-text df-g8 gap-20 fd-c width-320px jc-c al-c'>
+                  <div className='home-main-text gap-20  df-g8 fd-c width-320px aic jc-c al-c'>
                     <div className='df-g8 al-c jc-c'>
                       {/* <img
                         style={{ width: '150px', height: '150px', borderRadius: '999px', objectFit: 'cover' }}
@@ -128,6 +164,8 @@ const Home = () => {
                       /> */}
 
                     </div>
+                    <div className='df-g8 fd-c al-c home-tag-container'>
+                      <white>{heroTag}</white>                    </div>
 
 
                     <span>
