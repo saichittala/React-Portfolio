@@ -570,7 +570,7 @@ body {
 }
 
 .nav-hidden {
-    transform: translate(-50%, calc(-100% - 16px));
+    transform: translate(-50%, calc(-100% - 20px));
 }
 
 @media (max-width: 674px) {
@@ -1099,6 +1099,7 @@ body.light-theme .theme-toggle-btn {
     color: #2CB67D;
     padding: 12px 18px;
     border-radius: var(--border-radius-1);
+    font-weight: 300;
     background: linear-gradient(120deg, #1e6f5c10, #2cb67d15, #7cffd618, #1e6f5c12);
 }
 
