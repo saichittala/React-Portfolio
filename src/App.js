@@ -21,16 +21,22 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
 
   /* ========================================
-   * Luxury Smooth Scroll
+   * Premium Smooth Scroll
    * ======================================== */
   useEffect(() => {
 
     const lenis = new Lenis({
-      duration: 1.4,
+      duration: 1.1,
+      lerp: 0.075,
+
       smoothWheel: true,
-      smoothTouch: false,
-      lerp: 0.07,
-      wheelMultiplier: 0.8,
+      smoothTouch: true,
+
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.15,
+
+      infinite: false,
+      normalizeWheel: true,
     });
 
     function raf(time) {
@@ -43,88 +49,144 @@ function App() {
 
     requestAnimationFrame(raf);
 
-    // connect GSAP + Lenis
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
+    ScrollTrigger.scrollerProxy(document.body, {
+      scrollTop(value) {
+        return arguments.length
+          ? lenis.scrollTo(value, { immediate: true })
+          : lenis.scroll;
+      },
+
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
     });
 
-    gsap.ticker.lagSmoothing(0);
+    ScrollTrigger.refresh();
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove();
     };
 
   }, []);
 
+  /* ========================================
+   * Theme System
+   * ======================================== */
   const getSystemTheme = () =>
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
 
   const [mode, setMode] = useState(
-    localStorage.getItem("mode") || "system"
+    localStorage.getItem('mode') || 'system'
   );
 
   const [theme, setTheme] = useState(
-    mode === "system" ? getSystemTheme() : mode
+    mode === 'system' ? getSystemTheme() : mode
   );
 
   const [recruiterMode, setRecruiterMode] = useState(false);
+
   const [showRecruiterModal, setShowRecruiterModal] = useState(false);
 
+  const [animating, setAnimating] = useState(false);
+
+  /* ========================================
+   * Recruiter Modal
+   * ======================================== */
   useEffect(() => {
+
     if (recruiterMode) {
+
       const timer = setTimeout(() => {
         setShowRecruiterModal(true);
       }, 300);
 
       return () => clearTimeout(timer);
+
     } else {
       setShowRecruiterModal(false);
     }
+
   }, [recruiterMode]);
 
-  const [animating, setAnimating] = useState(false);
-
+  /* ========================================
+   * Theme Toggle
+   * ======================================== */
   const toggleTheme = () => {
+
     setAnimating(true);
 
-    const next = theme === "light" ? "dark" : "light";
+    const next = theme === 'light' ? 'dark' : 'light';
 
     setMode(next);
     setTheme(next);
 
-    setTimeout(() => setAnimating(false), 700);
+    setTimeout(() => {
+      setAnimating(false);
+    }, 700);
+
   };
 
+  /* ========================================
+   * Apply Theme
+   * ======================================== */
   useEffect(() => {
-    document.body.classList.remove("light-theme", "dark-theme");
+
+    document.body.classList.remove(
+      'light-theme',
+      'dark-theme'
+    );
+
     document.body.classList.add(`${theme}-theme`);
+
   }, [theme]);
 
+  /* ========================================
+   * Save Mode
+   * ======================================== */
   useEffect(() => {
-    localStorage.setItem("mode", mode);
+    localStorage.setItem('mode', mode);
   }, [mode]);
 
+  /* ========================================
+   * System Theme Listener
+   * ======================================== */
   useEffect(() => {
-    const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const media = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    );
 
     const handleChange = () => {
-      if (mode === "system") {
-        setTheme(media.matches ? "dark" : "light");
+
+      if (mode === 'system') {
+        setTheme(media.matches ? 'dark' : 'light');
       }
+
     };
 
     media.addEventListener('change', handleChange);
 
-    return () => media.removeEventListener('change', handleChange);
+    return () => {
+      media.removeEventListener('change', handleChange);
+    };
+
   }, [mode]);
 
   return (
     <HashRouter>
 
-      {animating && <div className="theme-transition-overlay"></div>}
+      {animating && (
+        <div className="theme-transition-overlay"></div>
+      )}
 
       <Header
         toggleTheme={toggleTheme}
@@ -142,20 +204,47 @@ function App() {
 
       <PageTransition
         animateRoutes={[
-          "/mydeziner",
-          "/customfurnish",
-          "/works",
-          "/about"
+          '/mydeziner',
+          '/customfurnish',
+          '/works',
+          '/about',
         ]}
       >
         {(location) => (
           <Routes location={location}>
-            <Route path="/" element={<Home recruiterMode={recruiterMode} />} />
-            <Route path="/mydeziner" element={<MyDeziner />} />
-            <Route path="/customfurnish" element={<CustomFurnish />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/works" element={<Works />} />
-            <Route path="/contact" element={<Contact />} />
+
+            <Route
+              path="/"
+              element={
+                <Home recruiterMode={recruiterMode} />
+              }
+            />
+
+            <Route
+              path="/mydeziner"
+              element={<MyDeziner />}
+            />
+
+            <Route
+              path="/customfurnish"
+              element={<CustomFurnish />}
+            />
+
+            <Route
+              path="/about"
+              element={<About />}
+            />
+
+            <Route
+              path="/works"
+              element={<Works />}
+            />
+
+            <Route
+              path="/contact"
+              element={<Contact />}
+            />
+
           </Routes>
         )}
       </PageTransition>
