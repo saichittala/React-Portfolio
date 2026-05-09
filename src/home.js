@@ -68,42 +68,53 @@ const Home = () => {
       setIsPasswordIncorrect(true); // Set incorrect flag if password is wrong
     }
   };
-
+  
   useEffect(() => {
-    const fetchLocation = async () => {
-      try {
-        const res = await fetch("https://ipapi.co/json");
-        const data = await res.json();
+  const fetchLocation = async () => {
+    try {
+      const response = await fetch("https://ipinfo.io/json");
 
-        const state = data.region;
-        const country = data.country_name;
+      const data = await response.json();
 
-        const location =
-          state && country
-            ? `${state}, ${country}`
-            : country;
+      console.log("LOCATION:", data);
 
-        const tags = [
-          `Now reaching ${location} ✦`,
-          `${state}, you've got taste ✦`,
-          `A quiet hello to ${location} ✦`,
-          `Nice to see ${state} here ✦`,
-          `Currently reaching ${location} ✦`,
-          `Look who's visiting from ${state} ✦`,
-        ];
+      const state =
+        data.region || "";
 
-        const randomTag =
-          tags[Math.floor(Math.random() * tags.length)];
+      const country =
+        data.country || "";
 
-        setHeroTag(randomTag);
+      const city =
+        data.city || "";
 
-      } catch (error) {
-        console.log(error);
-      }
-    };
+      const location =
+        city
+          ? `${city}, ${country}`
+          : `${state}, ${country}`;
 
-    fetchLocation();
-  }, []);
+      const tags = [
+        `Now reaching ${location} ✦`,
+        city
+          ? `${city}, you've got taste ✦`
+          : `${state}, you've got taste ✦`,
+        `A quiet hello to ${location} ✦`,
+        `Nice to see ${city || state} here ✦`,
+      ];
+
+      const randomTag =
+        tags[Math.floor(Math.random() * tags.length)];
+
+      setHeroTag(randomTag);
+
+    } catch (error) {
+      console.error(error);
+
+      setHeroTag("Welcome aboard ✦");
+    }
+  };
+
+  fetchLocation();
+}, []);
 
   // Close the popup
   const closePopup = () => {
@@ -165,7 +176,7 @@ const Home = () => {
 
                     </div>
                     <div className='df-g8 fd-c al-c home-tag-container'>
-                      <white>{heroTag}</white>                    </div>
+                      <span>{heroTag}</span>                    </div>
 
 
                     <span>
