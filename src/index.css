@@ -56,7 +56,7 @@
         --black-opacity-4: rgba(255, 255, 255, 0.7);
         --black-opacity-5: rgba(255, 255, 255, 0.9);
         --black-type-1: linear-gradient(to bottom, #fafafa, #e5e5e5);
-        --white-opacity-1: rgba(0, 0, 0, 0.1);
+        --white-opacity-1: rgba(0, 0, 0, 0.06);
         --box-shadow-1: 0 8px 24px 2px #ffffff1f, 0 0 0 0 #00000030;
         --purple-glow: rgba(168, 85, 247, 0.25);
 
@@ -96,7 +96,7 @@
         --purple-glow: rgba(168, 85, 247, 0.25);
 
         --cursor-color: #ffffff30;
-        --white-opacity-1: rgba(255, 255, 255, 0.1);
+        --white-opacity-1: rgba(255, 255, 255, 0.06);
 
         --box-shadow-1: 0 8px 204px 2px #ffffff1f, 0 0 0 0 #ffffff30;
 
@@ -647,6 +647,7 @@ body {
     padding: 4px 8px;
     border-radius: var(--border-radius-4);
     align-items: center;
+    border: 0.8px solid transparent;
 
     span {
         display: flex;
@@ -737,6 +738,11 @@ body.light-theme .theme-toggle-btn {
     filter: brightness(0) saturate(100%) invert(49%) sepia(21%) saturate(0%) hue-rotate(181deg) brightness(98%) contrast(90%);
 }
 
+.header-text-1:hover {
+    background-color: var(--white-opacity-1);
+    color: var(--white-color);
+}
+
 .header-text-active {
     img {
         display: none;
@@ -748,7 +754,8 @@ body.light-theme .theme-toggle-btn {
     transition: padding .5s cubic-bezier(0, -.6, 0, 1.07),
     transform .2s cubic-bezier(0, -.6, 0, 1.07),
     filter .2s cubic-bezier(0, -.6, 0, 1.07);
-    background: #33333310;
+    background: var(--white-opacity-1);
+    border: 0.8px solid var(--border-color);
 
     span {
         opacity: 1;
@@ -1045,10 +1052,10 @@ body.light-theme .theme-toggle-btn {
 
 .home-tag-container {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 0.04em;
 
-    color: #C7B8FF;
+    color: #4e4bb3;
 
     padding: 4px 12px;
 
@@ -1056,7 +1063,7 @@ body.light-theme .theme-toggle-btn {
 
     border-radius: 999px;
 
-    border: 1px solid rgba(167, 139, 250, 0.16);
+    border: 1px solid #4e4bb340;
 
     background:
         linear-gradient(135deg,
@@ -4160,9 +4167,9 @@ textarea:focus {
 
 /* Toast styling */
 .Toastify__toast-container--top-center.sticky-toast .Toastify__toast {
-    background: var(--black-opacity-2);
+    background: var(--black-opacity);
     backdrop-filter: blur(10px);
-    border: 0.8px solid transparent;
+    border: 0.8px solid var(--border-color);
     color: var(--white-color);
     border-radius: var(--border-radius-1);
     padding: 16px;

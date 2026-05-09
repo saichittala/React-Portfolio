@@ -68,48 +68,26 @@ const Home = () => {
       setIsPasswordIncorrect(true); // Set incorrect flag if password is wrong
     }
   };
-  
+
   useEffect(() => {
   const fetchLocation = async () => {
     try {
       const response = await fetch("https://ipinfo.io/json");
-
       const data = await response.json();
 
       console.log("LOCATION:", data);
 
-      const state =
-        data.region || "";
+      const state = data.region || "";
+      const country = data.country || "";
 
-      const country =
-        data.country || "";
+      const location = `${state}, ${country}`;
 
-      const city =
-        data.city || "";
-
-      const location =
-        city
-          ? `${city}, ${country}`
-          : `${state}, ${country}`;
-
-      const tags = [
-        `Now reaching ${location} ✦`,
-        city
-          ? `${city}, you've got taste ✦`
-          : `${state}, you've got taste ✦`,
-        `A quiet hello to ${location} ✦`,
-        `Nice to see ${city || state} here ✦`,
-      ];
-
-      const randomTag =
-        tags[Math.floor(Math.random() * tags.length)];
-
-      setHeroTag(randomTag);
+      setHeroTag(`A quiet hello to ${location} ✦`);
 
     } catch (error) {
       console.error(error);
 
-      setHeroTag("Welcome aboard ✦");
+      setHeroTag("A quiet hello ✦");
     }
   };
 
