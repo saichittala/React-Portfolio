@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from '@studio-freight/lenis';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import Lenis from '@studio-freight/lenis';
 
 // components
 import Header from './components/header.jsx';
@@ -16,65 +16,65 @@ import Works from './pages/works.js';
 import PageTransition from './components/PageTransition.jsx';
 import RecruiterModal from './components/RecruiterModal.jsx';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
   /* ========================================
    * Premium Smooth Scroll
    * ======================================== */
-  useEffect(() => {
+  // useEffect(() => {
 
-    const lenis = new Lenis({
-      duration: 1.1,
-      lerp: 0.075,
+  //   const lenis = new Lenis({
+  //     duration: 1.1,
+  //     lerp: 0.075,
 
-      smoothWheel: true,
-      smoothTouch: true,
+  //     smoothWheel: true,
+  //     smoothTouch: true,
 
-      wheelMultiplier: 0.9,
-      touchMultiplier: 1.15,
+  //     wheelMultiplier: 0.9,
+  //     touchMultiplier: 1.15,
 
-      infinite: false,
-      normalizeWheel: true,
-    });
+  //     infinite: false,
+  //     normalizeWheel: true,
+  //   });
 
-    function raf(time) {
-      lenis.raf(time);
+  //   function raf(time) {
+  //     lenis.raf(time);
 
-      ScrollTrigger.update();
+  //     ScrollTrigger.update();
 
-      requestAnimationFrame(raf);
-    }
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
+  //   requestAnimationFrame(raf);
 
-    lenis.on('scroll', ScrollTrigger.update);
+  //   lenis.on('scroll', ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy(document.body, {
-      scrollTop(value) {
-        return arguments.length
-          ? lenis.scrollTo(value, { immediate: true })
-          : lenis.scroll;
-      },
+  //   ScrollTrigger.scrollerProxy(document.body, {
+  //     scrollTop(value) {
+  //       return arguments.length
+  //         ? lenis.scrollTo(value, { immediate: true })
+  //         : lenis.scroll;
+  //     },
 
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-    });
+  //     getBoundingClientRect() {
+  //       return {
+  //         top: 0,
+  //         left: 0,
+  //         width: window.innerWidth,
+  //         height: window.innerHeight,
+  //       };
+  //     },
+  //   });
 
-    ScrollTrigger.refresh();
+  //   ScrollTrigger.refresh();
 
-    return () => {
-      lenis.destroy();
-    };
+  //   return () => {
+  //     lenis.destroy();
+  //   };
 
-  }, []);
+  // }, []);
 
   /* ========================================
    * Theme System

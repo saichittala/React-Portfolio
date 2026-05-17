@@ -82,7 +82,7 @@ const Home = () => {
 
       const location = `${state}, ${country}`;
 
-      setHeroTag(`A quiet hello to ${location} ✦`);
+      setHeroTag(`Hello to ${location} ✦`);
 
     } catch (error) {
       console.error(error);
