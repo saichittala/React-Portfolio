@@ -49,7 +49,7 @@
         --text-color: #404040;
         --border-color: rgba(0, 0, 0, 0.14);
         --grey-bg-w-color: #909090;
-        --grey-bg-b-color: #606060;
+        --grey-bg-b-color: #505050;
         --black-opacity: rgba(255, 255, 255, 0.8);
         --black-opacity-2: rgba(250, 250, 250, 0.7);
         --black-opacity-3: rgba(244, 244, 244, 0.5);
@@ -85,7 +85,7 @@
         --bg-trial-color: #333333;
         --text-color: #D0D0D0;
         --border-color: rgba(255, 255, 255, 0.14);
-        --grey-bg-w-color: #606060;
+        --grey-bg-w-color: #505050;
         --grey-bg-b-color: #86868D;
         --black-opacity: rgba(0, 0, 0, 0.8);
         --black-opacity-2: rgba(66, 66, 69, 0.7);
@@ -3458,7 +3458,7 @@ p,
 li,
 int {
     font-size: 18px;
-    font-weight: 250 !important;
+    font-weight: 300 !important;
     line-height: 2.1;
     margin: 0;
     color: var(--grey-bg-b-color);
