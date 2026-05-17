@@ -1,143 +1,157 @@
-import React, { useEffect, useState } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import React, {
+  useEffect,
+  useState,
+  lazy,
+  Suspense,
+  memo,
+} from 'react';
 
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import Lenis from '@studio-freight/lenis';
+import {
+  HashRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
-// components
+/* ========================================
+ * Components Imports FIRST
+ * ======================================== */
+
 import Header from './components/header.jsx';
-import Home from './home.js';
-import MyDeziner from './pages/mydeziner.js';
-import CustomFurnish from './pages/customfurnish.js';
-import About from './pages/about.js';
-import Contact from './pages/contact.js';
-import Works from './pages/works.js';
 import PageTransition from './components/PageTransition.jsx';
 import RecruiterModal from './components/RecruiterModal.jsx';
 
-// gsap.registerPlugin(ScrollTrigger);
+/* ========================================
+ * Lazy Loaded Pages
+ * ======================================== */
+
+const Home = lazy(() => import('./home.js'));
+
+const MyDeziner = lazy(() =>
+  import('./pages/mydeziner.js')
+);
+
+const CustomFurnish = lazy(() =>
+  import('./pages/customfurnish.js')
+);
+
+const About = lazy(() =>
+  import('./pages/about.js')
+);
+
+const Contact = lazy(() =>
+  import('./pages/contact.js')
+);
+
+const Works = lazy(() =>
+  import('./pages/works.js')
+);
+
+/* ========================================
+ * Loading Screen
+ * ======================================== */
+
+const PageLoader = () => {
+  return (
+    <div className="page-loader-wrapper">
+      <div className="page-loader"></div>
+    </div>
+  );
+};
+
+/* ========================================
+ * Main App
+ * ======================================== */
 
 function App() {
 
   /* ========================================
-   * Premium Smooth Scroll
+   * Detect System Theme
    * ======================================== */
-  // useEffect(() => {
 
-  //   const lenis = new Lenis({
-  //     duration: 1.1,
-  //     lerp: 0.075,
-
-  //     smoothWheel: true,
-  //     smoothTouch: true,
-
-  //     wheelMultiplier: 0.9,
-  //     touchMultiplier: 1.15,
-
-  //     infinite: false,
-  //     normalizeWheel: true,
-  //   });
-
-  //   function raf(time) {
-  //     lenis.raf(time);
-
-  //     ScrollTrigger.update();
-
-  //     requestAnimationFrame(raf);
-  //   }
-
-  //   requestAnimationFrame(raf);
-
-  //   lenis.on('scroll', ScrollTrigger.update);
-
-  //   ScrollTrigger.scrollerProxy(document.body, {
-  //     scrollTop(value) {
-  //       return arguments.length
-  //         ? lenis.scrollTo(value, { immediate: true })
-  //         : lenis.scroll;
-  //     },
-
-  //     getBoundingClientRect() {
-  //       return {
-  //         top: 0,
-  //         left: 0,
-  //         width: window.innerWidth,
-  //         height: window.innerHeight,
-  //       };
-  //     },
-  //   });
-
-  //   ScrollTrigger.refresh();
-
-  //   return () => {
-  //     lenis.destroy();
-  //   };
-
-  // }, []);
-
-  /* ========================================
-   * Theme System
-   * ======================================== */
   const getSystemTheme = () =>
-    window.matchMedia('(prefers-color-scheme: dark)').matches
+    window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches
       ? 'dark'
       : 'light';
+
+  /* ========================================
+   * States
+   * ======================================== */
 
   const [mode, setMode] = useState(
     localStorage.getItem('mode') || 'system'
   );
 
   const [theme, setTheme] = useState(
-    mode === 'system' ? getSystemTheme() : mode
+    mode === 'system'
+      ? getSystemTheme()
+      : mode
   );
 
-  const [recruiterMode, setRecruiterMode] = useState(false);
+  const [recruiterMode, setRecruiterMode] =
+    useState(false);
 
-  const [showRecruiterModal, setShowRecruiterModal] = useState(false);
+  const [showRecruiterModal, setShowRecruiterModal] =
+    useState(false);
 
-  const [animating, setAnimating] = useState(false);
+  const [animating, setAnimating] =
+    useState(false);
 
   /* ========================================
    * Recruiter Modal
    * ======================================== */
+
   useEffect(() => {
+
+    let timer;
 
     if (recruiterMode) {
 
-      const timer = setTimeout(() => {
+      timer = setTimeout(() => {
         setShowRecruiterModal(true);
       }, 300);
 
-      return () => clearTimeout(timer);
-
     } else {
+
       setShowRecruiterModal(false);
+
     }
+
+    return () => clearTimeout(timer);
 
   }, [recruiterMode]);
 
   /* ========================================
    * Theme Toggle
    * ======================================== */
+
   const toggleTheme = () => {
 
     setAnimating(true);
 
-    const next = theme === 'light' ? 'dark' : 'light';
+    const nextTheme =
+      theme === 'light'
+        ? 'dark'
+        : 'light';
 
-    setMode(next);
-    setTheme(next);
+    setMode(nextTheme);
+    setTheme(nextTheme);
 
-    setTimeout(() => {
-      setAnimating(false);
-    }, 700);
+    requestAnimationFrame(() => {
+
+      setTimeout(() => {
+        setAnimating(false);
+      }, 500);
+
+    });
 
   };
 
   /* ========================================
    * Apply Theme
    * ======================================== */
+
   useEffect(() => {
 
     document.body.classList.remove(
@@ -145,20 +159,26 @@ function App() {
       'dark-theme'
     );
 
-    document.body.classList.add(`${theme}-theme`);
+    document.body.classList.add(
+      `${theme}-theme`
+    );
 
   }, [theme]);
 
   /* ========================================
-   * Save Mode
+   * Save Theme
    * ======================================== */
+
   useEffect(() => {
+
     localStorage.setItem('mode', mode);
+
   }, [mode]);
 
   /* ========================================
    * System Theme Listener
    * ======================================== */
+
   useEffect(() => {
 
     const media = window.matchMedia(
@@ -168,25 +188,168 @@ function App() {
     const handleChange = () => {
 
       if (mode === 'system') {
-        setTheme(media.matches ? 'dark' : 'light');
+
+        setTheme(
+          media.matches
+            ? 'dark'
+            : 'light'
+        );
+
       }
 
     };
 
-    media.addEventListener('change', handleChange);
+    media.addEventListener(
+      'change',
+      handleChange
+    );
 
     return () => {
-      media.removeEventListener('change', handleChange);
+
+      media.removeEventListener(
+        'change',
+        handleChange
+      );
+
     };
 
   }, [mode]);
 
+  /* ========================================
+   * Global Performance Optimization
+   * ======================================== */
+
+  useEffect(() => {
+
+    document.body.style.webkitFontSmoothing =
+      'antialiased';
+
+    document.body.style.mozOsxFontSmoothing =
+      'grayscale';
+
+    document.documentElement.style.scrollBehavior =
+      'smooth';
+
+    document.body.style.overflowX = 'hidden';
+
+  }, []);
+
   return (
+
     <HashRouter>
+
+      {/* ========================================
+         Global Styles
+      ======================================== */}
+
+      <style>
+        {`
+
+          * {
+            box-sizing: border-box;
+          }
+
+          html,
+          body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+          }
+
+          body {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+          }
+
+          img,
+          video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+
+            transform: translateZ(0);
+            backface-visibility: hidden;
+          }
+
+          .fade-inn {
+            will-change: transform, opacity;
+            transform: translateZ(0);
+          }
+
+          .page-loader-wrapper {
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #fff;
+          }
+
+          .page-loader {
+
+            width: 48px;
+            height: 48px;
+
+            border-radius: 50%;
+
+            border: 3px solid #e6e6e6;
+            border-top-color: #111;
+
+            animation: spin 0.7s linear infinite;
+
+          }
+
+          @keyframes spin {
+
+            to {
+              transform: rotate(360deg);
+            }
+
+          }
+
+          .theme-transition-overlay {
+
+            position: fixed;
+            inset: 0;
+
+            z-index: 9999;
+
+            pointer-events: none;
+
+            backdrop-filter: blur(10px);
+
+            animation: fadeOverlay 0.5s ease forwards;
+
+          }
+
+          @keyframes fadeOverlay {
+
+            from {
+              opacity: 1;
+            }
+
+            to {
+              opacity: 0;
+            }
+
+          }
+
+        `}
+      </style>
+
+      {/* ========================================
+         Theme Transition
+      ======================================== */}
 
       {animating && (
         <div className="theme-transition-overlay"></div>
       )}
+
+      {/* ========================================
+         Header
+      ======================================== */}
 
       <Header
         toggleTheme={toggleTheme}
@@ -196,61 +359,81 @@ function App() {
         setRecruiterMode={setRecruiterMode}
       />
 
+      {/* ========================================
+         Recruiter Modal
+      ======================================== */}
+
       <RecruiterModal
         show={showRecruiterModal}
         recruiterMode={recruiterMode}
         setRecruiterMode={setRecruiterMode}
       />
 
-      <PageTransition
-        animateRoutes={[
-          '/mydeziner',
-          '/customfurnish',
-          '/works',
-          '/about',
-        ]}
-      >
-        {(location) => (
-          <Routes location={location}>
+      {/* ========================================
+         Routes
+      ======================================== */}
 
-            <Route
-              path="/"
-              element={
-                <Home recruiterMode={recruiterMode} />
-              }
-            />
+      <Suspense fallback={<PageLoader />}>
 
-            <Route
-              path="/mydeziner"
-              element={<MyDeziner />}
-            />
+        <PageTransition
+          animateRoutes={[
+            '/mydeziner',
+            '/customfurnish',
+            '/works',
+            '/about',
+          ]}
+        >
 
-            <Route
-              path="/customfurnish"
-              element={<CustomFurnish />}
-            />
+          {(location) => (
 
-            <Route
-              path="/about"
-              element={<About />}
-            />
+            <Routes location={location}>
 
-            <Route
-              path="/works"
-              element={<Works />}
-            />
+              <Route
+                path="/"
+                element={
+                  <Home
+                    recruiterMode={
+                      recruiterMode
+                    }
+                  />
+                }
+              />
 
-            <Route
-              path="/contact"
-              element={<Contact />}
-            />
+              <Route
+                path="/mydeziner"
+                element={<MyDeziner />}
+              />
 
-          </Routes>
-        )}
-      </PageTransition>
+              <Route
+                path="/customfurnish"
+                element={<CustomFurnish />}
+              />
+
+              <Route
+                path="/about"
+                element={<About />}
+              />
+
+              <Route
+                path="/works"
+                element={<Works />}
+              />
+
+              <Route
+                path="/contact"
+                element={<Contact />}
+              />
+
+            </Routes>
+
+          )}
+
+        </PageTransition>
+
+      </Suspense>
 
     </HashRouter>
   );
 }
 
-export default App;
+export default memo(App);
