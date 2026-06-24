@@ -11,6 +11,7 @@ import BubbleButton from '../components/BubbleButton';
 import { use } from 'react';
 // import SmoothScrollProvider from '../components/Scrollsmooth';
 import LazyImage from '../components/LazyImage';
+import ConfidentialGate from '../components/ConfidentialGate';
 
 
 const CustomFurnish = () => {

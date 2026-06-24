@@ -2395,7 +2395,7 @@ textarea {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    z-index: 100;
+    z-index: 10000;
     will-change: transform, width, height;
     cursor: pointer;
     padding: 6px;
@@ -3312,13 +3312,13 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 40px;
 }
 
 
 .content-div-main-heading-2 {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 36px;
     color: var(--white-color);
     width: 100%;
     line-height: 1.7;
@@ -4244,4 +4244,157 @@ textarea:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#scroll-story-section {
+  width: 100%;
+  position: relative;
+  height: 400vh; /* ← tall enough for 4 scenes of scrolling */
+}
+
+#scroll-story-section {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transform: scale(1.08);
+
+  transition:
+    opacity 1s ease,
+    transform 1.4s ease;
+
+  will-change: opacity, transform;
+}
+
+.scroll-video-1 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+.case-study-locked {
+  position: relative;
+  filter: blur(18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.confidential-preview {
+  width: 760px;
+  margin: 80px auto;
+  padding: 48px;
+  background: var(--black-opacity-4);
+  backdrop-filter: blur(20px);
+  border: 0.8px solid var(--border-color);
+  border-radius: var(--border-radius-1);
+  text-align: center;
+}
+
+.confidential-preview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.confidential-preview h2 {
+  color: var(--white-color);
+  margin: 0;
+}
+
+.confidential-preview p {
+  color: var(--grey-bg-b-color);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.confidential-section {
+width: 760px;
+margin: 120px auto;
+}
+
+.confidential-card {
+background: var(--black-opacity-4);
+backdrop-filter: blur(5px);
+display: flex;
+flex-direction: column;
+gap: 24px;
+align-items: center;
+.home-tag-container {
+    margin-bottom: 0 !important;
+}
+}
+
+.confidential-title {
+font-size: 20px;
+font-weight: 500;
+color: var(--white-color);
+margin: 0;
+text-align: center;
+}
+
+.confidential-description {
+color: var(--grey-bg-b-color);
+line-height: 1.8;
+font-size: 16px;
+margin: 0;
+text-align: center;
+}
+
+.confidential-actions {
+display: flex;
+flex-direction: column;
+gap: 12px;
+margin-top: 12px;
+}
+
+.confidential-input {
+width: 100%;
+padding: 16px 20px;
+
+background: var(--black-opacity-2);
+
+border: 0.8px solid var(--border-color);
+border-radius: var(--border-radius-4);
+
+color: var(--white-color);
+font-size: 16px;
+
+outline: none;
+}
+
+.confidential-input:focus {
+border-color: var(--grey-bg-w-color);
+}
+
+.case-study-locked {
+filter: blur(16px);
+opacity: 0.45;
+pointer-events: none;
+user-select: none;
+}
+
+@media (max-width: 900px) {
+.confidential-section {
+width: 100%;
+}
+
+.confidential-card {
+padding: 32px;
+}
+
+.confidential-title {
+font-size: 24px;
+}
 }

@@ -42,6 +42,10 @@ const Contact = lazy(() =>
   import('./pages/contact.js')
 );
 
+const Uggh = lazy(() =>
+  import('./pages/ug-gh.js')
+);
+
 const Works = lazy(() =>
   import('./pages/works.js')
 );
@@ -422,6 +426,10 @@ function App() {
               <Route
                 path="/contact"
                 element={<Contact />}
+              />
+              <Route
+                path="/Uggh"
+                element={<Uggh />}
               />
 
             </Routes>

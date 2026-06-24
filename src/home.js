@@ -36,6 +36,7 @@ const Home = () => {
 
 
   const cardsData = [
+    { title: "Building Faster Workflows for Underground Operators", type: "Groundhog Apps", year: "Professional 2026-2027", image: "img/projects/gh_ug/cover.webp", link: "#/Uggh", openInNewTab: true, locked: false },
     // { title: "Onboarding Process of LMS GroundHog", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.png", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Turning Website Traffic into Qualified Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Reducing Workflow Friction in Interior Design SaaS", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.png", link: "#/mydeziner", openInNewTab: true, locked: true, password: "surya@123" },
@@ -43,7 +44,7 @@ const Home = () => {
     // { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Crafting Unified Ride Booking Experience", type: "Yalla Gai", year: "Professional 2022-2023", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: false, password: "surya@123" },
     { title: "Reimagining Pet Care Experience", type: "Petzy", year: "Case Study 2023-2024", image: "img/projects/petzy.webp", link: "https://medium.com/@sai.chittala/case-study-petzy-petcare-application-aafe32d42117", openInNewTab: true, locked: false },
-    // { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.webp", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
+    { title: "Implemented the better Shopping Experience", type: "Shruh", year: "Professional 2022-2023", image: "img/projects/shruh.webp", link: "https://www.figma.com/design/rD9xg05vO3epMZ8RAoapWc/Shruh?node-id=0-1&t=4pvPTSg8AhOHQU6P-1", openInNewTab: true, locked: false },
     // { title: "Modernizing Devotion Through Design", type: "Temple Address", year: "Professional 2022-2023", image: "img/projects/templeaddress.webp", link: "https://www.figma.com/design/oerkBSCwxTmg7fMqVmoplQ/Temple-Address?node-id=0-1&t=LHGxQF1KPRmfWLC2-1", openInNewTab: true, locked: true, password: "1" },
     // { title: "Crafting Connected Listening Journeys", type: "Muzicon", year: "Personal 2021-2022", image: "img/projects/muzicon.webp", link: "https://www.figma.com/design/am0L5WJY9SNoQGUFZQcSkK/Muzicon?node-id=0-1&t=2yzxTpLJFMqdoBGX-1", openInNewTab: true, locked: false },
   ];
@@ -82,7 +83,7 @@ const Home = () => {
 
       const location = `${state}, ${country}`;
 
-      setHeroTag(`Hello to ${location} ✦`);
+      setHeroTag(`Hello to ${location}`);
 
     } catch (error) {
       console.error(error);
@@ -110,9 +111,6 @@ const Home = () => {
         theme="dark"
         className="sticky-toast"
       />
-      {/* <LuxurySmoothScroll scrollSpeed={1.0}> */}
-      {/* <SmoothScrollProvider duration={1.2}> */}
-
       <main className='z-index-11 '>
         <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
           <BubbleButton
@@ -164,24 +162,6 @@ const Home = () => {
                     <span>
                       I take products from <white>idea to scale</white> - strategically.
                     </span>
-                    {/* <span>
-                      
-                      Recently, I’ve helped teams design SaaS tools, dashboards, and design systems that cut wasted time and boost clarity. Recently, I designed MyDeziner <white>(10x faster workflows for interior designers) </white> and redesigned CustomFurnish <white>(38% higher lead conversions and 29% reduced dropouts).</white>
-                    </span> */}
-                    {/* <div className='df-g8'>
-                      <a href="https://www.linkedin.com/in/saichittala/" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        LinkedIn
-                      </a>
-                      <a href="https://www.upwork.com/freelancers/~01762e36a0d1eb9abf" target="_blank" className="intro-grey-text intro-link " rel="noopener noreferrer">
-                        Upwork
-                      </a>
-                      <a
-                        className="intro-grey-text intro-link"
-                        onClick={() => handleRequestLockPopup("SaiChittala-Product-Designer-Resume.pdf", RESUME_PASSWORD)}
-                      >
-                        Resume
-                      </a>
-                    </div> */}
                   </div>
                 </div>
               </div>
@@ -196,7 +176,7 @@ const Home = () => {
                   id="cards-container"
                   ref={cardsContainerRef}
                 >
-                  {(showAll ? cardsData : cardsData.slice(0, 4)).map((card, index) => (
+                  {(showAll ? cardsData : cardsData.slice(0, 6)).map((card, index) => (
                     <Card
                       key={index}
                       {...card}
@@ -208,7 +188,7 @@ const Home = () => {
 
 
 
-                {cardsData.length > 4 && (
+                {cardsData.length > 6 && (
                   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <button
                       className="btn-1"
@@ -228,129 +208,14 @@ const Home = () => {
               <div className='df-g8 fd-c al-c work-in-progress-container'>
                 <white>Working on two case studies, stay tuned</white>
               </div>
-
-
-
-
-
-              {/* <div className='df-g8 fd-c gap-36 display-none'>
-                <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
-                </a>
-                <div className='width-450 width-slider '>
-                  <CardSwipe
-                    images={cardsData.map(card => ({
-                      src: card.image,
-                      alt: card.title,
-                      title: card.title,
-                      year: card.year,
-                      link: card.link,
-                      locked: card.locked,
-                      password: card.password
-                    }))}
-                    autoplayDelay={100000}
-                    slideShadows={true}
-                    onRequestLockPopup={handleRequestLockPopup}
-                  />
-                </div>
-                <div className='width-450 '>
-                  <CardSwipe
-                    images={cardsData.map(card => ({
-                      src: card.image,
-                      alt: card.title,
-                      title: card.title,
-                      year: card.year,
-                      link: card.link,
-                      locked: card.locked,
-                      password: card.password
-                    }))}
-                    autoplayDelay={100000}
-                    slideShadows={true}
-                    onRequestLockPopup={handleRequestLockPopup}
-                  />
-                </div>
-              </div> */}
               <TestimonialsCard />
-              {/* <div className='df-g8 fd-c gap-36 width-450'>
-                <a className="fade-in content-div-main-heading-2 translate-text-up margin-unset">
-                  Experience
-                </a>
-
-                <div className='df-g8 fd-c' style={{ gap: '0px', paddingLeft: '8px' }}>
-                  {[
-                    { company: "Groundhog Apps", role: "Product Designer", dates: "Oct 2025 – Present", current: true },
-                    { company: "Customfurnish", role: "UI/UX Designer", dates: "Jan 2024 – Jul 2025" },
-                    { company: "FirstRicoz", role: "UI/UX Designer", dates: "Jan 2023 – Dec 2023" },
-                    { company: "YallaGai", role: "Freelance Product Designer", dates: "Feb 2022 – Dec 2022" },
-                  ].map((exp, index, arr) => (
-                    <div key={index} className='df-g8' style={{ gap: '16px', alignItems: 'stretch' }}>
-
-                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '16px' }}>
-                        <div style={{
-                          width: exp.current ? '12px' : '8px',
-                          height: exp.current ? '12px' : '8px',
-                          borderRadius: '50%',
-                          backgroundColor: exp.current ? 'var(--white-color)' : 'rgba(0,0,0,0.3)',
-                          boxShadow: exp.current ? '0 0 0 5px rgba(0,0,0,0.10)' : 'none',
-                          flexShrink: 0,
-                          marginTop: '4px',
-                          transition: 'all 0.3s ease',
-                        }} />
-                        {index < arr.length - 1 && (
-                          <div style={{
-                            width: '1px',
-                            flex: 1,
-                            minHeight: '40px',
-                            background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.04))',
-                            margin: '6px 0',
-                          }} />
-                        )}
-                      </div>
-
-                      <div className='df-g8' style={{
-                        justifyContent: 'space-between',
-                        alignItems: 'flex-start',
-                        flex: 1,
-                        paddingBottom: index < arr.length - 1 ? '28px' : '0px',
-                      }}>
-                        <div className='df-g8 fd-c' style={{ gap: '4px' }}>
-                          <span style={{ color: 'var(--white-color)', fontWeight: '500', fontSize: '18px' }}>
-                            {exp.company}
-                          </span>
-                          <span style={{ color: 'var(--white-color)', fontSize: '16px', opacity: '0.6' }}>
-                            {exp.role}
-                          </span>
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
-                          <span style={{ color: 'var(--white-color)', fontSize: '14px', opacity: '0.4', whiteSpace: 'nowrap', fontWeight: '300' }}>
-                            {exp.dates}
-                          </span>
-                          {exp.current && (
-                            <span style={{
-                              fontSize: '12px',
-                              fontWeight: '400',
-                              padding: '2px 8px',
-                              borderRadius: '20px',
-                              background: 'rgba(0,0,0,0.06)',
-                              color: 'var(--white-color)',
-                              opacity: '1',
-                            }}>
-                              Current
-                            </span>
-                          )}
-                        </div>
-                      </div>
-
-                    </div>
-                  ))}
-                </div>
-              </div> */}
               <div className='df-g8 fd-c gap-36 width-450'>
 
                 <div className="experience-container">
                   <a className="fade-in content-div-main-heading-2 translate-text-up margin-unset">
                     Experience
                   </a>
-                  <div className="timeline">
+                  <div className="timeline fade-in">
                     {[
                       {
                         company: "Groundhog Apps",
@@ -412,17 +277,10 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* <div className='df-g8 fd-c gap-36 '>
-                <a className="fade-in content-div-main-heading-2 translate-text-up width-450"> Selected Works
-                </a>
-              </div> */}
-
             </div>
           </div>
         </section>
       </main>
-      {/* </SmoothScrollProvider> */}
-
       <Footer />
 
       {/* LockPopup */}
@@ -433,8 +291,6 @@ const Home = () => {
         password={currentPassword} // Pass password to LockPopup
         isPasswordIncorrect={isPasswordIncorrect} // Pass incorrect password flag
       />
-      {/* </LuxurySmoothScroll> */}
-
     </div >
   );
 };

@@ -71,7 +71,7 @@ const TestimonialsCard = () => {
       </div>
 
       {/* Carousel */}
-      <div className="relative w-full overflow-hidden min-h-[230px]">
+      <div className="fade-in relative w-full overflow-hidden min-h-[230px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
