@@ -64,7 +64,7 @@ export default function ConfidentialGate({
                             <input
                                 className="confidential-input"
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Access Code"
                                 value={password}
                                 onChange={(e) => {
                                     setPassword(e.target.value);

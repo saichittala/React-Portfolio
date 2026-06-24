@@ -294,7 +294,7 @@ const Uggh = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">About
                           </a>
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p className='fade-inn'>The UG Operator App is an operational workflow platform designed for underground mining operators to manage and complete daily mining activities more efficiently in challenging underground environments. The product redesign focused on simplifying complex workflows, reducing interaction effort, and improving operational usability through a minimal, high-clarity interface optimized for faster task completion and better on-ground efficiency.
+                            <p className='fade-inn'>The UG Operator App is an operational workflow designed for underground mining operators to manage and complete daily mining activities more efficiently in challenging underground environments. The product redesign focused on simplifying complex workflows, reducing interaction effort, and improving operational usability through a minimal, high-clarity interface optimized for faster task completion and better on-ground efficiency.
                             </p>
                           </div>
                         </div>
