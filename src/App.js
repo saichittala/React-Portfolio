@@ -58,6 +58,10 @@ const Works = lazy(() =>
   import('./pages/works.js')
 );
 
+const Dd = lazy(() =>
+  import('./pages/dd.js')
+);
+
 /* ========================================
  * Loading Screen
  * ======================================== */
@@ -467,6 +471,10 @@ function App() {
               <Route
                 path="/lms-gh"
                 element={<Lmsgh />}
+              />
+              <Route
+                path="/dd"
+                element={<Dd />}
               />
 
             </Routes>
