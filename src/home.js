@@ -208,9 +208,9 @@ const Home = () => {
                   </div>
                 )}
               </div>
-              <div className='df-g8 fd-c al-c work-in-progress-container'>
+              {/* <div className='df-g8 fd-c al-c work-in-progress-container'>
                 <white>Working on two case studies, stay tuned</white>
-              </div>
+              </div> */}
               <TestimonialsCard />
               <div className='df-g8 fd-c gap-36 width-450'>
 
