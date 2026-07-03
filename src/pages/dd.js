@@ -54,7 +54,7 @@ const Dd = () => {
                 justifyContent: "center",
               }}
             >
-              <img src="img/projects/dd/cover.png" alt="Dynamic Dispatch Cover" loading="lazy" className='fade-inn' />
+              <img src="img/projects/dd/cover.webp" alt="Dynamic Dispatch Cover" loading="lazy" className='fade-inn' />
             </div>
 
             <div className="bg-main width-unset mobile-bg-main">
@@ -80,8 +80,8 @@ const Dd = () => {
                         <a className="fade-inn pd-sub-heading-2 translate-text-down">Web Dashboard</a>
                       </div>
                       <div className="pd-heading-div-main">
-                        <a className="fade-inn pd-main-heading-2 translate-text-up">Duration</a>
-                        <a className="fade-inn pd-sub-heading-2 translate-text-down">XX Weeks</a>
+                        <a className="fade-inn pd-main-heading-2 translate-text-up">Timeline</a>
+                        <a className="fade-inn pd-sub-heading-2 translate-text-down">2025-2026</a>
                       </div>
                       <div className="pd-heading-div-main">
                         <a className="fade-inn pd-main-heading-2 translate-text-up">Contributors</a>
@@ -160,19 +160,20 @@ const Dd = () => {
                           <span className="fade-inn section-subtitle-italic translate-text-up">Unified Operations Dashboard</span>
                           <p className='fade-inn'>Instead of navigating across multiple screens, dispatchers can monitor the entire hauling operation from a single interface.</p>
                           <div className="image-group">
-                            <img src="img/projects/dd/dashboard.png" alt="Unified Operations Dashboard" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/dd/sketches.png" alt="Production Insights and Status Indicators" className="fade-inn" loading="lazy" />
                           </div>
 
                           <span className="fade-inn section-subtitle-italic translate-text-up">Real-Time Queue Monitoring</span>
                           <p className='fade-inn'>Visual truck queues help identify congestion at loading and dumping sites, allowing dispatchers to rebalance fleet allocation quickly.</p>
-                          <div className="image-group">
+                          {/* <div className="image-group">
                             <img src="img/projects/dd/queues.png" alt="Real-Time Queue Monitoring" className="fade-inn" loading="lazy" />
-                          </div>
+                          </div> */}
 
                           <span className="fade-inn section-subtitle-italic translate-text-up">Production Insights & Status Indicators</span>
                           <p className='fade-inn'>Integrated TPH (Tons Per Hour) and Load Mix charts provide live production metrics without leaving the dashboard, while color-coded load states (Ideal, Underload, Overload) enable operators to detect issues at a glance and respond proactively.</p>
                           <div className="image-group">
-                            <img src="img/projects/dd/insights.png" alt="Production Insights and Status Indicators" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/dd/dashboard.png" alt="Unified Operations Dashboard" className="fade-inn" loading="lazy" />
+
                           </div>
                         </div>
                       </div>
@@ -220,7 +221,7 @@ const Dd = () => {
                     <div className="bg-main padding-unset">
                       <div className="project-details">
                         <div className="thankyou-content-heading fade-inn cursor-text">
-                          Thank you for viewing.
+                          Thank you for viewing. <a href="https://www.figma.com/design/ypimiOonZc3MIqO7osLZOE/Dynamic-Dispatch?node-id=816-83&t=BMJCOKxUpDfmhFX7-1" target="_blank" rel="noopener noreferrer">here is the figma link</a>
                         </div>
                       </div>
                     </div>
