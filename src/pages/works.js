@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import 'react-toastify/dist/ReactToastify.css';
 
 function Works() {
-    useFadeIn();
+  useFadeIn();
   const cardsContainerRef = useRef(null);
 
   // Manage popup state
@@ -22,6 +22,8 @@ function Works() {
 
   const cardsData = [
     { title: "Building Faster Workflows for Underground Operators", type: "Groundhog Apps", year: "Professional 2026-2027", image: "img/projects/gh_ug/cover.webp", link: "#/Uggh", openInNewTab: true, locked: false },
+    { title: "Level 5 Haul Truck Operator App", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/gh-op/cover.png", link: "#/Opgh", openInNewTab: true, locked: false },
+    { title: "Onboarding Process of LMS GroundHog", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.png", link: "#/lms-gh", openInNewTab: true, locked: false },
     { title: "Turning Website Traffic into Qualified Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: false, locked: false },
     { title: "Reducing Workflow Friction in Interior Design SaaS", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, },
     // { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
@@ -59,37 +61,37 @@ function Works() {
     setCurrentLink('');
     setIsPasswordIncorrect(false); // Reset password check state
   };
-    return (
-        <div className="content cursor" id="content">
-            <main>
-                <section className="fade-in">
-                    <div className="full-bg">
-                        <div className="bg-main projects-width pt-175">
-                            <div className="cards-container" id="cards-container" ref={cardsContainerRef}>
-                                {cardsData.map((card, index) => (
-                                    <Card
-                                        key={index}
-                                        {...card}
-                                        onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
-                                        password={card.password} // Pass password prop for locked cards
-                                    />
-                                ))}
-                            </div>
+  return (
+    <div className="content cursor" id="content">
+      <main>
+        <section className="fade-in">
+          <div className="full-bg">
+            <div className="bg-main projects-width pt-175">
+              <div className="cards-container" id="cards-container" ref={cardsContainerRef}>
+                {cardsData.map((card, index) => (
+                  <Card
+                    key={index}
+                    {...card}
+                    onRequestLockPopup={handleRequestLockPopup} // Pass handleRequestLockPopup function
+                    password={card.password} // Pass password prop for locked cards
+                  />
+                ))}
+              </div>
 
-                        </div>
-                    </div>
-                </section>
-            </main>
+            </div>
+          </div>
+        </section>
+      </main>
 
-            <LockPopup
+      <LockPopup
         isVisible={isPopupVisible}
         onClose={closePopup}
         onUnlock={handleUnlock}
         password={currentPassword} // Pass password to LockPopup
         isPasswordIncorrect={isPasswordIncorrect} // Pass incorrect password flag
       />
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Works;

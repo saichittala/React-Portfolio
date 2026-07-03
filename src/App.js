@@ -46,6 +46,14 @@ const Uggh = lazy(() =>
   import('./pages/ug-gh.js')
 );
 
+const Opgh = lazy(() =>
+  import('./pages/op-gh.js')
+);
+
+const Lmsgh = lazy(() =>
+  import('./pages/lms-gh.js')
+);
+
 const Works = lazy(() =>
   import('./pages/works.js')
 );
@@ -430,6 +438,14 @@ function App() {
               <Route
                 path="/Uggh"
                 element={<Uggh />}
+              />
+              <Route
+                path="/Opgh"
+                element={<Opgh />}
+              />
+              <Route
+                path="/lms-gh"
+                element={<Lmsgh />}
               />
 
             </Routes>

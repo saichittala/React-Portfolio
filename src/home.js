@@ -37,7 +37,8 @@ const Home = () => {
 
   const cardsData = [
     { title: "Building Faster Workflows for Underground Operators", type: "Groundhog Apps", year: "Professional 2026-2027", image: "img/projects/gh_ug/cover.webp", link: "#/Uggh", openInNewTab: true, locked: false },
-    // { title: "Onboarding Process of LMS GroundHog", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.png", link: "#/customfurnish", openInNewTab: true, locked: false },
+    { title: "Level 5 Haul Truck Operator App", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/gh-op/cover.png", link: "#/Opgh", openInNewTab: true, locked: false },
+    { title: "Onboarding Process of LMS GroundHog", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.png", link: "#/lms-gh", openInNewTab: true, locked: false },
     { title: "Turning Website Traffic into Qualified Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Reducing Workflow Friction in Interior Design SaaS", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.png", link: "#/mydeziner", openInNewTab: true, locked: true, password: "surya@123" },
     // { title: "Designing efficiency for interior designers", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: true, confidential: true, password: "surya@123" },
@@ -71,29 +72,29 @@ const Home = () => {
   };
 
   useEffect(() => {
-  const fetchLocation = async () => {
-    try {
-      const response = await fetch("https://ipinfo.io/json");
-      const data = await response.json();
+    const fetchLocation = async () => {
+      try {
+        const response = await fetch("https://ipinfo.io/json");
+        const data = await response.json();
 
-      console.log("LOCATION:", data);
+        console.log("LOCATION:", data);
 
-      const state = data.region || "";
-      const country = data.country || "";
+        const state = data.region || "";
+        const country = data.country || "";
 
-      const location = `${state}, ${country}`;
+        const location = `${state}, ${country}`;
 
-      setHeroTag(`Hello to ${location}`);
+        setHeroTag(`Hello to ${location}`);
 
-    } catch (error) {
-      console.error(error);
+      } catch (error) {
+        console.error(error);
 
-      setHeroTag("A quiet hello ✦");
-    }
-  };
+        setHeroTag("A quiet hello ✦");
+      }
+    };
 
-  fetchLocation();
-}, []);
+    fetchLocation();
+  }, []);
 
   // Close the popup
   const closePopup = () => {

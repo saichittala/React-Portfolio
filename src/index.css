@@ -163,19 +163,19 @@ html {
 }
 
 html.lenis {
-  height: auto;
+    height: auto;
 }
 
 .lenis.lenis-smooth {
-  scroll-behavior: auto !important;
+    scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+    overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 
@@ -1090,7 +1090,7 @@ body.light-theme .theme-toggle-btn {
         transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
         background 0.4s ease,
         border-color 0.4s ease;
-        margin-bottom: 36px;
+    margin-bottom: 36px;
 }
 
 .work-in-progress-container {
@@ -4247,154 +4247,304 @@ textarea:focus {
 }
 
 #scroll-story-section {
-  width: 100%;
-  position: relative;
-  height: 400vh; /* ← tall enough for 4 scenes of scrolling */
+    width: 100%;
+    position: relative;
+    height: 400vh;
+    /* ← tall enough for 4 scenes of scrolling */
 }
 
 #scroll-story-section {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .scroll-video {
-  position: absolute;
-  inset: 0;
+    position: absolute;
+    inset: 0;
 
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 
-  object-fit: cover;
+    object-fit: cover;
 
-  opacity: 0;
+    opacity: 0;
 
-  transform: scale(1.08);
+    transform: scale(1.08);
 
-  transition:
-    opacity 1s ease,
-    transform 1.4s ease;
+    transition:
+        opacity 1s ease,
+        transform 1.4s ease;
 
-  will-change: opacity, transform;
+    will-change: opacity, transform;
 }
 
 .scroll-video-1 {
-  opacity: 1;
-  transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 
 
 .case-study-locked {
-  position: relative;
-  filter: blur(18px);
-  pointer-events: none;
-  user-select: none;
+    position: relative;
+    filter: blur(18px);
+    pointer-events: none;
+    user-select: none;
 }
 
 .confidential-preview {
-  width: 760px;
-  margin: 80px auto;
-  padding: 48px;
-  background: var(--black-opacity-4);
-  backdrop-filter: blur(20px);
-  border: 0.8px solid var(--border-color);
-  border-radius: var(--border-radius-1);
-  text-align: center;
+    width: 760px;
+    margin: 80px auto;
+    padding: 48px;
+    background: var(--black-opacity-4);
+    backdrop-filter: blur(20px);
+    border: 0.8px solid var(--border-color);
+    border-radius: var(--border-radius-1);
+    text-align: center;
 }
 
 .confidential-preview-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .confidential-preview h2 {
-  color: var(--white-color);
-  margin: 0;
+    color: var(--white-color);
+    margin: 0;
 }
 
 .confidential-preview p {
-  color: var(--grey-bg-b-color);
-  line-height: 1.8;
-  margin: 0;
+    color: var(--grey-bg-b-color);
+    line-height: 1.8;
+    margin: 0;
 }
 
 .confidential-section {
-width: 760px;
-margin: 120px auto;
+    width: 760px;
+    margin: 120px auto;
 }
 
 .confidential-card {
-background: var(--black-opacity-4);
-backdrop-filter: blur(5px);
-display: flex;
-flex-direction: column;
-gap: 24px;
-align-items: center;
-.home-tag-container {
-    margin-bottom: 0 !important;
-}
+    background: var(--black-opacity-4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+
+    .home-tag-container {
+        margin-bottom: 0 !important;
+    }
 }
 
 .confidential-title {
-font-size: 20px;
-font-weight: 500;
-color: var(--white-color);
-margin: 0;
-text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-color);
+    margin: 0;
+    text-align: center;
 }
 
 .confidential-description {
-color: var(--grey-bg-b-color);
-line-height: 1.8;
-font-size: 16px;
-margin: 0;
-text-align: center;
+    color: var(--grey-bg-b-color);
+    line-height: 1.8;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
 }
 
 .confidential-actions {
-display: flex;
-flex-direction: column;
-gap: 12px;
-margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .confidential-input {
-width: 100%;
-padding: 16px 20px;
+    width: 100%;
+    padding: 16px 20px;
 
-background: var(--black-opacity-2);
+    background: var(--black-opacity-2);
 
-border: 0.8px solid var(--border-color);
-border-radius: var(--border-radius-4);
+    border: 0.8px solid var(--border-color);
+    border-radius: var(--border-radius-4);
 
-color: var(--white-color);
-font-size: 16px;
+    color: var(--white-color);
+    font-size: 16px;
 
-outline: none;
+    outline: none;
 }
 
 .confidential-input:focus {
-border-color: var(--grey-bg-w-color);
+    border-color: var(--grey-bg-w-color);
 }
 
 .case-study-locked {
-filter: blur(16px);
-opacity: 0.45;
-pointer-events: none;
-user-select: none;
+    filter: blur(16px);
+    opacity: 0.45;
+    pointer-events: none;
+    user-select: none;
 }
 
 @media (max-width: 900px) {
-.confidential-section {
-width: 100%;
+    .confidential-section {
+        width: 100%;
+    }
+
+    .confidential-card {
+        padding: 32px;
+    }
+
+    .confidential-title {
+        font-size: 24px;
+    }
 }
 
-.confidential-card {
-padding: 32px;
+/* Case Study Medium-Like Readability Classes */
+.medium-case-study {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 18px;
 }
 
-.confidential-title {
-font-size: 24px;
+.medium-case-study p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    color: var(--text-color);
 }
+
+.medium-case-study .section-subtitle-italic {
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--grey-bg-b-color);
+    margin-bottom: 16px;
+    margin-top: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.medium-case-study .section-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.medium-case-study .problem-blockquote {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.6;
+    border-left: 4px solid var(--white-color);
+    padding-left: 24px;
+    margin: 40px 0;
+    color: var(--white-color);
+}
+
+.medium-case-study ul.medium-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 24px 0;
+}
+
+.medium-case-study ul.medium-list li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    color: var(--text-color);
+}
+
+.medium-case-study ul.medium-list li::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    top: 1px;
+}
+
+.medium-case-study .image-group {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 56px;
+    margin-bottom: 56px;
+}
+
+.medium-case-study .image-group img {
+    border-radius: var(--border-radius-3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.medium-case-study .table-container {
+    overflow-x: auto;
+    margin: 36px 0;
+    border-radius: var(--border-radius-4);
+    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.medium-case-study table.medium-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text-color);
+}
+
+.medium-case-study table.medium-table th {
+    padding: 18px 24px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--white-color);
+    border-bottom: 2px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.medium-case-study table.medium-table td {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border-color);
+    line-height: 1.6;
+}
+
+.medium-case-study table.medium-table tr:last-child td {
+    border-bottom: none;
+}
+
+.medium-case-study table.medium-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+@media (max-width: 768px) {
+    .medium-case-study {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .medium-case-study p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .medium-case-study .section-heading {
+        font-size: 26px;
+    }
+
+    .medium-case-study .problem-blockquote {
+        font-size: 18px;
+        padding-left: 16px;
+    }
+
+    .medium-case-study ul.medium-list li {
+        font-size: 16px;
+    }
 }
