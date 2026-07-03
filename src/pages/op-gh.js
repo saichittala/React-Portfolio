@@ -202,8 +202,10 @@ const Opgh = () => {
                           <p className='fade-inn'>Interactive prototypes were created to validate workflow efficiency, improve information hierarchy, and ensure operators could quickly identify truck status under real operational conditions.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh_ug/prototype.webp" alt="Interactive Prototype" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/design-system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh_op/prototype.webp" alt="Interactive Prototype" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh_op/cs.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh_op/design_system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh_op/design-system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
                           </div>
                         </div>
                       </div>
