@@ -101,6 +101,13 @@ function App() {
       : mode
   );
 
+  const [activeTheme, setActiveTheme] = useState(() => {
+    const hash = window.location.hash;
+    const path = hash.replace(/^#/, '').split('?')[0];
+    const lightThemePaths = ['/customfurnish', '/mydeziner', '/lms-gh'];
+    return lightThemePaths.includes(path) ? 'light' : 'dark';
+  });
+
   const [recruiterMode, setRecruiterMode] =
     useState(false);
 
@@ -165,6 +172,20 @@ function App() {
    * ======================================== */
 
   useEffect(() => {
+    const handleRouteTheme = () => {
+      const hash = window.location.hash;
+      const path = hash.replace(/^#/, '').split('?')[0];
+      const lightThemePaths = ['/customfurnish', '/mydeziner', '/lms-gh'];
+      setActiveTheme(lightThemePaths.includes(path) ? 'light' : 'dark');
+    };
+
+    handleRouteTheme();
+
+    window.addEventListener('hashchange', handleRouteTheme);
+    return () => window.removeEventListener('hashchange', handleRouteTheme);
+  }, []);
+
+  useEffect(() => {
 
     document.body.classList.remove(
       'light-theme',
@@ -172,10 +193,10 @@ function App() {
     );
 
     document.body.classList.add(
-      `${theme}-theme`
+      `${activeTheme}-theme`
     );
 
-  }, [theme]);
+  }, [activeTheme]);
 
   /* ========================================
    * Save Theme
@@ -365,7 +386,7 @@ function App() {
 
       <Header
         toggleTheme={toggleTheme}
-        theme={theme}
+        theme={activeTheme}
         mode={mode}
         recruiterMode={recruiterMode}
         setRecruiterMode={setRecruiterMode}

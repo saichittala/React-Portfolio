@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 
 const useScrollEffect = () => {
   useEffect(() => {
+    const navBar = document.querySelector('.nav-bar');
+    
     // Handle scroll event for navbar
     const handleScroll = () => {
-      const navBar = document.querySelector('.nav-bar');
+      if (!navBar) return;
       if (window.scrollY > 0) {
         navBar.classList.add('scrolled'); // Add class when scrolling
       } else {

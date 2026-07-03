@@ -53,7 +53,7 @@ const Lmsgh = () => {
                 justifyContent: "center",
               }}
             >
-              <img src="img/projects/gh-lms/cover.png" alt="GroundHog LMS Cover" loading="lazy" className='fade-inn' />
+              <img src="img/projects/gh-lms/cover.webp" alt="GroundHog LMS Cover" loading="lazy" className='fade-inn' />
             </div>
 
             <div className="bg-main width-unset mo  bile-bg-main">

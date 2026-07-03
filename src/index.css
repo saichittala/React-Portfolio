@@ -86,7 +86,7 @@
         --text-color: #D0D0D0;
         --border-color: rgba(255, 255, 255, 0.14);
         --grey-bg-w-color: #505050;
-        --grey-bg-b-color: #86868D;
+        --grey-bg-b-color: #B0B0B0;
         --black-opacity: rgba(0, 0, 0, 0.8);
         --black-opacity-2: rgba(66, 66, 69, 0.7);
         --black-opacity-3: rgba(44, 44, 49, 0.5);
@@ -132,6 +132,15 @@
     --primary-font: 'Bricolage Grotesque',
     sans-serif;
     --secondary-font: 'Bricolage Grotesque',
+    sans-serif;
+    --tertiary-font: 'Bricolage Grotesque',
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
     sans-serif;
 
 }
@@ -3258,10 +3267,10 @@ a {
 .project-details {
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 80px;
     width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
     margin: auto;
-    padding: 150px 0;
+    padding: 100px 0;
 
     .zoom-image {
         width: unset;
@@ -3514,10 +3523,10 @@ ul {
         color: var(--black-color) !important;
         border-top: 0.8px solid var(--text-color);
         border-bottom: 0.8px solid var(--text-color);
-        font-family: var(--primary-fon) !important;
+        font-family: var(--primary-font) !important;
 
         span {
-            font-family: var(--primary-fon) !important;
+            font-family: var(--primary-font) !important;
         }
     }
 }
@@ -3560,10 +3569,10 @@ ul {
         color: var(--black-color);
         border-top: 0.8px solid var(--text-color);
         border-bottom: 0.8px solid var(--text-color);
-        font-family: var(--primary-fon) !important;
+        font-family: var(--primary-font) !important;
 
         span {
-            font-family: var(--primary-fon) !important;
+            font-family: var(--primary-font) !important;
         }
     }
 }
@@ -3629,10 +3638,10 @@ ul {
         border: 0.8px solid var(--border-color);
     }
 
-    font-family: var(--primary-fon) !important;
+    font-family: var(--primary-font) !important;
 
     span {
-        font-family: var(--primary-fon) !important;
+        font-family: var(--primary-font) !important;
     }
 }
 
@@ -3916,9 +3925,9 @@ ul {
 @media (max-width:674px) {
 
     .project-details {
-        gap: 56px;
+        gap: 32px;
         width: calc(min(1440px, 100vw) - var(--ps-gutter-mob) * 2);
-        padding: 80px 0;
+        padding: 60px 0;
     }
 
     .process-card-main {
@@ -4403,7 +4412,7 @@ textarea:focus {
 
 /* Case Study Medium-Like Readability Classes */
 .medium-case-study {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: var(--tertiary-font);
     color: var(--text-color);
     line-height: 1.8;
     font-size: 18px;
@@ -4413,13 +4422,13 @@ textarea:focus {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 24px;
-    color: var(--text-color);
+    color: var(--grey-bg-b-color);
 }
 
 .medium-case-study .section-subtitle-italic {
     display: block;
     font-size: 16px;
-    font-style: italic;
+    font-style: normal;
     color: var(--grey-bg-b-color);
     margin-bottom: 16px;
     margin-top: 36px;
@@ -4427,8 +4436,12 @@ textarea:focus {
     letter-spacing: 0.05em;
 }
 
+.medium-case-study .section-subtitle-italic:first-child {
+    margin-top: 0;
+}
+
 .medium-case-study .section-heading {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--white-color);
     margin-top: 40px;
@@ -4437,13 +4450,17 @@ textarea:focus {
     letter-spacing: -0.02em;
 }
 
+.medium-case-study .section-heading:first-child {
+    margin-top: 0;
+}
+
 .medium-case-study .problem-blockquote {
     font-size: 22px;
     font-style: italic;
     line-height: 1.6;
     border-left: 4px solid var(--white-color);
-    padding-left: 24px;
-    margin: 40px 0;
+    padding-left: 20px;
+    margin: 32px 0;
     color: var(--white-color);
 }
 
@@ -4458,7 +4475,7 @@ textarea:focus {
     padding-left: 28px;
     font-size: 18px;
     line-height: 1.7;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     color: var(--text-color);
 }
 
@@ -4476,15 +4493,16 @@ textarea:focus {
 .medium-case-study .image-group {
     display: flex;
     flex-direction: column;
-    gap: 36px;
-    margin-top: 56px;
-    margin-bottom: 56px;
+    gap: 48px;
+    margin-top: 64px;
+    margin-bottom: 64px;
 }
 
 .medium-case-study .image-group img {
     border-radius: var(--border-radius-3);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     width: 100%;
+    border: 1px solid var(--border-color);
 }
 
 .medium-case-study .table-container {
@@ -4547,4 +4565,96 @@ textarea:focus {
     .medium-case-study ul.medium-list li {
         font-size: 16px;
     }
+}
+
+/* ========================================
+ * Figma Interactive Prototype Embed
+ * ======================================== */
+.figma-prototype-wrapper {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.figma-placeholder-card {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-3);
+    border: 1px dashed var(--border-color);
+    background-color: rgba(255, 255, 255, 0.02);
+    gap: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.figma-placeholder-card:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--white-color);
+    transform: translateY(-2px);
+}
+
+.figma-placeholder-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.figma-placeholder-card:hover .figma-placeholder-bg {
+    opacity: 0.15;
+}
+
+.figma-play-icon {
+    width: 64px;
+    height: 64px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.figma-placeholder-card:hover .figma-play-icon {
+    transform: scale(1.1);
+}
+
+.figma-placeholder-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white-color);
+    z-index: 1;
+    font-family: var(--primary-font);
+}
+
+.figma-placeholder-subtitle {
+    font-size: 14px;
+    color: var(--grey-bg-b-color);
+    z-index: 1;
+    font-family: var(--tertiary-font);
+}
+
+.figma-prototype-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius-3);
+    border: 1px solid var(--border-color);
+    background: var(--black-2-color);
+}
+
+.figma-prototype-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }

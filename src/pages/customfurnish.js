@@ -45,16 +45,7 @@ const CustomFurnish = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    // force light theme
-    document.body.classList.remove("dark-theme");
-    document.body.classList.add("light-theme");
 
-    return () => {
-      // restore back (optional: system or previous)
-      document.body.classList.remove("light-theme");
-    };
-  }, []);
 
 
   return (

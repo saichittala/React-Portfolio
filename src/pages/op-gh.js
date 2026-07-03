@@ -107,7 +107,7 @@ const Opgh = () => {
                         </div>
 
                         <div className="content-div-main fade-inn width-800 medium-case-study">
-                          <h2 className="fade-inn section-heading translate-text-up">02. Current Problems Identified</h2>
+                          <h2 className="fade-inn section-heading translate-text-up">Current Problems Identified</h2>
                           <p className='fade-inn'>The existing experience presented large amounts of operational data without clear prioritization, making it difficult for operators to quickly understand truck status and respond efficiently. Navigation required multiple interactions, and the haul cycle lacked a clear visual representation, increasing cognitive effort during monitoring.</p>
 
                           <div className="image-group">
@@ -123,7 +123,7 @@ const Opgh = () => {
                   <div className="bg-main padding-unset">
                     <div className="project-details padding-top-unset">
                       <div className="project-breif-heading width-800 fade-inn">
-                        <span className=''>03</span>
+                        <span className=''>02</span>
                         <span className=''>Empathize</span>
                       </div>
                       <div className="content-div-main fade-inn width-800 medium-case-study">
@@ -143,7 +143,7 @@ const Opgh = () => {
                   <div className="bg-main padding-unset">
                     <div className="project-details padding-top-unset">
                       <div className="project-breif-heading width-800 fade-inn">
-                        <span className=''>04</span>
+                        <span className=''>03</span>
                         <span className=''>Define</span>
                       </div>
                       <div className="content-div-main fade-inn width-800 medium-case-study">
@@ -172,7 +172,7 @@ const Opgh = () => {
                   <div className="bg-main padding-unset">
                     <div className="project-details padding-top-unset">
                       <div className="project-breif-heading width-800 fade-inn">
-                        <span className=''>05</span>
+                        <span className=''>04</span>
                         <span className=''>Ideate</span>
                       </div>
                       <div className="content-div-main fade-inn width-800 medium-case-study">
@@ -192,7 +192,7 @@ const Opgh = () => {
                   <div className="bg-main padding-unset">
                     <div className="project-details padding-top-unset">
                       <div className="project-breif-heading width-800 fade-inn">
-                        <span className=''>06</span>
+                        <span className=''>05</span>
                         <span className=''>Prototype</span>
                       </div>
                       <div className="content-div-main fade-inn width-800 medium-case-study">
@@ -212,7 +212,7 @@ const Opgh = () => {
                   <div className="bg-main padding-unset">
                     <div className="project-details padding-top-unset">
                       <div className="project-breif-heading width-800 fade-inn">
-                        <span className=''>07</span>
+                        <span className=''>06</span>
                         <span className=''>Test & Iterate</span>
                       </div>
                       <div className="content-div-main fade-inn width-800 medium-case-study">
@@ -232,8 +232,8 @@ const Opgh = () => {
                   <div className="bg-main padding-unset">
                     <div className="project-details padding-top-unset">
                       <div className="project-breif-heading width-800 fade-inn">
-                        <span className=''>08</span>
-                        <span className=''>Final Outcome</span>
+                        <span className=''>07</span>
+                        <span className=''>Outcome</span>
                       </div>
                       <div className="content-div-main fade-inn width-800 medium-case-study">
                         <h2 className="fade-inn section-heading translate-text-up">Redesign Summary</h2>

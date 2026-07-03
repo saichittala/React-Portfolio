@@ -5,43 +5,29 @@ const useFadeIn = (selector = ".fade-in", offset = 0.9) => {
     const elements = document.querySelectorAll(selector);
     if (!elements.length) return;
 
-    const revealOnFrame = () => {
-      elements.forEach((el) => {
-        if (el.classList.contains("visible")) return; // skip if already visible
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight * offset) {
-          el.classList.add("visible");
-        }
-      });
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Stop observing once visible
+          }
+        });
+      },
+      {
+        threshold: 0,
+        rootMargin: `0px 0px -${(1 - offset) * 100}% 0px`, // Trigger when element crosses offset boundary
+      }
+    );
 
-    let frameId;
-
-    const animate = () => {
-      revealOnFrame();
-      frameId = requestAnimationFrame(animate);
-    };
-
-    // If Lenis exists, hook into its raf
-    if (window.lenis) {
-      window.lenis.on("scroll", revealOnFrame);
-      frameId = requestAnimationFrame(animate);
-    } else {
-      // fallback to native scroll + RAF
-      window.addEventListener("scroll", revealOnFrame, { passive: true });
-      frameId = requestAnimationFrame(animate);
-    }
-
-    // Run once immediately
-    revealOnFrame();
+    elements.forEach((el) => {
+      if (!el.classList.contains("visible")) {
+        observer.observe(el);
+      }
+    });
 
     return () => {
-      if (window.lenis) {
-        window.lenis.off("scroll", revealOnFrame);
-      } else {
-        window.removeEventListener("scroll", revealOnFrame);
-      }
-      cancelAnimationFrame(frameId);
+      observer.disconnect();
     };
   }, [selector, offset]);
 };
