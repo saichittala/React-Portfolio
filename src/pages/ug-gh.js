@@ -291,11 +291,10 @@ const Uggh = () => {
                     <div className="pd-main" >
                       <div className="   pd-content-main gap-72 margin-100">
                         <div className="content-div-main fade-inn width-800">
-                          <a className="fade-inn content-div-main-heading-2 translate-text-up ">About
-                          </a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                            <p className='fade-inn'>The UG Operator App is an operational workflow designed for underground mining operators to manage and complete daily mining activities more efficiently in challenging underground environments. The product redesign focused on simplifying complex workflows, reducing interaction effort, and improving operational usability through a minimal, high-clarity interface optimized for faster task completion and better on-ground efficiency.
-                            </p>
+                          <a className="fade-inn content-div-main-heading-2 translate-text-up ">About</a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                            <p className='fade-inn'>The UG Operator App is a mission-critical tablet application that enables underground mining operators to manage and complete daily operational activities. Unlike traditional enterprise software, it is used in low-light, high-risk environments where operators work inside moving equipment while wearing protective gloves.</p>
+                            <p className='fade-inn'>Designing for these conditions requires more than a functional interface—it demands workflows that are fast, intuitive, and reliable, allowing operators to stay focused on the job rather than the technology.</p>
                           </div>
                         </div>
 
@@ -318,12 +317,10 @@ const Uggh = () => {
                           </video>
                         </div> */}
                         <div className="content-div-main fade-inn  width-800">
-                          <a className="fade-inn content-div-main-heading-2 translate-text-up ">Current Problems Identified
-                          </a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-
-                            <p className='fade-inn'>The existing tablet experience was not optimized for underground operational conditions. Smaller touch targets, dense interfaces, multi-step workflows, and limited visual hierarchy made interactions difficult inside constantly moving equipment. Operators were required to spend more time navigating the system, increasing workflow friction during critical operational tasks.
-                            </p>
+                          <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Challenge</a>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                            <p className='fade-inn'>As the product evolved, new capabilities were introduced to support a growing range of operational workflows. While the functionality expanded, the overall experience became more complex. Operators had to navigate through multiple screens, interact with small touch targets, and process dense interfaces while working in demanding underground conditions.</p>
+                            <p className='fade-inn'>Tasks that should have taken seconds often required unnecessary effort, increasing cognitive load during time-critical operations. The challenge wasn't to add more functionality—it was to simplify the experience by redesigning the product around the operator, not the system.</p>
                           </div>
                         </div>
 
@@ -566,17 +563,17 @@ const Uggh = () => {
                         </div>
                         <div className="content-div-main fade-inn width-800 medium-case-study">
                           <h2 className="fade-inn section-heading translate-text-up">Operational Redesign Success</h2>
-                          <p className='fade-inn'>The redesign transformed the UG Operator App into a more focused and intuitive operational tool. By simplifying workflows, improving accessibility, and reducing unnecessary cognitive effort, the product better supports operators working in complex underground environments.</p>
-                          <p className='fade-inn'>Rather than adding new features, the redesign concentrated on making existing tasks faster, clearer, and more reliable.</p>
+                          <p className='fade-inn'>The redesign transformed the UG Operator App into a faster, more intuitive operational tool tailored for the realities of underground mining. By simplifying workflows, improving accessibility, and reducing cognitive load, the experience enabled operators to complete critical tasks with greater speed and confidence while maintaining consistency across the product ecosystem.</p>
 
-                          <span className="fade-inn section-subtitle-italic translate-text-up">Outcomes</span>
+                          <span className="fade-inn section-subtitle-italic translate-text-up">Impact</span>
                           <ul className='fade-inn medium-list'>
-                            <li>Streamlined task completion</li>
-                            <li>Reduced navigation complexity</li>
-                            <li>Improved touch accessibility</li>
-                            <li>Better visual hierarchy</li>
-                            <li>Consistent design language</li>
-                            <li>More intuitive workflows</li>
+                            <li>Reduced user interactions across core workflows by ~30%, enabling faster task completion.</li>
+                            <li>Simplified navigation by removing unnecessary steps and reducing workflow complexity.</li>
+                            <li>Increased touch target sizes to improve usability while wearing industrial gloves.</li>
+                            <li>Established a scalable design system with reusable components for consistent experiences across mining products.</li>
+                            <li>Improved information hierarchy, allowing operators to identify critical actions more quickly in low-visibility environments.</li>
+                            <li>Designed an interface optimized for underground conditions, including dark environments, vibration, and time-critical operations.</li>
+                            <li>Delivered a more intuitive and reliable workflow that reduced operator effort and improved overall usability.</li>
                           </ul>
 
                           <div className="image-group">
