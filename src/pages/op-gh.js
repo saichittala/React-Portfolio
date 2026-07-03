@@ -203,8 +203,8 @@ const Opgh = () => {
 
                           <div className="image-group">
                             <img src="img/projects/gh_op/prototype.webp" alt="Interactive Prototype" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_op/cs.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_op/design_system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/design_system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/cs.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
                             <img src="img/projects/gh_op/design-system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
                           </div>
                         </div>
