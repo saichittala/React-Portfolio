@@ -184,7 +184,7 @@ const Opgh = () => {
                           <p className='fade-inn'>Instead of organizing the interface around system functions, the redesign followed the truck's operational journey—from Traveling to Trip Completion. Information was prioritized based on operator needs, reducing unnecessary interactions and improving situational awareness.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh_ug/skectches.png" alt="Wireframes" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/sketches.png" alt="Wireframes" className="fade-inn" loading="lazy" />
                             {/* <img src="img/projects/gh_ug/user-flow.webp" alt="User Flow" className="fade-inn" loading="lazy" /> */}
                           </div>
                         </div>
@@ -204,7 +204,7 @@ const Opgh = () => {
                           <p className='fade-inn'>Interactive prototypes were created to validate workflow efficiency, improve information hierarchy, and ensure operators could quickly identify truck status under real operational conditions.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh_op/prototype.webp" alt="Interactive Prototype" className="fade-inn" loading="lazy" />
+                            {/* <img src="img/projects/gh_op/prototype.webp" alt="Interactive Prototype" className="fade-inn" loading="lazy" /> */}
                             <img src="img/projects/gh-op/design_system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
                             <img src="img/projects/gh-op/cs.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
                             <img src="img/projects/gh-op/cl.webp" alt="Components" className="fade-inn" loading="lazy" />
@@ -257,8 +257,8 @@ const Opgh = () => {
                           <p className='fade-inn'>The redesigned Level 5 Haul Truck Operator App provides operators with a clearer understanding of autonomous haul operations through simplified workflows, improved visibility of truck states, and a more intuitive tablet experience optimized for open-pit mining environments.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh_ug/final-dashboard.webp" alt="Final Dashboard Redesign" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/final-screens.webp" alt="Final Screens Overview" className="fade-inn" loading="lazy" />
+                            {/* <img src="img/projects/gh_ug/final-dashboard.webp" alt="Final Dashboard Redesign" className="fade-inn" loading="lazy" /> */}
+                            <img src="img/projects/gh-op/final_screens.webp" alt="Final Screens Overview" className="fade-inn" loading="lazy" />
                           </div>
                         </div>
                       </div>
