@@ -3034,6 +3034,10 @@ a {
         width: fit-content;
     }
 
+    .lux-form-wrapper button {
+        width: 100% !important;
+    }
+
     .footer-main {
         align-items: flex-start !important;
         gap: 48px !important;
