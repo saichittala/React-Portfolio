@@ -216,7 +216,7 @@ const Opgh = () => {
                           <div className="figma-prototype-container">
                             <iframe
                               title="OP App Figma Prototype"
-                              src="https://embed.figma.com/proto/FHFhj2BJEMYZMtp9YuSBDs/Groundhog-App--OP----Tablet--?node-id=543-28427&viewport=423%2C11548%2C0.44&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=543%3A28417&page-id=1%3A5&embed-host=share&show-proto-sidebar=0&hide-ui=1"
+                              src="https://embed.figma.com/proto/FHFhj2BJEMYZMtp9YuSBDs/Groundhog-App--OP----Tablet--?node-id=543-28427&viewport=181%2C5925%2C0.22&scaling=scale-down&content-scaling=responsive&starting-point-node-id=543%3A28417&show-proto-sidebar=0&page-id=1%3A5&embed-host=share&hide-ui=1"
                               allowFullScreen
                             ></iframe>
                           </div>
