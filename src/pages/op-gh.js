@@ -184,8 +184,8 @@ const Opgh = () => {
                           <p className='fade-inn'>Instead of organizing the interface around system functions, the redesign followed the truck's operational journey—from Traveling to Trip Completion. Information was prioritized based on operator needs, reducing unnecessary interactions and improving situational awareness.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh_ug/user-flow.webp" alt="User Flow" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/wireframes.webp" alt="Wireframes" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh_ug/skectches.png" alt="Wireframes" className="fade-inn" loading="lazy" />
+                            {/* <img src="img/projects/gh_ug/user-flow.webp" alt="User Flow" className="fade-inn" loading="lazy" /> */}
                           </div>
                         </div>
                       </div>
@@ -207,7 +207,7 @@ const Opgh = () => {
                             <img src="img/projects/gh_op/prototype.webp" alt="Interactive Prototype" className="fade-inn" loading="lazy" />
                             <img src="img/projects/gh-op/design_system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
                             <img src="img/projects/gh-op/cs.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_op/design-system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/cl.webp" alt="Components" className="fade-inn" loading="lazy" />
                           </div>
                         </div>
 
@@ -236,10 +236,10 @@ const Opgh = () => {
                           <h2 className="fade-inn section-heading translate-text-up">Refining Through Stakeholder Reviews</h2>
                           <p className='fade-inn'>Feedback from product stakeholders and iterative reviews helped refine navigation, improve visual hierarchy, simplify operational states, and increase overall usability before development.</p>
 
-                          <div className="image-group">
+                          {/* <div className="image-group">
                             <img src="img/projects/gh_ug/before-after.webp" alt="Before and After Comparison" className="fade-inn" loading="lazy" />
                             <img src="img/projects/gh_ug/iterations.webp" alt="Iterative Improvements" className="fade-inn" loading="lazy" />
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -269,7 +269,7 @@ const Opgh = () => {
                     <div className="bg-main padding-unset">
                       <div className="project-details">
                         <div className="thankyou-content-heading fade-inn cursor-text">
-                          Thank you for viewing.
+                          Thank you for viewing. <a href="https://www.figma.com/design/FHFhj2BJEMYZMtp9YuSBDs/Groundhog-App--OP----Tablet--?node-id=1-5&t=SspbIQIq6YlYcZmZ-1" target="_blank" rel="noopener noreferrer">here is the figma link</a>
                         </div>
                       </div>
                     </div>
