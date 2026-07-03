@@ -104,12 +104,14 @@ const Opgh = () => {
                       <div className="pd-content-main gap-72 margin-100">
                         <div className="content-div-main fade-inn width-800 medium-case-study">
                           <h2 className="fade-inn section-heading translate-text-up">About</h2>
-                          <p className='fade-inn'>The Level 5 Haul Truck Operator App is a tablet application designed for operators supervising autonomous haul truck operations in open-pit mines. The redesign focused on improving operational awareness, simplifying complex workflows, and helping operators quickly understand the current state of each truck throughout the haul cycle.</p>
+                          <p className='fade-inn'>The Level 5 Haul Truck Operator App is a mission-critical tablet application used to monitor and manage autonomous haul truck operations in open-pit mines. Operators are responsible for maintaining operational awareness across multiple trucks, responding to changing conditions, and ensuring each haul cycle progresses safely and efficiently.</p>
+                          <p className='fade-inn'>This redesign focused on transforming complex operational data into clear, actionable insights, enabling operators to understand the status of every truck at a glance and make faster, more confident decisions.</p>
                         </div>
 
                         <div className="content-div-main fade-inn width-800 medium-case-study">
-                          <h2 className="fade-inn section-heading translate-text-up">Current Problems Identified</h2>
-                          <p className='fade-inn'>The existing experience presented large amounts of operational data without clear prioritization, making it difficult for operators to quickly understand truck status and respond efficiently. Navigation required multiple interactions, and the haul cycle lacked a clear visual representation, increasing cognitive effort during monitoring.</p>
+                          <h2 className="fade-inn section-heading translate-text-up">The Challenge</h2>
+                          <p className='fade-inn'>Although the system provided comprehensive operational data, the information was difficult to interpret under real-world conditions. Critical updates competed with secondary information, workflows required unnecessary navigation, and operators lacked a clear, end-to-end view of the haul cycle.</p>
+                          <p className='fade-inn'>The challenge wasn't to add more information—it was to present the right information at the right time. The goal was to reduce cognitive effort, improve situational awareness, and help operators make operational decisions with confidence.</p>
 
                           <div className="image-group">
                             {/* <img src="img/projects/gh_ug/problem-overview.webp" alt="Current Problems Overview" className="fade-inn" loading="lazy" /> */}
@@ -133,8 +135,8 @@ const Opgh = () => {
                           <p className='fade-inn'>Before redesigning the interface, we mapped the complete autonomous haul cycle to understand what information operators need at every stage. This helped us identify opportunities to improve visibility, reduce cognitive load, and create a more intuitive monitoring experience.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh_ug/haul-cycle.webp" alt="Haul Cycle Map" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/operator-environment.webp" alt="Operator Environment" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/haul_cycle.png" alt="Haul Cycle Map" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/op_env.png" alt="Operator Environment" className="fade-inn" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -162,9 +164,9 @@ const Opgh = () => {
                             How might we design a tablet experience that enables operators to monitor autonomous haul trucks, understand operational states instantly, and respond confidently throughout the haul cycle?
                           </p>
 
-                          <div className="image-group">
+                          {/* <div className="image-group">
                             <img src="img/projects/gh_ug/problem-statement.webp" alt="Problem Statement" className="fade-inn" loading="lazy" />
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -206,6 +208,17 @@ const Opgh = () => {
                             <img src="img/projects/gh-op/design_system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
                             <img src="img/projects/gh-op/cs.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
                             <img src="img/projects/gh_op/design-system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
+                          </div>
+                        </div>
+
+                        {/* Figma Prototype Embed */}
+                        <div className="figma-prototype-wrapper fade-inn">
+                          <div className="figma-prototype-container">
+                            <iframe
+                              title="OP App Figma Prototype"
+                              src="https://embed.figma.com/proto/FHFhj2BJEMYZMtp9YuSBDs/Groundhog-App--OP----Tablet--?node-id=543-28427&viewport=423%2C11548%2C0.44&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=543%3A28417&page-id=1%3A5&embed-host=share&show-proto-sidebar=0&hide-ui=1"
+                              allowFullScreen
+                            ></iframe>
                           </div>
                         </div>
                       </div>
@@ -270,7 +283,7 @@ const Opgh = () => {
       </main>
 
       <Footer />
-    </div>
+    </div >
   );
 }
 
