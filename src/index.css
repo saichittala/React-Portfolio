@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital,wght@0,400;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
 
@@ -134,6 +134,7 @@
     --primary-font: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Text", "SF Pro Icons", "SF Pro Display", "Inter", sans-serif;
     --secondary-font: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Text", "SF Pro Icons", "SF Pro Display", "Inter", sans-serif;
     --tertiary-font: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro Text", "SF Pro Icons", "SF Pro Display", "Inter", sans-serif;
+    --quadrinary-font: 'Fragment Mono', monospace;
 
 }
 
@@ -4524,6 +4525,7 @@ textarea:focus {
 
 .medium-case-study .section-subtitle-italic {
     display: block;
+    font-family: var(--quadrinary-font);
     font-size: 16px;
     font-style: normal;
     color: var(--grey-bg-b-color);
