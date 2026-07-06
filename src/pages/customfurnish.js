@@ -210,7 +210,7 @@ const CustomFurnish = () => {
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                             <p className='fade-inn'>To define scope and direction, I clarified four key areas:
                             </p>
-                            <img src="img/projects/customfurnish/Cl-Questions-1.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" style={{ display: 'flex', flexDirection: 'column', marginTop: '20px' }} />
+                            <img src="img/projects/customfurnish/Cl-Questions-1.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" style={{ display: 'flex', flexDirection: 'column', marginTop: '20px' }} />
 
                           </div>
                         </div>
@@ -288,7 +288,7 @@ const CustomFurnish = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Flow</ch>
-                            <img src="img/projects/customfurnish/userflow.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                            <img src="img/projects/customfurnish/userflow.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
                           </div>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">Information Architecture</ch>
@@ -358,7 +358,7 @@ const CustomFurnish = () => {
                       <div className="content-div-main fade-inn width-800">
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                           <p className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px' }}>Beyond metrics, the redesign built confidence among users and internal stakeholders.</p>
-                          <img src="img/projects/customfurnish/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
+                          <img src="img/projects/customfurnish/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
                         </div>
                       </div>
 

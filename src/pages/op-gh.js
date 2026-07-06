@@ -54,7 +54,7 @@ const Opgh = () => {
                 justifyContent: "center",
               }}
             >
-              <img src="img/projects/gh-op/cover.png" alt="Level 5 Haul Truck Operator App Cover" loading="lazy" className='fade-inn' />
+              <img src="img/projects/gh-op/cover.webp" alt="Level 5 Haul Truck Operator App Cover" loading="lazy" className='fade-inn' />
             </div>
 
             <div className="bg-main width-unset mobile-bg-main">
@@ -135,8 +135,8 @@ const Opgh = () => {
                           <p className='fade-inn'>Before redesigning the interface, we mapped the complete autonomous haul cycle to understand what information operators need at every stage. This helped us identify opportunities to improve visibility, reduce cognitive load, and create a more intuitive monitoring experience.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh-op/haul_cycle.png" alt="Haul Cycle Map" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh-op/op_env.png" alt="Operator Environment" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/haul_cycle.webp" alt="Haul Cycle Map" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/op_env.webp" alt="Operator Environment" className="fade-inn" loading="lazy" />
                           </div>
                         </div>
                       </div>
@@ -184,7 +184,7 @@ const Opgh = () => {
                           <p className='fade-inn'>Instead of organizing the interface around system functions, the redesign followed the truck's operational journey—from Traveling to Trip Completion. Information was prioritized based on operator needs, reducing unnecessary interactions and improving situational awareness.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh-op/sketches.png" alt="Wireframes" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-op/sketches.webp" alt="Wireframes" className="fade-inn" loading="lazy" />
                             {/* <img src="img/projects/gh_ug/user-flow.webp" alt="User Flow" className="fade-inn" loading="lazy" /> */}
                           </div>
                         </div>

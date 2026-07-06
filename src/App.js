@@ -19,6 +19,13 @@ import {
 import Header from './components/header.jsx';
 import PageTransition from './components/PageTransition.jsx';
 import RecruiterModal from './components/RecruiterModal.jsx';
+import {
+  HomeSkeleton,
+  WorksSkeleton,
+  AboutSkeleton,
+  ContactSkeleton,
+  ProjectSkeleton
+} from './components/Skeletons.jsx';
 
 /* ========================================
  * Lazy Loaded Pages
@@ -412,14 +419,7 @@ function App() {
 
       <Suspense fallback={<PageLoader />}>
 
-        <PageTransition
-          animateRoutes={[
-            '/mydeziner',
-            '/customfurnish',
-            '/works',
-            '/about',
-          ]}
-        >
+        <PageTransition>
 
           {(location) => (
 
@@ -428,53 +428,91 @@ function App() {
               <Route
                 path="/"
                 element={
-                  <Home
-                    recruiterMode={
-                      recruiterMode
-                    }
-                  />
+                  <Suspense fallback={<HomeSkeleton />}>
+                    <Home
+                      recruiterMode={
+                        recruiterMode
+                      }
+                    />
+                  </Suspense>
                 }
               />
 
               <Route
                 path="/mydeziner"
-                element={<MyDeziner />}
+                element={
+                  <Suspense fallback={<ProjectSkeleton />}>
+                    <MyDeziner />
+                  </Suspense>
+                }
               />
 
               <Route
                 path="/customfurnish"
-                element={<CustomFurnish />}
+                element={
+                  <Suspense fallback={<ProjectSkeleton />}>
+                    <CustomFurnish />
+                  </Suspense>
+                }
               />
 
               <Route
                 path="/about"
-                element={<About />}
+                element={
+                  <Suspense fallback={<AboutSkeleton />}>
+                    <About />
+                  </Suspense>
+                }
               />
 
               <Route
                 path="/works"
-                element={<Works />}
+                element={
+                  <Suspense fallback={<WorksSkeleton />}>
+                    <Works />
+                  </Suspense>
+                }
               />
 
               <Route
                 path="/contact"
-                element={<Contact />}
+                element={
+                  <Suspense fallback={<ContactSkeleton />}>
+                    <Contact />
+                  </Suspense>
+                }
               />
               <Route
                 path="/Uggh"
-                element={<Uggh />}
+                element={
+                  <Suspense fallback={<ProjectSkeleton />}>
+                    <Uggh />
+                  </Suspense>
+                }
               />
               <Route
                 path="/Opgh"
-                element={<Opgh />}
+                element={
+                  <Suspense fallback={<ProjectSkeleton />}>
+                    <Opgh />
+                  </Suspense>
+                }
               />
               <Route
                 path="/lms-gh"
-                element={<Lmsgh />}
+                element={
+                  <Suspense fallback={<ProjectSkeleton />}>
+                    <Lmsgh />
+                  </Suspense>
+                }
               />
               <Route
                 path="/dd"
-                element={<Dd />}
+                element={
+                  <Suspense fallback={<ProjectSkeleton />}>
+                    <Dd />
+                  </Suspense>
+                }
               />
 
             </Routes>

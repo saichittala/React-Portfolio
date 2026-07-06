@@ -116,7 +116,7 @@ const MyDeziner = () => {
 
           <div className="full-bg">
             <div className=" p-img-1 main-image">
-              <img src="img/projects/mydeziner.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-inn' />
+              <img src="img/projects/mydeziner.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience mydeziner" loading="lazy" className='fade-inn' />
             </div>
             <div className="bg-main width-unset mobile-bg-main">
               <div className="project-details-main">
@@ -176,14 +176,14 @@ const MyDeziner = () => {
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                             <p>MyDeziner is a B2B SaaS platform used by interior designers to draw layouts, configure materials, and generate hyper-realistic interior renders. While the output quality was strong, the internal workflow was slowing designers down. The goal of this redesign was to improve efficiency, reduce repetitive work, and support faster project delivery without compromising design control or flexibility.
                             </p>
-                            {/* <img src="img/projects/mydeziner/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" /> */}
+                            {/* <img src="img/projects/mydeziner/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" /> */}
 
                           </div>
                         </div>
                         <div className="content-div-main fade-inn ">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800 ">Understanding the Problem Statement
                           </a>
-                          <LazyImage src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
+                          <LazyImage src="img/projects/mydeziner/mydeziner-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '36px' }} className='width-800'>
                             <div className='pd-content'>
                               <ch className="fade-inn translate-text-up" style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>Previous Scenario</ch>
@@ -225,7 +225,7 @@ const MyDeziner = () => {
                           </div>
                         </div>
 
-                        {/* <img src="img/projects/mydeziner/mydeziner-old.png" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-inn' loading="lazy" /> */}
+                        {/* <img src="img/projects/mydeziner/mydeziner-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" className='fade-inn' loading="lazy" /> */}
                         <div></div>
                         {/* <div className="content-div-main fade-inn  width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Challenge
@@ -440,7 +440,7 @@ const MyDeziner = () => {
                                   <p className='width-800 fade-inn'>These changes significantly reduced repetitive work and improved overall efficiency. Designers were able to work faster, maintain consistency across projects, and respond quickly during client discussions. The product shifted from being powerful but time-consuming to becoming a reliable daily tool that supports speed, quality, and business growth.
 
                                   </p>
-                                  {/* <img src="img/projects/mydeziner/successmetrics.png" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" /> */}
+                                  {/* <img src="img/projects/mydeziner/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" /> */}
                                 </div>
                               </div>
                             </div>

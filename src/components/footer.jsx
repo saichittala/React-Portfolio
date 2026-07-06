@@ -15,7 +15,7 @@ function Footer() {
 
                             {/* Social Links */}
                             <div className="footer-content">
-                                <a 
+                                <a
                                     href="https://www.linkedin.com/in/saichittala/"
                                     className="footer-white footer-link"
                                     target="_blank"
@@ -36,7 +36,7 @@ function Footer() {
                             {/* Additional Links */}
                             <div className="footer-content">
                                 <a href='/#about' className="footer-white footer-link ">About</a>
-                                <a href="Resumee.pdf" className="footer-white footer-link">Resume</a>
+                                <a href="Resume.pdf" className="footer-white footer-link">Resume</a>
                             </div>
                         </div>
                     </div>

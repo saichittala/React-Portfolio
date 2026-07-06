@@ -109,7 +109,7 @@ const Lmsgh = () => {
 
                           <div className="image-group">
                             {/* <img src="img/projects/lmsgh/overview.webp" alt="LMS Overview" className="fade-inn" loading="lazy" /> */}
-                            <img src="img/projects/gh-lms/dashboard.png" alt="Dashboard Overview" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh-lms/dashboard.webp" alt="Dashboard Overview" className="fade-inn" loading="lazy" />
                           </div>
                         </div>
                       </div>

@@ -28,6 +28,7 @@ const BubbleButton = ({
         if (!activationRef?.current) return;
 
         const handleScroll = () => {
+            if (!activationRef.current) return;
             const rect = activationRef.current.getBoundingClientRect();
             const viewportHeight = window.innerHeight;
 

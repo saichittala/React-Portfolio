@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from './card';
 import LockPopup from './components/lockpopup';
 import { useRef } from "react";
@@ -15,10 +16,11 @@ import Footer from './components/footer';
 const images = [
   { src: "img/projects/cf.webp", alt: "Image 1" },
   { src: "img/projects/mydeziner.webp", alt: "Image 2" },
-  { src: "img/projects/homegymr.png", alt: "Image 3" },
+  { src: "img/projects/homegymr.webp", alt: "Image 3" },
 ]
 
 const Home = () => {
+  const navigate = useNavigate();
   const cardsContainerRef = useRef(null);
 
   // Manage popup state
@@ -37,12 +39,12 @@ const Home = () => {
 
   const cardsData = [
     { title: "Building Faster Workflows for Underground Operators", type: "Groundhog Apps", year: "Professional 2026-2027", image: "img/projects/gh_ug/cover.webp", link: "#/Uggh", openInNewTab: true, locked: false },
-    { title: "Designing Autonomous Haul Truck Operations", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/gh-op/cover.png", link: "#/Opgh", openInNewTab: true, locked: false },
+    { title: "Designing Autonomous Haul Truck Operations", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/gh-op/cover.webp", link: "#/Opgh", openInNewTab: true, locked: false },
     { title: "Reducing Friction in LMS Onboarding", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.webp", link: "#/lms-gh", openInNewTab: true, locked: false },
     { title: "Real-time Fleet Monitoring for Open-Pit Mining Operations", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/dd/cover.webp", link: "#/dd", openInNewTab: true, locked: false },
-    { title: "Scaling Brands through Cinematic Short-Form Video", type: "Reelscale", year: "Professional 2026-2027", image: "img/projects/reelscale/main.png", link: "https://reelscale.in", openInNewTab: true, locked: false },
+    { title: "Scaling Brands through Cinematic Short-Form Video", type: "Reelscale", year: "Professional 2026-2027", image: "img/projects/reelscale/main.webp", link: "https://reelscale.in", openInNewTab: true, locked: false },
     { title: "Turning Website Traffic into Qualified Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
-    { title: "Reducing Workflow Friction in Interior Design SaaS", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.png", link: "#/mydeziner", openInNewTab: true, locked: true, password: "surya@123" },
+    { title: "Reducing Workflow Friction in Interior Design SaaS", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: true, password: "surya@123" },
     // { title: "Designing efficiency for interior designers", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: true, confidential: true, password: "surya@123" },
     // { title: "Optimizing Checkout, Maximizing Conversions", type: "Homegymr", year: "Professional 2024-2025", image: "img/projects/homegymr.webp", link: "https://www.homegymr.in/checkout?id=1&quantity=1", openInNewTab: true, locked: false },
     { title: "Crafting Unified Ride Booking Experience", type: "Yalla Gai", year: "Professional 2022-2023", image: "img/projects/yallagai.webp", link: "https://www.figma.com/design/c5Yd43Xo4ipF1FKnInr7Vv/Yalla-Gai?node-id=0-1&t=QdQPmGsy97stJ8cE-1", openInNewTab: true, locked: false, password: "surya@123" },
@@ -66,7 +68,21 @@ const Home = () => {
   // Handle unlock logic
   const handleUnlock = (enteredPassword) => {
     if (enteredPassword === currentPassword) {
-      window.open(currentLink, "_blank");
+      const isInternal = currentLink.startsWith('#') || currentLink.startsWith('/');
+      if (isInternal) {
+        let path = currentLink;
+        if (path.startsWith('#/')) {
+          path = path.substring(2);
+        } else if (path.startsWith('#')) {
+          path = path.substring(1);
+        }
+        if (!path.startsWith('/')) {
+          path = '/' + path;
+        }
+        navigate(path);
+      } else {
+        window.open(currentLink, "_blank");
+      }
       setPopupVisible(false); // Close popup on success
     } else {
       setIsPasswordIncorrect(true); // Set incorrect flag if password is wrong
@@ -115,7 +131,7 @@ const Home = () => {
         className="sticky-toast"
       />
       <main className='z-index-11 '>
-        <a href="#/customfurnish" target="_blank" rel="noopener noreferrer">
+        <a href="#/customfurnish">
           <BubbleButton
             activationRef={cardsContainerRef}
             text="View Recent Work"
@@ -139,7 +155,7 @@ const Home = () => {
                   <div className='profile-img'>
                     <img
                       style={{ width: '150px', borderRadius: '24px' }}
-                      src={'img/profile-2test.jpeg'}
+                      src={'img/profile-2test.webp'}
                       alt="profile-img"
                     />
                   </div>
@@ -149,7 +165,7 @@ const Home = () => {
                     <div className='df-g8 al-c jc-c'>
                       {/* <img
                         style={{ width: '150px', height: '150px', borderRadius: '999px', objectFit: 'cover' }}
-                        src={'img/profile-2test.jpeg'}
+                        src={'img/profile-2test.webp'}
                         alt="profile-img"
                       /> */}
 
@@ -224,26 +240,26 @@ const Home = () => {
                         company: "Groundhog Apps",
                         role: "Senior Product Designer",
                         dates: "Oct 2025 – Present",
-                        logo: "/img/logos/gh.png",
+                        logo: "/img/logos/gh.webp",
                         current: true,
                       },
                       {
                         company: "Customfurnish",
                         role: "UI/UX Designer",
                         dates: "Jan 2024 – Jul 2025",
-                        logo: "/img/logos/customfurnish.png",
+                        logo: "/img/logos/customfurnish.webp",
                       },
                       {
                         company: "FirstRicoz",
                         role: "UI/UX Designer",
                         dates: "Jan 2023 – Dec 2023",
-                        logo: "/img/logos/firstricoz.png",
+                        logo: "/img/logos/firstricoz.webp",
                       },
                       {
                         company: "YallaGai",
                         role: "Freelance Product Designer",
                         dates: "Feb 2022 – Dec 2022",
-                        logo: "/img/logos/yallagai.png",
+                        logo: "/img/logos/yallagai.webp",
                       },
                     ].map((exp, index, arr) => (
                       <div key={index} className="timeline-row">

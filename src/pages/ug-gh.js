@@ -403,7 +403,7 @@ const Uggh = () => {
                           {/* <div className="image-group">
                           <img src="img/projects/gh_ug/affinity-mapping.webp" alt="Affinity Mapping" className="fade-inn" loading="lazy" />
                           <img src="img/projects/gh_ug/problem-statement.webp" alt="Problem Statement Diagram" className="fade-inn" loading="lazy" />
-                          <img src="img/projects/gh_ug/userflow.png" alt="Journey Map" className="fade-inn" loading="lazy" />
+                          <img src="img/projects/gh_ug/userflow.webp" alt="Journey Map" className="fade-inn" loading="lazy" />
                         </div> */}
                         </div>
                       </div>
@@ -436,9 +436,9 @@ const Uggh = () => {
                           <p className='fade-inn'>Includes early sketches, user flows, information architecture, wireframes, and navigation concepts.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh_ug/sketches.png" alt="Early Sketches" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/userflow.png" alt="User Flow" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/ia.png" alt="Information Architecture" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh_ug/sketches.webp" alt="Early Sketches" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh_ug/userflow.webp" alt="User Flow" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/gh_ug/ia.webp" alt="Information Architecture" className="fade-inn" loading="lazy" />
                             {/* <img src="img/projects/gh_ug/wireframes.webp" alt="Wireframes" className="fade-inn" loading="lazy" /> */}
                           </div>
                         </div>
@@ -542,8 +542,8 @@ const Uggh = () => {
 
                           <div className="image-group">
                             <ReactBeforeSliderComponent className='fade-inn'
-                              firstImage={{ "imageUrl": 'img/projects/gh_ug/old-screen.png' }}
-                              secondImage={{ "imageUrl": 'img/projects/gh_ug/new-screen.png' }}
+                              firstImage={{ "imageUrl": 'img/projects/gh_ug/old-screen.webp' }}
+                              secondImage={{ "imageUrl": 'img/projects/gh_ug/new-screen.webp' }}
                             />
                             {/* <img src="img/projects/gh_ug/iteration-1.webp" alt="Iteration 1" className="fade-inn" loading="lazy" />
                           <img src="img/projects/gh_ug/iteration-2.webp" alt="Iteration 2" className="fade-inn" loading="lazy" /> */}

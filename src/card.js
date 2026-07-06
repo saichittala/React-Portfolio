@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useFadeIn from './components/useFadeIn';
 
 const Card = ({
@@ -14,6 +15,7 @@ const Card = ({
   password
 }) => {
   useFadeIn();
+  const navigate = useNavigate();
 
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +42,21 @@ const Card = ({
     if (locked) {
       onRequestLockPopup(link, password);
     } else {
-      window.open(link, openInNewTab ? "_blank" : "_self");
+      const isInternal = link.startsWith('#') || link.startsWith('/');
+      if (isInternal) {
+        let path = link;
+        if (path.startsWith('#/')) {
+          path = path.substring(2);
+        } else if (path.startsWith('#')) {
+          path = path.substring(1);
+        }
+        if (!path.startsWith('/')) {
+          path = '/' + path;
+        }
+        navigate(path);
+      } else {
+        window.open(link, openInNewTab ? "_blank" : "_self");
+      }
     }
   };
 

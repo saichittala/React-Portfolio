@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const DURATION = 500; // ms — snappy but graceful, Apple-style
@@ -16,43 +16,72 @@ export default function PageTransition({ children, animateRoutes = [] }) {
   const location = useLocation();
   const [displayLocation, setDisplayLocation] = useState(location);
   const [stage, setStage] = useState("idle");
-  const [animating, setAnimating] = useState(false);
+
+  const timeoutRef = useRef(null);
+  const frameRef1 = useRef(null);
+  const frameRef2 = useRef(null);
+  const currentKeyRef = useRef(
+    location.key || location.pathname + location.search + location.hash
+  );
+
+  // Track displayLocation in a ref to avoid triggering the transition effect on its updates
+  const displayLocationRef = useRef(displayLocation);
+  displayLocationRef.current = displayLocation;
 
   const shouldAnimate =
     animateRoutes.length === 0 || animateRoutes.includes(location.pathname);
 
   useEffect(() => {
-    if (location.key === displayLocation.key) return;
+    const locationKey =
+      location.key || location.pathname + location.search + location.hash;
+
+    if (locationKey === currentKeyRef.current) return;
+
+    currentKeyRef.current = locationKey;
+
+    const doCleanup = () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (frameRef1.current) cancelAnimationFrame(frameRef1.current);
+      if (frameRef2.current) cancelAnimationFrame(frameRef2.current);
+    };
+
+    doCleanup();
+
+    const displayKey =
+      displayLocationRef.current.key ||
+      displayLocationRef.current.pathname +
+        displayLocationRef.current.search +
+        displayLocationRef.current.hash;
+
+    if (locationKey === displayKey) {
+      setStage("idle");
+      return;
+    }
 
     if (!shouldAnimate) {
       setDisplayLocation(location);
+      setStage("idle");
       window.scrollTo(0, 0);
       return;
     }
 
-    if (animating) return;
-
-    setAnimating(true);
-
-    // Phase 1: Exit — current page fades up and out
     setStage("exit");
 
-    setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setDisplayLocation(location);
       window.scrollTo(0, 0);
 
-      // Phase 2: Enter — new page starts from slightly below, fades in
       setStage("enter");
 
-      // Tiny frame delay so the browser registers the enter styles before animating to idle
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
+      frameRef1.current = requestAnimationFrame(() => {
+        frameRef2.current = requestAnimationFrame(() => {
           setStage("idle");
-          setTimeout(() => setAnimating(false), DURATION);
         });
       });
     }, DURATION);
-  }, [location]);
+
+    return doCleanup;
+  }, [location, shouldAnimate]);
 
   const style = {
     ...stages[stage],
@@ -68,3 +97,5 @@ export default function PageTransition({ children, animateRoutes = [] }) {
     </div>
   );
 }
+
+

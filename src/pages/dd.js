@@ -160,19 +160,19 @@ const Dd = () => {
                           <span className="fade-inn section-subtitle-italic translate-text-up">Unified Operations Dashboard</span>
                           <p className='fade-inn'>Instead of navigating across multiple screens, dispatchers can monitor the entire hauling operation from a single interface.</p>
                           <div className="image-group">
-                            <img src="img/projects/dd/sketches.png" alt="Production Insights and Status Indicators" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/dd/sketches.webp" alt="Production Insights and Status Indicators" className="fade-inn" loading="lazy" />
                           </div>
 
                           <span className="fade-inn section-subtitle-italic translate-text-up">Real-Time Queue Monitoring</span>
                           <p className='fade-inn'>Visual truck queues help identify congestion at loading and dumping sites, allowing dispatchers to rebalance fleet allocation quickly.</p>
                           {/* <div className="image-group">
-                            <img src="img/projects/dd/queues.png" alt="Real-Time Queue Monitoring" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/dd/queues.webp" alt="Real-Time Queue Monitoring" className="fade-inn" loading="lazy" />
                           </div> */}
 
                           <span className="fade-inn section-subtitle-italic translate-text-up">Production Insights & Status Indicators</span>
                           <p className='fade-inn'>Integrated TPH (Tons Per Hour) and Load Mix charts provide live production metrics without leaving the dashboard, while color-coded load states (Ideal, Underload, Overload) enable operators to detect issues at a glance and respond proactively.</p>
                           <div className="image-group">
-                            <img src="img/projects/dd/dashboard.png" alt="Unified Operations Dashboard" className="fade-inn" loading="lazy" />
+                            <img src="img/projects/dd/dashboard.webp" alt="Unified Operations Dashboard" className="fade-inn" loading="lazy" />
 
                           </div>
                         </div>
