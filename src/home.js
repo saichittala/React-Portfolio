@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import useScrollReveal from './components/useScrollReveal';
 import Card from './card';
 import LockPopup from './components/lockpopup';
 import { useRef } from "react";
@@ -22,6 +23,7 @@ const images = [
 const Home = ({ recruiterMode, setActiveTheme }) => {
   const navigate = useNavigate();
   const cardsContainerRef = useRef(null);
+  useScrollReveal();
 
   // Manage popup state
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -144,9 +146,9 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
       const triggerEnd = testimonialsRect.top < viewportHeight * 0.5;
 
       if (triggerStart && !triggerEnd) {
-        setActiveTheme('light');
+        // setActiveTheme('light');
       } else {
-        setActiveTheme('dark');
+        // setActiveTheme('dark');
       }
     };
 
@@ -155,7 +157,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
 
     return () => {
       window.removeEventListener('scroll', handleScrollTheme);
-      setActiveTheme('dark');
+      // setActiveTheme('dark');
     };
   }, [setActiveTheme, showAll]);
 
@@ -346,7 +348,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
 
             {/* Hero CTA Section */}
             <div className="hero-cta-section fade-in">
-              <div className="bg-main hero-cta-container">
+              <div className="bg-main hero-cta-container fadeup">
                 <h2 className="hero-cta-heading">
                   Great products start with the <span>right conversation.</span>
                 </h2>
