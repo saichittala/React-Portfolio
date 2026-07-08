@@ -28,7 +28,7 @@ const Card = ({
           observer.disconnect(); // we only need it once
         }
       },
-      { rootMargin: '100px' } // start loading just before entering
+      { rootMargin: '0px 0px 200px 0px' } // start loading just before entering
     );
 
     if (cardRef.current) {

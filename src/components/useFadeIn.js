@@ -16,7 +16,7 @@ const useFadeIn = (selector = ".fade-in", offset = 0.9) => {
       },
       {
         threshold: 0,
-        rootMargin: `0px 0px -${(1 - offset) * 100}% 0px`, // Trigger when element crosses offset boundary
+        rootMargin: "0px 0px 200px 0px", // Trigger 200px before entering viewport
       }
     );
 
