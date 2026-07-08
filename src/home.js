@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Card from './card';
 import LockPopup from './components/lockpopup';
 import { useRef } from "react";
@@ -316,14 +316,14 @@ const Home = () => {
                   <div className="hero-cta-avatar">
                     <img src="img/profile-2test.webp" alt="Sai Chittala" />
                   </div>
-                  <a href="#/contact" className="hero-cta-button">
+                  <Link to="/contact" className="hero-cta-button">
                     <span>Let's Talk</span>
                     <div className="hero-cta-arrow">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: '16px', height: '16px' }}>
                         <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
