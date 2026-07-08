@@ -124,34 +124,37 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
   useEffect(() => {
     if (!setActiveTheme) return;
 
-    const container = cardsContainerRef.current;
-    if (!container) return;
+    const handleScrollTheme = () => {
+      const container = cardsContainerRef.current;
+      if (!container) return;
 
-    const cards = container.querySelectorAll('.card-container');
-    if (cards.length < 2) return;
+      const cards = container.querySelectorAll('.card-container');
+      if (cards.length < 2) return;
 
-    const secondCard = cards[1];
+      const secondCard = cards[1];
+      const testimonials = document.querySelector('.testimonials-section');
+      if (!testimonials) return;
 
-    const observerOptions = {
-      root: null,
-      rootMargin: '-30% 0px -30% 0px', // Center-focused trigger zone
-      threshold: 0.1
+      const secondCardRect = secondCard.getBoundingClientRect();
+      const testimonialsRect = testimonials.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      // Trigger light theme when second card enters, and revert to dark theme when testimonials section reaches the middle of the screen
+      const triggerStart = secondCardRect.top < viewportHeight * 0.7;
+      const triggerEnd = testimonialsRect.top < viewportHeight * 0.5;
+
+      if (triggerStart && !triggerEnd) {
+        setActiveTheme('light');
+      } else {
+        setActiveTheme('dark');
+      }
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveTheme('light');
-        } else {
-          setActiveTheme('dark');
-        }
-      });
-    }, observerOptions);
-
-    observer.observe(secondCard);
+    handleScrollTheme();
+    window.addEventListener('scroll', handleScrollTheme, { passive: true });
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener('scroll', handleScrollTheme);
       setActiveTheme('dark');
     };
   }, [setActiveTheme, showAll]);
