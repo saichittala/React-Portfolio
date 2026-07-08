@@ -78,8 +78,9 @@ export default function ConfidentialGate({
                                     style={{
                                         color: "#ff4d4f",
                                         fontSize: "14px",
-                                        marginTop: "8px",
-                                        textAlign: "center",
+                                        marginTop: "-10px",
+                                        textAlign: "left",
+                                        marginLeft: "18px",
                                     }}
                                 >
                                     {message}

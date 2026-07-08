@@ -185,13 +185,26 @@ body,
 .btn-1,
 .hero-cta-button,
 .row-divider,
-h1, h2, h3, h4, p, span, a, white, gray, .card-title, .card-year, .section-subtitle, .footer-white, .footer-grey {
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+a,
+white,
+gray,
+.card-title,
+.card-year,
+.section-subtitle,
+.footer-white,
+.footer-grey {
     transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
-                color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
-                border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
-                box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1),
-                fill 0.8s cubic-bezier(0.25, 1, 0.5, 1),
-                stroke 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        fill 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        stroke 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 
@@ -4731,12 +4744,12 @@ textarea:focus {
     }
 
     .medium-case-study p {
-        font-size: 16px;
-        line-height: 1.7;
+        font-size: 18px;
+        line-height: 1.9;
     }
 
     .medium-case-study .section-heading {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .medium-case-study .problem-blockquote {
@@ -4964,12 +4977,10 @@ img-comparison-slider img {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     position: relative;
-    background: radial-gradient(
-        50% 100% at 50% 100%,
-        rgba(0, 71, 255, 0.24) 0%,
-        rgba(0, 40, 180, 0.06) 50%,
-        transparent 100%
-    );
+    background: radial-gradient(50% 100% at 50% 100%,
+            rgba(0, 71, 255, 0.24) 0%,
+            rgba(0, 40, 180, 0.06) 50%,
+            transparent 100%);
 }
 
 .hero-cta-container {
@@ -5066,6 +5077,7 @@ img-comparison-slider img {
         margin-bottom: 28px;
         padding: 0 16px;
     }
+
     .hero-cta-container {
         padding: 50px 16px 60px 16px;
     }
