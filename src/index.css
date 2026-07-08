@@ -4920,3 +4920,118 @@ img-comparison-slider img {
     transform: translateY(0px);
     transition-delay: 0.1s;
 }
+
+/* ========================================
+   Hero CTA Section Styles
+   ======================================== */
+.hero-cta-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    position: relative;
+    background: radial-gradient(
+        50% 100% at 50% 100%,
+        rgba(30, 80, 255, 0.16) 0%,
+        rgba(15, 25, 80, 0.05) 50%,
+        transparent 100%
+    );
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.hero-cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 100px 20px;
+}
+
+.hero-cta-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.08) 20%,
+        rgba(255, 255, 255, 0.08) 80%,
+        transparent 100%
+    );
+    margin-bottom: 50px;
+}
+
+.hero-cta-heading {
+    font-size: 40px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.35;
+    max-width: 600px;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.hero-cta-heading span {
+    font-family: "Georgia", serif;
+    font-style: italic;
+    color: #98A2FF; /* Light indigo accent color */
+    font-weight: 400;
+}
+
+.hero-cta-button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero-cta-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-cta-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-cta-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    color: #000000;
+    padding: 8px 8px 8px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.hero-cta-button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.18);
+    background: #f7f7f7;
+}
+
+.hero-cta-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.hero-cta-button:hover .hero-cta-arrow {
+    transform: translateX(2px);
+}

@@ -192,6 +192,7 @@ const Home = () => {
                 </div>
               </div>
 
+
               <div className='df-g8 fd-c gap-36 width-100 '>
                 <a className="fade-in content-div-main-heading-2 translate-text-up  margin-unset"> Shipped Products
                 </a>
@@ -304,6 +305,30 @@ const Home = () => {
               </div>
 
             </div>
+
+            {/* Hero CTA Section */}
+            <div className="hero-cta-section fade-in">
+              <div className="bg-main hero-cta-container">
+                <div className="hero-cta-line"></div>
+                <h2 className="hero-cta-heading">
+                  Great products start with the <span>right conversation.</span>
+                </h2>
+                <div className="hero-cta-button-wrapper">
+                  <div className="hero-cta-avatar">
+                    <img src="img/profile-2test.webp" alt="Sai Chittala" />
+                  </div>
+                  <a href="#/contact" className="hero-cta-button">
+                    <span>Let's Talk</span>
+                    <div className="hero-cta-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: '16px', height: '16px' }}>
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </main>
