@@ -163,6 +163,37 @@
 
 }
 
+/* ==========================================================================
+   Smooth Theme Transitions
+   ========================================================================== */
+body,
+.content,
+.full-bg,
+.bg-main,
+.about-main,
+.card-container,
+.main-card,
+.sub-card,
+.testimonials-card-container,
+.testimonial-card,
+.experience-container,
+.timeline,
+.timeline-row,
+.timeline-left,
+.logo-wrapper,
+.logo-wrapper img,
+.btn-1,
+.hero-cta-button,
+.row-divider,
+h1, h2, h3, h4, p, span, a, white, gray, .card-title, .card-year, .section-subtitle, .footer-white, .footer-grey {
+    transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                fill 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                stroke 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
 
 
 .skeleton {
@@ -673,7 +704,9 @@ body {
         width 1s cubic-bezier(0.22, 1, 0.36, 1),
         opacity 0.3s ease,
         top 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-        padding 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        padding 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
     will-change: transform;
     /* border-bottom: 0.8px solid var(--border-color); */
@@ -796,7 +829,8 @@ body {
 
     transition: padding .5s cubic-bezier(0, -.6, 0, 1.07),
     transform .2s cubic-bezier(0, -.6, 0, 1.07),
-    filter .2s cubic-bezier(0, -.6, 0, 1.07);
+    filter .2s cubic-bezier(0, -.6, 0, 1.07),
+    color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
     img {
         filter: brightness(0) saturate(100%) invert(49%) sepia(21%) saturate(0%) hue-rotate(181deg) brightness(98%) contrast(90%);
@@ -822,7 +856,8 @@ body {
 
     transition: padding .5s cubic-bezier(0, -.6, 0, 1.07),
     transform .2s cubic-bezier(0, -.6, 0, 1.07),
-    filter .2s cubic-bezier(0, -.6, 0, 1.07);
+    filter .2s cubic-bezier(0, -.6, 0, 1.07),
+    color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 
     img {
         display: none;

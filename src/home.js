@@ -19,7 +19,7 @@ const images = [
   { src: "img/projects/homegymr.webp", alt: "Image 3" },
 ]
 
-const Home = () => {
+const Home = ({ recruiterMode, setActiveTheme }) => {
   const navigate = useNavigate();
   const cardsContainerRef = useRef(null);
 
@@ -120,6 +120,41 @@ const Home = () => {
 
     fetchLocation();
   }, []);
+
+  useEffect(() => {
+    if (!setActiveTheme) return;
+
+    const container = cardsContainerRef.current;
+    if (!container) return;
+
+    const cards = container.querySelectorAll('.card-container');
+    if (cards.length < 2) return;
+
+    const secondCard = cards[1];
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -30% 0px', // Center-focused trigger zone
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveTheme('light');
+        } else {
+          setActiveTheme('dark');
+        }
+      });
+    }, observerOptions);
+
+    observer.observe(secondCard);
+
+    return () => {
+      observer.disconnect();
+      setActiveTheme('dark');
+    };
+  }, [setActiveTheme, showAll]);
 
   // Close the popup
   const closePopup = () => {

@@ -435,6 +435,7 @@ function App() {
                       recruiterMode={
                         recruiterMode
                       }
+                      setActiveTheme={setActiveTheme}
                     />
                   </Suspense>
                 }
