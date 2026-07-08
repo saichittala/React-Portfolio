@@ -309,7 +309,6 @@ const Home = () => {
             {/* Hero CTA Section */}
             <div className="hero-cta-section fade-in">
               <div className="bg-main hero-cta-container">
-                <div className="hero-cta-line"></div>
                 <h2 className="hero-cta-heading">
                   Great products start with the <span>right conversation.</span>
                 </h2>
