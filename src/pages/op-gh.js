@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer';
 import BubbleButton from '../components/BubbleButton';
 import ConfidentialGate from '../components/ConfidentialGate';
+import useScrollReveal from '../components/useScrollReveal';
 
 const Opgh = () => {
+  useScrollReveal();
   const OpghRef = React.useRef(null);
   const [isMobile] = useState(window.innerWidth <= 674);
 

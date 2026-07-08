@@ -4,8 +4,10 @@ import BubbleButton from '../components/BubbleButton';
 import ConfidentialGate from '../components/ConfidentialGate';
 import 'img-comparison-slider';
 import 'img-comparison-slider/dist/styles.css';
+import useScrollReveal from '../components/useScrollReveal';
 
 const Lmsgh = () => {
+  useScrollReveal();
   const lmsghRef = React.useRef(null);
   const [isMobile] = useState(window.innerWidth <= 674);
 

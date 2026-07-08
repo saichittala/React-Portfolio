@@ -12,9 +12,11 @@ import { use } from 'react';
 // import SmoothScrollProvider from '../components/Scrollsmooth';
 import LazyImage from '../components/LazyImage';
 import ConfidentialGate from '../components/ConfidentialGate';
+import useScrollReveal from '../components/useScrollReveal';
 
 
 const CustomFurnish = () => {
+  useScrollReveal();
 
   // FullScrollFadeIn();
   // useFadeIn();

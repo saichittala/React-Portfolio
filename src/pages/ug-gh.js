@@ -6,9 +6,11 @@ import BubbleButton from '../components/BubbleButton';
 import { use } from 'react';
 import LazyImage from '../components/LazyImage';
 import ConfidentialGate from '../components/ConfidentialGate';
+import useScrollReveal from '../components/useScrollReveal';
 
 
 const Uggh = () => {
+  useScrollReveal();
 
   // FullScrollFadeIn();
   // useFadeIn();

@@ -98,73 +98,6 @@ function ThemeRouteHandler({ setActiveTheme }) {
   return null;
 }
 
-function ScrollRevealHandler() {
-  const location = useLocation();
-
-  useEffect(() => {
-    let revealObserver;
-    let fadeupObserver;
-    let timeoutId;
-
-    const setupObservers = () => {
-      const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.15
-      };
-
-      // IMAGE ANIMATION
-      const revealCallback = (entries) => {
-        entries.forEach((entry) => {
-          const container = entry.target;
-          if (entry.isIntersecting) {
-            container.classList.add("animating");
-            return;
-          }
-          if (entry.boundingClientRect.top > 0) {
-            container.classList.remove("animating");
-          }
-        });
-      };
-
-      revealObserver = new IntersectionObserver(revealCallback, options);
-      document.querySelectorAll(".reveal").forEach((reveal) => {
-        revealObserver.observe(reveal);
-      });
-
-      // TEXT ANIMATION
-      const fadeupCallback = (entries) => {
-        entries.forEach((entry) => {
-          const container = entry.target;
-          container.classList.add("not-fading-up");
-          if (entry.isIntersecting) {
-            container.classList.add("fading-up");
-            return;
-          }
-          if (entry.boundingClientRect.top > 0) {
-            container.classList.remove("fading-up");
-          }
-        });
-      };
-
-      fadeupObserver = new IntersectionObserver(fadeupCallback, options);
-      document.querySelectorAll(".fadeup").forEach((fadeup) => {
-        fadeupObserver.observe(fadeup);
-      });
-    };
-
-    // Delay slightly to let the lazy loaded component finish rendering
-    timeoutId = setTimeout(setupObservers, 400);
-
-    return () => {
-      clearTimeout(timeoutId);
-      if (revealObserver) revealObserver.disconnect();
-      if (fadeupObserver) fadeupObserver.disconnect();
-    };
-  }, [location.pathname]);
-
-  return null;
-}
 
 /* ========================================
  * Main App
@@ -350,7 +283,6 @@ function App() {
 
     <HashRouter>
       <ThemeRouteHandler setActiveTheme={setActiveTheme} />
-      <ScrollRevealHandler />
 
       {/* ========================================
          Global Styles
