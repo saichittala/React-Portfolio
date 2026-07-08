@@ -135,8 +135,22 @@ const Opgh = () => {
                           <p className='fade-inn'>Before redesigning the interface, we mapped the complete autonomous haul cycle to understand what information operators need at every stage. This helped us identify opportunities to improve visibility, reduce cognitive load, and create a more intuitive monitoring experience.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh-op/haul_cycle.webp" alt="Haul Cycle Map" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh-op/op_env.webp" alt="Operator Environment" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Haul Cycle Map</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-op/haul_cycle.webp" alt="Haul Cycle Map" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Operator Environment</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-op/op_env.webp" alt="Operator Environment" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -184,7 +198,14 @@ const Opgh = () => {
                           <p className='fade-inn'>Instead of organizing the interface around system functions, the redesign followed the truck's operational journey—from Traveling to Trip Completion. Information was prioritized based on operator needs, reducing unnecessary interactions and improving situational awareness.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh-op/sketches.webp" alt="Wireframes" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Wireframe Sketches</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-op/sketches.webp" alt="Wireframes" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
                             {/* <img src="img/projects/gh_ug/user-flow.webp" alt="User Flow" className="fade-inn" loading="lazy" /> */}
                           </div>
                         </div>
@@ -205,9 +226,30 @@ const Opgh = () => {
 
                           <div className="image-group">
                             {/* <img src="img/projects/gh_op/prototype.webp" alt="Interactive Prototype" className="fade-inn" loading="lazy" /> */}
-                            <img src="img/projects/gh-op/design_system.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh-op/cs.webp" alt="Design System Components" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh-op/cl.webp" alt="Components" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Design System</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-op/design_system.webp" alt="Design System Components" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Color Tokens</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-op/cs.webp" alt="Design System Components" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>UI Component Library</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-op/cl.webp" alt="Components" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
 
@@ -258,7 +300,14 @@ const Opgh = () => {
 
                           <div className="image-group">
                             {/* <img src="img/projects/gh_ug/final-dashboard.webp" alt="Final Dashboard Redesign" className="fade-inn" loading="lazy" /> */}
-                            <img src="img/projects/gh-op/final_screens.webp" alt="Final Screens Overview" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Final Solution Overview</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-op/final_screens.webp" alt="Final Screens Overview" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>

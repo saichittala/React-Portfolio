@@ -5,8 +5,8 @@ import useFadeIn from '../components/useFadeIn';
 
 import useScrollEffect from '../components/useScrollEffect';
 import ZoomOnScroll from '../components/ZoomOnScroll';
-import ReactBeforeSliderComponent from 'react-before-after-slider-component';
-import 'react-before-after-slider-component/dist/build.css';
+import 'img-comparison-slider';
+import 'img-comparison-slider/dist/styles.css';
 import BubbleButton from '../components/BubbleButton';
 // import SmoothScrollProvider from '../components/Scrollsmooth';
 import LazyImage from '../components/LazyImage';
@@ -166,10 +166,20 @@ const MyDeziner = () => {
                     </div>
                     <div className="pd-main" >
                       <div className="   pd-content-main gap-72 margin-100">
-                        {/* <ReactBeforeSliderComponent className='fade-inn '
-                          firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.webp' }}  // Passing the first image
-                          secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
-                        /> */}
+                        {/* <div className="slider-container-relative">
+                          <div className="slider-badge before-badge">Before</div>
+                          <div className="slider-badge after-badge">After</div>
+                          <img-comparison-slider class="fade-inn" hover="true">
+                            <img slot="first" src="img/projects/customfurnish/customfurnish-new.webp" alt="Before redesign" />
+                            <img slot="second" src="img/projects/customfurnish/customfurnish-old.webp" alt="After redesign" />
+                            <div slot="handle" className="custom-slider-handle">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-left-right">
+                                <path d="m9 7-5 5 5 5" />
+                                <path d="m15 7 5 5-5 5" />
+                              </svg>
+                            </div>
+                          </img-comparison-slider>
+                        </div> */}
                         <div className="content-div-main fade-inn width-800">
                           <a className=" content-div-main-heading-2 translate-text-up ">About
                           </a>

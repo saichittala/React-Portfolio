@@ -92,7 +92,13 @@ const Home = () => {
   useEffect(() => {
     const fetchLocation = async () => {
       try {
+        const cached = sessionStorage.getItem('user_location');
+        if (cached) {
+          setHeroTag(`Hello to ${cached}`);
+          return;
+        }
         const response = await fetch("https://ipinfo.io/json");
+        if (!response.ok) throw new Error("ipinfo request failed");
         const data = await response.json();
 
         console.log("LOCATION:", data);
@@ -101,6 +107,7 @@ const Home = () => {
         const country = data.country || "";
 
         const location = `${state}, ${country}`;
+        sessionStorage.setItem('user_location', location);
 
         setHeroTag(`Hello to ${location}`);
 

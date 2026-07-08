@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer';
-import ReactBeforeSliderComponent from 'react-before-after-slider-component';
-import 'react-before-after-slider-component/dist/build.css';
+import 'img-comparison-slider';
+import 'img-comparison-slider/dist/styles.css';
 import BubbleButton from '../components/BubbleButton';
 import { use } from 'react';
 import LazyImage from '../components/LazyImage';
@@ -290,12 +290,10 @@ const Uggh = () => {
                     </div>
                     <div className="pd-main" >
                       <div className="   pd-content-main gap-72 margin-100">
-                        <div className="content-div-main fade-inn width-800">
-                          <a className="fade-inn content-div-main-heading-2 translate-text-up ">About</a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                            <p className='fade-inn'>The UG Operator App is a mission-critical tablet application that enables underground mining operators to manage and complete daily operational activities. Unlike traditional enterprise software, it is used in low-light, high-risk environments where operators work inside moving equipment while wearing protective gloves.</p>
-                            <p className='fade-inn'>Designing for these conditions requires more than a functional interface—it demands workflows that are fast, intuitive, and reliable, allowing operators to stay focused on the job rather than the technology.</p>
-                          </div>
+                        <div className="content-div-main fade-inn width-800 medium-case-study">
+                          <h2 className="fade-inn section-heading translate-text-up">About</h2>
+                          <p className='fade-inn'>The UG Operator App is a mission-critical tablet application that enables underground mining operators to manage and complete daily operational activities. Unlike traditional enterprise software, it is used in low-light, high-risk environments where operators work inside moving equipment while wearing protective gloves.</p>
+                          <p className='fade-inn'>Designing for these conditions requires more than a functional interface—it demands workflows that are fast, intuitive, and reliable, allowing operators to stay focused on the job rather than the technology.</p>
                         </div>
 
                         {/* <div className="content-div-main fade-inn ">
@@ -316,12 +314,10 @@ const Uggh = () => {
                             Your browser does not support the video tag.
                           </video>
                         </div> */}
-                        <div className="content-div-main fade-inn  width-800">
-                          <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Challenge</a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                            <p className='fade-inn'>As the product evolved, new capabilities were introduced to support a growing range of operational workflows. While the functionality expanded, the overall experience became more complex. Operators had to navigate through multiple screens, interact with small touch targets, and process dense interfaces while working in demanding underground conditions.</p>
-                            <p className='fade-inn'>Tasks that should have taken seconds often required unnecessary effort, increasing cognitive load during time-critical operations. The challenge wasn't to add more functionality—it was to simplify the experience by redesigning the product around the operator, not the system.</p>
-                          </div>
+                        <div className="content-div-main fade-inn width-800 medium-case-study">
+                          <h2 className="fade-inn section-heading translate-text-up">The Challenge</h2>
+                          <p className='fade-inn'>As the product evolved, new capabilities were introduced to support a growing range of operational workflows. While the functionality expanded, the overall experience became more complex. Operators had to navigate through multiple screens, interact with small touch targets, and process dense interfaces while working in demanding underground conditions.</p>
+                          <p className='fade-inn'>Tasks that should have taken seconds often required unnecessary effort, increasing cognitive load during time-critical operations. The challenge wasn't to add more functionality—it was to simplify the experience by redesigning the product around the operator, not the system.</p>
                         </div>
 
 
@@ -436,11 +432,32 @@ const Uggh = () => {
                           <p className='fade-inn'>Includes early sketches, user flows, information architecture, wireframes, and navigation concepts.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/gh_ug/sketches.webp" alt="Early Sketches" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/userflow.webp" alt="User Flow" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/ia.webp" alt="Information Architecture" className="fade-inn" loading="lazy" />
-                            {/* <img src="img/projects/gh_ug/wireframes.webp" alt="Wireframes" className="fade-inn" loading="lazy" /> */}
-                          </div>
+                             <div>
+                               <span>Early Sketches</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/sketches.webp" alt="Early Sketches" loading="lazy" />
+                                 </div>
+                               </div>
+                             </div>
+                             <div>
+                               <span>User Flow</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/userflow.webp" alt="User Flow" loading="lazy" />
+                                 </div>
+                               </div>
+                             </div>
+                             <div>
+                               <span>Information Architecture</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/ia.webp" alt="Information Architecture" loading="lazy" />
+                                 </div>
+                               </div>
+                             </div>
+                             {/* <img src="img/projects/gh_ug/wireframes.webp" alt="Wireframes" className="fade-inn" loading="lazy" /> */}
+                           </div>
                         </div>
                       </div>
                     </div>
@@ -481,13 +498,48 @@ const Uggh = () => {
 
                         <div className="content-div-main fade-inn width-800 medium-case-study">
                           <div className="image-group">
-                            <img src="img/projects/gh_ug/prototype-flow.webp" alt="Prototype Iterations" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/design_system.webp" alt="Design System" className="fade-inn" loading="lazy" style={{ border: 'none' }} />
-                            <img src="img/projects/gh_ug/ts.webp" alt="Design System" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/cs.webp" alt="Design System" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/gh_ug/cl.webp" alt="Component Library" className="fade-inn" loading="lazy" />
-                            {/* <img src="img/projects/gh_ug/high-fidelity-ui.webp" alt="High Fidelity UI" className="fade-inn" loading="lazy" /> */}
-                          </div>
+                             <div>
+                               <span>Interactive Prototype Flow</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/prototype-flow.webp" alt="Prototype Iterations" loading="lazy" />
+                                 </div>
+                               </div>
+                             </div>
+                             <div>
+                               <span>Design System</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/design_system.webp" alt="Design System" loading="lazy" style={{ border: 'none' }} />
+                                 </div>
+                               </div>
+                             </div>
+                             <div>
+                               <span>Typographic Scale</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/ts.webp" alt="Design System" loading="lazy" />
+                                 </div>
+                               </div>
+                             </div>
+                             <div>
+                               <span>Color Tokens</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/cs.webp" alt="Design System" loading="lazy" />
+                                 </div>
+                               </div>
+                             </div>
+                             <div>
+                               <span>UI Component Library</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/cl.webp" alt="Component Library" loading="lazy" />
+                                 </div>
+                               </div>
+                             </div>
+                             {/* <img src="img/projects/gh_ug/high-fidelity-ui.webp" alt="High Fidelity UI" className="fade-inn" loading="lazy" /> */}
+                           </div>
                         </div>
                       </div>
                     </div>
@@ -541,10 +593,23 @@ const Uggh = () => {
                           </div>
 
                           <div className="image-group">
-                            <ReactBeforeSliderComponent className='fade-inn'
-                              firstImage={{ "imageUrl": 'img/projects/gh_ug/old-screen.webp' }}
-                              secondImage={{ "imageUrl": 'img/projects/gh_ug/new-screen.webp' }}
-                            />
+                            <div>
+                              <span>Before & After Redesign</span>
+                              <div className="slider-container-relative">
+                                <div className="slider-badge before-badge">Before</div>
+                                <div className="slider-badge after-badge">After</div>
+                                <img-comparison-slider class="fade-inn" hover="true">
+                                  <img slot="first" src="img/projects/gh_ug/old-screen.webp" alt="Before redesign" />
+                                  <img slot="second" src="img/projects/gh_ug/new-screen.webp" alt="After redesign" />
+                                  <div slot="handle" className="custom-slider-handle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-left-right">
+                                      <path d="m9 7-5 5 5 5" />
+                                      <path d="m15 7 5 5-5 5" />
+                                    </svg>
+                                  </div>
+                                </img-comparison-slider>
+                              </div>
+                            </div>
                             {/* <img src="img/projects/gh_ug/iteration-1.webp" alt="Iteration 1" className="fade-inn" loading="lazy" />
                           <img src="img/projects/gh_ug/iteration-2.webp" alt="Iteration 2" className="fade-inn" loading="lazy" /> */}
                             {/* <img src="img/projects/gh_ug/feedback-session.webp" alt="Feedback Session" className="fade-inn" loading="lazy" /> */}
@@ -577,10 +642,17 @@ const Uggh = () => {
                           </ul>
 
                           <div className="image-group">
-                            {/* <img src="img/projects/gh_ug/final-dashboard.webp" alt="Final Dashboard" className="fade-inn" loading="lazy" />
-                          <img src="img/projects/gh_ug/final-workflow.webp" alt="Final Workflow" className="fade-inn" loading="lazy" /> */}
-                            <img src="img/projects/gh_ug/final_screens.webp" alt="Final Screens" className="fade-inn" loading="lazy" />
-                          </div>
+                             {/* <img src="img/projects/gh_ug/final-dashboard.webp" alt="Final Dashboard" className="fade-inn" loading="lazy" />
+                           <img src="img/projects/gh_ug/final-workflow.webp" alt="Final Workflow" className="fade-inn" loading="lazy" /> */}
+                             <div>
+                               <span>Final Solution Overview</span>
+                               <div className="reveal">
+                                 <div className="image-wrap">
+                                   <img src="img/projects/gh_ug/final_screens.webp" alt="Final Screens" loading="lazy" />
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
                         </div>
                       </div>
                     </div>

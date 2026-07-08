@@ -10,6 +10,7 @@ import {
   HashRouter,
   Routes,
   Route,
+  useLocation,
 } from 'react-router-dom';
 
 /* ========================================
@@ -82,6 +83,90 @@ const PageLoader = () => {
 };
 
 /* ========================================
+ * Theme Route Handler
+ * ======================================== */
+function ThemeRouteHandler({ setActiveTheme }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+    const lightThemePaths = ['/customfurnish', '/mydeziner', '/lms-gh'];
+    const isLight = lightThemePaths.some(p => path === p || path === `${p}/`);
+    setActiveTheme(isLight ? 'light' : 'dark');
+  }, [location, setActiveTheme]);
+
+  return null;
+}
+
+function ScrollRevealHandler() {
+  const location = useLocation();
+
+  useEffect(() => {
+    let revealObserver;
+    let fadeupObserver;
+    let timeoutId;
+
+    const setupObservers = () => {
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.15
+      };
+
+      // IMAGE ANIMATION
+      const revealCallback = (entries) => {
+        entries.forEach((entry) => {
+          const container = entry.target;
+          if (entry.isIntersecting) {
+            container.classList.add("animating");
+            return;
+          }
+          if (entry.boundingClientRect.top > 0) {
+            container.classList.remove("animating");
+          }
+        });
+      };
+
+      revealObserver = new IntersectionObserver(revealCallback, options);
+      document.querySelectorAll(".reveal").forEach((reveal) => {
+        revealObserver.observe(reveal);
+      });
+
+      // TEXT ANIMATION
+      const fadeupCallback = (entries) => {
+        entries.forEach((entry) => {
+          const container = entry.target;
+          container.classList.add("not-fading-up");
+          if (entry.isIntersecting) {
+            container.classList.add("fading-up");
+            return;
+          }
+          if (entry.boundingClientRect.top > 0) {
+            container.classList.remove("fading-up");
+          }
+        });
+      };
+
+      fadeupObserver = new IntersectionObserver(fadeupCallback, options);
+      document.querySelectorAll(".fadeup").forEach((fadeup) => {
+        fadeupObserver.observe(fadeup);
+      });
+    };
+
+    // Delay slightly to let the lazy loaded component finish rendering
+    timeoutId = setTimeout(setupObservers, 400);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (revealObserver) revealObserver.disconnect();
+      if (fadeupObserver) fadeupObserver.disconnect();
+    };
+  }, [location.pathname]);
+
+  return null;
+}
+
+/* ========================================
  * Main App
  * ======================================== */
 
@@ -112,12 +197,7 @@ function App() {
       : mode
   );
 
-  const [activeTheme, setActiveTheme] = useState(() => {
-    const hash = window.location.hash;
-    const path = hash.replace(/^#/, '').split('?')[0];
-    const lightThemePaths = ['/customfurnish', '/mydeziner', '/lms-gh'];
-    return lightThemePaths.includes(path) ? 'light' : 'dark';
-  });
+  const [activeTheme, setActiveTheme] = useState('dark');
 
   const [recruiterMode, setRecruiterMode] =
     useState(false);
@@ -182,19 +262,7 @@ function App() {
    * Apply Theme
    * ======================================== */
 
-  useEffect(() => {
-    const handleRouteTheme = () => {
-      const hash = window.location.hash;
-      const path = hash.replace(/^#/, '').split('?')[0];
-      const lightThemePaths = ['/customfurnish', '/mydeziner', '/lms-gh'];
-      setActiveTheme(lightThemePaths.includes(path) ? 'light' : 'dark');
-    };
-
-    handleRouteTheme();
-
-    window.addEventListener('hashchange', handleRouteTheme);
-    return () => window.removeEventListener('hashchange', handleRouteTheme);
-  }, []);
+  // Route theme is now handled inside HashRouter context via ThemeRouteHandler
 
   useEffect(() => {
 
@@ -281,6 +349,8 @@ function App() {
   return (
 
     <HashRouter>
+      <ThemeRouteHandler setActiveTheme={setActiveTheme} />
+      <ScrollRevealHandler />
 
       {/* ========================================
          Global Styles

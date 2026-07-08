@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer';
 import BubbleButton from '../components/BubbleButton';
 import ConfidentialGate from '../components/ConfidentialGate';
+import 'img-comparison-slider';
+import 'img-comparison-slider/dist/styles.css';
 
 const Lmsgh = () => {
   const lmsghRef = React.useRef(null);
@@ -109,7 +111,10 @@ const Lmsgh = () => {
 
                           <div className="image-group">
                             {/* <img src="img/projects/lmsgh/overview.webp" alt="LMS Overview" className="fade-inn" loading="lazy" /> */}
-                            <img src="img/projects/gh-lms/dashboard.webp" alt="Dashboard Overview" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Dashboard Overview</span>
+                              <img src="img/projects/gh-lms/dashboard.webp" alt="Dashboard Overview" className="fade-inn" loading="lazy" />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -131,8 +136,22 @@ const Lmsgh = () => {
                         <p className='fade-inn'>The challenge was to design an onboarding experience that reduced friction while encouraging users to experience the value of the platform before purchasing.</p>
 
                         <div className="image-group">
-                          <img src="img/projects/lmsgh/challenge.webp" alt="Onboarding Challenge" className="fade-inn" loading="lazy" />
-                          <img src="img/projects/lmsgh/existing-flow.webp" alt="Existing Flow Map" className="fade-inn" loading="lazy" />
+                          <div>
+                            <span>Existing Onboarding</span>
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/gh-lms/onboarding.webp" alt="Onboarding Challenge" loading="lazy" />
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <span>Existing Flow Map</span>
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/gh-lms/existing-uf.webp" alt="Existing Flow Map" loading="lazy" />
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -161,8 +180,18 @@ const Lmsgh = () => {
                           </ul>
 
                           <div className="image-group">
-                            <img src="img/projects/lmsgh/persona.webp" alt="User Persona" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/lmsgh/journey-map.webp" alt="Learner Journey Map" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>User Persona</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-lms/user-persona.webp" alt="User Persona" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            {/* <div>
+                            <span>Learner Journey Map</span>
+                            <img src="img/projects/gh-lms/learner-journey-map.webp" alt="Learner Journey Map" className="fade-inn" loading="lazy" />
+                          </div> */}
                           </div>
                         </div>
                       </div>
@@ -193,7 +222,10 @@ const Lmsgh = () => {
                           </p>
 
                           <div className="image-group">
-                            <img src="img/projects/lmsgh/problem-statement.webp" alt="Problem Statement Diagram" className="fade-inn" loading="lazy" />
+                            {/* <div>
+                              <span>Problem Statement Diagram</span>
+                              <img src="img/projects/lmsgh/problem-statement.webp" alt="Problem Statement Diagram" className="fade-inn" loading="lazy" />
+                            </div> */}
                           </div>
                         </div>
                       </div>
@@ -226,8 +258,18 @@ const Lmsgh = () => {
                           </ul>
 
                           <div className="image-group">
-                            <img src="img/projects/lmsgh/user-flow.webp" alt="User Flow Journey" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Proposed User Flow</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-lms/user-flow.webp" alt="User Flow Journey" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            {/* <div>
+                            <span>Wireframe Sketches</span>
                             <img src="img/projects/lmsgh/wireframes.webp" alt="Wireframes" className="fade-inn" loading="lazy" />
+                          </div> */}
                           </div>
                         </div>
                       </div>
@@ -245,11 +287,41 @@ const Lmsgh = () => {
                           <h2 className="fade-inn section-heading translate-text-up">Bringing Concepts to Life</h2>
                           <p className='fade-inn'>Interactive prototypes explored different onboarding patterns, dashboard layouts, pricing models, and course discovery experiences.</p>
                           <p className='fade-inn'>Special attention was given to reducing signup friction while making premium features easy to understand during the free trial.</p>
+                        </div>
 
+                        {/* Figma Prototype Embed */}
+
+
+                        <div className="content-div-main fade-inn width-800 medium-case-study" style={{ marginTop: '48px' }}>
                           <div className="image-group">
-                            <img src="img/projects/lmsgh/signup-flow.webp" alt="Signup Flow Prototype" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/lmsgh/dashboard.webp" alt="Dashboard Layout Prototype" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Signup Flow Prototype</span>
+                              <div className="figma-prototype-wrapper fade-inn">
+                                <div className="figma-prototype-container">
+                                  <iframe
+                                    title="LMS Signup Flow Figma Prototype"
+                                    src="https://embed.figma.com/proto/Ux8vi0Menw1kiedzrgJnTl/LMS-Web?node-id=349-10334&viewport=1152%2C-1001%2C0.25&scaling=scale-down&content-scaling=fixed&starting-point-node-id=349%3A10334&page-id=227%3A5554&embed-host=share&show-proto-sidebar=0&hide-ui=1"
+                                    allowFullScreen
+                                  ></iframe>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Signin Flow Prototype</span>
+                              <div className="figma-prototype-wrapper fade-inn">
+                                <div className="figma-prototype-container">
+                                  <iframe
+                                    title="LMS Signin Flow Figma Prototype"
+                                    src="https://embed.figma.com/proto/Ux8vi0Menw1kiedzrgJnTl/LMS-Web?node-id=302-13788&viewport=1152%2C-1001%2C0.25&scaling=scale-down&content-scaling=fixed&starting-point-node-id=302%3A13788&page-id=227%3A5554&embed-host=share&show-proto-sidebar=0&hide-ui=1"
+                                    allowFullScreen
+                                  ></iframe>
+                                </div>
+                              </div>
+                            </div>
+                            {/* <div>
+                            <span>Pricing Model Prototype</span>
                             <img src="img/projects/lmsgh/pricing.webp" alt="Pricing Model Prototype" className="fade-inn" loading="lazy" />
+                          </div> */}
                           </div>
                         </div>
                       </div>
@@ -269,8 +341,27 @@ const Lmsgh = () => {
                           <p className='fade-inn'>The final experience reduced unnecessary decisions and helped users reach their first learning activity much faster.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/lmsgh/before-after.webp" alt="Before and After Comparison" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Before & After Comparison</span>
+                              <div className="slider-container-relative">
+                                <div className="slider-badge before-badge">Before</div>
+                                <div className="slider-badge after-badge">After</div>
+                                <img-comparison-slider class="fade-inn" hover="true">
+                                  <img slot="first" src="img/projects/gh-lms/before-lms.webp" alt="Before redesign" />
+                                  <img slot="second" src="img/projects/gh-lms/after-lms.webp" alt="After redesign" />
+                                  <div slot="handle" className="custom-slider-handle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-left-right">
+                                      <path d="m9 7-5 5 5 5" />
+                                      <path d="m15 7 5 5-5 5" />
+                                    </svg>
+                                  </div>
+                                </img-comparison-slider>
+                              </div>
+                            </div>
+                            {/* <div>
+                            <span>Iterative Screen Revisions</span>
                             <img src="img/projects/lmsgh/iterations.webp" alt="Iterative Screen Revisions" className="fade-inn" loading="lazy" />
+                          </div> */}
                           </div>
                         </div>
                       </div>
@@ -290,10 +381,26 @@ const Lmsgh = () => {
                           <p className='fade-inn'>The platform now provides a structured onboarding journey, simplified navigation, integrated subscription flow, and a dashboard focused on helping users continue learning with confidence.</p>
 
                           <div className="image-group">
-                            <img src="img/projects/lmsgh/final-dashboard.webp" alt="Final Dashboard View" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/lmsgh/course-library.webp" alt="Course Library view" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/lmsgh/certificate.webp" alt="Mining Safety Certificate View" className="fade-inn" loading="lazy" />
-                            <img src="img/projects/lmsgh/pricing-page.webp" alt="SaaS Pricing Page View" className="fade-inn" loading="lazy" />
+                            <div>
+                              <span>Final Dashboard Design</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh-lms/final-screens.webp" alt="Final Dashboard View" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            {/* <div>
+                              <span>Course Library View</span>
+                              <img src="img/projects/lmsgh/course-library.webp" alt="Course Library view" className="fade-inn" loading="lazy" />
+                            </div>
+                            <div>
+                              <span>Safety Certificate View</span>
+                              <img src="img/projects/lmsgh/certificate.webp" alt="Mining Safety Certificate View" className="fade-inn" loading="lazy" />
+                            </div>
+                            <div>
+                              <span>SaaS Pricing Page View</span>
+                              <img src="img/projects/lmsgh/pricing-page.webp" alt="SaaS Pricing Page View" className="fade-inn" loading="lazy" />
+                            </div> */}
                           </div>
                         </div>
                       </div>
@@ -304,7 +411,7 @@ const Lmsgh = () => {
                     <div className="bg-main padding-unset">
                       <div className="project-details">
                         <div className="thankyou-content-heading fade-inn cursor-text">
-                          Thank you for viewing.
+                          Thank you for viewing. <a href="https://www.figma.com/design/Ux8vi0Menw1kiedzrgJnTl/LMS-Web?node-id=227-5554&t=gOpLmKvhNfBSrPQa-1" target="_blank" rel="noopener noreferrer">here is the figma link</a>
                         </div>
                       </div>
                     </div>

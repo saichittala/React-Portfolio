@@ -5,8 +5,8 @@ import Footer from '../components/footer';
 // import FullScrollFadeIn from '../components/FullScrollFadeIn';
 // import useScrollEffect from '../components/useScrollEffect';
 // import ZoomOnScroll from '../components/ZoomOnScroll';
-import ReactBeforeSliderComponent from 'react-before-after-slider-component';
-import 'react-before-after-slider-component/dist/build.css';
+import 'img-comparison-slider';
+import 'img-comparison-slider/dist/styles.css';
 import BubbleButton from '../components/BubbleButton';
 import { use } from 'react';
 // import SmoothScrollProvider from '../components/Scrollsmooth';
@@ -156,10 +156,20 @@ const CustomFurnish = () => {
                     </div>
                     <div className="pd-main" >
                       <div className="   pd-content-main gap-72 margin-100">
-                        {/* <ReactBeforeSliderComponent className='fade-inn '
-                          firstImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-new.webp' }}  // Passing the first image
-                          secondImage={{ "imageUrl": 'img/projects/customfurnish/customfurnish-old.webp' }}  // Passing the first image
-                        /> */}
+                        {/* <div className="slider-container-relative">
+                          <div className="slider-badge before-badge">Before</div>
+                          <div className="slider-badge after-badge">After</div>
+                          <img-comparison-slider class="fade-inn" hover="true">
+                            <img slot="first" src="img/projects/customfurnish/customfurnish-new.webp" alt="Before redesign" />
+                            <img slot="second" src="img/projects/customfurnish/customfurnish-old.webp" alt="After redesign" />
+                            <div slot="handle" className="custom-slider-handle">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-left-right">
+                                <path d="m9 7-5 5 5 5" />
+                                <path d="m15 7 5 5-5 5" />
+                              </svg>
+                            </div>
+                          </img-comparison-slider>
+                        </div> */}
                         <div className="content-div-main fade-inn width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">About
                           </a>
@@ -210,7 +220,11 @@ const CustomFurnish = () => {
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                             <p className='fade-inn'>To define scope and direction, I clarified four key areas:
                             </p>
-                            <img src="img/projects/customfurnish/Cl-Questions-1.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" style={{ display: 'flex', flexDirection: 'column', marginTop: '20px' }} />
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/customfurnish/Cl-Questions-1.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" loading="lazy" style={{ display: 'flex', flexDirection: 'column', marginTop: '20px' }} />
+                              </div>
+                            </div>
 
                           </div>
                         </div>
@@ -267,17 +281,29 @@ const CustomFurnish = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Persona 1</ch>
-                            <img src="img/projects/customfurnish/userpersona-1.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/customfurnish/userpersona-1.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                              </div>
+                            </div>
                           </div>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Persona 2</ch>
-                            <img src="img/projects/customfurnish/userpersona-2.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/customfurnish/userpersona-2.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn" loading="lazy" />
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up  width-800">Empathy Map</ch>
-                            <img src="img/projects/customfurnish/empathymap.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/customfurnish/empathymap.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                              </div>
+                            </div>
                             <p className='fade-inn'>Key insight: Users needed reassurance and process clarity more than more content.</p>
 
                           </div>
@@ -288,15 +314,27 @@ const CustomFurnish = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Flow</ch>
-                            <img src="img/projects/customfurnish/userflow.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/customfurnish/userflow.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-100" loading="lazy" />
+                              </div>
+                            </div>
                           </div>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">Information Architecture</ch>
-                            <img src="img/projects/customfurnish/information-architecture.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/customfurnish/information-architecture.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                              </div>
+                            </div>
                           </div>
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">Components</ch>
-                            <img src="img/projects/customfurnish/Components.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                            <div className="reveal">
+                              <div className="image-wrap">
+                                <img src="img/projects/customfurnish/Components.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="width-100" loading="lazy" />
+                              </div>
+                            </div>
                             <p className='fade-inn'>Each step reduced cognitive load and guided users forward.</p>
                           </div>
                         </div>
@@ -313,7 +351,11 @@ const CustomFurnish = () => {
                           <span className=''>Outcome</span>
                         </div>
                         <div className="content-div-main fade-inn ">
-                          <img src="img/projects/customfurnish/customfurnish-new.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
+                          <div className="reveal">
+                            <div className="image-wrap">
+                              <img src="img/projects/customfurnish/customfurnish-new.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
+                            </div>
+                          </div>
                           <p style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginTop: '24px' }} className='fade-inn width-800'>
                             The redesigned website became a clear, trust-first platform that guided users toward consultation booking. Instead of overwhelming users with too much information, the experience focused on clarity, confidence, and structured decision-making.</p>
                           <div >
@@ -358,7 +400,11 @@ const CustomFurnish = () => {
                       <div className="content-div-main fade-inn width-800">
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                           <p className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px' }}>Beyond metrics, the redesign built confidence among users and internal stakeholders.</p>
-                          <img src="img/projects/customfurnish/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
+                          <div className="reveal">
+                            <div className="image-wrap">
+                              <img src="img/projects/customfurnish/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />
+                            </div>
+                          </div>
                         </div>
                       </div>
 
