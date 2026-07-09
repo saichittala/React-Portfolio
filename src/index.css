@@ -1770,7 +1770,7 @@ body.light-theme .theme-toggle-btn {
     background-position: center;
     background-size: cover;
     cursor: pointer;
-    border: 0.8px solid var(--black-2-color);
+    border: 0.8px solid var(--border-color);
     overflow: hidden;
     /* border-top-left-radius: var(--border-radius-1);
     border-top-right-radius: var(--border-radius-1);
