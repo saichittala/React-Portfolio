@@ -9,13 +9,12 @@ export default function useScrollReveal() {
     };
 
     // IMAGE ANIMATION
-    const revealCallback = (entries) => {
+    const revealCallback = (entries, observer) => {
       entries.forEach((entry) => {
         const container = entry.target;
         if (entry.isIntersecting) {
           container.classList.add("animating");
-        } else if (entry.boundingClientRect.top > 0) {
-          container.classList.remove("animating");
+          observer.unobserve(container); // Animate only once
         }
       });
     };
@@ -25,14 +24,13 @@ export default function useScrollReveal() {
     revealEls.forEach((reveal) => revealObserver.observe(reveal));
 
     // TEXT ANIMATION
-    const fadeupCallback = (entries) => {
+    const fadeupCallback = (entries, observer) => {
       entries.forEach((entry) => {
         const container = entry.target;
         container.classList.add("not-fading-up");
         if (entry.isIntersecting) {
           container.classList.add("fading-up");
-        } else if (entry.boundingClientRect.top > 0) {
-          container.classList.remove("fading-up");
+          observer.unobserve(container); // Animate only once
         }
       });
     };

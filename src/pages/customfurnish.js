@@ -81,6 +81,7 @@ const CustomFurnish = () => {
                 large: { width: 204, height: 52 }
               }}
               activateAt={isMobile ? -3.8 : -0.5}
+              deactivateAt={0.98}
               className="custom-bubble-class" >
               <img src="img/open-web.svg" alt="Arrow" />
             </BubbleButton>

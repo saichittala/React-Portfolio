@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { createPortal } from 'react-dom';
 
 const BubbleButton = ({
     text = "Let's Connect",
@@ -8,6 +9,8 @@ const BubbleButton = ({
     hideDelay = 500,
     size = { small: 48, large: { width: 140, height: 48 } },
     className = '',
+    onClick, // Accept onClick prop
+    isStatic = false, // Accept isStatic prop
 
     // New props for custom activation points
     activateAt = 0.67,    // 5% of viewport from top (0-1)
@@ -18,51 +21,47 @@ const BubbleButton = ({
     elementPosition = 'middle' // 'top' | 'middle' | 'bottom'
 
 }) => {
-    const [animationPhase, setAnimationPhase] = useState('hidden');
-    const [isMounted, setIsMounted] = useState(false);
+    const [animationPhase, setAnimationPhase] = useState(isStatic ? 'visible' : 'hidden');
+    const [isMounted, setIsMounted] = useState(isStatic);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 674);
     const textRef = useRef(null);
     const [contentWidth, setContentWidth] = useState(size.large.width);
 
     useEffect(() => {
+        if (isStatic) return;
         if (!activationRef?.current) return;
 
         const handleScroll = () => {
             if (!activationRef.current) return;
             const rect = activationRef.current.getBoundingClientRect();
             const viewportHeight = window.innerHeight;
-
-            const activationStart = viewportHeight * (isMobile ? 0.5 : activateAt);
-            const activationEnd = viewportHeight * (isMobile ? 1.05 : deactivateAt);
-
+ 
+            const activationStart = viewportHeight * activateAt;
+            const activationEnd = viewportHeight * deactivateAt;
+ 
             const isActive = rect.top <= activationStart && rect.bottom >= activationEnd;
-
-            setAnimationPhase(prev => {
-                if (isActive && prev === 'hidden') {
-                    setIsMounted(true);
-                    return 'small';
-                }
-                if (isActive && prev === 'small') return 'expanding';
-                if (isActive && prev === 'expanding') return 'visible';
-                if (!isActive && prev === 'visible') return 'hiding';
-                if (!isActive && prev === 'hiding') return 'small';
-                return prev;
-            });
+ 
+            if (isActive) {
+                setIsMounted(true);
+                setAnimationPhase('visible');
+            } else {
+                setAnimationPhase('hiding');
+            }
         };
-
+ 
         window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
-
+ 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [activationRef, activateAt, deactivateAt, elementPosition]);
-
+    }, [activationRef, activationRef?.current, activateAt, deactivateAt, elementPosition]);
+ 
     useEffect(() => {
-        if (animationPhase === 'small') {
+        if (animationPhase === 'hiding') {
             const timer = setTimeout(() => {
                 setAnimationPhase('hidden');
                 setIsMounted(false);
             }, hideDelay);
-
+ 
             return () => clearTimeout(timer);
         }
     }, [animationPhase, hideDelay]);
@@ -82,12 +81,17 @@ const BubbleButton = ({
         }
     }, [text, animationPhase]);
 
-    return (
+    const buttonElement = (
         <AnimatePresence>
             {isMounted && (
                 <motion.div
                     className={`bubble-button ${className}`}
-                    initial={false}
+                    onClick={onClick}
+                    initial={{
+                        width: size.small,
+                        height: size.small,
+                        opacity: 0
+                    }}
                     animate={{
                         width:
                             animationPhase === 'small' || animationPhase === 'hiding'
@@ -124,6 +128,7 @@ const BubbleButton = ({
                 >
                     <motion.span
                         className="bubble-button__text"
+                        ref={textRef}
                         initial={false}
                         animate={{
                             opacity: animationPhase === 'visible' ? 1 : 0,
@@ -169,6 +174,16 @@ const BubbleButton = ({
             )}
         </AnimatePresence>
     );
+
+    if (isStatic) {
+        return buttonElement;
+    }
+
+    if (typeof document !== 'undefined') {
+        return createPortal(buttonElement, document.body);
+    }
+
+    return buttonElement;
 };
 
 export default BubbleButton;

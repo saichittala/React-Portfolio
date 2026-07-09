@@ -18,6 +18,7 @@ const Uggh = () => {
   // ZoomOnScroll();
   const UgghRef = React.useRef(null);
   const [isMobile] = useState(window.innerWidth <= 674);
+  const [isSummaryPopupVisible, setIsSummaryPopupVisible] = useState(false);
   useEffect(() => {
     const heading = document.querySelector('.pd-main-heading, .pd-main-heading-2');
     if (!heading) return;
@@ -202,21 +203,22 @@ const Uggh = () => {
 
       <main>
         <section ref={UgghRef}>
-          <a href="https://www.figma.com/design/IHX8O0ZQrwEwOcPHjjZUFH/Uggh?node-id=0-1&t=tfbAj8cpIn9eWmee-1" target="_blank" rel="noopener noreferrer">
-            <BubbleButton
-              activationRef={UgghRef}
-              text="Open Figma Design"
-              showDelay={300}
-              hideDelay={500}
-              size={{
-                small: 12,
-                large: { width: 204, height: 52 }
-              }}
-              activateAt={isMobile ? -3.8 : -0.5}
-              className="custom-bubble-class" >
-              <img src="img/open-web.svg" alt="Arrow" />
-            </BubbleButton>
-          </a>
+          <BubbleButton
+            activationRef={UgghRef}
+            text="Quick Summary"
+            showDelay={300}
+            hideDelay={500}
+            size={{
+              small: 12,
+              large: { width: 178, height: 52 }
+            }}
+            activateAt={isMobile ? -3.8 : -0.5}
+            deactivateAt={0.98}
+            className="custom-bubble-class"
+            onClick={() => setIsSummaryPopupVisible(true)}
+          >
+            <span className="summary-panel-icon-sparkle">✦</span>
+          </BubbleButton>
           <div className="full-bg">
             <div
               className="p-img-1 main-image bg-black"
@@ -297,6 +299,7 @@ const Uggh = () => {
                           <p className='fade-inn'>The UG Operator App is a mission-critical tablet application that enables underground mining operators to manage and complete daily operational activities. Unlike traditional enterprise software, it is used in low-light, high-risk environments where operators work inside moving equipment while wearing protective gloves.</p>
                           <p className='fade-inn'>Designing for these conditions requires more than a functional interface—it demands workflows that are fast, intuitive, and reliable, allowing operators to stay focused on the job rather than the technology.</p>
                         </div>
+
 
                         {/* <div className="content-div-main fade-inn ">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800 ">Before diving into the project, let’s step into the operator’s environment.
@@ -434,32 +437,32 @@ const Uggh = () => {
                           <p className='fade-inn'>Includes early sketches, user flows, information architecture, wireframes, and navigation concepts.</p>
 
                           <div className="image-group">
-                             <div>
-                               <span>Early Sketches</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/sketches.webp" alt="Early Sketches" loading="lazy" />
-                                 </div>
-                               </div>
-                             </div>
-                             <div>
-                               <span>User Flow</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/userflow.webp" alt="User Flow" loading="lazy" />
-                                 </div>
-                               </div>
-                             </div>
-                             <div>
-                               <span>Information Architecture</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/ia.webp" alt="Information Architecture" loading="lazy" />
-                                 </div>
-                               </div>
-                             </div>
-                             {/* <img src="img/projects/gh_ug/wireframes.webp" alt="Wireframes" className="fade-inn" loading="lazy" /> */}
-                           </div>
+                            <div>
+                              <span>Early Sketches</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/sketches.webp" alt="Early Sketches" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>User Flow</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/userflow.webp" alt="User Flow" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Information Architecture</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/ia.webp" alt="Information Architecture" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            {/* <img src="img/projects/gh_ug/wireframes.webp" alt="Wireframes" className="fade-inn" loading="lazy" /> */}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -500,48 +503,48 @@ const Uggh = () => {
 
                         <div className="content-div-main fade-inn width-800 medium-case-study">
                           <div className="image-group">
-                             <div>
-                               <span>Interactive Prototype Flow</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/prototype-flow.webp" alt="Prototype Iterations" loading="lazy" />
-                                 </div>
-                               </div>
-                             </div>
-                             <div>
-                               <span>Design System</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/design_system.webp" alt="Design System" loading="lazy" style={{ border: 'none' }} />
-                                 </div>
-                               </div>
-                             </div>
-                             <div>
-                               <span>Typographic Scale</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/ts.webp" alt="Design System" loading="lazy" />
-                                 </div>
-                               </div>
-                             </div>
-                             <div>
-                               <span>Color Tokens</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/cs.webp" alt="Design System" loading="lazy" />
-                                 </div>
-                               </div>
-                             </div>
-                             <div>
-                               <span>UI Component Library</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/cl.webp" alt="Component Library" loading="lazy" />
-                                 </div>
-                               </div>
-                             </div>
-                             {/* <img src="img/projects/gh_ug/high-fidelity-ui.webp" alt="High Fidelity UI" className="fade-inn" loading="lazy" /> */}
-                           </div>
+                            <div>
+                              <span>Interactive Prototype Flow</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/prototype-flow.webp" alt="Prototype Iterations" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Design System</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/design_system.webp" alt="Design System" loading="lazy" style={{ border: 'none' }} />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Typographic Scale</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/ts.webp" alt="Design System" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Color Tokens</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/cs.webp" alt="Design System" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>UI Component Library</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/cl.webp" alt="Component Library" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            {/* <img src="img/projects/gh_ug/high-fidelity-ui.webp" alt="High Fidelity UI" className="fade-inn" loading="lazy" /> */}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -644,17 +647,17 @@ const Uggh = () => {
                           </ul>
 
                           <div className="image-group">
-                             {/* <img src="img/projects/gh_ug/final-dashboard.webp" alt="Final Dashboard" className="fade-inn" loading="lazy" />
+                            {/* <img src="img/projects/gh_ug/final-dashboard.webp" alt="Final Dashboard" className="fade-inn" loading="lazy" />
                            <img src="img/projects/gh_ug/final-workflow.webp" alt="Final Workflow" className="fade-inn" loading="lazy" /> */}
-                             <div>
-                               <span>Final Solution Overview</span>
-                               <div className="reveal">
-                                 <div className="image-wrap">
-                                   <img src="img/projects/gh_ug/final_screens.webp" alt="Final Screens" loading="lazy" />
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
+                            <div>
+                              <span>Final Solution Overview</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/final_screens.webp" alt="Final Screens" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -674,6 +677,68 @@ const Uggh = () => {
             </div>
           </div>
         </section>
+
+        {isSummaryPopupVisible && (
+          <div className="popup" style={{ display: 'flex', zIndex: 100000 }}>
+            <div className="popup-content summary-popup-content">
+              <div className="popup-header">
+                <div className="popup-title-div">
+                  <span className="summary-panel-icon-sparkle">✦</span>
+                  <span style={{ fontWeight: 600, fontSize: '18px', color: 'var(--white-color)' }}>Quick Summary</span>
+                </div>
+                <img
+                  className="close-button cursor-link"
+                  src="img/close-popup.svg"
+                  alt="close-popup"
+                  onClick={() => setIsSummaryPopupVisible(false)}
+                />
+              </div>
+              <div className="popup-body summary-popup-body">
+                <div className="summary-panel-content" style={{ padding: '8px 0 0 0' }}>
+
+                  <div className="summary-col problem">
+                    <div className="summary-col-header">
+                      <span>The Problem</span>
+                    </div>
+                    <p className="summary-col-body">
+                      Operators were spending too much time navigating between screens while working in hazardous underground conditions.
+                    </p>
+                  </div>
+
+                  <div className="summary-col solution">
+                    <div className="summary-col-header">
+                      <span>The Solution</span>
+                    </div>
+                    <p className="summary-col-body">
+                      Redesigned the entire workflow around operator goals, simplifying navigation and improving usability.
+                    </p>
+                  </div>
+
+                  <div className="summary-col result">
+                    <div className="summary-col-header">
+                      <span>Result</span>
+                    </div>
+                    <ul className="summary-result-list">
+                      <li className="summary-result-item">
+                        <span className="summary-result-bullet">✦</span>
+                        <span>30% reduction in interactions</span>
+                      </li>
+                      <li className="summary-result-item">
+                        <span className="summary-result-bullet">✦</span>
+                        <span>Reusable Design System</span>
+                      </li>
+                      <li className="summary-result-item">
+                        <span className="summary-result-bullet">✦</span>
+                        <span>Improved operational efficiency</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
       {/* </SmoothScrollProvider> */}
       <Footer />
