@@ -168,8 +168,6 @@ const ContactForm = () => {
                 <button
                     type="submit"
                     disabled={isSending}
-                    className={`bg-blue-600 text-white px-6 py-3 rounded-lg transition-all w-full font-medium ${isSending ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'
-                        }`}
                 >
                     {isSending ? 'Sending...' : 'Send Message'}
                 </button>
