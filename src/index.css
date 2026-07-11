@@ -75,7 +75,7 @@
         --tag-color: #6D28D9;
         --white-05: #06060605;
         --violet-color: rgba(109, 40, 217, 0.25);
-        --blue-color: rgba(1, 114, 234, 0.25);
+        --blue-color: rgba(1, 114, 234, 0.80);
 
 
 
@@ -123,7 +123,7 @@
         --tag-color: #A78BFA;
         --white-05: #ffffff05;
         --violet-color: rgba(139, 92, 246, 0.25);
-        --blue-color: rgba(1, 114, 234, 0.25);
+        --blue-color: rgba(1, 114, 234, 0.80);
 
 
 
@@ -4786,7 +4786,7 @@ textarea:focus {
 .confidential-input-wrapper {
     position: relative;
     width: 100%;
-    background: var(--glass-bg) !important;
+    background: linear-gradient(#0000001a, #0000001a), linear-gradient(#2133351a, #2133351a) !important;
     border-radius: var(--border-radius-4);
     box-shadow: var(--glass-box-shadow) !important;
     backdrop-filter: url(#input-filter) saturate(180%) blur(20px) !important;
@@ -4799,7 +4799,7 @@ textarea:focus {
     content: "";
     border-radius: inherit;
     pointer-events: none;
-    background: var(--glass-border-gradient);
+    background: linear-gradient(135deg, #ffffff80, #ffffff1f 40% 60%, #ffffff80) !important;
     padding: 1px;
     position: absolute;
     inset: 0;
