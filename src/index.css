@@ -934,6 +934,8 @@ body {
     padding: 10px 14px;
     border-radius: var(--border-radius-2);
     align-items: center;
+    position: relative;
+    border: none !important;
 
     span {
         display: flex;
@@ -951,6 +953,34 @@ body {
         filter: brightness(0) saturate(100%) invert(49%) sepia(21%) saturate(0%) hue-rotate(181deg) brightness(98%) contrast(90%);
         transition: color .2s cubic-bezier(0, -.6, 0, 1.07), filter .2s cubic-bezier(0, -.6, 0, 1.07);
     }
+}
+
+.header-text-1:before {
+    content: "";
+    border-radius: inherit;
+    pointer-events: none;
+    background: var(--glass-border-gradient);
+    padding: 1px;
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    -webkit-mask-position: 0 0, 0 0;
+    -webkit-mask-size: auto, auto;
+    -webkit-mask-repeat: repeat, repeat;
+    -webkit-mask-clip: content-box, border-box;
+    -webkit-mask-origin: content-box, border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-source-type: auto, auto;
+    mask-mode: match-source, match-source;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 2;
+}
+
+.header-text-1:hover:before,
+.header-text-active:before {
+    opacity: var(--glass-border-opacity);
 }
 
 /* Style toggle button */
@@ -1001,8 +1031,9 @@ body.light-theme .theme-toggle-btn {
 }
 
 .header-text-1:hover {
-    background-color: var(--white-opacity-1);
+    background: var(--glass-bg) !important;
     color: var(--white-color);
+    box-shadow: var(--glass-box-shadow) !important;
 }
 
 .header-text-active {
@@ -1016,8 +1047,9 @@ body.light-theme .theme-toggle-btn {
     transition: padding .5s cubic-bezier(0, -.6, 0, 1.07),
     transform .2s cubic-bezier(0, -.6, 0, 1.07),
     filter .2s cubic-bezier(0, -.6, 0, 1.07);
-    background: var(--white-opacity-1);
-    border: 0.8px solid var(--border-color);
+    background: var(--glass-bg) !important;
+    border: none !important;
+    box-shadow: var(--glass-box-shadow) !important;
 
     span {
         opacity: 1;
@@ -1085,19 +1117,49 @@ body.light-theme .theme-toggle-btn {
     padding: 10px 24px;
     align-items: flex-start;
     gap: 10px;
-    background: var(--black-2-color);
+    background: var(--glass-bg);
     transition: 0.2s cubic-bezier(0, -.6, 0, 1.07);
     cursor: pointer;
 
     text-decoration: none;
     color: var(--white-color);
     border-radius: 99px;
-    border: 0.8px solid var(--border-color);
+    border: none !important;
+    box-shadow: var(--glass-box-shadow) !important;
+    position: relative;
     font-size: 16px;
 }
 
+.btn-1:before {
+    content: "";
+    border-radius: inherit;
+    pointer-events: none;
+    background: var(--glass-border-gradient);
+    padding: 1px;
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    -webkit-mask-position: 0 0, 0 0;
+    -webkit-mask-size: auto, auto;
+    -webkit-mask-repeat: repeat, repeat;
+    -webkit-mask-clip: content-box, border-box;
+    -webkit-mask-origin: content-box, border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-source-type: auto, auto;
+    mask-mode: match-source, match-source;
+    opacity: var(--glass-border-opacity);
+    transition: opacity 0.2s;
+}
+
 .btn-1:hover {
-    background-color: var(--teritiary-color);
+    box-shadow: var(--glass-box-shadow-focus) !important;
+    background: var(--glass-bg);
+}
+
+.btn-1:hover:before {
+    opacity: var(--glass-border-opacity-focus);
+    background: var(--glass-border-gradient-focus);
 }
 
 .btn-1:active {
