@@ -1,8 +1,8 @@
-// import useFadeIn from '../components/useFadeIn';
+import useFadeIn from '../components/useFadeIn';
 import SmoothScrollProvider from '../components/Scrollsmooth';
 
 function About() {
-    // useFadeIn();
+    useFadeIn();
     return (
         <div className="content cursor" id="content">
             {/* <SmoothScrollProvider duration={1.3}> */}
