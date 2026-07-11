@@ -1213,10 +1213,10 @@ body.light-theme .theme-toggle-btn {
     /* cursor: pointer; */
     cursor: pointer;
     color: var(--white-color);
-    background: var(--black-opacity-4);
+    background: var(--glass-bg);
     width: fit-content;
     backdrop-filter: blur(20px);
-    border: 0.8px solid var(--border-color);
+    border: none !important;
     border-radius: var(--border-radius-1);
     align-items: center;
     justify-content: center;
@@ -1226,11 +1226,40 @@ body.light-theme .theme-toggle-btn {
     will-change: transform;
     width: 40px !important;
     height: 40px;
+    position: relative;
+    box-shadow: var(--glass-box-shadow) !important;
 }
 
+.btn-4:before {
+    content: "";
+    border-radius: inherit;
+    pointer-events: none;
+    background: var(--glass-border-gradient);
+    padding: 1px;
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    -webkit-mask-position: 0 0, 0 0;
+    -webkit-mask-size: auto, auto;
+    -webkit-mask-repeat: repeat, repeat;
+    -webkit-mask-clip: content-box, border-box;
+    -webkit-mask-origin: content-box, border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-source-type: auto, auto;
+    mask-mode: match-source, match-source;
+    opacity: var(--glass-border-opacity);
+    transition: opacity 0.2s;
+}
 
 .btn-4:hover {
-    background-color: var(--black-opacity-3);
+    box-shadow: var(--glass-box-shadow-focus) !important;
+    background: var(--glass-bg);
+}
+
+.btn-4:hover:before {
+    opacity: var(--glass-border-opacity-focus);
+    background: var(--glass-border-gradient-focus);
 }
 
 .btn-4-img img {
@@ -2475,10 +2504,36 @@ textarea {
     flex-direction: column;
     gap: 28px;
     padding: 36px;
-    background: var(--black-opacity-4);
-    border: 0.8px solid var(--border-color);
+    background: var(--glass-bg);
+    border: none !important;
     border-radius: var(--border-radius-1);
     cursor: grab;
+    position: relative;
+    box-shadow: var(--glass-box-shadow) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.testimonial-card:before {
+    content: "";
+    border-radius: inherit;
+    pointer-events: none;
+    background: var(--glass-border-gradient);
+    padding: 1px;
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    -webkit-mask-position: 0 0, 0 0;
+    -webkit-mask-size: auto, auto;
+    -webkit-mask-repeat: repeat, repeat;
+    -webkit-mask-clip: content-box, border-box;
+    -webkit-mask-origin: content-box, border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-source-type: auto, auto;
+    mask-mode: match-source, match-source;
+    opacity: var(--glass-border-opacity);
+    transition: opacity 0.2s;
 }
 
 .testimonial-toggle {
@@ -5217,21 +5272,49 @@ img-comparison-slider img {
     display: flex;
     align-items: center;
     gap: 20px;
-    background: var(--white-color);
-    color: var(--black-color);
+    background: var(--glass-bg) !important;
+    color: var(--white-color) !important;
     padding: 8px 8px 8px 24px;
     border-radius: 9999px;
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    box-shadow: 0 4px 15px var(--white-opacity-1);
-    border: 1px solid var(--border-color);
+    box-shadow: var(--glass-box-shadow) !important;
+    border: none !important;
+    position: relative;
+}
+
+.hero-cta-button:before {
+    content: "";
+    border-radius: inherit;
+    pointer-events: none;
+    background: var(--glass-border-gradient);
+    padding: 1px;
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    -webkit-mask-position: 0 0, 0 0;
+    -webkit-mask-size: auto, auto;
+    -webkit-mask-repeat: repeat, repeat;
+    -webkit-mask-clip: content-box, border-box;
+    -webkit-mask-origin: content-box, border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-source-type: auto, auto;
+    mask-mode: match-source, match-source;
+    opacity: var(--glass-border-opacity);
+    transition: opacity 0.2s;
 }
 
 .hero-cta-button:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 20px var(--white-opacity-1);
+    box-shadow: var(--glass-box-shadow-focus) !important;
+}
+
+.hero-cta-button:hover:before {
+    opacity: var(--glass-border-opacity-focus);
+    background: var(--glass-border-gradient-focus);
 }
 
 .hero-cta-arrow {
