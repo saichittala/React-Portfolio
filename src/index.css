@@ -4677,6 +4677,12 @@ textarea:focus {
     z-index: 1;
 }
 
+.message-textarea {
+    height: 128px;
+    resize: none;
+    font-family: inherit;
+}
+
 .case-study-locked {
     filter: blur(16px);
     opacity: 0.45;
