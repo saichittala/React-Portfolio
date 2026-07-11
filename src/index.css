@@ -85,7 +85,7 @@
         --cursor-color: #00000030;
 
         /* Liquid Glass Light Theme overrides */
-        --glass-bg: rgba(255, 255, 255, 0.25);
+        --glass-bg: rgba(255, 255, 255, 0.6);
         --glass-border-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0) 40% 60%, rgba(0, 0, 0, 0.15));
         --glass-box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 4px 20px rgba(0, 0, 0, 0.06);
         --glass-border-opacity: 0.5;
