@@ -7,6 +7,7 @@ export default function ConfidentialGate({
     const [isUnlocked, setIsUnlocked] = useState(false);
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
+    const [toastState, setToastState] = useState("hidden");
 
     const handleUnlock = () => {
         if (!password.trim()) {
@@ -16,6 +17,13 @@ export default function ConfidentialGate({
 
         if (password === "surya@123") {
             setIsUnlocked(true);
+            setToastState("entering");
+            setTimeout(() => {
+                setToastState("exiting");
+                setTimeout(() => {
+                    setToastState("hidden");
+                }, 400);
+            }, 3000);
         } else {
             setMessage("Incorrect password");
         }
@@ -81,6 +89,19 @@ export default function ConfidentialGate({
 
     return (
         <>
+            {toastState !== "hidden" && (
+                <div className={`glass-toast ${toastState}`}>
+                    <div className="glass-toast-content">
+                        <svg className="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="11" width="18" height="11" rx="2" stroke="var(--blue-color)" strokeWidth="2"/>
+                            <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7" stroke="var(--blue-color)" strokeWidth="2" strokeLinecap="round"/>
+                            <circle cx="12" cy="16" r="1.5" fill="var(--blue-color)"/>
+                            <path d="M12 17.5V19" stroke="var(--blue-color)" strokeWidth="2" strokeLinecap="round"/>
+                        </svg>
+                        <span className="toast-message">Project Unlocked</span>
+                    </div>
+                </div>
+            )}
             {previewContent}
 
             {!isUnlocked && (
