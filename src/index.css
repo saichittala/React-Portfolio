@@ -207,9 +207,18 @@
     sans-serif;
     --quadrinary-font: 'Fragment Mono',
     monospace;
-    --serif-font: 'Instrument Serif',
-    Georgia,
-    serif;
+    --serif-font: 'Instrument Serif', Georgia, serif;
+
+    /* Typography Design System */
+    --font-size-impact-num: clamp(64px, 8vw, 120px);
+    --font-size-impact-unit: clamp(28px, 3.5vw, 54px);
+    --font-size-impact-desc: clamp(16px, 1.5vw, 22px);
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --line-height-flat: 1;
+    --line-height-relaxed: 1.4;
 }
 
 /* ==========================================================================
@@ -5978,28 +5987,28 @@ img-comparison-slider img {
 
 .impact-number {
     font-family: var(--serif-font) !important;
-    font-size: clamp(64px, 8vw, 120px);
-    font-weight: 200;
+    font-size: var(--font-size-impact-num);
+    font-weight: var(--font-weight-bold);
     color: var(--impact-accent);
-    line-height: 1;
+    line-height: var(--line-height-flat);
 }
 
 .impact-unit {
     font-family: var(--primary-font) !important;
-    font-size: clamp(28px, 3.5vw, 54px);
-    font-weight: 400;
+    font-size: var(--font-size-impact-unit);
+    font-weight: var(--font-weight-regular);
     color: var(--white-color) !important;
-    line-height: 1;
+    line-height: var(--line-height-flat);
 }
 
 /* In light-theme, white-color is dark, so it will look dark and adapt nicely */
 
 .impact-description {
     font-family: var(--primary-font) !important;
-    font-size: clamp(16px, 1.5vw, 22px);
-    font-weight: 400;
+    font-size: var(--font-size-impact-desc);
+    font-weight: var(--font-weight-regular);
     color: var(--grey-bg-b-color) !important;
     margin-top: 16px;
     max-width: 600px;
-    line-height: 1.4;
+    line-height: var(--line-height-relaxed);
 }
