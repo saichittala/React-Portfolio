@@ -6,6 +6,7 @@ import 'img-comparison-slider';
 import 'img-comparison-slider/dist/styles.css';
 import useScrollReveal from '../components/useScrollReveal';
 import ProjectNavigation from '../components/ProjectNavigation';
+import ProjectImpact from '../components/ProjectImpact';
 
 const Lmsgh = () => {
   useScrollReveal();
@@ -409,6 +410,15 @@ const Lmsgh = () => {
                       </div>
                     </div>
                   </div>
+
+                  <ProjectImpact 
+                    sectionNumber="09"
+                    metrics={[
+                      { number: "3x", unit: "increase", description: "in self-service mining safety course signups" },
+                      { number: "50%", unit: "faster", description: "learner onboarding and initial profile completion" },
+                      { number: "98%", unit: "completion", description: "rate for structured compliance certification journeys" }
+                    ]}
+                  />
 
                   <ProjectNavigation 
                     figmaLink="https://www.figma.com/design/Ux8vi0Menw1kiedzrgJnTl/LMS-Web?node-id=227-5554&t=gOpLmKvhNfBSrPQa-1"

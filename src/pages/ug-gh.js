@@ -8,6 +8,7 @@ import LazyImage from '../components/LazyImage';
 import ConfidentialGate from '../components/ConfidentialGate';
 import useScrollReveal from '../components/useScrollReveal';
 import ProjectNavigation from '../components/ProjectNavigation';
+import ProjectImpact from '../components/ProjectImpact';
 
 
 const Uggh = () => {
@@ -663,6 +664,15 @@ const Uggh = () => {
                       </div>
                     </div>
                   </div>
+
+                  <ProjectImpact 
+                    sectionNumber="08"
+                    metrics={[
+                      { number: "30%", unit: "reduction", description: "in user interactions across core operator workflows" },
+                      { number: "44px", unit: "minimum", description: "touch target sizes optimized for heavy industrial gloves" },
+                      { number: "2x", unit: "faster", description: "information retrieval in low-visibility environments" }
+                    ]}
+                  />
 
                   <ProjectNavigation 
                     figmaLink="https://www.figma.com/design/rxHo1Cf9CKCVGfmZhSMdKt/UG-App---Ideation-phase--2-?node-id=1447-11497&t=rE24klPvI0AfONWk-1"

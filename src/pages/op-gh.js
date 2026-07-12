@@ -4,6 +4,7 @@ import BubbleButton from '../components/BubbleButton';
 import ConfidentialGate from '../components/ConfidentialGate';
 import useScrollReveal from '../components/useScrollReveal';
 import ProjectNavigation from '../components/ProjectNavigation';
+import ProjectImpact from '../components/ProjectImpact';
 
 const Opgh = () => {
   useScrollReveal();
@@ -316,6 +317,15 @@ const Opgh = () => {
                       </div>
                     </div>
                   </div>
+
+                  <ProjectImpact 
+                    sectionNumber="08"
+                    metrics={[
+                      { number: "40%", unit: "fewer", description: "clicks required to resolve haul truck dispatch conflicts" },
+                      { number: "100%", unit: "visibility", description: "of autonomous haul truck states in real-time" },
+                      { number: "15s", unit: "reduction", description: "in dispatcher response times to field alerts" }
+                    ]}
+                  />
 
                   <ProjectNavigation 
                     figmaLink="https://www.figma.com/design/FHFhj2BJEMYZMtp9YuSBDs/Groundhog-App--OP----Tablet--?node-id=1-5&t=SspbIQIq6YlYcZmZ-1"
