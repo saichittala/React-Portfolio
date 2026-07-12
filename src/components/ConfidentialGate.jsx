@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function ConfidentialGate({
     children,
@@ -6,6 +7,7 @@ export default function ConfidentialGate({
 }) {
     const [isUnlocked, setIsUnlocked] = useState(false);
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const [message, setMessage] = useState("");
     const [toastState, setToastState] = useState("hidden");
 
@@ -134,10 +136,10 @@ export default function ConfidentialGate({
 
                         <div className="confidential-actions lux-form-wrapper">
 
-                            <div className="confidential-input-wrapper" ref={inputRef}>
+                             <div className="confidential-input-wrapper" ref={inputRef}>
                                 <input
                                     className="confidential-input"
-                                    type="password"
+                                    type={showPassword ? "text" : "password"}
                                     placeholder="Access Code"
                                     value={password}
                                     onChange={(e) => {
@@ -146,6 +148,14 @@ export default function ConfidentialGate({
                                     }}
                                     onKeyDown={handleKeyDown}
                                 />
+                                <button
+                                    type="button"
+                                    className="password-toggle-btn"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    aria-label={showPassword ? "Hide access code" : "Show access code"}
+                                >
+                                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                </button>
                             </div>
 
                             {message && (
