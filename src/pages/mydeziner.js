@@ -185,7 +185,7 @@ const MyDeziner = () => {
                         <div className="content-div-main fade-inn width-800">
                           <a className=" content-div-main-heading-2 translate-text-up ">About
                           </a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <div className="flex-col-g4">
                             <p>MyDeziner is a B2B SaaS platform used by interior designers to draw layouts, configure materials, and generate hyper-realistic interior renders. While the output quality was strong, the internal workflow was slowing designers down. The goal of this redesign was to improve efficiency, reduce repetitive work, and support faster project delivery without compromising design control or flexibility.
                             </p>
                             {/* <img src="img/projects/mydeziner/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" /> */}
@@ -196,9 +196,9 @@ const MyDeziner = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800 ">Understanding the Problem Statement
                           </a>
                           <LazyImage src="img/projects/mydeziner/mydeziner-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '36px' }} className='width-800'>
+                          <div className="width-800 flex-col-g12-mt36">
                             <div className='pd-content'>
-                              <ch className="fade-inn translate-text-up" style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>Previous Scenario</ch>
+                              <ch className="fade-inn translate-text-up ch-previous-scenario">Previous Scenario</ch>
 
                             </div>
                             <p className='fade-inn'>
@@ -206,7 +206,7 @@ const MyDeziner = () => {
                             </p>
                             <p className='fade-inn'>
                               Although the rendering quality was impressive, the workflow felt heavy.                            </p>
-                            <p className='fade-inn' style={{ fontWeight: '600' }}>
+                            <p className='fade-inn font-semibold'>
                               "Powerful output, but slow execution."
                             </p>
                           </div>
@@ -231,7 +231,7 @@ const MyDeziner = () => {
                             </ul> */}
 
                           {/* </div> */}
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                          <div className="flex-col-g18">
                             <p >Although MyDeziner produced high-quality renders, the workflow was not efficient. Designers spent a lot of time repeating the same actions across rooms and objects. Managing properties and materials was difficult, searching for specific options required multiple clicks, and applying the same material across different objects was time-consuming. These issues slowed down project delivery, increased frustration, and affected the speed at which designs and quotes could be shared with clients.
                             </p>
                           </div>
@@ -259,7 +259,7 @@ const MyDeziner = () => {
                         <div className="content-div-main fade-inn  width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">The Solution
                           </a>
-                          <div className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                          <div className="fade-inn flex-col-g18">
                             <p >To address these bottlenecks, MyDeziner was redesigned as a smarter and more supportive tool for interior designers. The focus was on removing repetitive work and reducing cognitive load. Key improvements included smart property management, faster property search, and easier material reuse. The overall workflow was streamlined into a clear sequence—design on the canvas, apply render settings efficiently, and generate final renders—helping designers iterate faster, get approvals sooner, and deliver better client experiences.
                             </p>
                             {/* <ul className='df-g8 fd-c gap-12 margin-unset'>

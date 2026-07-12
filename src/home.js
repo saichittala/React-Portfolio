@@ -101,12 +101,12 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
         }
         const response = await fetch("https://ipinfo.io/json");
         if (!response.ok) throw new Error("ipinfo request failed");
-        const data = await response.json();
+        const locationData = await response.json();
 
-        console.log("LOCATION:", data);
+        console.log("LOCATION:", locationData);
 
-        const state = data.region || "";
-        const country = data.country || "";
+        const state = locationData.region || "";
+        const country = locationData.country || "";
 
         const location = `${state}, ${country}`;
         sessionStorage.setItem('user_location', location);
@@ -201,7 +201,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
                 <div className='df-g8 width-fc display-none'>
                   <div className='profile-img'>
                     <img
-                      style={{ width: '150px', borderRadius: '24px' }}
+                      className="profile-img-home"
                       src={'img/profile-2test.webp'}
                       alt="profile-img"
                     />
@@ -256,7 +256,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
 
 
                 {cardsData.length > 6 && (
-                  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <div className="df-flex-center">
                     <button
                       className="btn-1"
                       onClick={() => {
@@ -359,7 +359,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
                   <Link to="/contact" className="hero-cta-button">
                     <span>Let's Talk</span>
                     <div className="hero-cta-arrow">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ width: '16px', height: '16px' }}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>
                     </div>

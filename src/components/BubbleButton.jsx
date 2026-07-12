@@ -186,4 +186,4 @@ const BubbleButton = ({
     return buttonElement;
 };
 
-export default BubbleButton;
+export default React.memo(BubbleButton);

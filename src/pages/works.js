@@ -1,13 +1,9 @@
-import Header from '../components/header';
 import useFadeIn from '../components/useFadeIn';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../card';
 import LockPopup from '../components/lockpopup'; // Import LockPopup component
-// import DesignText from './components/designtext';
 import { useRef } from "react";
-// import LuxurySmoothScroll from './components/smoothscroll';
-import { motion } from "framer-motion";
 import 'react-toastify/dist/ReactToastify.css';
 
 function Works() {
@@ -20,7 +16,6 @@ function Works() {
   const [currentPassword, setCurrentPassword] = useState('');
   const [currentLink, setCurrentLink] = useState('');
   const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false); // Track incorrect password
-  const AnimatedComponent = motion.div;
 
   const cardsData = [
     { title: "Building Faster Workflows for Underground Operators", type: "Groundhog Apps", year: "Professional 2026-2027", image: "img/projects/gh_ug/cover.webp", link: "#/Uggh", openInNewTab: true, locked: false },

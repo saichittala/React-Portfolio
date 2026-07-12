@@ -153,4 +153,4 @@ const TestimonialsCard = () => {
   );
 };
 
-export default TestimonialsCard;
+export default React.memo(TestimonialsCard);

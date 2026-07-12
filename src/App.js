@@ -135,35 +135,8 @@ function App() {
   const [recruiterMode, setRecruiterMode] =
     useState(false);
 
-  const [showRecruiterModal, setShowRecruiterModal] =
-    useState(false);
-
   const [animating, setAnimating] =
     useState(false);
-
-  /* ========================================
-   * Recruiter Modal
-   * ======================================== */
-
-  useEffect(() => {
-
-    let timer;
-
-    if (recruiterMode) {
-
-      timer = setTimeout(() => {
-        setShowRecruiterModal(true);
-      }, 300);
-
-    } else {
-
-      setShowRecruiterModal(false);
-
-    }
-
-    return () => clearTimeout(timer);
-
-  }, [recruiterMode]);
 
   /* ========================================
    * Theme Toggle
@@ -410,7 +383,6 @@ function App() {
       ======================================== */}
 
       <RecruiterModal
-        show={showRecruiterModal}
         recruiterMode={recruiterMode}
         setRecruiterMode={setRecruiterMode}
       />

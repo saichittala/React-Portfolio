@@ -15,8 +15,8 @@ function About() {
                                 <div className='df-g8 gap-36 fd-c width-100'>
                                     <p className='width-100'><a className='cursor-link width-100' href='https://www.upwork.com/freelancers/~01762e36a0d1eb9abf/' target='blank'>Sai Chittala</a> is a Senior Product Designer at <a className='cursor-link' href='https://www.groundhogapps.com/' target='blank'>GroundHogApps</a>, with a total of 4+ years of hands-on experience, where I've meticulously crafted visually stunning and inituitive interfaces entirely through my creative touch, utilizing industry-standard tools to consistently set new design standards. Past: <a className='cursor-link' href='https://www.customfurnish.com/' target='blank'>CustomFurnish</a>, <a className='cursor-link' href='https://www.ricoz.in' target='blank'>Ricoz</a>, <a className='cursor-link' href='https://www.upwork.com' >Upwork</a> </p>
                                     
-                                    <div className="experience-container" style={{ marginTop: '24px' }}>
-                                        <h3 className="fade-in content-div-main-heading-2 margin-unset" style={{ fontSize: '20px', marginBottom: '20px', display: 'block', color: 'var(--white-color)' }}>
+                                    <div className="experience-container">
+                                        <h3 className="fade-in content-div-main-heading-2 margin-unset">
                                             Experience
                                         </h3>
                                         <div className="timeline fade-in">

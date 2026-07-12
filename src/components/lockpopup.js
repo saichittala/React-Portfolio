@@ -31,7 +31,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
   if (!isVisible) return null;
 
   return (
-    <div id="passwordPopup" className="popup" style={{ display: 'flex', zIndex: 1001 }}>
+    <div id="passwordPopup" className="popup lock-popup-override">
       <div className="popup-content">
         <div className="popup-header">
           <div className='df-g8 popup-lock-img '>
@@ -57,7 +57,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
           />
           {/* Display error message */}
           {isPasswordIncorrect &&
-            <p className="error-message" style={{ color: 'red', marginBottom: '0px', fontsize: '12px' }}>
+            <p className="error-message error-message-style">
               {errorMessage}
               Incorrect password. Please try again.</p>
           }

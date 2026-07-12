@@ -223,12 +223,7 @@ const Uggh = () => {
           </BubbleButton>
           <div className="full-bg">
             <div
-              className="p-img-1 main-image bg-black"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="p-img-1 main-image bg-black df-flex-center"
             >
               <img src="img/projects/gh_ug/cover.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-inn' />
               {/* <video
@@ -686,12 +681,12 @@ const Uggh = () => {
         </section>
 
         {isSummaryPopupVisible && (
-          <div className="popup" style={{ display: 'flex', zIndex: 100000 }}>
+          <div className="popup">
             <div className="popup-content summary-popup-content">
               <div className="popup-header">
                 <div className="popup-title-div">
                   <span className="summary-panel-icon-sparkle">✦</span>
-                  <span style={{ fontWeight: 600, fontSize: '18px', color: 'var(--white-color)' }}>Quick Summary</span>
+                  <span className="summary-popup-title">Quick Summary</span>
                 </div>
                 <img
                   className="close-button cursor-link"
@@ -701,7 +696,7 @@ const Uggh = () => {
                 />
               </div>
               <div className="popup-body summary-popup-body">
-                <div className="summary-panel-content" style={{ padding: '8px 0 0 0' }}>
+                <div className="summary-panel-content summary-panel-padding">
 
                   <div className="summary-col problem">
                     <div className="summary-col-header">

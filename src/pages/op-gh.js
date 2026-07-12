@@ -51,12 +51,7 @@ const Opgh = () => {
         <section ref={OpghRef}>
           <div className="full-bg">
             <div
-              className="p-img-1 main-image bg-black"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="p-img-1 main-image bg-black df-flex-center"
             >
               <img src="img/projects/gh-op/cover.webp" alt="Level 5 Haul Truck Operator App Cover" loading="lazy" className='fade-inn' />
             </div>

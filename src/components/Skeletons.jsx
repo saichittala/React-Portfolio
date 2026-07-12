@@ -3,7 +3,7 @@ import React from 'react';
 export const HomeSkeleton = () => (
   <div className="skeleton-container">
     {/* Hero Text */}
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+    <div className="flex-col-g16">
       <div className="skeleton skeleton-text short" />
       <div className="skeleton skeleton-text heading" />
       <div className="skeleton skeleton-text subheading" />
@@ -28,7 +28,7 @@ export const HomeSkeleton = () => (
 export const WorksSkeleton = () => (
   <div className="skeleton-container">
     {/* Works Title */}
-    <div className="skeleton skeleton-text title" style={{ width: '180px', height: '48px' }} />
+    <div className="skeleton skeleton-text title skel-text-title-180" />
 
     {/* Works cards (3-column layout) */}
     <div className="skeleton-grid-3">
@@ -44,19 +44,19 @@ export const WorksSkeleton = () => (
 );
 
 export const AboutSkeleton = () => (
-  <div className="skeleton-container" style={{ gap: '56px' }}>
+  <div className="skeleton-container gap-56">
     {/* Hero text */}
     <div className="skeleton skeleton-text heading" style={{ width: '70%' }} />
 
     {/* Details (split layout) */}
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '48px' }}>
-      <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+    <div className="flex-wrap-g48">
+      <div className="skel-about-left">
         <div className="skeleton skeleton-text paragraph" />
         <div className="skeleton skeleton-text paragraph" />
         <div className="skeleton skeleton-text paragraph" />
         <div className="skeleton skeleton-text short" />
       </div>
-      <div style={{ flex: '0 0 280px', height: '280px', borderRadius: '24px' }} className="skeleton" />
+      <div className="skeleton skel-about-right" />
     </div>
   </div>
 );
@@ -64,40 +64,40 @@ export const AboutSkeleton = () => (
 export const ContactSkeleton = () => (
   <div className="skeleton-container">
     {/* Contact Title */}
-    <div className="skeleton skeleton-text title" style={{ width: '200px', height: '48px' }} />
+    <div className="skeleton skeleton-text title skel-text-title-200" />
 
     {/* Form blocks */}
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '600px', width: '100%' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+    <div className="skel-form-wrapper">
+      <div className="flex-col-g8">
         <div className="skeleton skeleton-text short" />
-        <div className="skeleton" style={{ height: '48px', width: '100%', borderRadius: '8px' }} />
+        <div className="skeleton skel-input-field" />
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div className="flex-col-g8">
         <div className="skeleton skeleton-text short" />
-        <div className="skeleton" style={{ height: '48px', width: '100%', borderRadius: '8px' }} />
+        <div className="skeleton skel-input-field" />
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div className="flex-col-g8">
         <div className="skeleton skeleton-text short" />
-        <div className="skeleton" style={{ height: '140px', width: '100%', borderRadius: '8px' }} />
+        <div className="skeleton skel-textarea-field" />
       </div>
-      <div className="skeleton" style={{ height: '48px', width: '140px', borderRadius: '99px', marginTop: '16px' }} />
+      <div className="skeleton skel-btn-field" />
     </div>
   </div>
 );
 
 export const ProjectSkeleton = () => (
-  <div className="skeleton-container" style={{ paddingTop: '120px' }}>
+  <div className="skeleton-container skel-pt-120">
     {/* Hero Banner */}
-    <div className="skeleton" style={{ width: '100%', aspectRatio: '16/7', borderRadius: '24px' }} />
+    <div className="skeleton skel-banner" />
 
     {/* Project Header */}
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '24px' }}>
+    <div className="flex-col-g16-mt24">
       <div className="skeleton skeleton-text heading" style={{ width: '40%' }} />
       <div className="skeleton skeleton-text short" />
     </div>
 
     {/* Body text blocks */}
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '32px' }}>
+    <div className="flex-col-g16-mt32">
       <div className="skeleton skeleton-text paragraph" />
       <div className="skeleton skeleton-text paragraph" />
       <div className="skeleton skeleton-text paragraph" />

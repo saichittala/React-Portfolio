@@ -53,12 +53,7 @@ const Lmsgh = () => {
         <section ref={lmsghRef}>
           <div className="full-bg">
             <div
-              className="p-img-1 main-image bg-black"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="p-img-1 main-image bg-black df-flex-center"
             >
               <img src="img/projects/gh-lms/cover.webp" alt="GroundHog LMS Cover" loading="lazy" className='fade-inn' />
             </div>
@@ -296,7 +291,7 @@ const Lmsgh = () => {
                         {/* Figma Prototype Embed */}
 
 
-                        <div className="content-div-main fade-inn width-800 medium-case-study" style={{ marginTop: '48px' }}>
+                        <div className="content-div-main fade-inn width-800 medium-case-study mt-48">
                           <div className="image-group">
                             <div>
                               <span>Signup Flow Prototype</span>

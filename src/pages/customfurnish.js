@@ -89,12 +89,7 @@ const CustomFurnish = () => {
           </a>
           <div className="full-bg">
             <div
-              className="p-img-1 main-image bg-black"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="p-img-1 main-image bg-black df-flex-center"
             >
               {/* <img src="img/projects/cf.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer mydeziner" loading="lazy" className='fade-inn' /> */}
               <video
@@ -102,8 +97,7 @@ const CustomFurnish = () => {
                 loop
                 muted
                 playsInline
-                className="fade-inn"
-                style={{ width: '100%', height: '100%' }}
+                className="fade-inn w-full-h-full"
               >
                 <source src="img/projects/cf-promo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -190,9 +184,9 @@ const CustomFurnish = () => {
                           <a className="fade-inn content-div-main-heading-2 translate-text-up width-800 ">Understanding the Problem Statement
                           </a>
                           <LazyImage src="img/projects/customfurnish/customfurnish-old.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '36px' }} className='width-800'>
+                          <div className="width-800 flex-col-g12-mt36">
                             <div className='pd-content'>
-                              <ch className="fade-inn translate-text-up" style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>Previous Scenario</ch>
+                              <ch className="fade-inn translate-text-up ch-previous-scenario">Previous Scenario</ch>
 
                             </div>
                             <p className='fade-inn'>
@@ -206,7 +200,7 @@ const CustomFurnish = () => {
                         <div className="content-div-main fade-inn  width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">Current Problems Identified
                           </a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <div className="flex-col-g4">
                             <ul className='df-g8 fd-c gap-12 margin-unset'>
                               <li>Low consultation conversion rate</li>
                               <li>High drop-offs before inquiry submission</li>
@@ -221,12 +215,12 @@ const CustomFurnish = () => {
                         <div className="content-div-main fade-inn  width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">Clarifying Questions
                           </a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <div className="flex-col-g4">
                             <p className='fade-inn'>To define scope and direction, I clarified four key areas:
                             </p>
                             <div className="reveal">
                               <div className="image-wrap">
-                                <img src="img/projects/customfurnish/Cl-Questions-1.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" loading="lazy" style={{ display: 'flex', flexDirection: 'column', marginTop: '20px' }} />
+                                <img src="img/projects/customfurnish/Cl-Questions-1.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" loading="lazy" className="img-flex-mt20" />
                               </div>
                             </div>
 
@@ -235,7 +229,7 @@ const CustomFurnish = () => {
                         <div className="content-div-main fade-inn  width-800">
                           <a className="fade-inn content-div-main-heading-2 translate-text-up ">Problem Statement
                           </a>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                          <div className="flex-col-g4">
                             <p className='fade-inn'>How might we transform CustomFurnish’s website from a static design showcase into a trust-driven, conversion-focused platform that encourages high-intent users to book consultations?
                             </p>
                           </div>
@@ -254,8 +248,8 @@ const CustomFurnish = () => {
                       <div className="content-div-main fade-inn width-800">
                         <a className="fade-inn content-div-main-heading-2 translate-text-up ">Discover</a>
                         <p className='fade-inn'>Research focused on understanding why users were leaving without contacting the company.</p>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          <div className='pd-content' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>
+                        <div className="flex-col-g4">
+                          <div className='pd-content ch-previous-scenario'>
                             <ch className="fade-inn translate-text-up">Qualitative Research Questions</ch>
                           </div>
                           <ul className='df-g8 fd-c gap-12 margin-unset'>
@@ -266,8 +260,8 @@ const CustomFurnish = () => {
                           </ul>
 
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          <div className='pd-content' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px', marginTop: '36px', fontStyle: 'Italic' }}>
+                        <div className="flex-col-g4">
+                          <div className='pd-content ch-previous-scenario'>
                             <ch className="fade-inn translate-text-up">Quantative Research Questions</ch>
                           </div>
                           <ul className='df-g8 fd-c gap-12 margin-unset'>
@@ -280,9 +274,9 @@ const CustomFurnish = () => {
 
                         </div>
                       </div>
-                      <div className="content-div-main fade-inn width-800" style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
+                      <div className="content-div-main fade-inn width-800 flex-col-g56">
                         <a className="fade-inn content-div-main-heading-2 translate-text-up ">Define</a>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
+                        <div className="flex-col-g56">
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Persona 1</ch>
                             <div className="reveal">
@@ -300,7 +294,7 @@ const CustomFurnish = () => {
                             </div>
                           </div>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
+                        <div className="flex-col-g56">
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up  width-800">Empathy Map</ch>
                             <div className="reveal">
@@ -313,9 +307,9 @@ const CustomFurnish = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="content-div-main fade-inn width-800" style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
+                      <div className="content-div-main fade-inn width-800 flex-col-g56">
                         <a className="fade-inn content-div-main-heading-2 translate-text-up ">Ideate</a>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '56px' }}>
+                        <div className="flex-col-g56">
                           <div className="pd-content width-800 fade-inn">
                             <ch className="fade-inn translate-text-up">User Flow</ch>
                             <div className="reveal">
@@ -360,7 +354,7 @@ const CustomFurnish = () => {
                               <img src="img/projects/customfurnish/customfurnish-new.webp" alt="Sai Chittala UX Designer Portfolio - User Experience Product Designer customfurnish" className='fade-inn' loading="lazy" />
                             </div>
                           </div>
-                          <p style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginTop: '24px' }} className='fade-inn width-800'>
+                          <p className='fade-inn width-800 flex-col-g4-mt24'>
                             The redesigned website became a clear, trust-first platform that guided users toward consultation booking. Instead of overwhelming users with too much information, the experience focused on clarity, confidence, and structured decision-making.</p>
                           <div >
 
@@ -402,8 +396,8 @@ const CustomFurnish = () => {
                         <span className=''>Impact</span>
                       </div>
                       <div className="content-div-main fade-inn width-800">
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                          <p className='fade-inn' style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '24px' }}>Beyond metrics, the redesign built confidence among users and internal stakeholders.</p>
+                        <div className="flex-col-g4">
+                          <p className='fade-inn flex-col-g4-mb24'>Beyond metrics, the redesign built confidence among users and internal stakeholders.</p>
                           <div className="reveal">
                             <div className="image-wrap">
                               <img src="img/projects/customfurnish/successmetrics.webp" alt="Sai Chittala UX Designer Product Designer Visual Designer Interaction Designer Portfolio - User Experience " className="fade-inn width-800" loading="lazy" />

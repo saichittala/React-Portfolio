@@ -50,19 +50,19 @@ const calculateMatch = (text) => {
     let totalWeight = 0;
     let matchedWeight = 0;
 
-    Object.entries(resumeSkills).forEach(([skill, data]) => {
-        totalWeight += data.weight;
+    Object.entries(resumeSkills).forEach(([skill, skillConfig]) => {
+        totalWeight += skillConfig.weight;
 
-        const found = data.keywords.some((keyword) =>
+        const found = skillConfig.keywords.some((keyword) =>
             jd.includes(keyword)
         );
 
         if (found) {
             matched.push(skill);
-            matchedWeight += data.weight;
+            matchedWeight += skillConfig.weight;
         } else {
             // Only consider "missing" if it's an important skill
-            if (data.weight >= 1.3) {
+            if (skillConfig.weight >= 1.3) {
                 missing.push(skill);
             } else {
                 notMentioned.push(skill);
