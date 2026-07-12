@@ -207,7 +207,9 @@
     sans-serif;
     --quadrinary-font: 'Fragment Mono',
     monospace;
-    --serif-font: 'Instrument Serif', Georgia, serif;
+    --serif-font: 'Instrument Serif',
+    Georgia,
+    serif;
 }
 
 /* ==========================================================================
@@ -5965,7 +5967,7 @@ img-comparison-slider img {
 .impact-number {
     font-family: var(--serif-font) !important;
     font-size: clamp(64px, 8vw, 120px);
-    font-weight: 700;
+    font-weight: 200;
     color: var(--impact-accent);
     line-height: 1;
 }

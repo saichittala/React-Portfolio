@@ -668,9 +668,9 @@ const Uggh = () => {
                   <ProjectImpact 
                     sectionNumber="08"
                     metrics={[
-                      { number: "30%", unit: "reduction", description: "in user interactions across core operator workflows" },
-                      { number: "44px", unit: "minimum", description: "touch target sizes optimized for heavy industrial gloves" },
-                      { number: "2x", unit: "faster", description: "information retrieval in low-visibility environments" }
+                      { number: "30%", unit: "reduction", description: "fewer core operator interactions" },
+                      { number: "44px", unit: "minimum", description: "targets optimized for gloves" },
+                      { number: "2x", unit: "faster", description: "retrieval in low visibility" }
                     ]}
                   />
 

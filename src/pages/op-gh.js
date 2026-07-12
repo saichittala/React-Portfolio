@@ -321,9 +321,9 @@ const Opgh = () => {
                   <ProjectImpact 
                     sectionNumber="08"
                     metrics={[
-                      { number: "40%", unit: "fewer", description: "clicks required to resolve haul truck dispatch conflicts" },
-                      { number: "100%", unit: "visibility", description: "of autonomous haul truck states in real-time" },
-                      { number: "15s", unit: "reduction", description: "in dispatcher response times to field alerts" }
+                      { number: "40%", unit: "fewer", description: "clicks resolving dispatch conflicts" },
+                      { number: "100%", unit: "visibility", description: "real-time truck state tracking" },
+                      { number: "15s", unit: "reduction", description: "faster response to alerts" }
                     ]}
                   />
 

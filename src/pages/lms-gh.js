@@ -414,9 +414,9 @@ const Lmsgh = () => {
                   <ProjectImpact 
                     sectionNumber="09"
                     metrics={[
-                      { number: "3x", unit: "increase", description: "in self-service mining safety course signups" },
-                      { number: "50%", unit: "faster", description: "learner onboarding and initial profile completion" },
-                      { number: "98%", unit: "completion", description: "rate for structured compliance certification journeys" }
+                      { number: "3x", unit: "increase", description: "safety course registration growth" },
+                      { number: "50%", unit: "faster", description: "onboarding setup completion time" },
+                      { number: "98%", unit: "completion", description: "compliance certification course rate" }
                     ]}
                   />
 
