@@ -209,7 +209,22 @@
     monospace;
     --serif-font: 'Instrument Serif', Georgia, serif;
 
-    /* Typography Design System */
+    /* Typography Design System & Scales */
+    --font-size-2xs: 12px;
+    --font-size-xs: 13px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 22px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 28px;
+    --font-size-4xl: 32px;
+    --font-size-clamp-title: clamp(32px, 2.5vw, 100px);
+    --font-size-clamp-h2: clamp(20px, 1.7vw, 29px);
+    --font-size-clamp-h3: clamp(18px, 2vw, 28px);
+    --font-size-clamp-body: clamp(16px, 2vw, 22px);
+
     --font-size-impact-num: clamp(64px, 8vw, 120px);
     --font-size-impact-unit: clamp(28px, 3.5vw, 54px);
     --font-size-impact-desc: clamp(16px, 1.5vw, 22px);
@@ -1901,13 +1916,13 @@ body.light-theme .theme-toggle-btn {
 }
 
 .about-main-heading {
-    font-size: 28px;
-    font-weight: 600;
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-medium);
 }
 
 .about-description {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-light);
     line-height: 28px;
 }
 
@@ -1980,8 +1995,8 @@ body.light-theme .theme-toggle-btn {
 }
 
 .card-title {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
     text-transform: capitalize;
     text-align: left;
@@ -1989,8 +2004,8 @@ body.light-theme .theme-toggle-btn {
 }
 
 .card-type {
-    font-size: 13px;
-    font-weight: 300;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-light);
     color: var(--grey-bg-b-color);
     text-transform: capitalize;
     text-align: left;
@@ -1998,8 +2013,8 @@ body.light-theme .theme-toggle-btn {
 }
 
 .card-year {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-light);
     color: var(--grey-bg-b-color);
     text-transform: capitalize;
     text-align: left;
@@ -3808,8 +3823,8 @@ a {
 }
 
 .pd-sub-heading {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
     color: var(--grey-bg-b-color);
 }
 
@@ -3823,8 +3838,8 @@ a {
     gap: 40px;
 
     int {
-        font-size: 16px;
-        font-weight: 500 !important;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-medium) !important;
         line-height: 1.6;
         margin: 0;
         color: var(--white-color);
@@ -3862,8 +3877,8 @@ a {
 p,
 li,
 int {
-    font-size: 18px;
-    font-weight: 300 !important;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-light) !important;
     line-height: 2.1;
     margin: 0;
     color: var(--grey-bg-b-color);
@@ -3881,7 +3896,7 @@ ul {
     color: var(--grey-bg-b-color);
     border: none;
     border-radius: 99px;
-    font-size: 18px;
+    font-size: var(--font-size-md);
     transform: scale3d(1, 1, 1);
     transition: all 0.3s ease-in;
     /* cursor: pointer; */
@@ -4903,7 +4918,7 @@ textarea:focus {
     font-family: var(--tertiary-font);
     color: var(--text-color);
     line-height: 1.8;
-    font-size: 18px;
+    font-size: var(--font-size-md);
 }
 
 .content-div-main.medium-case-study {
@@ -4912,7 +4927,7 @@ textarea:focus {
 }
 
 .medium-case-study p {
-    font-size: 18px;
+    font-size: var(--font-size-md);
     line-height: 1.8;
     margin-bottom: 20px;
     color: var(--grey-bg-b-color);
@@ -4921,7 +4936,7 @@ textarea:focus {
 .medium-case-study .section-subtitle-italic {
     display: block;
     font-family: var(--quadrinary-font);
-    font-size: 16px;
+    font-size: var(--font-size-base);
     font-style: normal;
     color: var(--grey-bg-b-color);
     margin-bottom: 28px;
@@ -4935,8 +4950,8 @@ textarea:focus {
 }
 
 .medium-case-study .section-heading {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
     color: var(--white-color);
     margin-top: 40px;
     margin-bottom: 28px;
@@ -4949,7 +4964,7 @@ textarea:focus {
 }
 
 .medium-case-study .problem-blockquote {
-    font-size: 22px;
+    font-size: var(--font-size-xl);
     font-style: italic;
     line-height: 1.6;
     border-left: 4px solid var(--white-color);
@@ -4967,7 +4982,7 @@ textarea:focus {
 .medium-case-study ul.medium-list li {
     position: relative;
     padding-left: 28px;
-    font-size: 18px;
+    font-size: var(--font-size-md);
     line-height: 1.7;
     margin-bottom: 20px;
     color: var(--text-color);
