@@ -55,7 +55,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
 
   const popupElement = (
     <div id="passwordPopup" className="popup lock-popup-override">
-      <div className="popup-content">
+      <div className="popup-content lock-popup-content">
         <div className="popup-header">
           <div className='df-g8 popup-lock-img '>
             <img className="icon-theme" src="img/lock-1.svg" alt="lock" />
