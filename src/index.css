@@ -5393,10 +5393,7 @@ img-comparison-slider img {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     position: relative;
-    background: radial-gradient(50% 100% at 50% 100%,
-            rgba(0, 71, 255, 0.24) 0%,
-            rgba(0, 40, 180, 0.06) 50%,
-            transparent 100%);
+    background: radial-gradient(50% 100% at 50% 100%, rgba(199, 255, 159, 0.15) 0%, rgba(199, 255, 159, 0.06) 50%, transparent 100%);
 }
 
 .hero-cta-container {
