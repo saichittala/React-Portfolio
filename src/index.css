@@ -1,5 +1,6 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital,wght@0,400;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital,wght@0,400;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap');
+
 
 
 
@@ -206,7 +207,7 @@
     sans-serif;
     --quadrinary-font: 'Fragment Mono',
     monospace;
-    --serif-font: 'Playfair Display', Georgia, serif;
+    --serif-font: 'Instrument Serif', Georgia, serif;
 }
 
 /* ==========================================================================
