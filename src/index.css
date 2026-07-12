@@ -6052,7 +6052,7 @@ img-comparison-slider img {
    ========================================================================== */
 .lock-popup-override {
     display: flex !important;
-    z-index: 1001 !important;
+    z-index: 100000 !important;
 }
 
 .error-message-style {

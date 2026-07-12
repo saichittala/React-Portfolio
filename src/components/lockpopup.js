@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect }) => {
   const passwordInputRef = useRef(null);
@@ -12,6 +13,28 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
     if (isVisible) {
       setErrorMessage('');
     }
+  }, [isVisible]);
+
+  // Prevent background scrolling when popup is active
+  useEffect(() => {
+    if (isVisible) {
+      document.body.style.overflow = 'hidden';
+      if (window.lenis) {
+        window.lenis.stop();
+      }
+    } else {
+      document.body.style.overflow = '';
+      if (window.lenis) {
+        window.lenis.start();
+      }
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      if (window.lenis) {
+        window.lenis.start();
+      }
+    };
   }, [isVisible]);
 
   const handlePasswordChange = (e) => {
@@ -30,7 +53,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
 
   if (!isVisible) return null;
 
-  return (
+  const popupElement = (
     <div id="passwordPopup" className="popup lock-popup-override">
       <div className="popup-content">
         <div className="popup-header">
@@ -88,6 +111,8 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
       </div>
     </div>
   );
+
+  return createPortal(popupElement, document.body);
 };
 
 export default LockPopup;
