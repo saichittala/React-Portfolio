@@ -5204,15 +5204,39 @@ img-comparison-slider img {
     position: absolute;
     top: 20px;
     z-index: 10;
-    background-color: var(--card-white-color);
-    color: #1a1a1a;
+    background: var(--glass-bg);
+    color: var(--white-color) !important;
     font-family: var(--primary-font);
     font-size: 14px;
     font-weight: 500;
     padding: 8px 16px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--glass-box-shadow) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     pointer-events: none;
+}
+
+.slider-badge:before {
+    content: "";
+    border-radius: inherit;
+    pointer-events: none;
+    background: var(--glass-border-gradient);
+    padding: 1px;
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    -webkit-mask-position: 0 0, 0 0;
+    -webkit-mask-size: auto, auto;
+    -webkit-mask-repeat: repeat, repeat;
+    -webkit-mask-clip: content-box, border-box;
+    -webkit-mask-origin: content-box, border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-source-type: auto, auto;
+    mask-mode: match-source, match-source;
+    opacity: var(--glass-border-opacity);
+    transition: opacity 0.2s;
 }
 
 .before-badge {
