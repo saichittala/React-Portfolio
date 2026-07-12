@@ -14,7 +14,11 @@ function ProjectImpact({ sectionNumber = "08", metrics = [] }) {
           <div className="content-div-main fade-inn width-800 medium-case-study" style={{ paddingBottom: 0 }}>
             <div className="impact-container">
               {metrics.map((metric, index) => (
-                <div key={index} className="impact-item">
+                <div 
+                  key={index} 
+                  className="impact-item fadeup"
+                  style={{ transitionDelay: `${index * 0.15}s` }}
+                >
                   <div className="impact-number-row">
                     <span className="impact-number">{metric.number}</span>
                     <span className="impact-unit">{metric.unit}</span>
