@@ -45,6 +45,7 @@
     --input-border-gradient: linear-gradient(135deg, #ffffff40, #ffffff1f 40% 60%, #ffffff40);
     --input-backdrop-filter: url(#input-filter) saturate(180%) blur(20px);
     --impact-accent: #c7ff9f;
+    --green-color: #2CB67D;
 
 
     /* Liquid Glass default (Dark Theme) variables */
@@ -88,6 +89,7 @@
         --input-backdrop-filter: saturate(180%) blur(20px);
         --cursor-color: #00000030;
         --impact-accent: #2d6a4f;
+        --green-color: #059669;
 
 
         /* Liquid Glass Light Theme overrides */
@@ -5421,9 +5423,9 @@ img-comparison-slider img {
 }
 
 .hero-cta-heading span {
-    font-family: inherit;
+    font-family: var(--serif-font);
     font-style: italic;
-    color: var(--tag-color);
+    color: var(--green-color);
     font-weight: var(--font-weight-regular);
 }
 
