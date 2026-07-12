@@ -13,6 +13,7 @@ import { use } from 'react';
 import LazyImage from '../components/LazyImage';
 import ConfidentialGate from '../components/ConfidentialGate';
 import useScrollReveal from '../components/useScrollReveal';
+import ProjectNavigation from '../components/ProjectNavigation';
 
 
 const CustomFurnish = () => {
@@ -416,17 +417,12 @@ const CustomFurnish = () => {
                   </div>
                 </div>
 
-                <div className="bg-full bg-white margin-unset">
-                  <div className="bg-main  padding-unset">
-                    <div className="project-details">
-                      <div className="thankyou-content-heading fade-inn cursor-text">
-                        Thank you for viewing. <a
-                          href="https://www.customfurnish.com" rel="noopener noreferrer"
-                          target="_blank">Have a look at live website</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ProjectNavigation 
+                  figmaLink="https://www.customfurnish.com"
+                  linkLabel="Have a look at live website"
+                  previousLink="/dd"
+                  nextLink="/mydeziner"
+                />
               </div>
             </div>
           </div>

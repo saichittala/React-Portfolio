@@ -3,6 +3,7 @@ import Footer from '../components/footer';
 import BubbleButton from '../components/BubbleButton';
 import ConfidentialGate from '../components/ConfidentialGate';
 import useScrollReveal from '../components/useScrollReveal';
+import ProjectNavigation from '../components/ProjectNavigation';
 
 const Dd = () => {
   useScrollReveal();
@@ -232,15 +233,11 @@ const Dd = () => {
                     </div>
                   </div>
 
-                  <div className="bg-full bg-white margin-unset">
-                    <div className="bg-main padding-unset">
-                      <div className="project-details">
-                        <div className="thankyou-content-heading fade-inn cursor-text">
-                          Thank you for viewing. <a href="https://www.figma.com/design/ypimiOonZc3MIqO7osLZOE/Dynamic-Dispatch?node-id=816-83&t=BMJCOKxUpDfmhFX7-1" target="_blank" rel="noopener noreferrer">here is the figma link</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <ProjectNavigation 
+                    figmaLink="https://www.figma.com/design/ypimiOonZc3MIqO7osLZOE/Dynamic-Dispatch?node-id=816-83&t=BMJCOKxUpDfmhFX7-1"
+                    previousLink="/lms-gh"
+                    nextLink="/customfurnish"
+                  />
                 </ConfidentialGate>
 
               </div>

@@ -10,6 +10,7 @@ import 'img-comparison-slider/dist/styles.css';
 import BubbleButton from '../components/BubbleButton';
 // import SmoothScrollProvider from '../components/Scrollsmooth';
 import LazyImage from '../components/LazyImage';
+import ProjectNavigation from '../components/ProjectNavigation';
 
 
 
@@ -504,22 +505,12 @@ const MyDeziner = () => {
                   </div>
                 </div> */}
 
-                {/* <div className="bg-full bg-white margin-unset">
-                    <div className="bg-main  padding-unset">
-                      <div className="project-details">
-                        <div className="thankyou-content-heading fade-inn cursor-text">
-                          Thank you for viewing. <a className=''
-                            href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
-                            target="_blank">Have a look</a>
-                        </div>
-                        <div className="thankyou-content-heading fade-inn">
-                        Thank you for viewing. <a
-                          href="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
-                          target="_blank">Have a look</a>
-                      </div>
-                      </div>
-                    </div>
-                  </div> */}
+                <ProjectNavigation 
+                  figmaLink="https://www.figma.com/proto/m3zYF0txidC2O6T98toUB5/MyDeziner-(-WEB-)?page-id=312%3A33670&node-id=312-33671&node-type=frame&viewport=1718%2C1395%2C0.19&t=7dLVBbJUJP2Uvd5V-1&scaling=scale-down&content-scaling=fixed"
+                  linkLabel="Have a look"
+                  previousLink="/customfurnish"
+                  nextLink={null}
+                />
               </div>
             </div>
           </div>

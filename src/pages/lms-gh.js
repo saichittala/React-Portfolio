@@ -5,6 +5,7 @@ import ConfidentialGate from '../components/ConfidentialGate';
 import 'img-comparison-slider';
 import 'img-comparison-slider/dist/styles.css';
 import useScrollReveal from '../components/useScrollReveal';
+import ProjectNavigation from '../components/ProjectNavigation';
 
 const Lmsgh = () => {
   useScrollReveal();
@@ -409,15 +410,11 @@ const Lmsgh = () => {
                     </div>
                   </div>
 
-                  <div className="bg-full bg-white margin-unset">
-                    <div className="bg-main padding-unset">
-                      <div className="project-details">
-                        <div className="thankyou-content-heading fade-inn cursor-text">
-                          Thank you for viewing. <a href="https://www.figma.com/design/Ux8vi0Menw1kiedzrgJnTl/LMS-Web?node-id=227-5554&t=gOpLmKvhNfBSrPQa-1" target="_blank" rel="noopener noreferrer">here is the figma link</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <ProjectNavigation 
+                    figmaLink="https://www.figma.com/design/Ux8vi0Menw1kiedzrgJnTl/LMS-Web?node-id=227-5554&t=gOpLmKvhNfBSrPQa-1"
+                    previousLink="/Opgh"
+                    nextLink="/dd"
+                  />
                 </ConfidentialGate>
 
               </div>

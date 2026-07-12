@@ -3,6 +3,7 @@ import Footer from '../components/footer';
 import BubbleButton from '../components/BubbleButton';
 import ConfidentialGate from '../components/ConfidentialGate';
 import useScrollReveal from '../components/useScrollReveal';
+import ProjectNavigation from '../components/ProjectNavigation';
 
 const Opgh = () => {
   useScrollReveal();
@@ -316,15 +317,11 @@ const Opgh = () => {
                     </div>
                   </div>
 
-                  <div className="bg-full bg-white margin-unset">
-                    <div className="bg-main padding-unset">
-                      <div className="project-details">
-                        <div className="thankyou-content-heading fade-inn cursor-text">
-                          Thank you for viewing. <a href="https://www.figma.com/design/FHFhj2BJEMYZMtp9YuSBDs/Groundhog-App--OP----Tablet--?node-id=1-5&t=SspbIQIq6YlYcZmZ-1" target="_blank" rel="noopener noreferrer">here is the figma link</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <ProjectNavigation 
+                    figmaLink="https://www.figma.com/design/FHFhj2BJEMYZMtp9YuSBDs/Groundhog-App--OP----Tablet--?node-id=1-5&t=SspbIQIq6YlYcZmZ-1"
+                    previousLink="/Uggh"
+                    nextLink="/lms-gh"
+                  />
                 </ConfidentialGate>
 
               </div>

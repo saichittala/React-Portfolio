@@ -7,6 +7,7 @@ import { use } from 'react';
 import LazyImage from '../components/LazyImage';
 import ConfidentialGate from '../components/ConfidentialGate';
 import useScrollReveal from '../components/useScrollReveal';
+import ProjectNavigation from '../components/ProjectNavigation';
 
 
 const Uggh = () => {
@@ -663,15 +664,11 @@ const Uggh = () => {
                     </div>
                   </div>
 
-                  <div className="bg-full bg-white margin-unset">
-                    <div className="bg-main  padding-unset">
-                      <div className="project-details">
-                        <div className="thankyou-content-heading fade-inn cursor-text">
-                          Thank you for viewing. <a href="https://www.figma.com/design/rxHo1Cf9CKCVGfmZhSMdKt/UG-App---Ideation-phase--2-?node-id=1447-11497&t=rE24klPvI0AfONWk-1" target="_blank" rel="noopener noreferrer">here is the figma link</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <ProjectNavigation 
+                    figmaLink="https://www.figma.com/design/rxHo1Cf9CKCVGfmZhSMdKt/UG-App---Ideation-phase--2-?node-id=1447-11497&t=rE24klPvI0AfONWk-1"
+                    previousLink={null}
+                    nextLink="/Opgh"
+                  />
                 </ConfidentialGate>
               </div>
             </div>
