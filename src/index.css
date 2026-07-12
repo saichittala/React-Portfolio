@@ -207,11 +207,12 @@
     sans-serif;
     --quadrinary-font: 'Fragment Mono',
     monospace;
-    --serif-font: 'Instrument Serif', Georgia, serif;
+    --serif-font: 'Instrument Serif',
+    Georgia,
+    serif;
 
     /* Typography Design System & Scales */
     --font-size-2xs: 12px;
-    --font-size-xs: 13px;
     --font-size-sm: 14px;
     --font-size-base: 16px;
     --font-size-md: 18px;
@@ -473,8 +474,8 @@ html.lenis {
 }
 
 .fw-600 {
-    font-weight: 600 !important;
-    font-size: 20px;
+    font-weight: var(--font-weight-medium) !important;
+    font-size: var(--font-size-lg);
 }
 
 .justify-center {
@@ -943,9 +944,9 @@ body {
 
 
 .header-text {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     color: var(--grey-bg-b-color);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     display: flex;
     gap: 4px;
     padding: 4px 8px;
@@ -970,7 +971,7 @@ body {
 }
 
 .header-text-1 {
-    font-size: 18px;
+    font-size: var(--font-size-md);
     color: var(--grey-bg-b-color);
     font-weight: 350;
     display: flex;
@@ -1087,7 +1088,7 @@ body.light-theme .theme-toggle-btn {
 
     padding: 10px 14px;
     color: var(--white-color);
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     transition: padding .5s cubic-bezier(0, -.6, 0, 1.07),
     transform .2s cubic-bezier(0, -.6, 0, 1.07),
     filter .2s cubic-bezier(0, -.6, 0, 1.07);
@@ -1171,7 +1172,7 @@ body.light-theme .theme-toggle-btn {
     border: none !important;
     box-shadow: var(--glass-box-shadow) !important;
     position: relative;
-    font-size: 16px;
+    font-size: var(--font-size-base);
 }
 
 .btn-1:before {
@@ -1264,7 +1265,7 @@ body.light-theme .theme-toggle-btn {
     border-radius: var(--border-radius-1);
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: var(--font-size-2xs);
     height: 100%;
     line-height: 1.6;
     will-change: transform;
@@ -1434,7 +1435,7 @@ body.light-theme .theme-toggle-btn {
 
 .home-main-text {
     width: 100%;
-    font-size: 24px;
+    font-size: var(--font-size-2xl);
     color: var(--grey-bg-b-color);
     font-weight: 250;
     line-height: 1.7;
@@ -1448,8 +1449,8 @@ body.light-theme .theme-toggle-btn {
 }
 
 .home-tag-container {
-    font-size: 14px;
-    font-weight: 300;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
     letter-spacing: 0.04em;
 
     color: var(--tag-color);
@@ -1483,12 +1484,12 @@ body.light-theme .theme-toggle-btn {
 }
 
 .work-in-progress-container {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     border: 0.8px solid rgba(44, 182, 125, 0.25);
     color: #2CB67D;
     padding: 12px 18px;
     border-radius: var(--border-radius-1);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     background: linear-gradient(120deg, #1e6f5c10, #2cb67d15, #7cffd618, #1e6f5c12);
 }
 
@@ -1559,7 +1560,7 @@ body.light-theme .theme-toggle-btn {
 }
 
 .fs-14 {
-    font-size: 14px !important;
+    font-size: var(--font-size-sm) !important;
 }
 
 .cursor-none {
@@ -1665,13 +1666,13 @@ body.light-theme .theme-toggle-btn {
 
 .intro-white-text {
     color: var(--white-color);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     background-image: unset;
 }
 
 .intro-grey-text {
     color: var(--grey-bg-b-color) !important;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     background-image: unset;
 }
 
@@ -1680,7 +1681,7 @@ body.light-theme .theme-toggle-btn {
     /* cursor: pointer; */
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0, -.6, 0, 1.07);
-    font-size: 20px;
+    font-size: var(--font-size-lg);
     margin-top: 12px;
 }
 
@@ -1708,7 +1709,7 @@ body.light-theme .theme-toggle-btn {
 
 .say-hi-btn {
     padding: 12px 24px;
-    font-size: 16px !important;
+    font-size: var(--font-size-base) !important;
     gap: 10px;
     background: none;
     display: flex;
@@ -1723,8 +1724,8 @@ body.light-theme .theme-toggle-btn {
 
 
 .intro-content p {
-    font-size: clamp(20px, 1.7vw, 29px);
-    font-weight: 300;
+    font-size: var(--font-size-clamp-h2);
+    font-weight: var(--font-weight-light);
     color: var(--white-color) !important;
     margin: 0;
     line-height: 1.5;
@@ -1739,7 +1740,7 @@ body.light-theme .theme-toggle-btn {
     background-image: linear-gradient(138deg, #0895FF, #C952DD 34%, #FF2E55 68%, #FF9014);
     background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
 }
 
 .company-text:hover {
@@ -1769,9 +1770,9 @@ body.light-theme .theme-toggle-btn {
 
 .scroll-btn a {
     color: var(--grey-bg-b-color);
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
 }
 
 .scroll-btn img {
@@ -1849,7 +1850,7 @@ body.light-theme .theme-toggle-btn {
     padding: 20vh 0;
 
     a {
-        font-weight: 400;
+        font-weight: var(--font-weight-regular);
         line-height: inherit;
         color: var(--white-color);
     }
@@ -1862,8 +1863,8 @@ body.light-theme .theme-toggle-btn {
 
 .about-main p {
     color: var(--grey-bg-b-color);
-    font-size: 18px;
-    font-weight: 300 !important;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-light) !important;
     width: 100%;
     line-height: 2.1;
 }
@@ -1877,8 +1878,8 @@ body.light-theme .theme-toggle-btn {
 
 
 .about-div-heading {
-    font-size: 32px;
-    font-weight: 500;
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-medium);
 }
 
 .about-img {
@@ -2004,7 +2005,7 @@ body.light-theme .theme-toggle-btn {
 }
 
 .card-type {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-2xs);
     font-weight: var(--font-weight-light);
     color: var(--grey-bg-b-color);
     text-transform: capitalize;
@@ -2034,8 +2035,8 @@ body.light-theme .theme-toggle-btn {
     padding: 6px 12px 6px 9px;
     background: rgba(176, 32, 32, 0.80);
     backdrop-filter: blur(40px);
-    font-size: 14px;
-    font-weight: 400;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-regular);
     color: var(--card-white-color);
     border-radius: var(--border-radius-3);
     border: 0.8px solid var(--border-color);
@@ -2114,8 +2115,8 @@ body.light-theme .theme-toggle-btn {
 }
 
 .main-heading {
-    font-size: clamp(18px, 2vw, 28px);
-    font-weight: 300;
+    font-size: var(--font-size-clamp-h3);
+    font-weight: var(--font-weight-light);
     color: var(--card-white-color);
     text-align: left;
     width: 75%;
@@ -2135,8 +2136,8 @@ body.light-theme .theme-toggle-btn {
 }
 
 .heading-type {
-    font-size: clamp(16px, 2vw, 22px);
-    font-weight: 300;
+    font-size: var(--font-size-clamp-body);
+    font-weight: var(--font-weight-light);
     color: var(--card-white-color);
     text-align: left;
     text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);
@@ -2239,7 +2240,7 @@ body.light-theme .theme-toggle-btn {
 
 /* Label */
 .recruiter-label {
-    font-size: 13px;
+    font-size: var(--font-size-xs);
     color: var(--text-color);
     opacity: 0.6;
     transition: 0.3s;
@@ -2361,7 +2362,7 @@ body.light-theme .theme-toggle-btn {
     align-items: center;
     margin-bottom: 20px;
     color: var(--white-color);
-    font-size: 18px;
+    font-size: var(--font-size-md);
 }
 
 .beta-tag {
@@ -2369,7 +2370,7 @@ body.light-theme .theme-toggle-btn {
     color: #f53535;
     padding: 4px 8px;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: var(--font-size-2xs);
 }
 
 /* Close button */
@@ -2377,7 +2378,7 @@ body.light-theme .theme-toggle-btn {
     background: transparent;
     border: none;
     color: var(--text-color);
-    font-size: 16px;
+    font-size: var(--font-size-base);
     cursor: pointer;
     opacity: 0.7;
 }
@@ -2390,7 +2391,7 @@ body.light-theme .theme-toggle-btn {
 .mini-toggle {
     padding: 4px 10px;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: var(--font-size-2xs);
     background: rgba(239, 68, 68, 0.1);
     color: #ef4444;
     border: none;
@@ -2408,7 +2409,7 @@ body.light-theme .theme-toggle-btn {
     padding: 6px 10px;
     border-radius: 999px;
     background: var(--black-opacity-3);
-    font-size: 12px;
+    font-size: var(--font-size-2xs);
 }
 
 
@@ -2442,7 +2443,7 @@ textarea {
     margin-top: 28px;
     margin-bottom: 20px;
     color: var(--white-color);
-    font-size: 16px;
+    font-size: var(--font-size-base);
     line-height: 1.6;
 }
 
@@ -2457,7 +2458,7 @@ textarea {
         border-radius: var(--border-radius-1);
         background: #22c55e20;
         color: var(--white-color);
-        font-size: 14px;
+        font-size: var(--font-size-sm);
         border: 0.8px solid #22c55e30;
     }
 }
@@ -2474,14 +2475,14 @@ textarea {
         border-radius: var(--border-radius-1);
         background: #ef444420;
         color: var(--white-color);
-        font-size: 14px;
+        font-size: var(--font-size-sm);
         border: 0.8px solid #ef444430;
     }
 }
 
 .reset-btn-rec {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     padding: 8px 16px;
 }
 
@@ -2509,8 +2510,8 @@ textarea {
 }
 
 .percent {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-medium);
     color: #22c55e;
 
 }
@@ -2593,8 +2594,8 @@ textarea {
 }
 
 .testimonial-text {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-light);
     color: var(--grey-bg-b-color);
     line-height: 1.7;
     font-style: italic;
@@ -2613,14 +2614,14 @@ textarea {
 }
 
 .testimonial-name {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
     color: var(--white-color);
 }
 
 .testimonial-role {
-    font-size: 14px;
-    font-weight: 300;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
     color: var(--grey-bg-b-color);
     padding-top: 8px;
 }
@@ -2663,7 +2664,7 @@ textarea {
 }
 
 .section-title {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     letter-spacing: 1px;
     color: var(--text-color);
     opacity: 0.6;
@@ -2733,13 +2734,13 @@ textarea {
 }
 
 .company-name {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
 }
 
 .role {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     color: var(--text-color);
     opacity: 0.7;
 }
@@ -2752,13 +2753,13 @@ textarea {
 }
 
 .dates {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     color: var(--text-color);
     opacity: 0.5;
 }
 
 .current-badge {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     padding: 4px 8px;
     border-radius: var(--border-radius-1);
     background: var(--white-opacity-1);
@@ -2790,8 +2791,8 @@ textarea {
 }
 
 .lets-connect-text {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-light);
     color: var(--white-color);
     white-space: nowrap;
 }
@@ -2839,8 +2840,8 @@ textarea {
 }
 
 .bubble-button__text {
-    font-size: 14px !important;
-    font-weight: 400;
+    font-size: var(--font-size-sm) !important;
+    font-weight: var(--font-weight-regular);
     color: var(--white-color);
     white-space: nowrap;
     padding: 0 16px;
@@ -2876,8 +2877,8 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(32px, 2.5vw, 100px);
-    font-weight: 600;
+    font-size: var(--font-size-clamp-title);
+    font-weight: var(--font-weight-medium);
     text-align: center;
 }
 
@@ -2966,16 +2967,16 @@ textarea {
     margin: 0;
     text-align: left;
     margin-bottom: 6px;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-base);
 }
 
 .popup-label {
-    font-size: 16px !important;
+    font-size: var(--font-size-base) !important;
     color: var(--grey-bg-b-color);
     text-align: left;
     margin-bottom: 4px !important;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
 }
 
 .popup-content img {
@@ -2993,18 +2994,18 @@ textarea {
 
 
 .error-message {
-    font-size: 14px !important;
+    font-size: var(--font-size-sm) !important;
     margin-top: 0px !important;
     margin-left: 0px !important;
 }
 
 .popup-info-text {
-    font-size: 14px !important;
+    font-size: var(--font-size-sm) !important;
     color: var(--white-color);
     text-align: left;
     margin-top: 0px !important;
     margin-left: 0px !important;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     /* background: #0A84FF20; */
     padding: 4px 12px;
     border-radius: var(--border-radius-4);
@@ -3069,13 +3070,13 @@ textarea {
     width: 100%;
     min-width: 310px;
     padding: 14px;
-    font-size: 18px;
+    font-size: var(--font-size-md);
     background: var(--black-2-color);
     border-width: 1px;
     border-color: var(--border-color);
     color: var(--white-color);
     border-radius: var(--border-radius-4);
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
 }
 
 
@@ -3091,7 +3092,7 @@ textarea {
 }
 
 .popup-contact-link {
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-style: normal !important;
 }
 
@@ -3116,7 +3117,7 @@ textarea {
 
 .unlock-projects a {
     color: var(--black-color);
-    font-size: 16px;
+    font-size: var(--font-size-base);
 }
 
 
@@ -3159,7 +3160,7 @@ textarea {
 
 .footer-main a {
     color: var(--white-color);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
 }
 
 .footer-content {
@@ -3168,8 +3169,8 @@ textarea {
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-light);
 }
 
 
@@ -3196,7 +3197,7 @@ textarea {
 
 .toggle {
     display: none;
-    font-size: 24px;
+    font-size: var(--font-size-2xl);
     /* cursor: pointer; */
     cursor: pointer;
 }
@@ -3306,8 +3307,8 @@ textarea {
 }
 
 #loading-text {
-    font-size: 14px;
-    font-weight: 300;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
     transition: transform 0.5s ease;
     color: var(--white-color);
 }
@@ -3543,15 +3544,15 @@ a {
     .mob-btn-1 {
         background-color: unset !important;
         padding: unset !important;
-        font-size: 20px;
+        font-size: var(--font-size-lg);
         text-decoration: none;
         color: var(--white-color);
-        font-weight: 300;
+        font-weight: var(--font-weight-light);
     }
 
     .mob-btn-2 {
         background-color: var(--black-2-color);
-        font-size: 16px;
+        font-size: var(--font-size-base);
         color: var(--white-color);
         text-transform: capitalize;
     }
@@ -3616,7 +3617,7 @@ a {
         width: 70%;
         text-align: left;
         text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.45);
-        font-size: 18px;
+        font-size: var(--font-size-md);
     }
 
     .heading-type {
@@ -3737,16 +3738,16 @@ a {
 
 
 .content-div-main-heading-2 {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
     width: 100%;
     line-height: 1.7;
 }
 
 .content-div-main-heading-3 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
     margin-bottom: 20px;
     color: var(--white-color);
     width: 100%;
@@ -3755,7 +3756,7 @@ a {
 
 .content-div-main-heading-4 {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     color: var(--white-color);
     width: 100%;
     line-height: 1.7;
@@ -3782,14 +3783,14 @@ a {
 }
 
 .b-active {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
 }
 
 .b-inactive {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-regular);
     color: var(--grey-bg-b-color);
 }
 
@@ -3815,7 +3816,7 @@ a {
 
 .pd-main-heading {
     font-size: 4.5vw;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     color: var(--white-color);
     line-height: 0.65;
     opacity: 1 !important;
@@ -3917,8 +3918,8 @@ ul {
 
 
 .pd-content ch {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
     color: var(--white-color);
 }
 
@@ -3952,7 +3953,7 @@ ul {
 
     .challenges-content-heading {
         font-size: 2.4vw;
-        font-weight: 500;
+        font-weight: var(--font-weight-medium);
         color: var(--black-color) !important;
         line-height: 1.5;
         font-family: var(--secondary-font) !important;
@@ -3960,13 +3961,13 @@ ul {
 
     .thankyou-content-heading {
         font-size: 2.4vw;
-        font-weight: 500;
+        font-weight: var(--font-weight-medium);
         color: var(--grey-bg-w-color) !important;
         line-height: 1.5;
 
         a {
             font-size: 2.4vw;
-            font-weight: 500;
+            font-weight: var(--font-weight-medium);
             color: var(--black-color) !important;
             line-height: 1.5;
         }
@@ -3994,7 +3995,7 @@ ul {
 .project-breif-heading {
     border-top: 0.8px solid var(--border-color);
     color: var(--white-color);
-    font-size: 24px;
+    font-size: var(--font-size-2xl);
     padding: 20px 0;
     border-bottom: 0.8px solid var(--border-color);
     display: flex;
@@ -4092,11 +4093,11 @@ ul {
 
 
     .challenge-heading {
-        font-weight: 400;
+        font-weight: var(--font-weight-regular);
     }
 
     .challenge-content {
-        font-weight: 400;
+        font-weight: var(--font-weight-regular);
     }
 }
 
@@ -4114,12 +4115,12 @@ ul {
 
     .challenge-heading {
         color: var(--grey-bg-b-color);
-        font-weight: 300;
+        font-weight: var(--font-weight-light);
     }
 
     .challenge-content {
         color: var(--grey-bg-b-color);
-        font-weight: 300;
+        font-weight: var(--font-weight-light);
     }
 
 }
@@ -4128,17 +4129,17 @@ ul {
 
 
 .challenge-heading {
-    font-size: 20px;
+    font-size: var(--font-size-lg);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     line-height: normal;
     padding-bottom: 20vh;
 }
 
 .challenge-content {
-    font-size: 20px;
+    font-size: var(--font-size-lg);
     font-style: normal;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     line-height: normal;
 }
 
@@ -4223,8 +4224,8 @@ ul {
 }
 
 .pd-main-heading-2 {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
     margin-bottom: 20px;
     color: var(--white-color);
     width: 100%;
@@ -4232,8 +4233,8 @@ ul {
 }
 
 .pd-sub-heading-2 {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-light);
     color: var(--grey-bg-b-color);
     margin-bottom: 16px;
     line-height: 150%;
@@ -4252,8 +4253,8 @@ ul {
 }
 
 .process-card-heading {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
     color: var(--black-2-color);
     line-height: 1.5;
 }
@@ -4268,8 +4269,8 @@ ul {
 .process-card-info {
     display: flex;
     padding: 10px 24px;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-light);
     color: var(--black-2-color);
     background-color: var(--secondary-color);
     border-radius: var(--border-radius-2);
@@ -4515,8 +4516,8 @@ ul {
     border: 0.8px solid var(--border-color);
     color: var(--white-color);
     border-radius: var(--border-radius-4);
-    font-size: 16px;
-    font-weight: 400;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
     padding: 14px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     cursor: text;
@@ -4527,8 +4528,8 @@ textarea {
     border: 0.8px solid var(--border-color);
     color: var(--white-color);
     border-radius: var(--border-radius-4);
-    font-size: 14px;
-    font-weight: 300;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
     padding: 14px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     cursor: text;
@@ -4571,14 +4572,14 @@ textarea:focus {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     color: #fff !important;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     border: none !important;
     border-radius: var(--border-radius-4);
     padding: 14px;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0, -.6, 0, 1.07);
     margin-top: 12px;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     position: relative;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), 0 4px 20px rgba(1, 114, 234, 0.2) !important;
 }
@@ -4640,8 +4641,8 @@ textarea:focus {
     color: var(--white-color);
     border-radius: var(--border-radius-1);
     padding: 16px;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
     box-shadow:
         rgba(0, 0, 0, 0.24) 0px 0px 3px 0px inset,
         rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
@@ -4797,8 +4798,8 @@ textarea:focus {
 }
 
 .confidential-title {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
     margin: 0;
     text-align: center;
@@ -4807,7 +4808,7 @@ textarea:focus {
 .confidential-description {
     color: var(--grey-bg-b-color);
     line-height: 1.8;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     margin: 0;
     text-align: center;
 }
@@ -4880,7 +4881,7 @@ textarea:focus {
     background: transparent !important;
     border: none !important;
     color: var(--white-color);
-    font-size: 16px;
+    font-size: var(--font-size-base);
     outline: none;
     position: relative;
     z-index: 1;
@@ -4909,7 +4910,7 @@ textarea:focus {
     }
 
     .confidential-title {
-        font-size: 24px;
+        font-size: var(--font-size-2xl);
     }
 }
 
@@ -4997,8 +4998,8 @@ textarea:focus {
     position: absolute;
     left: 8px;
     color: var(--white-color);
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
     line-height: 1;
     top: 1px;
 }
@@ -5021,7 +5022,7 @@ textarea:focus {
 .medium-case-study .image-group span {
     display: block;
     font-family: var(--quadrinary-font);
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     color: var(--grey-bg-b-color);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -5045,7 +5046,7 @@ textarea:focus {
 .medium-case-study table.medium-table th {
     padding: 18px 24px;
     text-align: left;
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
     border-bottom: 2px solid var(--border-color);
     background-color: rgba(255, 255, 255, 0.04);
@@ -5067,26 +5068,26 @@ textarea:focus {
 
 @media (max-width: 768px) {
     .medium-case-study {
-        font-size: 16px;
+        font-size: var(--font-size-base);
         line-height: 1.7;
     }
 
     .medium-case-study p {
-        font-size: 18px;
+        font-size: var(--font-size-md);
         line-height: 1.9;
     }
 
     .medium-case-study .section-heading {
-        font-size: 22px;
+        font-size: var(--font-size-xl);
     }
 
     .medium-case-study .problem-blockquote {
-        font-size: 18px;
+        font-size: var(--font-size-md);
         padding-left: 16px;
     }
 
     .medium-case-study ul.medium-list li {
-        font-size: 16px;
+        font-size: var(--font-size-base);
     }
 }
 
@@ -5147,15 +5148,15 @@ textarea:focus {
 }
 
 .figma-placeholder-title {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
     z-index: 1;
     font-family: var(--primary-font);
 }
 
 .figma-placeholder-subtitle {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     color: var(--grey-bg-b-color);
     z-index: 1;
     font-family: var(--tertiary-font);
@@ -5241,8 +5242,8 @@ img-comparison-slider img {
     background: var(--glass-bg);
     color: var(--white-color) !important;
     font-family: var(--primary-font);
-    font-size: 14px;
-    font-weight: 500;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
     padding: 8px 16px;
     border-radius: 8px;
     box-shadow: var(--glass-box-shadow) !important;
@@ -5373,7 +5374,7 @@ img-comparison-slider img {
 
 .hero-cta-heading {
     font-size: 40px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
     line-height: 1.35;
     max-width: 600px;
@@ -5386,7 +5387,7 @@ img-comparison-slider img {
     font-family: inherit;
     font-style: italic;
     color: var(--tag-color);
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
 }
 
 .hero-cta-button-wrapper {
@@ -5419,8 +5420,8 @@ img-comparison-slider img {
     padding: 8px 8px 8px 24px;
     border-radius: 9999px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-base);
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     box-shadow: var(--glass-box-shadow) !important;
     border: none !important;
@@ -5478,7 +5479,7 @@ img-comparison-slider img {
 /* Mobile responsive font & container sizing for CTA block */
 @media (max-width: 674px) {
     .hero-cta-heading {
-        font-size: 24px;
+        font-size: var(--font-size-2xl);
         line-height: 1.4;
         margin-bottom: 28px;
         padding: 0 16px;
@@ -5521,8 +5522,8 @@ img-comparison-slider img {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
     letter-spacing: -0.2px;
     color: var(--white-color);
     font-family: var(--primary-font), sans-serif;
@@ -5608,8 +5609,8 @@ img-comparison-slider img {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
     font-family: var(--primary-font), sans-serif;
 }
 
@@ -5647,7 +5648,7 @@ img-comparison-slider img {
 }
 
 .summary-col-body {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     line-height: 1.6;
     color: var(--text-color);
     margin: 0;
@@ -5666,7 +5667,7 @@ img-comparison-slider img {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     line-height: 1.5;
     color: var(--text-color);
 }
@@ -5788,7 +5789,7 @@ img-comparison-slider img {
 
 .toast-message {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     color: var(--white-color);
     letter-spacing: -0.1px;
 }
@@ -5841,7 +5842,7 @@ img-comparison-slider img {
 
 .thankyou-title {
     font-size: clamp(28px, 2.5vw, 40px);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     color: var(--grey-bg-w-color) !important;
     margin: 0;
     line-height: 1.3;
@@ -5851,7 +5852,7 @@ img-comparison-slider img {
 .thankyou-figma-link {
     display: inline-block;
     font-size: clamp(28px, 2.5vw, 40px);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     color: var(--black-color) !important;
     margin-top: 8px;
     line-height: 1.3;
@@ -5884,7 +5885,7 @@ img-comparison-slider img {
     padding: 24px 0;
     text-decoration: none;
     font-size: clamp(16px, 1.2vw, 20px);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-family: var(--secondary-font) !important;
     transition: opacity 0.2s ease;
 }
@@ -5914,7 +5915,7 @@ img-comparison-slider img {
     align-items: center;
     padding: 24px 0;
     font-size: clamp(16px, 1.2vw, 20px);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-family: var(--secondary-font) !important;
     opacity: 0.25;
     cursor: not-allowed;
