@@ -81,14 +81,14 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
               onChange={handlePasswordChange}
               onKeyDown={handleKeyPress}
             />
-            <button
-              type="button"
+            <span
               className="password-toggle-btn"
               onClick={() => setShowPassword(!showPassword)}
+              role="button"
               aria-label={showPassword ? "Hide password" : "Show password"}
             >
               {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-            </button>
+            </span>
           </div>
           {/* Display error message */}
           {isPasswordIncorrect &&

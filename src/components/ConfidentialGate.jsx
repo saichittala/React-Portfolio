@@ -148,14 +148,14 @@ export default function ConfidentialGate({
                                     }}
                                     onKeyDown={handleKeyDown}
                                 />
-                                <button
-                                    type="button"
+                                <span
                                     className="password-toggle-btn"
                                     onClick={() => setShowPassword(!showPassword)}
+                                    role="button"
                                     aria-label={showPassword ? "Hide access code" : "Show access code"}
                                 >
                                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                                </button>
+                                </span>
                             </div>
 
                             {message && (
