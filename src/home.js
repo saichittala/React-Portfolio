@@ -354,7 +354,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
                 </h2>
                 <div className="hero-cta-button-wrapper">
                   <div className="hero-cta-avatar">
-                    <img src="img/profile-2test.webp" alt="Sai Chittala" />
+                    <img src="img/profile-new.webp" alt="Sai Chittala" />
                   </div>
                   <Link to="/contact" className="hero-cta-button">
                     <span>Let's Talk</span>
