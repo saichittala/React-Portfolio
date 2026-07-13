@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const TestimonialsCard = () => {
   const testimonials = [
@@ -14,61 +15,152 @@ const TestimonialsCard = () => {
     },
     {
       text: "Sai is an exceptionally talented designer who bridges the gap between complex user requirements and clean, modern aesthetics. His design system work saved our development team countless hours. He is proactive, highly collaborative, and receptive to feedback. Highly recommended!",
-      name: "Sarah Jenkins",
-      role: "Head of Product, FinStream",
+      name: "Ram Kadiayala",
+      role: "Head of Design, Medplus",
     },
     {
       text: "Working with Sai was a game-changer for our mobile app redesign. He has a rare ability to translate messy brainstorms into sleek, intuitive interfaces. His interactive prototypes were incredibly detailed and helped us align the stakeholders instantly. An absolute pleasure to work with.",
-      name: "Marcus Chen",
-      role: "Co-Founder, Hatchly",
+      name: "Jack Daniels",
+      role: "Principle Product Designer, TarkaLabs",
     },
     {
       text: "Sai's dedication to user research and visual excellence really set him apart. He redesigned our B2B dashboard, making complex analytics clear and actionable for our customers. He iterates quickly and delivers top-notch files that are ready for implementation. We'll definitely work together again.",
-      name: "Elena Rostova",
-      role: "VP of Design, ApexSaaS",
+      name: "Rajesh Kumar",
+      role: "CEO, Firstricoz",
     },
   ];
 
+  const [index, setIndex] = useState(0);
+  const [expanded, setExpanded] = useState(false);
+
+  const LIMIT = 152;
+
+  const currentText = testimonials[index].text;
+  const isLong = currentText.length > LIMIT;
+  const truncatedText = currentText.slice(0, LIMIT);
+
+  const goNext = () => {
+    setIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const goPrev = () => {
+    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  // Auto-slide
+  useEffect(() => {
+    const t = setInterval(goNext, 10000);
+    return () => clearInterval(t);
+  }, []);
+
+  // Reset expanded when slide changes
+  useEffect(() => {
+    setExpanded(false);
+  }, [index]);
+
+  // Swipe detection
+  const handleDragEnd = (event, info) => {
+    const swipe = info.offset.x;
+    if (swipe < -50) goNext();
+    if (swipe > 50) goPrev();
+  };
+
   return (
-    <section className="testimonials-section display-flex fd-c flex-col gap-36 fade-in">
+    <section className="testimonials-section width-450 display-flex fd-c flex-col gap-36 fade-in">
+
       {/* Heading */}
       <div className="display-flex justify-between items-center">
         <a className="fade-in content-div-main-heading-2 translate-text-up">
           Testimonials
         </a>
+
+        <div className="display-flex gap-8">
+          <button onClick={goPrev} className="btn-4">
+            <img src="img/left-arrow.svg" alt="prev" />
+          </button>
+
+          <button onClick={goNext} className="btn-4">
+            <img src="img/right-arrow.svg" alt="next" />
+          </button>
+        </div>
       </div>
 
-      {/* Marquee Wrapper */}
-      <div className="testimonials-marquee-container">
-        <div className="testimonials-marquee-track">
-          <div className="testimonials-marquee-group">
-            {testimonials.map((t, i) => (
-              <div key={`g1-${i}`} className="testimonial-card">
-                <img src="img/quote.svg" alt="quote" className="quote-icon" />
-                <p className="testimonial-text">
-                  “{t.text}”
-                </p>
-                <div className="testimonial-info">
-                  <span className="testimonial-name">{t.name}</span>
-                  <span className="text-sm opacity-75 testimonial-role">{t.role}</span>
+      {/* Carousel */}
+      <div className="fade-in relative w-full overflow-hidden min-h-[230px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={handleDragEnd}
+            dragElastic={0.3}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -40 }}
+            transition={{ duration: 0.45 }}
+            className="w-full cursor-grab active:cursor-grabbing"
+          >
+            <div className="testimonial-card">
+              <img src="img/quote.svg" alt="quote" className="quote-icon" />
+
+              {/* Text with inline Show More */}
+              <p className="testimonial-text opacity-90 leading-relaxed">
+                {!expanded ? (
+                  <>
+                    “{isLong ? truncatedText + "..." : currentText}”
+                    {isLong && (
+                      <span
+                        onClick={() => setExpanded(true)}
+                        className="testimonial-toggle"
+                      >
+                        {" "}Show more
+                      </span>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    “{currentText}”
+                    {isLong && (
+                      <span
+                        onClick={() => setExpanded(false)}
+                        className="testimonial-toggle"
+                      >
+                        {" "}Show less
+                      </span>
+                    )}
+                  </>
+                )}
+              </p>
+
+              {/* Info */}
+              <div className="testimonial-info df-g8 gap-12 mt-3">
+                <div className="df-g8 fd-c">
+                  <span className="testimonial-name">
+                    {testimonials[index].name}
+                  </span>
+                  <span className="text-sm opacity-75 testimonial-role">
+                    {testimonials[index].role}
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
-          <div className="testimonials-marquee-group" aria-hidden="true">
-            {testimonials.map((t, i) => (
-              <div key={`g2-${i}`} className="testimonial-card">
-                <img src="img/quote.svg" alt="quote" className="quote-icon" />
-                <p className="testimonial-text">
-                  “{t.text}”
-                </p>
-                <div className="testimonial-info">
-                  <span className="testimonial-name">{t.name}</span>
-                  <span className="text-sm opacity-75 testimonial-role">{t.role}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Dots */}
+      <div className="df-g8 width-100 jc-c">
+        <div className="display-flex justify-center items-center testimonial-count gap-8 mt-2">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`bubble-dots ${i === index
+                ? "bubble-dots-active"
+                : "bubble-dots-inactive"
+                }`}
+            ></button>
+          ))}
         </div>
       </div>
     </section>

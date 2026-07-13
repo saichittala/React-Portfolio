@@ -2655,81 +2655,35 @@ textarea {
     padding-top: 8px;
 }
 
-.testimonials-marquee-container {
-    overflow: hidden;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    padding: 24px 0;
-    mask-image: linear-gradient(to right, transparent, #fff 15%, #fff 85%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, #fff 15%, #fff 85%, transparent);
-}
-
-.testimonials-marquee-container::before,
-.testimonials-marquee-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.testimonials-marquee-container::before {
-    left: 0;
-    background: linear-gradient(to right, var(--black-color) 0%, transparent 100%);
-}
-
-.testimonials-marquee-container::after {
-    right: 0;
-    background: linear-gradient(to left, var(--black-color) 0%, transparent 100%);
-}
-
-.testimonials-marquee-track {
+.testimonial-count {
     display: flex;
-    width: max-content;
-    animation: marquee-scroll 45s linear infinite;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: var(--border-radius-1);
+    border: 0.8px solid var(--border-color)
 }
 
-.testimonials-marquee-track:hover {
-    animation-play-state: paused;
+.bubble-dots {
+    width: 8% !important;
+    height: 8px !important;
+    border: none !important;
+    border-radius: 99px;
+    transition: all 0.3s ease;
 }
 
-.testimonials-marquee-group {
-    display: flex;
-    gap: 24px;
-    padding-right: 24px;
-    align-items: stretch;
+.bubble-dots-active {
+    background: var(--white-color) !important;
 }
 
-.testimonials-marquee-group .testimonial-card {
-    width: 420px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-    cursor: default;
+.bubble-dots-inactive {
+    background: var(--grey-bg-b-color) !important;
+    opacity: 0.3;
+    cursor: pointer;
 }
 
-.testimonials-marquee-group .testimonial-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
 
-@keyframes marquee-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
+
+
 
 .experience-container {
     display: flex;
