@@ -350,7 +350,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
             <div className="hero-cta-section fade-in">
               <div className="bg-main hero-cta-container fadeup">
                 <h2 className="hero-cta-heading">
-                  Great products start with the <span>right conversation.</span>
+                  Ready to build something <span>people love?</span>
                 </h2>
                 <div className="hero-cta-button-wrapper">
                   <div className="hero-cta-avatar">
