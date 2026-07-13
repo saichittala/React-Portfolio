@@ -37,7 +37,8 @@
     var(--glass-box-shadow) !important;
 }
 
-.glass-surface--svg::before {
+.glass-surface--svg::before,
+.glass-surface--fallback::before {
   content: "";
   border-radius: inherit;
   pointer-events: none;
@@ -60,33 +61,18 @@
   z-index: 1;
 }
 
-.glass-surface--svg:focus-within::before {
+.glass-surface--svg:focus-within::before,
+.glass-surface--fallback:focus-within::before {
   opacity: var(--glass-border-opacity-focus, 1.0);
   background: var(--glass-border-gradient-focus);
 }
 
 .glass-surface--fallback {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px) saturate(1.8) brightness(1.1);
-  -webkit-backdrop-filter: blur(12px) saturate(1.8) brightness(1.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow:
-    0 8px 32px 0 rgba(31, 38, 135, 0.2),
-    0 2px 16px 0 rgba(31, 38, 135, 0.1),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
-    inset 0 -1px 0 0 rgba(255, 255, 255, 0.2);
-}
-
-@media (prefers-color-scheme: dark) {
-  .glass-surface--fallback {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px) saturate(1.8) brightness(1.2);
-    -webkit-backdrop-filter: blur(12px) saturate(1.8) brightness(1.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow:
-      inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
-      inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
-  }
+  background: var(--glass-head-bg) !important;
+  backdrop-filter: saturate(var(--glass-saturation, 1)) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(var(--glass-saturation, 1)) blur(20px) !important;
+  box-shadow: var(--glass-box-shadow) !important;
+  border: none !important;
 }
 
 @supports not (backdrop-filter: blur(10px)) {
