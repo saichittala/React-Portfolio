@@ -5,6 +5,9 @@
   justify-content: center;
   overflow: hidden;
   transition: opacity 0.26s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
 }
 
 .glass-surface__filter {
@@ -69,8 +72,8 @@
 
 .glass-surface--fallback {
   background: var(--glass-head-bg) !important;
-  backdrop-filter: saturate(var(--glass-saturation, 1)) blur(20px) !important;
-  -webkit-backdrop-filter: saturate(var(--glass-saturation, 1)) blur(20px) !important;
+  backdrop-filter: saturate(1.8) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(1.8) blur(20px) !important;
   box-shadow: var(--glass-box-shadow) !important;
   border: none !important;
 }
