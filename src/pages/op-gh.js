@@ -62,7 +62,7 @@ const Opgh = () => {
 
                   <div className="pd-main">
                     <div className="pd-heading-div p-head-arrow">
-                      <a className="pd-main-heading">Haul Truck Operator App</a>
+                      <a className="pd-main-heading">Haul Truck App</a>
                       <img src="img/arrow-down.svg" alt="arrow-down" />
                     </div>
                   </div>
@@ -313,7 +313,7 @@ const Opgh = () => {
                     </div>
                   </div>
 
-                  <ProjectImpact 
+                  <ProjectImpact
                     sectionNumber="08"
                     metrics={[
                       { number: "40%", unit: "fewer", description: "clicks resolving dispatch conflicts" },
@@ -322,7 +322,7 @@ const Opgh = () => {
                     ]}
                   />
 
-                  <ProjectNavigation 
+                  <ProjectNavigation
                     figmaLink="https://www.figma.com/design/FHFhj2BJEMYZMtp9YuSBDs/Groundhog-App--OP----Tablet--?node-id=1-5&t=SspbIQIq6YlYcZmZ-1"
                     previousLink="/Uggh"
                     nextLink="/lms-gh"
