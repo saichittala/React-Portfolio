@@ -28,7 +28,7 @@ const calculateMatch = (text) => {
 
     if (rawRole && rawIndustry && rawExp !== null) {
         // Find match in dataset
-        const matchedRecord = recruiterDataset.find(r => 
+        const matchedRecord = recruiterDataset.find(r =>
             r.role.toLowerCase() === rawRole.toLowerCase() &&
             r.industry.toLowerCase() === rawIndustry.toLowerCase() &&
             r.exp === rawExp
@@ -123,11 +123,11 @@ const calculateMatch = (text) => {
     // If we have role, industry, and exp, try to find the record in dataset
     if (role && industry && exp !== null) {
         const expLevels = [1, 2, 3, 5, 7];
-        const closestExp = expLevels.reduce((prev, curr) => 
+        const closestExp = expLevels.reduce((prev, curr) =>
             Math.abs(curr - exp) < Math.abs(prev - exp) ? curr : prev
         );
 
-        const matchedRecord = recruiterDataset.find(r => 
+        const matchedRecord = recruiterDataset.find(r =>
             r.role.toLowerCase() === role.toLowerCase() &&
             r.industry.toLowerCase() === industry.toLowerCase() &&
             r.exp === closestExp
@@ -156,7 +156,7 @@ const calculateMatch = (text) => {
     const matched = requiredSkills.filter(s => candidateSkills.includes(s));
     const missing = requiredSkills.filter(s => !candidateSkills.includes(s));
     const finalExp = exp || 5;
-    
+
     let score = 54 + 7 * matched.length + 4 * (finalExp - 1);
     score = Math.min(100, Math.max(0, score));
 
@@ -300,7 +300,7 @@ function RecruiterModal({ recruiterMode, setRecruiterMode }) {
                         {/* Left */}
                         <div className="df-g8 gap-8 aic">
                             <span>AI Job Match Analysis</span>
-                            <span className="beta-tag">Beta</span>
+                            {/* <span className="beta-tag">Beta</span> */}
                         </div>
 
                         {/* Right */}
