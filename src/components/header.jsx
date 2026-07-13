@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import RecruiterToggle from "./RecruiterToggle";
+import GlassSurface from './GlassSurface';
 
 function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
   const [menuActive, setMenuActive] = useState(false);
@@ -76,60 +77,17 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
     };
   }, []);
 
-  // 3. The onClick handler for scrolling is no longer needed.
-  // React Router's <Link> component will handle navigation.
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (!scrolled) return;
-
-    const navEl = document.querySelector('.nav-scrolled');
-    if (!navEl) return;
-
-    const updateFilter = () => {
-      const rect = navEl.getBoundingClientRect();
-      const width = rect.width;
-      const height = rect.height;
-      const radius = 36; // border-radius of nav-scrolled is 36px
-      const borderScale = 0.07;
-      const border = Math.min(width, height) * (borderScale * 0.5);
-
-      const svgString = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">
-          <defs>
-            <linearGradient id="red-grad" x1="100%" y1="0%" x2="0%" y2="0%">
-              <stop offset="0%" stop-color="#000"/>
-              <stop offset="100%" stop-color="red"/>
-            </linearGradient>
-            <linearGradient id="blue-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#000"/>
-              <stop offset="100%" stop-color="blue"/>
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="${width}" height="${height}" fill="black"></rect>
-          <rect x="0" y="0" width="${width}" height="${height}" rx="${radius}" fill="url(#red-grad)" />
-          <rect x="0" y="0" width="${width}" height="${height}" rx="${radius}" fill="url(#blue-grad)" style="mix-blend-mode: difference" />
-          <rect x="${border}" y="${border}" width="${width - border * 2}" height="${height - border * 2}" rx="${radius}" fill="hsl(0 0% 50% / 0.93)" style="filter:blur(11px)" />
-        </svg>
-      `;
-
-      const encoded = encodeURIComponent(svgString.trim());
-      const dataUri = `data:image/svg+xml,${encoded}`;
-
-      const feImage = document.querySelector('#filter feImage');
-      if (feImage) {
-        feImage.setAttribute('href', dataUri);
-      }
+    if (typeof window === 'undefined') return;
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 674);
     };
-
-    // Small delay to let CSS transitions stabilize layout dimensions
-    const timeoutId = setTimeout(updateFilter, 150);
-
-    window.addEventListener('resize', updateFilter);
-    return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener('resize', updateFilter);
-    };
-  }, [scrolled]);
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div>
@@ -140,6 +98,30 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
     ${showNavbar ? 'nav-visible' : 'nav-hidden'}
   `}
       >
+        <GlassSurface
+          width="100%"
+          height="100%"
+          borderRadius={isMobile ? 0 : 36}
+          brightness={theme === 'light' ? 100 : 50}
+          opacity={theme === 'light' ? 0.6 : 0.93}
+          blur={11}
+          displace={0}
+          distortionScale={-180}
+          redOffset={0}
+          greenOffset={10}
+          blueOffset={20}
+          yChannel="B"
+          mixBlendMode={theme === 'light' ? 'normal' : 'difference'}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            zIndex: 0,
+            pointerEvents: 'none',
+            opacity: scrolled ? 1 : 0,
+            transition: 'opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1)'
+          }}
+          contentStyle={{ padding: 0 }}
+        />
 
         <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
           <div className="mob-nav-btns">
@@ -244,83 +226,7 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
           </div>
         </div>
       </nav>
-      <svg className="filter" xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
-        <defs>
-          <filter id="filter" colorInterpolationFilters="sRGB">
-            {/* the input displacement image */}
-            <feImage
-              x="0"
-              y="0"
-              width="100%"
-              height="100%"
-              result="map"
-            />
-            {/* the chromatic aberration for the people */}
-            {/* RED channel with strongest displacement */}
-            <feDisplacementMap
-              in="SourceGraphic"
-              in2="map"
-              id="redchannel"
-              xChannelSelector="R"
-              yChannelSelector="B"
-              result="dispRed"
-              scale="-180"
-            />
-            <feColorMatrix
-              in="dispRed"
-              type="matrix"
-              values="1 0 0 0 0
-                      0 0 0 0 0
-                      0 0 0 0 0
-                      0 0 0 1 0"
-              result="red"
-            />
-            {/* GREEN channel (reference / least displaced) */}
-            <feDisplacementMap
-              in="SourceGraphic"
-              in2="map"
-              id="greenchannel"
-              xChannelSelector="R"
-              yChannelSelector="B"
-              result="dispGreen"
-              scale="-170"
-            />
-            <feColorMatrix
-              in="dispGreen"
-              type="matrix"
-              values="0 0 0 0 0
-                      0 1 0 0 0
-                      0 0 0 0 0
-                      0 0 0 1 0"
-              result="green"
-            />
-            {/* BLUE channel with medium displacement */}
-            <feDisplacementMap
-              in="SourceGraphic"
-              in2="map"
-              id="bluechannel"
-              xChannelSelector="R"
-              yChannelSelector="B"
-              result="dispBlue"
-              scale="-160"
-            />
-            <feColorMatrix
-              in="dispBlue"
-              type="matrix"
-              values="0 0 0 0 0
-                      0 0 0 0 0
-                      0 0 1 0 0
-                      0 0 0 1 0"
-              result="blue"
-            />
-            {/* Blend channels back together */}
-            <feBlend in="red" in2="green" mode="screen" result="rg" />
-            <feBlend in="rg" in2="blue" mode="screen" result="output" />
-            {/* output blend */}
-            <feGaussianBlur in="output" stdDeviation="0.7" />
-          </filter>
-        </defs>
-      </svg>
+
     </div>
   );
 }

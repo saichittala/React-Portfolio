@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import GlassSurface from "./GlassSurface";
 
 export default function ConfidentialGate({
     children,
@@ -30,58 +31,6 @@ export default function ConfidentialGate({
             setMessage("Incorrect password");
         }
     };
-
-    const inputRef = useRef(null);
-
-    useEffect(() => {
-        const inputEl = inputRef.current;
-        if (!inputEl) return;
-
-        const updateFilter = () => {
-            const rect = inputEl.getBoundingClientRect();
-            const width = rect.width;
-            const height = rect.height;
-            const radius = 12; // Matches var(--border-radius-4)
-            const borderScale = 0.07;
-            const border = Math.min(width, height) * (borderScale * 0.5);
-
-            const svgString = `
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}">
-                  <defs>
-                    <linearGradient id="input-red-grad" x1="100%" y1="0%" x2="0%" y2="0%">
-                      <stop offset="0%" stop-color="#000"/>
-                      <stop offset="100%" stop-color="red"/>
-                    </linearGradient>
-                    <linearGradient id="input-blue-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stop-color="#000"/>
-                      <stop offset="100%" stop-color="blue"/>
-                    </linearGradient>
-                  </defs>
-                  <rect x="0" y="0" width="${width}" height="${height}" fill="black"></rect>
-                  <rect x="0" y="0" width="${width}" height="${height}" rx="${radius}" fill="url(#input-red-grad)" />
-                  <rect x="0" y="0" width="${width}" height="${height}" rx="${radius}" fill="url(#input-blue-grad)" style="mix-blend-mode: difference" />
-                  <rect x="${border}" y="${border}" width="${width - border * 2}" height="${height - border * 2}" rx="${radius}" fill="hsl(0 0% 50% / 0.93)" style="filter:blur(11px)" />
-                </svg>
-            `;
-
-            const encoded = encodeURIComponent(svgString.trim());
-            const dataUri = `data:image/svg+xml,${encoded}`;
-
-            const feImage = document.querySelector('#input-filter feImage');
-            if (feImage) {
-                feImage.setAttribute('href', dataUri);
-            }
-        };
-
-        // Delay slightly to ensure browser has completed layout styles
-        const timeoutId = setTimeout(updateFilter, 150);
-
-        window.addEventListener('resize', updateFilter);
-        return () => {
-            clearTimeout(timeoutId);
-            window.removeEventListener('resize', updateFilter);
-        };
-    }, []);
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
@@ -136,7 +85,18 @@ export default function ConfidentialGate({
 
                         <div className="confidential-actions lux-form-wrapper">
 
-                             <div className="confidential-input-wrapper" ref={inputRef}>
+                             <GlassSurface
+                                width="100%"
+                                height="auto"
+                                borderRadius={12}
+                                distortionScale={-40}
+                                redOffset={0}
+                                greenOffset={5}
+                                blueOffset={10}
+                                yChannel="B"
+                                className="confidential-input-glass-wrapper"
+                                contentStyle={{ padding: 0 }}
+                             >
                                 <input
                                     className="confidential-input"
                                     type={showPassword ? "text" : "password"}
@@ -156,7 +116,7 @@ export default function ConfidentialGate({
                                 >
                                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                                 </span>
-                            </div>
+                             </GlassSurface>
 
                             {message && (
                                 <p
@@ -200,77 +160,6 @@ export default function ConfidentialGate({
             >
                 {children}
             </div>
-
-            <svg className="filter" xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
-                <defs>
-                    <filter id="input-filter" colorInterpolationFilters="sRGB">
-                        <feImage
-                            x="0"
-                            y="0"
-                            width="100%"
-                            height="100%"
-                            result="map"
-                        />
-                        <feDisplacementMap
-                            in="SourceGraphic"
-                            in2="map"
-                            id="input-redchannel"
-                            xChannelSelector="R"
-                            yChannelSelector="B"
-                            result="dispRed"
-                            scale="-40"
-                        />
-                        <feColorMatrix
-                            in="dispRed"
-                            type="matrix"
-                            values="1 0 0 0 0
-                                    0 0 0 0 0
-                                    0 0 0 0 0
-                                    0 0 0 1 0"
-                            result="red"
-                        />
-                        <feDisplacementMap
-                            in="SourceGraphic"
-                            in2="map"
-                            id="input-greenchannel"
-                            xChannelSelector="R"
-                            yChannelSelector="B"
-                            result="dispGreen"
-                            scale="-35"
-                        />
-                        <feColorMatrix
-                            in="dispGreen"
-                            type="matrix"
-                            values="0 0 0 0 0
-                                    0 1 0 0 0
-                                    0 0 0 0 0
-                                    0 0 0 1 0"
-                            result="green"
-                        />
-                        <feDisplacementMap
-                            in="SourceGraphic"
-                            in2="map"
-                            id="input-bluechannel"
-                            xChannelSelector="R"
-                            yChannelSelector="B"
-                            result="dispBlue"
-                            scale="-30"
-                        />
-                        <feColorMatrix
-                            in="dispBlue"
-                            type="matrix"
-                            values="0 0 0 0 0
-                                    0 0 0 0 0
-                                    0 0 1 0 0
-                                    0 0 0 1 0"
-                            result="blue"
-                        />
-                        <feBlend in="red" in2="green" mode="screen" result="rg" />
-                        <feBlend in="rg" in2="blue" mode="screen" result="output" />
-                        <feGaussianBlur in="output" stdDeviation="0.7" />
-                    </filter>
-                </defs>
-            </svg>
         </>
     );
 }
