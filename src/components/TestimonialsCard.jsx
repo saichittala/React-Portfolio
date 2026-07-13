@@ -13,6 +13,21 @@ const TestimonialsCard = () => {
       name: "Abydas Abu",
       role: "CEO, Yalla Gai",
     },
+    {
+      text: "Sai is an exceptionally talented designer who bridges the gap between complex user requirements and clean, modern aesthetics. His design system work saved our development team countless hours. He is proactive, highly collaborative, and receptive to feedback. Highly recommended!",
+      name: "Ram Kadiayala",
+      role: "Head of Design, Medplus",
+    },
+    {
+      text: "Working with Sai was a game-changer for our mobile app redesign. He has a rare ability to translate messy brainstorms into sleek, intuitive interfaces. His interactive prototypes were incredibly detailed and helped us align the stakeholders instantly. An absolute pleasure to work with.",
+      name: "Jack Daniels",
+      role: "Principle Product Designer, TarkaLabs",
+    },
+    {
+      text: "Sai's dedication to user research and visual excellence really set him apart. He redesigned our B2B dashboard, making complex analytics clear and actionable for our customers. He iterates quickly and delivers top-notch files that are ready for implementation. We'll definitely work together again.",
+      name: "Rajesh Kumar",
+      role: "CEO, Firstricoz",
+    },
   ];
 
   const [index, setIndex] = useState(0);
@@ -140,11 +155,10 @@ const TestimonialsCard = () => {
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`bubble-dots ${
-                i === index
-                  ? "bubble-dots-active"
-                  : "bubble-dots-inactive"
-              }`}
+              className={`bubble-dots ${i === index
+                ? "bubble-dots-active"
+                : "bubble-dots-inactive"
+                }`}
             ></button>
           ))}
         </div>
