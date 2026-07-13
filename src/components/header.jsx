@@ -124,7 +124,24 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
         />
 
         <div className={`menu-container ${menuActive ? 'active' : ''}`} id="menu-container">
-          <div className="mob-nav-btns">
+          <GlassSurface
+            width="100%"
+            height="100%"
+            borderRadius={0}
+            distortionScale={-20}
+            redOffset={0}
+            greenOffset={2}
+            blueOffset={4}
+            yChannel="B"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              zIndex: 0,
+              pointerEvents: 'none'
+            }}
+            contentStyle={{ padding: 0 }}
+          />
+          <div className="mob-nav-btns" style={{ position: 'relative', zIndex: 2 }}>
             <Link
               to="/works"
               className="about-button btn-1 mob-btn-1 border-none"

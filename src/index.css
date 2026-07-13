@@ -927,10 +927,10 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    background: #00000050;
+    background: transparent !important;
     transition: position .3s cubic-bezier(0, -.6, 0, 1.07);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     visibility: hidden;
     z-index: 0;
 }
@@ -3528,8 +3528,8 @@ a {
         transition: opacity 0.5s cubic-bezier(0, -.6, 0, 1.07), transform 0.5s cubic-bezier(0, -.6, 0, 1.07), height 0.5s cubic-bezier(0, -.6, 0, 1.07);
         opacity: 0;
         height: 10vh;
-        background: var(--black-color);
-        border-bottom: 0.8px solid var(--border-color);
+        background: transparent !important;
+        border: none !important;
         box-sizing: border-box;
         z-index: 10;
         /* Ensure the menu is on top of other content */
@@ -3619,7 +3619,7 @@ a {
         visibility: visible;
         height: auto;
         padding: 36px;
-        border: 0.8px solid var(--border-color);
+        border: none !important;
         transition: .4s padding cubic-bezier(0, -.6, 0, 1.07), opacity 0.5s cubic-bezier(0, -.6, 0, 1.07), transform 0.5s cubic-bezier(0, -.6, 0, 1.07), height 0.5s cubic-bezier(0, -.6, 0, 1.07);
 
     }
