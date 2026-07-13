@@ -2668,6 +2668,27 @@ textarea {
     -webkit-mask-image: linear-gradient(to right, transparent, #fff 15%, #fff 85%, transparent);
 }
 
+.testimonials-marquee-container::before,
+.testimonials-marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.testimonials-marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--black-color) 0%, transparent 100%);
+}
+
+.testimonials-marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--black-color) 0%, transparent 100%);
+}
+
 .testimonials-marquee-track {
     display: flex;
     width: max-content;
