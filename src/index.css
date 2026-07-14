@@ -3184,10 +3184,27 @@ textarea {
 .bg-footer {
     width: calc(min(1440px, 100vw) - var(--ps-gutter) / 4);
     margin: auto;
-    padding: 48px 0;
+    padding: 64px 0 48px 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
     border-top: 0.8px solid var(--border-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border-top: 0.8px solid var(--border-color);
+    padding-top: 24px;
+}
+
+.footer-copyright {
+    font-size: var(--font-size-sm);
+    color: var(--grey-bg-b-color) !important;
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.02em;
 }
 
 .footer-main {

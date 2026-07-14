@@ -39,6 +39,13 @@ function Footer() {
                                 <a href="Resume.pdf" className="footer-white footer-link">Resume</a>
                             </div>
                         </div>
+
+                        {/* Footer Bottom / Copyright */}
+                        <div className="footer-bottom">
+                            <span className="footer-copyright">
+                                © 2026 Sai Chittala. All Rights Reserved.
+                            </span>
+                        </div>
                     </div>
                 </div>
             </section>
