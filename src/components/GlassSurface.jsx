@@ -153,6 +153,15 @@ const GlassSurface = ({
     if (typeof window === 'undefined' || typeof document === 'undefined') {
       return false;
     }
+
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    const isFirefox = /Firefox/.test(navigator.userAgent);
+
+    if (isIOS || isSafari || isFirefox) {
+      return false;
+    }
+
     return true;
   };
 
