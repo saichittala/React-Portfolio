@@ -28,6 +28,9 @@ function About() {
                                         <p className='width-100' style={{ fontSize: '20px', lineHeight: '1.6', margin: 0 }}>
                                             I partner closely with product managers and engineers to build user-centered products that balance business goals, technical feasibility, and exceptional user experiences.
                                         </p>
+                                        <p className='width-100' style={{ fontSize: '20px', lineHeight: '1.6', margin: 0 }}>
+                                            I design products that reduce complexity, improve efficiency, and create measurable business impact.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
