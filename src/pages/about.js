@@ -1,9 +1,13 @@
 import useFadeIn from '../components/useFadeIn';
 import SmoothScrollProvider from '../components/Scrollsmooth';
 import ProjectImpact from '../components/ProjectImpact';
+import useScrollReveal from '../components/useScrollReveal';
+import { Link } from 'react-router-dom';
+import Footer from '../components/footer';
 
 function About() {
     useFadeIn();
+    useScrollReveal();
     return (
         <div className="content cursor" id="content">
             {/* <SmoothScrollProvider duration={1.3}> */}
@@ -75,41 +79,44 @@ function About() {
                                 </div>
                             </div>
                             <div className="about-metrics-section fade-inn">
-                                <h3 className="content-div-main-heading-2">Key Metrics & Impact</h3>
                                 <ProjectImpact
-                                    sectionNumber="01"
-                                    title="UG Mining Operator App"
+                                    sectionNumber=""
+                                    title="Key Impact Metrics"
                                     metrics={[
-                                        { number: "30%", unit: "reduction", description: "fewer core operator interactions" },
-                                        { number: "44px", unit: "minimum", description: "targets optimized for gloves" },
-                                        { number: "2x", unit: "faster", description: "retrieval in low visibility" }
+                                        { number: "30%", unit: "reduction", description: "in core operator interactions across underground systems" },
+                                        { number: "40%", unit: "fewer", description: "clicks required to resolve haul truck dispatch conflicts" },
+                                        { number: "50%", unit: "faster", description: "onboarding setup and course completion time" },
+                                        { number: "15s", unit: "reduction", description: "in operator response latency to critical dispatch alerts" }
                                     ]}
                                 />
-                                <ProjectImpact
-                                    sectionNumber="02"
-                                    title="Alert Dispatch App"
-                                    metrics={[
-                                        { number: "40%", unit: "fewer", description: "clicks resolving dispatch conflicts" },
-                                        { number: "100%", unit: "visibility", description: "real-time truck state tracking" },
-                                        { number: "15s", unit: "reduction", description: "faster response to alerts" }
-                                    ]}
-                                />
-                                <ProjectImpact
-                                    sectionNumber="03"
-                                    title="LMS Safety Onboarding"
-                                    metrics={[
-                                        { number: "3x", unit: "increase", description: "safety course registration growth" },
-                                        { number: "50%", unit: "faster", description: "onboarding setup completion time" },
-                                        { number: "98%", unit: "completion", description: "compliance certification course rate" }
-                                    ]}
-                                />
+                            </div>
+                        </div>
+                        {/* Hero CTA Section */}
+                        <div className="hero-cta-section fade-in">
+                            <div className="bg-main hero-cta-container fadeup">
+                                <h2 className="hero-cta-heading">
+                                    Ready to build something <span>people love?</span>
+                                </h2>
+                                <div className="hero-cta-button-wrapper">
+                                    <div className="hero-cta-avatar">
+                                        <img src="img/profile-new.webp" alt="Sai Chittala" />
+                                    </div>
+                                    <Link to="/contact" className="hero-cta-button">
+                                        <span>Let's Talk</span>
+                                        <div className="hero-cta-arrow">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                                <path d="M5 12h14M12 5l7 7-7 7" />
+                                            </svg>
+                                        </div>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
             {/* </SmoothScrollProvider> */}
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
