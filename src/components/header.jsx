@@ -128,10 +128,10 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
             width="100%"
             height="100%"
             borderRadius={0}
-            distortionScale={-20}
+            distortionScale={-180}
             redOffset={0}
-            greenOffset={2}
-            blueOffset={4}
+            greenOffset={10}
+            blueOffset={20}
             yChannel="B"
             style={{
               position: 'absolute',
