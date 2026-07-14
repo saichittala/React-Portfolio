@@ -3,7 +3,6 @@ import Footer from '../components/footer';
 import 'img-comparison-slider';
 import 'img-comparison-slider/dist/styles.css';
 import BubbleButton from '../components/BubbleButton';
-import { use } from 'react';
 import LazyImage from '../components/LazyImage';
 import ConfidentialGate from '../components/ConfidentialGate';
 import useScrollReveal from '../components/useScrollReveal';
@@ -14,10 +13,6 @@ import ProjectImpact from '../components/ProjectImpact';
 const Uggh = () => {
   useScrollReveal();
 
-  // FullScrollFadeIn();
-  // useFadeIn();
-  // useScrollEffect();
-  // ZoomOnScroll();
   const UgghRef = React.useRef(null);
   const [isMobile] = useState(window.innerWidth <= 674);
   const [isSummaryPopupVisible, setIsSummaryPopupVisible] = useState(false);

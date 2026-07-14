@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer';
-// import useFadeIn from '../components/useFadeIn';
-
-// import FullScrollFadeIn from '../components/FullScrollFadeIn';
-// import useScrollEffect from '../components/useScrollEffect';
-// import ZoomOnScroll from '../components/ZoomOnScroll';
 import 'img-comparison-slider';
 import 'img-comparison-slider/dist/styles.css';
 import BubbleButton from '../components/BubbleButton';
-import { use } from 'react';
-// import SmoothScrollProvider from '../components/Scrollsmooth';
 import LazyImage from '../components/LazyImage';
 import ConfidentialGate from '../components/ConfidentialGate';
 import useScrollReveal from '../components/useScrollReveal';
@@ -19,10 +12,6 @@ import ProjectNavigation from '../components/ProjectNavigation';
 const CustomFurnish = () => {
   useScrollReveal();
 
-  // FullScrollFadeIn();
-  // useFadeIn();
-  // useScrollEffect();
-  // ZoomOnScroll();
   const customfurnishRef = React.useRef(null);
   const [isMobile] = useState(window.innerWidth <= 674);
   useEffect(() => {

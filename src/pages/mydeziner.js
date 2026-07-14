@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Footer from '../components/footer';
-import FullScrollFadeIn from '../components/FullScrollFadeIn';
 import useFadeIn from '../components/useFadeIn';
 
 import useScrollEffect from '../components/useScrollEffect';
@@ -8,7 +7,6 @@ import ZoomOnScroll from '../components/ZoomOnScroll';
 import 'img-comparison-slider';
 import 'img-comparison-slider/dist/styles.css';
 import BubbleButton from '../components/BubbleButton';
-// import SmoothScrollProvider from '../components/Scrollsmooth';
 import LazyImage from '../components/LazyImage';
 import ProjectNavigation from '../components/ProjectNavigation';
 
@@ -16,7 +14,6 @@ import ProjectNavigation from '../components/ProjectNavigation';
 
 const MyDeziner = () => {
 
-  // FullScrollFadeIn();
   useFadeIn();
   useScrollEffect();
   ZoomOnScroll();
