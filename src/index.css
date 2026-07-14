@@ -6085,6 +6085,8 @@ img-comparison-slider img {
 
 .lock-popup-content {
     border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .error-message-style {
