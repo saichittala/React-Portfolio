@@ -2969,7 +2969,6 @@ textarea {
     z-index: 100000;
     overflow-y: hidden !important;
     animation: fadeIn 0.1s cubic-bezier(0, -.6, 0, 1.07);
-    backdrop-filter: blur(6px);
     overflow: hidden;
 }
 
@@ -6083,10 +6082,10 @@ img-comparison-slider img {
     z-index: 100000 !important;
 }
 
-.lock-popup-content {
+div.popup-content.lock-popup-content {
     border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
+    /* background: transparent !important;
+    box-shadow: none !important; */
 }
 
 .error-message-style {

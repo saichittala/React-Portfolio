@@ -112,12 +112,12 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
 
 
         </div>
-        <div>
-        <div className="unlock-projects cursor-link" onClick={handlePasswordSubmit}>
-          {/* <img src="img/unlock.svg" alt="unlock" /> */}
-          <a>Unlock</a>
-        </div>
-        <p className="popup-info-text df-g8 gap-8">
+        <div className='width-100'>
+          <div className="unlock-projects cursor-link" onClick={handlePasswordSubmit}>
+            {/* <img src="img/unlock.svg" alt="unlock" /> */}
+            <a>Unlock</a>
+          </div>
+          <p className="popup-info-text df-g8 gap-8">
             <img src="img/info.svg" alt="lock" />
             <div>
               {"Protected. Available upon "}
