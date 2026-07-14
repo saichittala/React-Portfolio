@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Eye, EyeOff } from 'lucide-react';
+import GlassSurface from './GlassSurface';
 
 const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect }) => {
   const passwordInputRef = useRef(null);
@@ -57,7 +58,17 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
 
   const popupElement = (
     <div id="passwordPopup" className="popup lock-popup-override">
-      <div className="popup-content lock-popup-content">
+      <GlassSurface
+        className="popup-content lock-popup-content"
+        borderRadius={24}
+        distortionScale={-20}
+        redOffset={0}
+        greenOffset={2}
+        blueOffset={4}
+        yChannel="B"
+        style={{ padding: 0 }}
+        contentStyle={{ padding: '56px', display: 'flex', flexDirection: 'column', gap: '32px', width: '100%', boxSizing: 'border-box' }}
+      >
         <div className="popup-header">
           <div className='df-g8 popup-lock-img '>
             <img className="icon-theme" src="img/lock-1.svg" alt="lock" />
@@ -97,7 +108,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
               Incorrect password. Please try again.</p>
           }
 
-          
+
         </div>
         <div>
         <div className="unlock-projects cursor-link" onClick={handlePasswordSubmit}>
@@ -118,9 +129,7 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
           </p>
 
         </div>
-
-        
-      </div>
+      </GlassSurface>
     </div>
   );
 
