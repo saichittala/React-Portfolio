@@ -18,12 +18,44 @@ function About() {
                             <div className='about-main'>
                                 <img src="img/profile-new.webp" alt="" className="fade-inn" loading="lazy" />
                                 <div className='df-g8 gap-36 fd-c width-100'>
-                                    <p className='width-100'><a className='cursor-link width-100' href='https://www.upwork.com/freelancers/~01762e36a0d1eb9abf/' target='blank'>Sai Chittala</a> is a Senior Product Designer at <a className='cursor-link' href='https://www.groundhogapps.com/' target='blank'>GroundHogApps</a>, with a total of 4+ years of hands-on experience, where I've meticulously crafted visually stunning and inituitive interfaces entirely through my creative touch, utilizing industry-standard tools to consistently set new design standards. Past: <a className='cursor-link' href='https://www.customfurnish.com/' target='blank'>CustomFurnish</a>, <a className='cursor-link' href='https://www.ricoz.in' target='blank'>Ricoz</a>, <a className='cursor-link' href='https://www.upwork.com' >Upwork</a> </p>
-
-                                    <div className="experience-container">
-                                        <h3 className="fade-in content-div-main-heading-2 margin-unset">
-                                            Experience
-                                        </h3>
+                                    <div className='flex-col-g16-mt24' style={{ gap: '20px', marginTop: 0 }}>
+                                        <p className='width-100' style={{ fontSize: 'var(--font-size-base)', lineHeight: '1.6', margin: 0 }}>
+                                            I'm a Senior Product Designer with 4+ years of experience designing enterprise SaaS, AI-powered, and B2B products that solve complex business challenges through intuitive, scalable user experiences.
+                                        </p>
+                                        <p className='width-100' style={{ fontSize: 'var(--font-size-base)', lineHeight: '1.6', margin: 0 }}>
+                                            Currently at <a className='cursor-link' href='https://www.groundhogapps.com/' target='blank'>GroundHog Apps</a>, I design mission-critical mining automation products used in industrial operations, simplifying complex workflows, improving operational efficiency, and helping teams make faster, data-driven decisions. Previously, I've designed AI-powered interior design platforms, real estate experiences, and digital products across startups and freelance engagements.
+                                        </p>
+                                        <p className='width-100' style={{ fontSize: 'var(--font-size-base)', lineHeight: '1.6', margin: 0 }}>
+                                            I specialize in transforming ambiguity into clear product strategies by combining user research, systems thinking, interaction design, rapid prototyping, usability testing, and scalable design systems. I work closely with product managers, engineers, and business stakeholders to deliver solutions that balance user needs, technical feasibility, and business goals.
+                                        </p>
+                                        <p className='width-100' style={{ fontSize: 'var(--font-size-base)', lineHeight: '1.6', margin: 0 }}>
+                                            My work has contributed to measurable outcomes, including reducing user interactions by 30%, improving task completion by 60%, increasing lead conversions by 38%, and reducing development rework by 50% through scalable design systems.
+                                        </p>
+                                        <p className='width-100' style={{ fontSize: 'var(--font-size-base)', lineHeight: '1.6', margin: 0 }}>
+                                            I believe exceptional products aren't defined by beautiful interfaces—they're defined by how effortlessly users achieve their goals. Every decision I make is driven by clarity, usability, accessibility, and measurable business impact.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="about-metrics-section fade-inn">
+                                <ProjectImpact
+                                    sectionNumber=""
+                                    title="Key Impact Metrics"
+                                    metrics={[
+                                        { number: "30%", unit: "reduction", description: "in core operator interactions across underground systems" },
+                                        { number: "40%", unit: "fewer", description: "clicks required to resolve haul truck dispatch conflicts" },
+                                        { number: "50%", unit: "faster", description: "onboarding setup and course completion time" },
+                                        { number: "15s", unit: "reduction", description: "in operator response latency to critical dispatch alerts" }
+                                    ]}
+                                />
+                            </div>
+                            <div className="about-experience-section fade-inn" style={{ marginTop: '80px', width: '100%' }}>
+                                <div className="project-details padding-top-unset">
+                                    <div className="project-breif-heading width-800 fade-inn">
+                                        <span>05</span>
+                                        <span>Experience</span>
+                                    </div>
+                                    <div className="content-div-main fade-inn width-800" style={{ paddingBottom: 0 }}>
                                         <div className="timeline fade-in">
                                             {[
                                                 {
@@ -77,18 +109,6 @@ function About() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="about-metrics-section fade-inn">
-                                <ProjectImpact
-                                    sectionNumber=""
-                                    title="Key Impact Metrics"
-                                    metrics={[
-                                        { number: "30%", unit: "reduction", description: "in core operator interactions across underground systems" },
-                                        { number: "40%", unit: "fewer", description: "clicks required to resolve haul truck dispatch conflicts" },
-                                        { number: "50%", unit: "faster", description: "onboarding setup and course completion time" },
-                                        { number: "15s", unit: "reduction", description: "in operator response latency to critical dispatch alerts" }
-                                    ]}
-                                />
                             </div>
                         </div>
                         {/* Hero CTA Section */}
