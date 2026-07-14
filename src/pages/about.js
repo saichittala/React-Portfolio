@@ -26,10 +26,10 @@ function About() {
                                             At <a className='cursor-link' href='https://www.groundhogapps.com/' target='blank'>GroundHog Apps</a>, I design mission-critical mining automation products used in industrial operations. Previously, I worked on AI-powered interior design and real estate platforms, delivering solutions that increased lead conversions by 38%, reduced task completion time by 60%, reduced user interactions by 30%, and cut development rework by 50% through scalable design systems.
                                         </p>
                                         <p className='width-100' style={{ fontSize: 'var(--font-size-md)', lineHeight: '1.6', margin: 0 }}>
-                                            I partner closely with product managers and engineers to build user-centered products that balance business goals, technical feasibility, and exceptional user experiences.
+                                            I believe great product design goes beyond creating polished interfaces—it starts with understanding user needs, business objectives, and technical constraints. By combining user research, systems thinking, rapid prototyping, and close collaboration with cross-functional teams, I create products that are intuitive, scalable, and built to deliver lasting value.
                                         </p>
                                         <p className='width-100' style={{ fontSize: 'var(--font-size-md)', lineHeight: '1.6', margin: 0 }}>
-                                            I design products that reduce complexity, improve efficiency, and create measurable business impact.
+                                            I partner closely with product managers and engineers to build user-centered products that balance business goals, technical feasibility, and exceptional user experiences.
                                         </p>
                                     </div>
                                 </div>
