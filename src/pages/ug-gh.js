@@ -405,7 +405,7 @@ const Uggh = () => {
                               </div>
                             </div>
                             <div>
-                              <span>Quick Discussions</span>
+                              <span>Collaborative Brainstorming</span>
                               <div className="reveal">
                                 <div className="image-wrap">
                                   <img src="img/projects/gh_ug/team-meeting.webp" alt="Research Insights" loading="lazy" />
