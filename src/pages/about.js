@@ -18,7 +18,7 @@ function About() {
                             <div className='about-main'>
                                 <img src="img/profile-new.webp" alt="" className="fade-inn" loading="lazy" />
                                 <div className='df-g8 gap-36 fd-c width-100'>
-                                    <div className='flex-col-g16-mt24' style={{ gap: '20px', marginTop: 0 }}>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginTop: 0 }}>
                                         <p className='width-100' style={{ fontSize: '20px', lineHeight: '1.6', margin: 0 }}>
                                             I'm a Senior Product Designer with 4+ years of experience designing enterprise SaaS, AI-powered, and B2B products. I specialize in simplifying complex workflows into intuitive, scalable experiences that improve usability and drive measurable business outcomes.
                                         </p>
