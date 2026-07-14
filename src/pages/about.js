@@ -19,16 +19,16 @@ function About() {
                                 <img src="img/profile-new.webp" alt="" className="fade-inn" loading="lazy" />
                                 <div className='df-g8 gap-36 fd-c width-100'>
                                     <div className='flex-col-g16-mt24' style={{ gap: '20px', marginTop: 0 }}>
-                                        <p className='width-100' style={{ fontSize: 'var(--font-size-md)', lineHeight: '1.6', margin: 0 }}>
+                                        <p className='width-100' style={{ fontSize: '20px', lineHeight: '1.6', margin: 0 }}>
                                             I'm a Senior Product Designer with 4+ years of experience designing enterprise SaaS, AI-powered, and B2B products. I specialize in simplifying complex workflows into intuitive, scalable experiences that improve usability and drive measurable business outcomes.
                                         </p>
-                                        <p className='width-100' style={{ fontSize: 'var(--font-size-md)', lineHeight: '1.6', margin: 0 }}>
+                                        <p className='width-100' style={{ fontSize: '20px', lineHeight: '1.6', margin: 0 }}>
                                             At <a className='cursor-link' href='https://www.groundhogapps.com/' target='blank'>GroundHog Apps</a>, I design mission-critical mining automation products used in industrial operations. Previously, I worked on AI-powered interior design and real estate platforms, delivering solutions that increased lead conversions by 38%, reduced task completion time by 60%, reduced user interactions by 30%, and cut development rework by 50% through scalable design systems.
                                         </p>
-                                        <p className='width-100' style={{ fontSize: 'var(--font-size-md)', lineHeight: '1.6', margin: 0 }}>
+                                        <p className='width-100' style={{ fontSize: '20px', lineHeight: '1.6', margin: 0 }}>
                                             I believe great product design goes beyond creating polished interfaces—it starts with understanding user needs, business objectives, and technical constraints. By combining user research, systems thinking, rapid prototyping, and close collaboration with cross-functional teams, I create products that are intuitive, scalable, and built to deliver lasting value.
                                         </p>
-                                        <p className='width-100' style={{ fontSize: 'var(--font-size-md)', lineHeight: '1.6', margin: 0 }}>
+                                        <p className='width-100' style={{ fontSize: '20px', lineHeight: '1.6', margin: 0 }}>
                                             I partner closely with product managers and engineers to build user-centered products that balance business goals, technical feasibility, and exceptional user experiences.
                                         </p>
                                     </div>
