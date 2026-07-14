@@ -1,5 +1,6 @@
 import useFadeIn from '../components/useFadeIn';
 import SmoothScrollProvider from '../components/Scrollsmooth';
+import ProjectImpact from '../components/ProjectImpact';
 
 function About() {
     useFadeIn();
@@ -75,59 +76,33 @@ function About() {
                             </div>
                             <div className="about-metrics-section fade-inn">
                                 <h3 className="content-div-main-heading-2">Key Metrics & Impact</h3>
-                                <div className="about-metrics-grid">
-                                    <div className="about-metrics-card">
-                                        <span className="metrics-card-subtitle">UG Mining Operator App</span>
-                                        <div className="metrics-list">
-                                            <div className="metric-item">
-                                                <span className="metric-number">30%</span>
-                                                <span className="metric-desc">Reduction in core operator interactions</span>
-                                            </div>
-                                            <div className="metric-item">
-                                                <span className="metric-number">44px</span>
-                                                <span className="metric-desc">Minimum target sizes optimized for heavy gloves</span>
-                                            </div>
-                                            <div className="metric-item">
-                                                <span className="metric-number">2x</span>
-                                                <span className="metric-desc">Faster information retrieval in low-visibility</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="about-metrics-card">
-                                        <span className="metrics-card-subtitle">Alert Dispatch App</span>
-                                        <div className="metrics-list">
-                                            <div className="metric-item">
-                                                <span className="metric-number">40%</span>
-                                                <span className="metric-desc">Fewer clicks required to resolve dispatch conflicts</span>
-                                            </div>
-                                            <div className="metric-item">
-                                                <span className="metric-number">100%</span>
-                                                <span className="metric-desc">Visibility of real-time haul truck states</span>
-                                            </div>
-                                            <div className="metric-item">
-                                                <span className="metric-number">15s</span>
-                                                <span className="metric-desc">Reduction in response time to critical alerts</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="about-metrics-card">
-                                        <span className="metrics-card-subtitle">LMS Safety Onboarding</span>
-                                        <div className="metrics-list">
-                                            <div className="metric-item">
-                                                <span className="metric-number">3x</span>
-                                                <span className="metric-desc">Increase in safety course registration growth</span>
-                                            </div>
-                                            <div className="metric-item">
-                                                <span className="metric-number">50%</span>
-                                                <span className="metric-desc">Faster onboarding setup completion time</span>
-                                            </div>
-                                            <div className="metric-item">
-                                                <span className="metric-number">98%</span>
-                                                <span className="metric-desc">Completion rate on compliance certification courses</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ProjectImpact
+                                    sectionNumber="01"
+                                    title="UG Mining Operator App"
+                                    metrics={[
+                                        { number: "30%", unit: "reduction", description: "fewer core operator interactions" },
+                                        { number: "44px", unit: "minimum", description: "targets optimized for gloves" },
+                                        { number: "2x", unit: "faster", description: "retrieval in low visibility" }
+                                    ]}
+                                />
+                                <ProjectImpact
+                                    sectionNumber="02"
+                                    title="Alert Dispatch App"
+                                    metrics={[
+                                        { number: "40%", unit: "fewer", description: "clicks resolving dispatch conflicts" },
+                                        { number: "100%", unit: "visibility", description: "real-time truck state tracking" },
+                                        { number: "15s", unit: "reduction", description: "faster response to alerts" }
+                                    ]}
+                                />
+                                <ProjectImpact
+                                    sectionNumber="03"
+                                    title="LMS Safety Onboarding"
+                                    metrics={[
+                                        { number: "3x", unit: "increase", description: "safety course registration growth" },
+                                        { number: "50%", unit: "faster", description: "onboarding setup completion time" },
+                                        { number: "98%", unit: "completion", description: "compliance certification course rate" }
+                                    ]}
+                                />
                             </div>
                         </div>
                     </div>

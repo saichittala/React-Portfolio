@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProjectImpact({ sectionNumber = "08", metrics = [] }) {
+function ProjectImpact({ sectionNumber = "08", title = "Impact", metrics = [] }) {
   if (!metrics || metrics.length === 0) return null;
 
   return (
@@ -9,7 +9,7 @@ function ProjectImpact({ sectionNumber = "08", metrics = [] }) {
         <div className="project-details padding-top-unset">
           <div className="project-breif-heading width-800 fade-inn">
             <span>{sectionNumber}</span>
-            <span>Impact</span>
+            <span>{title}</span>
           </div>
           <div className="content-div-main fade-inn width-800 medium-case-study" style={{ paddingBottom: 0 }}>
             <div className="impact-container">
