@@ -367,8 +367,19 @@ const Uggh = () => {
                             <li>User interviews with mining operators</li>
                             <li>Review of operational tasks and edge cases</li>
                           </ul>
-                          <h3 className="fade-inn section-heading translate-text-up">Let's Take a look at some of the research part behind this</h3>
+                          <h3 className="fade-inn section-heading translate-text-up">Research That Shaped Every Design Decision</h3>
                           <div className="image-group">
+                            <div>
+                              <span>Stakeholder Workshops</span>
+                              <p className="fade-inn" style={{ marginTop: '-4px', marginBottom: '16px', color: 'var(--text-color)', opacity: 0.8, fontSize: 'var(--font-size-xs)' }}>
+                                Interviewed operators and cross-functional stakeholders to uncover workflow bottlenecks, operational challenges, and opportunities for improving the underground operator experience.
+                              </p>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/stakeholder-input.webp" alt="Stakeholder Workshops" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
                             <div>
                               <span>Empathy Map</span>
                               <div className="reveal">
@@ -390,6 +401,14 @@ const Uggh = () => {
                               <div className="reveal">
                                 <div className="image-wrap">
                                   <img src="img/projects/gh_ug/research_insights.webp" alt="Research Insights" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Quick Discussions</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/team-meeting.webp" alt="Research Insights" loading="lazy" />
                                 </div>
                               </div>
                             </div>
