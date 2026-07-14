@@ -60,6 +60,8 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
     <div id="passwordPopup" className="popup lock-popup-override">
       <GlassSurface
         className="popup-content lock-popup-content"
+        width="auto"
+        height="auto"
         borderRadius={24}
         distortionScale={-20}
         redOffset={0}
