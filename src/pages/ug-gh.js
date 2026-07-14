@@ -342,17 +342,6 @@ const Uggh = () => {
                           <p className='fade-inn'>Before proposing solutions, we needed to understand the environment in which the product was used. Unlike traditional enterprise applications used in offices, the UG Operator App supports operators working in underground mines—where low visibility, constant machine vibration, heavy protective gloves, and time-critical decisions are part of everyday operations.</p>
                           <p className='fade-inn'>In this context, every interaction carries a cost. Extra taps, unclear information, or small touch targets don't just slow users down—they interrupt operational workflows.</p>
                           <p className='fade-inn'>Rather than starting with the interface, we focused on understanding the people, the environment, and the operational constraints that shaped their experience.</p>
-
-                          <span className="fade-inn section-subtitle-italic translate-text-up">Research Activities</span>
-                          <ul className='fade-inn medium-list'>
-                            <li>Stakeholder workshops</li>
-                            <li>Workflow analysis</li>
-                            <li>Existing product audit</li>
-                            <li>Contextual observation</li>
-                            <li>User interviews with mining operators</li>
-                            <li>Review of operational tasks and edge cases</li>
-                          </ul>
-
                           <div className="image-group">
                             <video
                               autoPlay
@@ -368,6 +357,44 @@ const Uggh = () => {
                           <img src="img/projects/gh_ug/operator-observation.webp" alt="Operator Observation" className="fade-inn" loading="lazy" />
                           <img src="img/projects/gh_ug/stakeholder-workshop.webp" alt="Stakeholder Workshop" className="fade-inn" loading="lazy" /> */}
                           </div>
+
+                          <span className="fade-inn section-subtitle-italic translate-text-up">Research Activities</span>
+                          <ul className='fade-inn medium-list'>
+                            <li>Stakeholder workshops</li>
+                            <li>Workflow analysis</li>
+                            <li>Existing product audit</li>
+                            <li>Contextual observation</li>
+                            <li>User interviews with mining operators</li>
+                            <li>Review of operational tasks and edge cases</li>
+                          </ul>
+                          <h3 className="fade-inn section-heading translate-text-up">Let's Take a look at some of the research part behind this</h3>
+                          <div className="image-group">
+                            <div>
+                              <span>Empathy Map</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/empathy_map.webp" alt="Empathy Map" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>User Persona</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/user_persona.webp" alt="User Persona" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <span>Research Insights</span>
+                              <div className="reveal">
+                                <div className="image-wrap">
+                                  <img src="img/projects/gh_ug/research_insights.webp" alt="Research Insights" loading="lazy" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
                         </div>
                       </div>
                     </div>
@@ -660,7 +687,7 @@ const Uggh = () => {
                     </div>
                   </div>
 
-                  <ProjectImpact 
+                  <ProjectImpact
                     sectionNumber="08"
                     metrics={[
                       { number: "30%", unit: "reduction", description: "fewer core operator interactions" },
@@ -669,7 +696,7 @@ const Uggh = () => {
                     ]}
                   />
 
-                  <ProjectNavigation 
+                  <ProjectNavigation
                     figmaLink="https://www.figma.com/design/rxHo1Cf9CKCVGfmZhSMdKt/UG-App---Ideation-phase--2-?node-id=1447-11497&t=rE24klPvI0AfONWk-1"
                     previousLink={null}
                     nextLink="/Opgh"
