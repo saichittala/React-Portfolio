@@ -12,7 +12,8 @@ const Card = ({
   locked,
   confidential,
   onRequestLockPopup,
-  password
+  password,
+  onCardClick
 }) => {
   useFadeIn();
   const navigate = useNavigate();
@@ -39,7 +40,19 @@ const Card = ({
   }, []);
 
   const handleCardClick = () => {
-    if (locked) {
+    if (onCardClick) {
+      onCardClick({
+        title,
+        type,
+        year,
+        image,
+        link,
+        openInNewTab,
+        locked,
+        confidential,
+        password
+      });
+    } else if (locked) {
       onRequestLockPopup(link, password);
     } else {
       const isInternal = link.startsWith('#') || link.startsWith('/');

@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import useScrollReveal from './components/useScrollReveal';
 import Card from './card';
 import LockPopup from './components/lockpopup';
+import ProjectSummaryModal from './components/ProjectSummaryModal';
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import BubbleButton from './components/BubbleButton';
@@ -33,6 +34,40 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
   const [showAll, setShowAll] = useState(false); // 🔹 For View More/Less toggle
   const RESUME_PASSWORD = "surya@123"; // set your desired password
   const [heroTag, setHeroTag] = useState("Now reaching you ✦");
+
+  // Manage summary modal state
+  const [isSummaryVisible, setSummaryVisible] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  // Handle card click to open summary modal
+  const handleCardClick = (project) => {
+    setSelectedProject(project);
+    setSummaryVisible(true);
+  };
+
+  // Handle opening of full case study from modal
+  const handleOpenCaseStudy = (project) => {
+    setSummaryVisible(false);
+    if (project.locked) {
+      handleRequestLockPopup(project.link, project.password);
+    } else {
+      const isInternal = project.link.startsWith('#') || project.link.startsWith('/');
+      if (isInternal) {
+        let path = project.link;
+        if (path.startsWith('#/')) {
+          path = path.substring(2);
+        } else if (path.startsWith('#')) {
+          path = path.substring(1);
+        }
+        if (!path.startsWith('/')) {
+          path = '/' + path;
+        }
+        navigate(path);
+      } else {
+        window.open(project.link, project.openInNewTab ? "_blank" : "_self");
+      }
+    }
+  };
 
 
 
@@ -247,8 +282,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
                     <Card
                       key={index}
                       {...card}
-                      onRequestLockPopup={handleRequestLockPopup}
-                      password={card.password}
+                      onCardClick={handleCardClick}
                     />
                   ))}
                 </motion.div>
@@ -380,6 +414,13 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
         onUnlock={handleUnlock}
         password={currentPassword} // Pass password to LockPopup
         isPasswordIncorrect={isPasswordIncorrect} // Pass incorrect password flag
+      />
+
+      <ProjectSummaryModal
+        isVisible={isSummaryVisible}
+        onClose={() => setSummaryVisible(false)}
+        project={selectedProject}
+        onOpenCaseStudy={handleOpenCaseStudy}
       />
     </div >
   );
