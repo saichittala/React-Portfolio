@@ -2153,6 +2153,7 @@ body.light-theme .theme-toggle-btn {
 .quick-summary-btn-glass {
     --glass-border-opacity: 1.0 !important;
     --glass-border-opacity-focus: 1.0 !important;
+    background: rgba(0, 0, 0, 0.50) !important;
 }
 
 .quick-summary-btn-glass::before {
