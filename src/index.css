@@ -57,6 +57,7 @@
     --glass-border-opacity-focus: 1.0;
 
     .light-theme {
+        --impact-accent: #2e6930;
         --black-color: #ffffff;
         --black-2-color: #f7f8f9;
         --white-color: #2b2c2d;

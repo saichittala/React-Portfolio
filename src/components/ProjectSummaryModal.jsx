@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import GlassSurface from './GlassSurface';
 import { projectSummaries } from '../utils/projectSummaries';
-import { X, ExternalLink } from 'lucide-react';
+import { X } from 'lucide-react';
 import './ProjectSummaryModal.css';
 
 function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
@@ -47,10 +47,7 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
         <div className="project-summary-container">
           {/* Header */}
           <div className="project-summary-header">
-            <div className="project-summary-header-left">
-              <span className="summary-project-type">{project.type}</span>
-              <h2 className="summary-project-title">{project.title}</h2>
-            </div>
+            <h2 className="summary-project-title">{project.title}</h2>
             
             <div className="project-summary-header-right">
               {/* See Full Case Study button (Liquid Glass style) */}
@@ -61,72 +58,73 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
                 <GlassSurface
                   width="auto"
                   height="auto"
-                  borderRadius={12}
+                  borderRadius={100}
                   className="btn-case-study-glass-inner"
-                  contentStyle={{ padding: '12px 20px', display: 'flex', gap: '8px', alignItems: 'center' }}
+                  contentStyle={{ padding: '10px 22px', display: 'flex', gap: '8px', alignItems: 'center' }}
                 >
                   <span className="case-study-btn-text">See Full Case Study</span>
-                  <ExternalLink size={16} />
                 </GlassSurface>
               </button>
 
               <button className="summary-close-btn cursor-link" onClick={onClose}>
-                <X size={20} />
+                <X size={18} />
               </button>
             </div>
           </div>
 
           {/* Body */}
           <div className="project-summary-body">
-            <div className="project-summary-columns">
-              
-              {/* Left Column - Details */}
-              <div className="project-summary-details-col">
-                <div className="summary-section">
-                  <h3 className="summary-section-title">About the Project</h3>
-                  <p className="summary-section-text">{summary.about}</p>
+            
+            {/* Top Section: Image & Metrics Side-by-Side */}
+            <div className="summary-top-section">
+              <div className="summary-image-wrapper">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="summary-project-img" 
+                />
+              </div>
+
+              {/* Vertical Metrics Column */}
+              <div className="summary-metrics-col">
+                {summary.metrics && summary.metrics.length > 0 ? (
+                  summary.metrics.map((metric, i) => (
+                    <div key={i} className="summary-metric-item">
+                      <div className="summary-metric-value-row">
+                        <span className="summary-metric-number">{metric.number}</span>
+                        <span className="summary-metric-unit">{metric.unit}</span>
+                      </div>
+                      <p className="summary-metric-desc">{metric.description}</p>
+                    </div>
+                  ))
+                ) : (
+                  <p className="summary-section-text">Metrics details are confidential or pending release.</p>
+                )}
+              </div>
+            </div>
+
+            {/* Bottom Section: Cards */}
+            <div className="summary-bottom-section">
+              {/* About the Project Card (Full Width) */}
+              <div className="summary-card about-card">
+                <h3 className="summary-card-title">About the Project</h3>
+                <p className="summary-card-text">{summary.about}</p>
+              </div>
+
+              {/* Problem & Solution Cards (Side-by-Side) */}
+              <div className="summary-cards-row">
+                <div className="summary-card half-card">
+                  <h3 className="summary-card-title">The Problem</h3>
+                  <p className="summary-card-text">{summary.problem}</p>
                 </div>
                 
-                <div className="summary-section">
-                  <h3 className="summary-section-title">The Problem</h3>
-                  <p className="summary-section-text">{summary.problem}</p>
-                </div>
-
-                <div className="summary-section">
-                  <h3 className="summary-section-title">The Solution</h3>
-                  <p className="summary-section-text">{summary.solution}</p>
+                <div className="summary-card half-card">
+                  <h3 className="summary-card-title">The Solution</h3>
+                  <p className="summary-card-text">{summary.solution}</p>
                 </div>
               </div>
-
-              {/* Right Column - Image & Impact */}
-              <div className="project-summary-visual-col">
-                <div className="summary-image-wrapper">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="summary-project-img" 
-                  />
-                </div>
-
-                <div className="summary-impact-section">
-                  <h3 className="summary-section-title font-small">Impact</h3>
-                  <div className="summary-impact-row">
-                    {summary.metrics && summary.metrics.length > 0 ? (
-                      summary.metrics.map((metric, i) => (
-                        <div key={i} className="summary-impact-card">
-                          <span className="summary-impact-num">{metric.number}</span>
-                          <span className="summary-impact-unit">{metric.unit}</span>
-                          <p className="summary-impact-desc">{metric.description}</p>
-                        </div>
-                      ))
-                    ) : (
-                      <p className="summary-section-text">Metrics details are confidential or pending release.</p>
-                    )}
-                  </div>
-                </div>
-              </div>
-
             </div>
+
           </div>
         </div>
       </GlassSurface>
