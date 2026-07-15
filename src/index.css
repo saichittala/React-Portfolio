@@ -94,7 +94,12 @@
         --glass-bg: rgba(255, 255, 255, 0.6);
         --glass-head-bg: rgba(255, 255, 255, 0.4);
         --glass-border-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0) 40% 60%, rgba(0, 0, 0, 0.15));
-        --glass-box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 4px 20px rgba(0, 0, 0, 0.06);
+        /* --glass-box-shadow: inset 0 1px rgba(255, 255, 255, 0.6), 0 4px 20px rgba(0, 0, 0, 0.06); */
+        --glass-box-shadow: inset 0 1px rgba(255, 255, 255, 0.60),
+            inset 0 -1px rgba(255, 255, 255, 0.25),
+            inset 1px 0 rgba(255, 255, 255, 0.15),
+            inset -1px 0 rgba(255, 255, 255, 0.15),
+            0 4px 20px rgba(0, 0, 0, 0.06);
         --glass-border-opacity: 0.34;
         --glass-box-shadow-focus: inset 0 1px rgba(255, 255, 255, 0.8), 0 0 8px rgba(0, 0, 0, 0.08);
         --glass-border-gradient-focus: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 40% 60%, rgba(0, 0, 0, 0.3));
@@ -146,7 +151,8 @@
         --glass-bg: rgba(12, 10, 9, 0.5);
         --glass-head-bg: rgba(0, 0, 0, 0.25);
         --glass-border-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 40% 60%, rgba(255, 255, 255, 0.5));
-        --glass-box-shadow: inset 0 1px rgba(255, 255, 255, 0.12), 0 4px 20px rgba(0, 0, 0, 0.18);
+        /* --glass-box-shadow: inset 0 1px rgba(255, 255, 255, 0.12), 0 4px 20px rgba(0, 0, 0, 0.18); */
+        --glass-box-shadow: inset 0 1px rgba(255, 255, 255, .18), inset 0 -1px rgba(255, 255, 255, .12), 0 4px 20px rgba(0, 0, 0, .18);
         --glass-border-opacity: 0.34;
         --glass-box-shadow-focus: inset 0 1px rgba(255, 255, 255, 0.25), 0 0 8px rgba(255, 255, 255, 0.15);
         --glass-border-gradient-focus: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 40% 60%, rgba(255, 255, 255, 0.4));
