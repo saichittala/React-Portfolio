@@ -16,6 +16,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -209,7 +210,7 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  padding: 24px 32px;
+  padding: 20px;
 }
 
 .summary-card-title {
@@ -217,6 +218,7 @@
   font-weight: 500;
   color: var(--white-color);
   margin-bottom: 12px;
+  margin-top: 0px !important;
 }
 
 .summary-card-text {
@@ -277,9 +279,9 @@
   .project-summary-container {
     padding: 24px;
   }
-  
+
   .project-summary-header {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
     gap: 16px;
     margin-bottom: 24px;

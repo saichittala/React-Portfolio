@@ -18,6 +18,7 @@ const Card = ({
 }) => {
   useFadeIn();
   const navigate = useNavigate();
+  const hasSummary = link === '#/Uggh' || link === '#/Opgh' || link === '#/lms-gh';
 
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -91,20 +92,22 @@ const Card = ({
         }}
       >
         {/* Quick Summary Button (Liquid Glass) */}
-        <button className="card-quick-summary-btn cursor-link" onClick={handleSummaryClick}>
-          <GlassSurface
-            width="auto"
-            height="auto"
-            borderRadius={100}
-            className="quick-summary-btn-glass"
-            contentStyle={{ padding: 0 }}
-          >
-            <div className="quick-summary-btn-inner">
-              <span className="quick-summary-sparkle">✦</span>
-              <span>Quick Summary</span>
-            </div>
-          </GlassSurface>
-        </button>
+        {hasSummary && (
+          <button className="card-quick-summary-btn cursor-link" onClick={handleSummaryClick}>
+            <GlassSurface
+              width="auto"
+              height="auto"
+              borderRadius={100}
+              className="quick-summary-btn-glass"
+              contentStyle={{ padding: 0 }}
+            >
+              <div className="quick-summary-btn-inner">
+                <span className="quick-summary-sparkle">✦</span>
+                <span>Quick Summary</span>
+              </div>
+            </GlassSurface>
+          </button>
+        )}
 
         {confidential && (
           <div

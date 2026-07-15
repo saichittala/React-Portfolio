@@ -1,8 +1,8 @@
 export const projectSummaries = {
   "Building Faster Workflows for Underground Operators": {
-    about: "A specialized mobile workflow application designed for underground mining operators to track tasks, log machinery states, and fill safety forms under rough environmental conditions.",
-    problem: "Operators working in underground mines face extreme environmental constraints—low visibility, constant machine vibration, and heavy protective gloves—making traditional UI layouts slow and frustrating.",
-    solution: "Redesigned the entire interface around operator goals, standardizing on a touch-first layout with high-contrast text and a minimum 44px tap target size.",
+    about: "A rugged, touch-first mobile application that helps underground mining operators log machinery states, complete task checklists, and submit safety forms offline.",
+    problem: "Mining environments are harsh. Operators wearing thick protective gloves struggled to tap small buttons on tablets, and complex screen navigation was unsafe during machine vibrations.",
+    solution: "Simplified the screen flows to 1-tap logging, added high-contrast dark themes for poor lighting, and enlarged all touch targets to a minimum of 44px for easy glove tapping.",
     metrics: [
       { number: "30%", unit: "reduction", description: "in interaction clicks" },
       { number: "44px", unit: "minimum", description: "touch targets optimized for gloves" },
@@ -10,9 +10,9 @@ export const projectSummaries = {
     ]
   },
   "Designing Autonomous Haul Truck Operations": {
-    about: "A fleet monitoring and dispatch console to track and coordinate autonomous haul trucks in open-pit mining operations.",
-    problem: "Dispatchers were overwhelmed by scanning multiple high-density screens to detect haul truck delays and resolve routing conflicts.",
-    solution: "Created a centralized live map view with automated collision/delay alerts and a prioritized notifications panel.",
+    about: "A real-time fleet dispatch dashboard that helps open-pit mining dispatchers track, monitor, and coordinate autonomous haul trucks.",
+    problem: "Dispatchers suffered from severe cognitive overload. They had to watch dozens of moving trucks across multiple complex screens to detect routing delays.",
+    solution: "Consolidated fleet data into a single-screen live map with automated delay alerts, smart routing suggestions, and a prioritized alerts sidebar.",
     metrics: [
       { number: "40%", unit: "fewer", description: "clicks to resolve routing conflicts" },
       { number: "100%", unit: "visibility", description: "real-time truck state tracking" },
@@ -20,9 +20,9 @@ export const projectSummaries = {
     ]
   },
   "Reducing Friction in LMS Onboarding": {
-    about: "A corporate learning management system built for heavy industry workers to manage safety compliance courses and certifications.",
-    problem: "Workers experienced high onboarding drop-offs, failing to register and complete critical compliance training prior to site deployment.",
-    solution: "Streamlined sign-up paths, introduced personalized progress widgets, and simplified navigation.",
+    about: "An enterprise learning management system built for heavy industry workers to manage safety compliance courses and certifications.",
+    problem: "Confusing onboarding steps led to high drop-offs, delaying workers from completing compliance certifications and blocking site deployment.",
+    solution: "Streamlined sign-up from 7 steps to 3, designed a personalized course progress widget, and added clear visual feedback for completion.",
     metrics: [
       { number: "3x", unit: "increase", description: "in safety course registrations" },
       { number: "50%", unit: "faster", description: "onboarding setup completion time" },
