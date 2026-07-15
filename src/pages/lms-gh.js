@@ -7,6 +7,7 @@ import 'img-comparison-slider/dist/styles.css';
 import useScrollReveal from '../components/useScrollReveal';
 import ProjectNavigation from '../components/ProjectNavigation';
 import ProjectImpact from '../components/ProjectImpact';
+import GlassSurface from '../components/GlassSurface';
 
 const Lmsgh = () => {
   useScrollReveal();
@@ -343,8 +344,24 @@ const Lmsgh = () => {
                             <div>
                               <span>Before & After Comparison</span>
                               <div className="slider-container-relative">
-                                <div className="slider-badge before-badge">Before</div>
-                                <div className="slider-badge after-badge">After</div>
+                                <GlassSurface
+                                  width="auto"
+                                  height="auto"
+                                  borderRadius={8}
+                                  className="slider-badge before-badge"
+                                  contentStyle={{ padding: 0 }}
+                                >
+                                  Before
+                                </GlassSurface>
+                                <GlassSurface
+                                  width="auto"
+                                  height="auto"
+                                  borderRadius={8}
+                                  className="slider-badge after-badge"
+                                  contentStyle={{ padding: 0 }}
+                                >
+                                  After
+                                </GlassSurface>
                                 <img-comparison-slider class="fade-inn" hover="true">
                                   <img slot="first" src="img/projects/gh-lms/before-lms.webp" alt="Before redesign" />
                                   <img slot="second" src="img/projects/gh-lms/after-lms.webp" alt="After redesign" />
