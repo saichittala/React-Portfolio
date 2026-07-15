@@ -5292,7 +5292,7 @@ img-comparison-slider img {
     font-family: var(--primary-font);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    padding: 8px 16px;
+    padding: 4px 10px;
     border-radius: 8px;
     pointer-events: none;
 }
