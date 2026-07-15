@@ -17,7 +17,7 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
       setIsClosing(true);
       const timer = setTimeout(() => {
         setShouldRender(false);
-      }, 500); // matches slideDown animation duration (0.5s)
+      }, 2500); // matches slideDown animation duration (2.5s)
       return () => clearTimeout(timer);
     }
   }, [isVisible, shouldRender]);
