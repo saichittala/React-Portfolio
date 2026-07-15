@@ -652,21 +652,13 @@ const Uggh = () => {
                             <div>
                               <span>Before & After Redesign</span>
                               <div className="slider-container-relative">
-                                <GlassSurface
-                                  width="auto"
-                                  height="auto"
-                                  borderRadius={8}
-                                  className="slider-badge before-badge"
+                                <GlassSurface width="auto" height="auto" borderRadius={8} distortionScale={-180} redOffset={0} greenOffset={10} blueOffset={20} yChannel="B" className="slider-badge before-badge"
                                   contentStyle={{ padding: 0 }}
                                   style={{ position: 'absolute' }}
                                 >
                                   Before
                                 </GlassSurface>
-                                <GlassSurface
-                                  width="auto"
-                                  height="auto"
-                                  borderRadius={8}
-                                  className="slider-badge after-badge"
+                                <GlassSurface width="auto" height="auto" borderRadius={8} distortionScale={-180} redOffset={0} greenOffset={10} blueOffset={20} yChannel="B" className="slider-badge after-badge"
                                   contentStyle={{ padding: 0 }}
                                   style={{ position: 'absolute' }}
                                 >

@@ -46,6 +46,13 @@
     --input-backdrop-filter: url(#input-filter) saturate(180%) blur(20px);
     --impact-accent: #c7ff9f;
 
+    /* Rainbow Button Color Tokens */
+    --color-1: hsl(0, 100%, 63%);
+    --color-2: hsl(270, 100%, 63%);
+    --color-3: hsl(210, 100%, 63%);
+    --color-4: hsl(195, 100%, 63%);
+    --color-5: hsl(90, 100%, 63%);
+
 
     /* Liquid Glass default (Dark Theme) variables */
     --glass-bg: rgba(12, 10, 9, 0.2);
@@ -2081,6 +2088,16 @@ body.light-theme .theme-toggle-btn {
     border: 0.8px solid var(--border-color);
 }
 
+@keyframes rainbow {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
 .card-quick-summary-btn {
     position: absolute;
     top: 12px;
@@ -2094,11 +2111,54 @@ body.light-theme .theme-toggle-btn {
 }
 
 .card-quick-summary-btn:hover {
-    transform: scale(1.01);
+    transform: scale(1.005);
 }
 
 .card-quick-summary-btn:active {
     transform: scale(0.95);
+}
+
+/* Glow effect directly behind the glass button */
+.card-quick-summary-btn::before {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    z-index: -1;
+    height: 30%;
+    width: 80%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg,
+            var(--color-1),
+            var(--color-5),
+            var(--color-3),
+            var(--color-4),
+            var(--color-2),
+            var(--color-1)) !important;
+    background-size: 200% 100% !important;
+    animation: rainbow 2s infinite linear !important;
+    filter: blur(10px);
+    opacity: 0.65;
+    pointer-events: none;
+    border-radius: 100px;
+}
+
+/* Glass border animation override */
+.quick-summary-btn-glass {
+    --glass-border-opacity: 1.0 !important;
+    --glass-border-opacity-focus: 1.0 !important;
+}
+
+.quick-summary-btn-glass::before {
+    background: linear-gradient(90deg,
+            var(--color-1),
+            var(--color-5),
+            var(--color-3),
+            var(--color-4),
+            var(--color-2),
+            var(--color-1)) !important;
+    background-size: 200% 100% !important;
+    animation: rainbow 2s infinite linear !important;
 }
 
 .quick-summary-btn-inner {

@@ -98,6 +98,11 @@ const Card = ({
               width="auto"
               height="auto"
               borderRadius={100}
+              distortionScale={-180}
+              redOffset={0}
+              greenOffset={10}
+              blueOffset={20}
+              yChannel="B"
               className="quick-summary-btn-glass"
               contentStyle={{ padding: 0 }}
             >

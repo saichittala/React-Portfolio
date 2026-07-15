@@ -59,6 +59,11 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
                   width="auto"
                   height="auto"
                   borderRadius={100}
+                  distortionScale={-180}
+                  redOffset={0}
+                  greenOffset={10}
+                  blueOffset={20}
+                  yChannel="B"
                   className="btn-case-study-glass-inner"
                   contentStyle={{ padding: '10px 22px', display: 'flex', gap: '8px', alignItems: 'center' }}
                 >
@@ -67,7 +72,20 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
               </button>
 
               <button className="summary-close-btn cursor-link" onClick={onClose}>
-                <X size={18} />
+                <GlassSurface
+                  width={38}
+                  height={38}
+                  borderRadius={100}
+                  distortionScale={-180}
+                  redOffset={0}
+                  greenOffset={10}
+                  blueOffset={20}
+                  yChannel="B"
+                  className="btn-close-glass-inner"
+                  contentStyle={{ padding: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                >
+                  <X size={18} />
+                </GlassSurface>
               </button>
             </div>
           </div>
