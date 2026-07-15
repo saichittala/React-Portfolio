@@ -65,10 +65,10 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
           {/* Header */}
           <div className="project-summary-header">
             <h2 className="summary-project-title">{project.title}</h2>
-            
+
             <div className="project-summary-header-right">
               {/* See Full Case Study button (Liquid Glass style) */}
-              <button 
+              <button
                 className="btn-case-study-glass cursor-link"
                 onClick={() => onOpenCaseStudy(project)}
               >
@@ -84,7 +84,7 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
                   className="btn-case-study-glass-inner"
                   contentStyle={{ padding: '10px 22px', display: 'flex', gap: '8px', alignItems: 'center' }}
                 >
-                  <span className="case-study-btn-text">See Full Case Study</span>
+                  <span className="case-study-btn-text">Dive Deep</span>
                 </GlassSurface>
               </button>
 
@@ -109,14 +109,14 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
 
           {/* Body */}
           <div className="project-summary-body">
-            
+
             {/* Top Section: Image & Metrics Side-by-Side */}
             <div className="summary-top-section">
               <div className="summary-image-wrapper">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="summary-project-img" 
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="summary-project-img"
                 />
               </div>
 
@@ -152,7 +152,7 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
                   <h3 className="summary-card-title">The Problem</h3>
                   <p className="summary-card-text">{summary.problem}</p>
                 </div>
-                
+
                 <div className="summary-card half-card">
                   <h3 className="summary-card-title">The Solution</h3>
                   <p className="summary-card-text">{summary.solution}</p>

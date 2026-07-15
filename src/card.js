@@ -108,7 +108,7 @@ const Card = ({
             >
               <div className="quick-summary-btn-inner">
                 <span className="quick-summary-sparkle">✦</span>
-                <span>Quick Summary</span>
+                <span>Snapshot</span>
               </div>
             </GlassSurface>
           </button>
