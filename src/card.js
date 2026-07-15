@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFadeIn from './components/useFadeIn';
+import GlassSurface from './components/GlassSurface';
 
 const Card = ({
   title,
@@ -13,7 +14,7 @@ const Card = ({
   confidential,
   onRequestLockPopup,
   password,
-  onCardClick
+  onSummaryClick
 }) => {
   useFadeIn();
   const navigate = useNavigate();
@@ -40,19 +41,7 @@ const Card = ({
   }, []);
 
   const handleCardClick = () => {
-    if (onCardClick) {
-      onCardClick({
-        title,
-        type,
-        year,
-        image,
-        link,
-        openInNewTab,
-        locked,
-        confidential,
-        password
-      });
-    } else if (locked) {
+    if (locked) {
       onRequestLockPopup(link, password);
     } else {
       const isInternal = link.startsWith('#') || link.startsWith('/');
@@ -73,9 +62,25 @@ const Card = ({
     }
   };
 
+  const handleSummaryClick = (e) => {
+    e.stopPropagation();
+    if (onSummaryClick) {
+      onSummaryClick({
+        title,
+        type,
+        year,
+        image,
+        link,
+        openInNewTab,
+        locked,
+        confidential,
+        password
+      });
+    }
+  };
+
   return (
-    <div className='card-container' onClick={handleCardClick}
-    >
+    <div className='card-container' onClick={handleCardClick}>
       <div
         ref={cardRef}
         className="main-card fade-in cursor-link"
@@ -85,6 +90,22 @@ const Card = ({
           backgroundPosition: 'center',
         }}
       >
+        {/* Quick Summary Button (Liquid Glass) */}
+        <button className="card-quick-summary-btn cursor-link" onClick={handleSummaryClick}>
+          <GlassSurface
+            width="auto"
+            height="auto"
+            borderRadius={100}
+            className="quick-summary-btn-glass"
+            contentStyle={{ padding: 0 }}
+          >
+            <div className="quick-summary-btn-inner">
+              <span className="quick-summary-sparkle">✦</span>
+              <span>Quick Summary</span>
+            </div>
+          </GlassSurface>
+        </button>
+
         {confidential && (
           <div
             className="confidential-badge"
@@ -98,7 +119,6 @@ const Card = ({
             <span className="confidential-text">Confidential</span>
           </div>
         )}
-
 
         <div className="sub-card">
           <div className="card-content"></div>

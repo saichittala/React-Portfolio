@@ -282,7 +282,9 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
                     <Card
                       key={index}
                       {...card}
-                      onCardClick={handleCardClick}
+                      onSummaryClick={handleCardClick} // Show summary on summary button click
+                      onRequestLockPopup={handleRequestLockPopup}
+                      password={card.password}
                     />
                   ))}
                 </motion.div>

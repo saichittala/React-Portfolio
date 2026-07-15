@@ -116,7 +116,9 @@ function Works() {
                   <Card
                     key={index}
                     {...card}
-                    onCardClick={handleCardClick} // Intercept card click to show summary first
+                    onSummaryClick={handleCardClick} // Show summary on summary button click
+                    onRequestLockPopup={handleRequestLockPopup}
+                    password={card.password}
                   />
                 ))}
               </div>

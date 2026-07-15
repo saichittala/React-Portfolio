@@ -2065,7 +2065,8 @@ body.light-theme .theme-toggle-btn {
 
     position: absolute;
     top: 12px;
-    left: 12px;
+    right: 12px;
+    left: auto;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -2077,6 +2078,43 @@ body.light-theme .theme-toggle-btn {
     color: var(--card-white-color);
     border-radius: var(--border-radius-3);
     border: 0.8px solid var(--border-color);
+}
+
+.card-quick-summary-btn {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 20;
+    background: transparent;
+    border: none;
+    padding: 0;
+    pointer-events: auto;
+    transition: transform 0.2s;
+}
+
+.card-quick-summary-btn:hover {
+    transform: scale(1.05);
+}
+
+.card-quick-summary-btn:active {
+    transform: scale(0.95);
+}
+
+.quick-summary-btn-inner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    color: var(--white-color) !important;
+    font-family: var(--primary-font);
+    font-size: 11px;
+    font-weight: var(--font-weight-medium);
+}
+
+.quick-summary-sparkle {
+    font-size: 11px;
+    color: var(--white-color);
+    line-height: 1;
 }
 
 .confidential-icon {
