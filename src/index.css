@@ -2159,6 +2159,7 @@ body.light-theme .theme-toggle-btn {
             var(--color-1)) !important;
     background-size: 200% 100% !important;
     animation: rainbow 2s infinite linear !important;
+    padding: 1.5px !important;
 }
 
 .quick-summary-btn-inner {
