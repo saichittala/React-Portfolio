@@ -2,32 +2,62 @@
   position: fixed;
   inset: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* Align bottom like Apple sheets */
   justify-content: center;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.8);
-  /* backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); */
-  animation: fadeInModal 0.3s ease-out;
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 24px; /* Floating space around sheet on desktop */
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeInOverlay 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes fadeInModal {
-  from {
-    opacity: 0;
-  }
+.project-summary-overlay.closing {
+  animation: fadeOutOverlay 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
 
-  to {
-    opacity: 1;
-  }
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOutOverlay {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 .project-summary-card {
   max-width: 1050px;
-  max-height: 850px;
+  max-height: 80vh; /* Floating style maximum height */
   width: 90vw !important;
-  height: 85vh !important;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5) !important;
+  height: 80vh !important;
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(100%);
+  animation: slideUpCard 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.project-summary-card.closing {
+  animation: slideDownCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpCard {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownCard {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
 }
 
 .project-summary-container {
@@ -281,6 +311,18 @@
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
+  .project-summary-overlay {
+    padding: 0;
+  }
+
+  .project-summary-card {
+    width: 100vw !important;
+    max-width: 100% !important;
+    height: 82vh !important;
+    max-height: 82vh !important;
+    border-radius: 24px 24px 0 0 !important;
+  }
+
   .project-summary-container {
     padding: 24px;
   }

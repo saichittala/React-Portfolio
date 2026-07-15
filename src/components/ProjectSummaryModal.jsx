@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import GlassSurface from './GlassSurface';
 import { projectSummaries } from '../utils/projectSummaries';
@@ -6,6 +6,22 @@ import { X } from 'lucide-react';
 import './ProjectSummaryModal.css';
 
 function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
+  const [shouldRender, setShouldRender] = useState(isVisible);
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    if (isVisible) {
+      setShouldRender(true);
+      setIsClosing(false);
+    } else if (shouldRender) {
+      setIsClosing(true);
+      const timer = setTimeout(() => {
+        setShouldRender(false);
+      }, 500); // matches slideDown animation duration (0.5s)
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible, shouldRender]);
+
   // Prevent background scrolling when popup is active
   useEffect(() => {
     if (isVisible) {
@@ -21,7 +37,7 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
     };
   }, [isVisible]);
 
-  if (!isVisible || !project) return null;
+  if (!shouldRender || !project) return null;
 
   const summary = projectSummaries[project.title] || {
     about: "No summary details available for this project.",
@@ -31,9 +47,9 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
   };
 
   const modalElement = (
-    <div className="project-summary-overlay">
+    <div className={`project-summary-overlay ${isClosing ? 'closing' : ''}`} onClick={onClose}>
       <GlassSurface
-        className="project-summary-card"
+        className={`project-summary-card ${isClosing ? 'closing' : ''}`}
         borderRadius={24}
         distortionScale={-180}
         redOffset={0}
@@ -43,6 +59,7 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
         width="90vw"
         height="85vh"
         contentStyle={{ padding: 0 }}
+        onClick={(e) => e.stopPropagation()}
       >
         <div className="project-summary-container">
           {/* Header */}
