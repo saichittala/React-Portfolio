@@ -658,6 +658,7 @@ const Uggh = () => {
                                   borderRadius={8}
                                   className="slider-badge before-badge"
                                   contentStyle={{ padding: 0 }}
+                                  style={{ position: 'absolute' }}
                                 >
                                   Before
                                 </GlassSurface>
@@ -667,6 +668,7 @@ const Uggh = () => {
                                   borderRadius={8}
                                   className="slider-badge after-badge"
                                   contentStyle={{ padding: 0 }}
+                                  style={{ position: 'absolute' }}
                                 >
                                   After
                                 </GlassSurface>

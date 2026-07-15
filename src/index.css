@@ -5285,7 +5285,7 @@ img-comparison-slider img {
 }
 
 .slider-badge {
-    position: absolute;
+    position: absolute !important;
     top: 20px;
     z-index: 10;
     color: var(--white-color) !important;
