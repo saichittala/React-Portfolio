@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import LockPopup from './lockpopup';
 
 function ProjectNavigation({ figmaLink, linkLabel = "here is the figma link", previousLink, nextLink }) {
+  const [isPopupVisible, setPopupVisible] = useState(false);
+  const [isPasswordIncorrect, setIsPasswordIncorrect] = useState(false);
+
+  const handleLinkClick = (e) => {
+    const isFigma = figmaLink && figmaLink.includes('figma.com');
+    if (isFigma) {
+      e.preventDefault();
+      setPopupVisible(true);
+      setIsPasswordIncorrect(false);
+    }
+  };
+
+  const handleUnlock = (enteredPassword) => {
+    if (enteredPassword === "figma@123") {
+      window.open(figmaLink, "_blank");
+      setPopupVisible(false);
+    } else {
+      setIsPasswordIncorrect(true);
+    }
+  };
+
+  const closePopup = () => {
+    setPopupVisible(false);
+    setIsPasswordIncorrect(false);
+  };
+
   return (
     <div className="bg-full bg-white margin-unset">
       <div className="bg-main padding-unset">
@@ -13,8 +40,7 @@ function ProjectNavigation({ figmaLink, linkLabel = "here is the figma link", pr
               <span className="thankyou-title">Thank you for viewing.</span>
               <a 
                 href={figmaLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                onClick={handleLinkClick}
                 className="thankyou-figma-link"
               >
                 {linkLabel}
@@ -58,8 +84,16 @@ function ProjectNavigation({ figmaLink, linkLabel = "here is the figma link", pr
           </div>
         </div>
       </div>
+      <LockPopup
+        isVisible={isPopupVisible}
+        onClose={closePopup}
+        onUnlock={handleUnlock}
+        password="figma@123"
+        isPasswordIncorrect={isPasswordIncorrect}
+      />
     </div>
   );
 }
 
 export default ProjectNavigation;
+
