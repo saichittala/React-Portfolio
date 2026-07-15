@@ -12,6 +12,12 @@
 
 
 
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
 :root {
 
     /* Colors */
@@ -47,11 +53,11 @@
     --impact-accent: #c7ff9f;
 
     /* Rainbow Button Color Tokens */
-    --color-1: hsl(0, 100%, 63%);
-    --color-2: hsl(270, 100%, 63%);
-    --color-3: hsl(210, 100%, 63%);
-    --color-4: hsl(195, 100%, 63%);
-    --color-5: hsl(90, 100%, 63%);
+    --color-1: #ff424280;
+    --color-2: #a142ff80;
+    --color-3: #42a1ff80;
+    --color-4: #5fca6e80;
+    --color-5: #fff54280;
 
 
     /* Liquid Glass default (Dark Theme) variables */
@@ -2088,13 +2094,13 @@ body.light-theme .theme-toggle-btn {
     border: 0.8px solid var(--border-color);
 }
 
-@keyframes rainbow {
+@keyframes spin-border {
     0% {
-        background-position: 0% 0%;
+        --border-angle: 0deg;
     }
 
     100% {
-        background-position: -200% 0%;
+        --border-angle: 360deg;
     }
 }
 
@@ -2115,7 +2121,7 @@ body.light-theme .theme-toggle-btn {
 }
 
 .card-quick-summary-btn:active {
-    transform: scale(0.95);
+    transform: scale(0.995);
 }
 
 /* Glow effect directly behind the glass button */
@@ -2128,17 +2134,17 @@ body.light-theme .theme-toggle-btn {
     height: 30%;
     width: 80%;
     transform: translateX(-50%);
-    background: linear-gradient(90deg,
-            var(--color-1),
-            var(--color-5),
-            var(--color-3),
-            var(--color-4),
-            var(--color-2),
-            var(--color-1)) !important;
-    background-size: 200% 100% !important;
-    animation: rainbow 2s infinite linear !important;
+    background: conic-gradient(from var(--border-angle),
+            var(--color-1) 0%,
+            var(--color-5) 5%,
+            var(--color-3) 10%,
+            var(--color-4) 15%,
+            var(--color-2) 20%,
+            transparent 25%,
+            transparent 100%) !important;
+    animation: spin-border 3s infinite linear !important;
     filter: blur(10px);
-    opacity: 0.65;
+    opacity: 0.75;
     pointer-events: none;
     border-radius: 100px;
 }
@@ -2150,15 +2156,15 @@ body.light-theme .theme-toggle-btn {
 }
 
 .quick-summary-btn-glass::before {
-    background: linear-gradient(90deg,
-            var(--color-1),
-            var(--color-5),
-            var(--color-3),
-            var(--color-4),
-            var(--color-2),
-            var(--color-1)) !important;
-    background-size: 200% 100% !important;
-    animation: rainbow 2s infinite linear !important;
+    background: conic-gradient(from var(--border-angle),
+            var(--color-1) 0%,
+            var(--color-5) 5%,
+            var(--color-3) 10%,
+            var(--color-4) 15%,
+            var(--color-2) 20%,
+            transparent 25%,
+            transparent 100%) !important;
+    animation: spin-border 3s infinite linear !important;
     padding: 1.5px !important;
 }
 
