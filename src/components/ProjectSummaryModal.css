@@ -125,6 +125,22 @@
   height: auto !important;
   box-shadow: var(--glass-box-shadow) !important;
   transition: transform 0.2s, box-shadow 0.2s;
+  --glass-border-opacity: 1.0 !important;
+  --glass-border-opacity-focus: 1.0 !important;
+  background: rgba(0, 0, 0, 0.50) !important;
+}
+
+.btn-case-study-glass-inner::before {
+  background: conic-gradient(from var(--border-angle),
+          var(--color-1) 0%,
+          var(--color-5) 5%,
+          var(--color-3) 10%,
+          var(--color-4) 15%,
+          var(--color-2) 20%,
+          transparent 25%,
+          transparent 100%) !important;
+  animation: spin-border 3s infinite linear !important;
+  padding: 1.5px !important;
 }
 
 .btn-case-study-glass-inner:hover {
