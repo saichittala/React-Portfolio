@@ -73,13 +73,18 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
       >
         <div className="popup-header">
           <div className='df-g8 popup-lock-img '>
-            <img className="icon-theme" src="img/lock-1.svg" alt="lock" />
+            <img className="icon-theme" src="img/lock-1.svg" alt="Lock icon" width="24" height="24" />
           </div>
           <img
             className="close-button cursor-link"
             src="img/close-popup.svg"
-            alt="close-popup"
+            alt="Close popup"
+            width="20"
+            height="20"
             onClick={onClose}
+            role="button"
+            tabIndex={0}
+            aria-label="Close modal"
           />
         </div>
         <div className="popup-body">
@@ -115,10 +120,10 @@ const LockPopup = ({ isVisible, onClose, onUnlock, password, isPasswordIncorrect
         <div className='width-100'>
           <div className="unlock-projects cursor-link" onClick={handlePasswordSubmit}>
             {/* <img src="img/unlock.svg" alt="unlock" /> */}
-            <a>Unlock</a>
+            <button className="border-none bg-transparent font-inherit cursor-link" style={{ color: 'inherit' }}>Unlock</button>
           </div>
           <p className="popup-info-text df-g8 gap-8">
-            <img src="img/info.svg" alt="lock" />
+            <img src="img/info.svg" alt="Information icon" width="16" height="16" />
             <div>
               {"Protected. Available upon "}
               <a

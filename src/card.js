@@ -93,7 +93,7 @@ const Card = ({
       >
         {/* Quick Summary Button (Liquid Glass) */}
         {hasSummary && (
-          <button className="card-quick-summary-btn cursor-link" onClick={handleSummaryClick}>
+          <button className="card-quick-summary-btn cursor-link" onClick={handleSummaryClick} aria-label="View quick snapshot summary">
             <GlassSurface
               width="auto"
               height="auto"
@@ -121,8 +121,10 @@ const Card = ({
           >
             <img
               src="img/lock-1.svg"
-              alt="lock"
+              alt="Confidential project lock"
               className="confidential-icon"
+              width="16"
+              height="16"
             />
             <span className="confidential-text">Confidential</span>
           </div>

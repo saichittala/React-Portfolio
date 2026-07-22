@@ -71,6 +71,7 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
               <button
                 className="btn-case-study-glass cursor-link"
                 onClick={() => onOpenCaseStudy(project)}
+                aria-label="Open full case study"
               >
                 <GlassSurface
                   width="auto"
@@ -88,7 +89,7 @@ function ProjectSummaryModal({ isVisible, onClose, project, onOpenCaseStudy }) {
                 </GlassSurface>
               </button>
 
-              <button className="summary-close-btn cursor-link" onClick={onClose}>
+              <button className="summary-close-btn cursor-link" onClick={onClose} aria-label="Close summary modal">
                 <GlassSurface
                   width={38}
                   height={38}

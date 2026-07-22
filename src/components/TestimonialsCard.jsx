@@ -70,17 +70,17 @@ const TestimonialsCard = () => {
 
       {/* Heading */}
       <div className="display-flex justify-between items-center">
-        <a className="fade-in content-div-main-heading-2 translate-text-up">
+        <h2 className="fade-in content-div-main-heading-2 translate-text-up">
           Testimonials
-        </a>
+        </h2>
 
         <div className="display-flex gap-8">
-          <button onClick={goPrev} className="btn-4">
-            <img src="img/left-arrow.svg" alt="prev" />
+          <button onClick={goPrev} className="btn-4" aria-label="Previous testimonial">
+            <img src="img/left-arrow.svg" alt="Previous testimonial" width="16" height="16" />
           </button>
 
-          <button onClick={goNext} className="btn-4">
-            <img src="img/right-arrow.svg" alt="next" />
+          <button onClick={goNext} className="btn-4" aria-label="Next testimonial">
+            <img src="img/right-arrow.svg" alt="Next testimonial" width="16" height="16" />
           </button>
         </div>
       </div>
@@ -101,7 +101,7 @@ const TestimonialsCard = () => {
             className="w-full cursor-grab active:cursor-grabbing"
           >
             <div className="testimonial-card">
-              <img src="img/quote.svg" alt="quote" className="quote-icon" />
+              <img src="img/quote.svg" alt="" aria-hidden="true" className="quote-icon" width="24" height="24" />
 
               {/* Text with inline Show More */}
               <p className="testimonial-text opacity-90 leading-relaxed">
@@ -155,6 +155,7 @@ const TestimonialsCard = () => {
             <button
               key={i}
               onClick={() => setIndex(i)}
+              aria-label={`Go to testimonial slide ${i + 1}`}
               className={`bubble-dots ${i === index
                 ? "bubble-dots-active"
                 : "bubble-dots-inactive"

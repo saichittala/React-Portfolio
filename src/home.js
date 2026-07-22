@@ -261,7 +261,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
                     </span>
 
                     <span>
-                      I take products from <white>idea to scale</white> - strategically.
+                      I take products from <span style={{ color: 'var(--white-color)', fontWeight: 600 }}>idea to scale</span> - strategically.
                     </span>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
                 )}
               </div>
               {/* <div className='df-g8 fd-c al-c work-in-progress-container'>
-                <white>Working on two case studies, stay tuned</white>
+                <span>Working on two case studies, stay tuned</span>
               </div> */}
               <TestimonialsCard />
               <div className='df-g8 fd-c gap-36 width-450'>

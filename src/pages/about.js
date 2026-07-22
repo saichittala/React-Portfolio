@@ -16,7 +16,7 @@ function About() {
                     <div className="full-bg">
                         <div className="bg-main">
                             <div className='about-main'>
-                                <img src="img/profile-new.webp" alt="" className="fade-inn" loading="lazy" />
+                                <img src="img/profile-new.webp" alt="Sai Chittala Profile" className="fade-inn" loading="lazy" width="220" height="308" />
                                 <div className='df-g8 gap-36 fd-c width-100'>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginTop: 0 }}>
                                         <p className='width-100' style={{ fontSize: '20px', lineHeight: '1.6', margin: 0 }}>
@@ -72,7 +72,7 @@ function About() {
                                                 <div key={index} className="timeline-row">
                                                     <div className="timeline-left">
                                                         <div className="logo-wrapper">
-                                                            <img src={exp.logo} alt={exp.company} />
+                                                            <img src={exp.logo} alt={`${exp.company} logo`} width="44" height="44" />
                                                         </div>
                                                         {index < arr.length - 1 && <div className="timeline-line" />}
                                                     </div>
@@ -117,7 +117,7 @@ function About() {
                                 </h2>
                                 <div className="hero-cta-button-wrapper">
                                     <div className="hero-cta-avatar">
-                                        <img src="img/profile-new.webp" alt="Sai Chittala" />
+                                        <img src="img/profile-new.webp" alt="Sai Chittala" width="44" height="44" />
                                     </div>
                                     <Link to="/contact" className="hero-cta-button">
                                         <span>Let's Talk</span>

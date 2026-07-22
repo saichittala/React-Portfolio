@@ -169,8 +169,8 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
         </div>
 
         <div className='df-g8 jc-sb'>
-          <a href='/home' className='df-g8 alc logo'>
-            <img src="img/logo-main.svg" alt="" className='logo' />
+          <a href='/home' className='df-g8 alc logo' aria-label="Sai Chittala Home">
+            <img src="img/logo-main.svg" alt="Sai Chittala Logo" className='logo' width="32" height="32" />
           </a>
           <div className="nav-main">
             <RecruiterToggle className={`about-button display-none menu-nav header-text-1 recruiter-toggle-mobile`}
@@ -181,7 +181,9 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
             <img
               className={`menu-icon ${menuActive ? 'clicked' : ''}`}
               src={menuActive ? 'img/close.svg' : 'img/menu.svg'}
-              alt="menu-icon"
+              alt="Toggle menu"
+              width="24"
+              height="24"
               onClick={toggleMenu}
             />
 
@@ -192,35 +194,24 @@ function Header({ toggleTheme, theme, recruiterMode, setRecruiterMode }) {
 
             {/* Desktop Navigation - Updated to use Link and dynamic classes */}
             <div className="nav-btns">
-              {/* The 'Home' link is active if the path is exactly "/" */}
-              {/* <Link to="/" className={`about-button menu-nav header-text-1 ${location.pathname === '/' ? 'header-text-active' : ''}`}>
-                <img src="img/home-nav.svg" alt="logo" />
-
-                <span>Home</span>
-              </Link> */}
               <div className="df-g8 aic">
-                {/* Recruiter Mode */}
-                {/* <RecruiterToggle className={`about-button display-none menu-nav header-text-1 recruiter-toggle-header`}
-                  recruiterMode={recruiterMode}
-                  setRecruiterMode={setRecruiterMode}
-                /> */}
               </div>
 
               {/* The 'Works' link is active if the path is "/works" */}
               <Link to="/works" className={`about-button menu-nav header-text-1 ${location.pathname === '/works' ? 'header-text-active' : ''}`}>
-                <img src="img/works-nav.svg" alt="logo" />
+                <img src="img/works-nav.svg" alt="" aria-hidden="true" width="16" height="16" />
                 <span>Works</span>
               </Link>
 
               {/* The 'About' link is active if the path is "/about" */}
               <Link to="/about" className={`about-button menu-nav header-text-1 ${location.pathname === '/about' ? 'header-text-active' : ''}`}>
-                <img src="img/profile-nav.svg" alt="logo" />
+                <img src="img/profile-nav.svg" alt="" aria-hidden="true" width="16" height="16" />
                 <span>About</span>
               </Link>
 
               {/* The 'Contact' link is active if the path is "/contact" */}
               <Link to="/contact" className={`about-button menu-nav header-text-1 ${location.pathname === '/contact' ? 'header-text-active' : ''}`}>
-                <img src="img/contact-nav.svg" alt="logo" />
+                <img src="img/contact-nav.svg" alt="" aria-hidden="true" width="16" height="16" />
                 <span>Contact</span>
               </Link>
               {/* <div className='df-g8 aic'>
