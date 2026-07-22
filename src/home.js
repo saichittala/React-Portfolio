@@ -159,41 +159,7 @@ const Home = ({ recruiterMode, setActiveTheme }) => {
   }, []);
 
   useEffect(() => {
-    if (!setActiveTheme) return;
-
-    const handleScrollTheme = () => {
-      const container = cardsContainerRef.current;
-      if (!container) return;
-
-      const cards = container.querySelectorAll('.card-container');
-      if (cards.length < 2) return;
-
-      const secondCard = cards[1];
-      const testimonials = document.querySelector('.testimonials-section');
-      if (!testimonials) return;
-
-      const secondCardRect = secondCard.getBoundingClientRect();
-      const testimonialsRect = testimonials.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-
-      // Trigger light theme when second card enters, and revert to dark theme when testimonials section reaches the middle of the screen
-      const triggerStart = secondCardRect.top < viewportHeight * 0.7;
-      const triggerEnd = testimonialsRect.top < viewportHeight * 0.5;
-
-      if (triggerStart && !triggerEnd) {
-        // setActiveTheme('light');
-      } else {
-        // setActiveTheme('dark');
-      }
-    };
-
-    handleScrollTheme();
-    window.addEventListener('scroll', handleScrollTheme, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScrollTheme);
-      // setActiveTheme('dark');
-    };
+    // Theme scroll listener removed to prevent main-thread forced reflows
   }, [setActiveTheme, showAll]);
 
   // Close the popup

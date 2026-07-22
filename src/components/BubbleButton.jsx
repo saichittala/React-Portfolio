@@ -31,27 +31,34 @@ const BubbleButton = ({
         if (isStatic) return;
         if (!activationRef?.current) return;
 
+        let ticking = false;
         const handleScroll = () => {
-            if (!activationRef.current) return;
-            const rect = activationRef.current.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
- 
-            const activationStart = viewportHeight * activateAt;
-            const activationEnd = viewportHeight * deactivateAt;
- 
-            const isActive = rect.top <= activationStart && rect.bottom >= activationEnd;
- 
-            if (isActive) {
-                setIsMounted(true);
-                setAnimationPhase('visible');
-            } else {
-                setAnimationPhase('hiding');
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    ticking = false;
+                    if (!activationRef.current) return;
+                    const rect = activationRef.current.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+
+                    const activationStart = viewportHeight * activateAt;
+                    const activationEnd = viewportHeight * deactivateAt;
+
+                    const isActive = rect.top <= activationStart && rect.bottom >= activationEnd;
+
+                    if (isActive) {
+                        setIsMounted(true);
+                        setAnimationPhase('visible');
+                    } else {
+                        setAnimationPhase('hiding');
+                    }
+                });
+                ticking = true;
             }
         };
- 
+
         window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
- 
+
         return () => window.removeEventListener('scroll', handleScroll);
     }, [activationRef, activationRef?.current, activateAt, deactivateAt, elementPosition]);
  

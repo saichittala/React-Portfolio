@@ -57,10 +57,9 @@ const GlassSurface = ({
   const blueChannelRef = useRef(null);
   const gaussianBlurRef = useRef(null);
 
-  const generateDisplacementMap = () => {
-    const rect = containerRef.current?.getBoundingClientRect();
-    const actualWidth = rect?.width || 400;
-    const actualHeight = rect?.height || 200;
+  const generateDisplacementMap = (w, h) => {
+    const actualWidth = w || containerRef.current?.clientWidth || 400;
+    const actualHeight = h || containerRef.current?.clientHeight || 200;
     const edgeSize = Math.min(actualWidth, actualHeight) * (borderWidth * 0.5);
 
     const actualBrightness = brightness !== 50 ? brightness : (isDark ? 50 : 100);
@@ -89,8 +88,8 @@ const GlassSurface = ({
     return `data:image/svg+xml,${encodeURIComponent(svgContent)}`;
   };
 
-  const updateDisplacementMap = () => {
-    feImageRef.current?.setAttribute('href', generateDisplacementMap());
+  const updateDisplacementMap = (w, h) => {
+    feImageRef.current?.setAttribute('href', generateDisplacementMap(w, h));
   };
 
   useEffect(() => {
@@ -130,13 +129,19 @@ const GlassSurface = ({
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const resizeObserver = new ResizeObserver(() => {
-      setTimeout(updateDisplacementMap, 0);
+    let rAFId;
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      if (entry) {
+        const { width: w, height: h } = entry.contentRect;
+        cancelAnimationFrame(rAFId);
+        rAFId = requestAnimationFrame(() => updateDisplacementMap(w, h));
+      }
     });
 
     resizeObserver.observe(containerRef.current);
 
     return () => {
+      cancelAnimationFrame(rAFId);
       resizeObserver.disconnect();
     };
   }, []);
