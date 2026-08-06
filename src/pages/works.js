@@ -23,10 +23,10 @@ function Works() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const cardsData = [
-    { title: "Building Faster Workflows for Underground Operators", type: "Groundhog Apps", year: "Professional 2026-2027", image: "img/projects/gh_ug/cover.webp", link: "#/Uggh", openInNewTab: true, locked: false },
-    { title: "Designing Autonomous Haul Truck Operations", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/gh-op/cover.webp", link: "#/Opgh", openInNewTab: true, locked: false },
-    { title: "Reducing Friction in LMS Onboarding", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.webp", link: "#/lms-gh", openInNewTab: true, locked: false },
-    { title: "Real-time Fleet Monitoring for Open-Pit Mining Operations", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/dd/cover.webp", link: "#/dd", openInNewTab: true, locked: false },
+    { title: "Building Faster Workflows for Underground Operators", type: "Groundhog Apps", year: "Professional 2026-2027", image: "img/projects/gh_ug/cover.webp", link: "#/Uggh", openInNewTab: true, locked: true, password: "surya@123" },
+    { title: "Designing Autonomous Haul Truck Operations", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/gh-op/cover.webp", link: "#/Opgh", openInNewTab: true, locked: true, password: "surya@123" },
+    { title: "Reducing Friction in LMS Onboarding", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/lms-gh.webp", link: "#/lms-gh", openInNewTab: true, locked: true, password: "surya@123" },
+    { title: "Real-time Fleet Monitoring for Open-Pit Mining Operations", type: "Groundhog Apps", year: "Professional 2025-2026", image: "img/projects/dd/cover.webp", link: "#/dd", openInNewTab: true, locked: true, password: "surya@123" },
     { title: "Scaling Brands through Cinematic Short-Form Video", type: "Reelscale", year: "Professional 2026-2027", image: "img/projects/reelscale/main.webp", link: "https://reelscale.in", openInNewTab: true, locked: false },
     { title: "Turning Website Traffic into Qualified Leads", type: "Customfurnish", year: "Professional 2024-2025", image: "img/projects/cf.webp", link: "#/customfurnish", openInNewTab: true, locked: false },
     { title: "Reducing Workflow Friction in Interior Design SaaS", type: "Mydeziner", year: "Professional 2024-2025", image: "img/projects/mydeziner.webp", link: "#/mydeziner", openInNewTab: true, locked: true, password: "surya@123" },
